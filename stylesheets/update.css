@@ -11,3 +11,25 @@ h4 {
 #comments:hover {
   text-decoration: underline;
 }
+
+.main h5 {
+  font-weight: 900;
+  font-size: 1.4em;
+  color: #000;
+  text-decoration: underline;
+  margin-left: 36px;
+}
+
+.main ul {
+  font-size: 1.5em;
+  line-height: 1.3em;
+  list-style: inside;
+}
+
+#disqus_thread {
+  font-size: 1.6em;
+  line-height: 1.5;
+  color: #5e543e;
+  margin: 1.5em 36px;
+}
+
