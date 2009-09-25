@@ -1,7 +1,7 @@
 ---
 title: Kinetic Energy
-layout: default
+layout: post
 author: Nick Quaranto
 ---
 
-Welcome to the first edition of The Update!
+Welcome to the first edition of The Update!!

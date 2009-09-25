@@ -5,9 +5,9 @@ title: Home
 <h2>The Update</h2><h3>What's new on your community gem host</h3>
 <div class='post'>
   <h4>
-    <a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a>
+    <a href='{{ site.posts.first.url }}'>{{ site.posts.first.title }}</a>
     published {{ site.posts.first.date | date_to_string }} by {{ site.posts.first.author }}
   </h4>
   {{ site.posts.first.content }}
-  <a id="comments" href="{{ site.posts.first.url }#disqus">Comments &raquo;</a>
+  <a id="comments" href="{{ site.posts.first.url }}#disqus">Comments &raquo;</a>
 </div>
