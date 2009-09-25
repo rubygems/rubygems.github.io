@@ -12,7 +12,7 @@ As you can tell, the redesign is live! Thanks to "Thoughtbot":http://thoughtbot.
 
 The next big piece of news is that this site will be moving to "http://rubygems.org":http://rubygems.org soon. (The current site will stay live at "http://docs.rubygems.org":http://docs.rubygems.org). We're currently working with the RubyGems team on this, and it will require a little bit of redirecting and rebranding on our part. Stay tuned here for updates!
 
-We're also going to use this space to feature gems that are new (and of course, some that are old) that are hosted on the site. This will be a column in the style of "GitHub Rebase":http://rebase.github.com, so if you've got ridiculous Ruby images or great gems on gemcutter be sure to let us know.
+We're also going to use this space to feature gems that are new (and of course, some that are old) that are hosted on the site. This will be a column in the style of "GitHub Rebase":http://rebase.github.com, so if you've got ridiculous Ruby images or great gems on gemcutter, let me know at nick@gemcutter.org.
 
 h5. Features
 
