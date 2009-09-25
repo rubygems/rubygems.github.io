@@ -1,0 +1,7 @@
+---
+title: Kinetic Energy
+layout: default
+author: Nick Quaranto
+---
+
+Welcome to the first edition of The Update!
