@@ -1,0 +1,20 @@
+---
+title: Moving Forward
+layout: post
+author: Nick Quaranto
+---
+
+p=. "!http://farm3.static.flickr.com/2064/2224917035_88115fd957.jpg!":http://www.flickr.com/photos/themuuj/2224917035/
+
+We're getting ready for the RubyGems.org transition, and the first thing that needs to happen is a DNS switch for Gemcutter from Heroku to our new home at RackSpace. If you're just downloading gems from Gemcutter, your gem installs will continue to work thanks to our "maintenance mode setup":http://litanyagainstfear.com/blog/2009/11/10/load-rails-conditionally-with-rack/. If you're using the Gemcutter gem, you *will need to upgrade it to continue to push.* Run @gem upgrade gemcutter@ and you should be all set. Going forward, the gem plugins will be merged into RubyGems in order lower the barrier further for gem publication.
+
+The entire Heroku team has been excited to see the site blossom on the platform, and as huge supporters of the Ruby community they want nothing but this effort to succeed. To further the integration of Gemcutter with RubyForge, one of the major decisions made was that Gemcutter’s database would become the central database for RubyForge. We'll be integrating projects, mailing lists, and other useful features. To facilitate this, we needed to move Gemcutter and RubyForge into the same datacenter, and decided it was easier to move Gemcutter than to move all of RubyForge to Heroku. I’d just like to say thanks to the Heroku team for the help and support so far, our decision to move off Heroku has nothing to do with the quality or capabilities of the Heroku platform.
+
+Since there was no lock-in with the Heroku platform, no modifications were necessary in order to move. Several of the optimizations the Heroku platform encouraged have actually helped make this transition really easy: 
+
+1) Using "S3":http://docs.heroku.com/s3 and the "read-only file system":http://docs.heroku.com/constraints#read-only-filesystem helped make the migration onto a new platform very easy, since only the app code needed to move over.
+2) Delayed::Job for "background processing":http://docs.heroku.com/background-jobs meant that we could simply run the workers on the new server and `gem push` would still work.
+3) The simplicity of "heroku db:pull":http://docs.heroku.com/taps means that migrating Gemcutter's database will go extremely quickly.
+
+Heroku's been a huge part of Gemcutter and will continue to be as the project moves forward. As more of the RubyForge platform is migrated over to Ruby, hopefully there will be a chance to return to the ease of deployment and management that Heroku offers. 
+
