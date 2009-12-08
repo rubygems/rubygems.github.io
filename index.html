@@ -11,3 +11,12 @@ title: Home
   {{ site.posts.first.content }}
   <a id="comments" href="{{ site.posts.first.url }}#disqus_thread">Comments &raquo;</a>
 </div>
+
+<div class="archive">
+  <h5>archive</h5>
+  <ul id="archive">
+  {% for post in site.posts %}
+  <li><abbr>{{ post.date | date_to_string }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>

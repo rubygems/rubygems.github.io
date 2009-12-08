@@ -161,6 +161,26 @@ body {
   margin-top: 10px;
 }
 
+.main .archive {
+  display: block;
+  margin-top: 24px;
+}
+
+.main .archive h5 {
+  line-height: 24px;
+  color: #340505;
+  font-size: 2em;
+  margin-left: 36px;
+  padding-top: 20px;
+  border-top: 2px solid #340505;
+  width: 700px;
+}
+
+.main .archive abbr {
+  width: 100px;
+  display: inline-block;
+}
+
 .main h2 {
   line-height: 44px;
   display: inline-block;
