@@ -8,7 +8,7 @@ Thanks to some hard work from David Black and Tom Copeland, all of the RubyForge
 
 1) You can log in with your RubyForge account info if you haven't made a Gemcutter account yet. If you had both a Gemcutter and RubyForge account under the same email, your account has not been changed.
 2) All of the project ownerships from RubyForge have been transferred over to Gemcutter. If you're still having trouble gaining access to your RubyForge gems/projects, feel free to shoot nick@gemcutter.org an email.
-3) @gem migrate@ is now deprecated in the Gemcutter gem.
+3) @gem migrate@ is now deprecated in the Gemcutter gem as of version 0.2.1.
 4) We now have usernames for the site, which will allow us to do all sorts of neat features! (dashboard, subdomains, etc)
 
 As always, if you're looking to help out with the project feel free to "fork the repo":http://github.com/qrush/gemcutter or hop in #gemcutter on irc.freenode.net to see how you can help out.
