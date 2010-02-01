@@ -22,7 +22,7 @@ h4. Features
 
 *Webhooks*: Get notifications for specific gems or all gems when new versions are pushed. "Read up here.":http://gemcutter.org/pages/gem_docs#webhook
 
-*CloudFront*: We're now serving all gems older than a day off CloudFront, which should speed up downloads immensely.
+*CloudFront*: We're now serving all gems older than a day from CloudFront, which should speed up downloads immensely.
 
 *RubyGems Support Site*: Need help with Gemcutter or RubyGems? "Look no further":http://help.rubygems.org
 
