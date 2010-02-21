@@ -1,0 +1,21 @@
+---
+title: RubyGems.org move complete
+layout: post
+author: Nick Quaranto
+---
+
+As you may have noticed, Gemcutter has now become RubyGems.org. This transition has been in the works for "several months now":http://update.gemcutter.org/2009/10/26/transition.html, and the new RubyGems 1.3.6 release brings it to a close. The original goal of Gemcutter was to improve the RubyGem hosting scene for everyone in the Ruby community, and it's been realized now.
+
+For those concerned with what's going to change, here's some basic information about what's happened to bring you up to speed:
+
+* gemcutter.org, gems.rubyforge.org, and rubygems.org all point to the same place
+* gem serving/installing will continue to work for all 3 domains
+* rubygems.org is the default gem source as of RubyGems 1.3.6
+* rubygems.org is the main web frontend now, and the other two sites redirect to it
+* @gem owner@ and @gem push@ have been merged into RubyGems proper.
+* The gemcutter gem as of 0.4.0 just has @gem webhook@ (and soon, @gem yank@!)
+* The GitHub project, Twitter account, etc name will remain the same
+
+Going forward, we'll eventually be using gemcutter.org for gem forking/subdomains, and gems.rubyforge.org will probably remain inactive. I'd also like to say thanks to "Eric Hodel":http://segment7.net, "Tom Copeland":http://tomcopeland.blogs.com/, and "John Barnette":http://www.jbarnette.com/, their help with making this all happen has been immeasurable.
+
+If you've got questions about the transition, let us know in the comments!
