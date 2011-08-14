@@ -1,0 +1,21 @@
+---
+title: RubyGems 1.8.7 Released
+layout: post
+author: Gregory Brown
+---
+
+This release focuses on bug fixes only. You can update your RubyGems by running the following command.
+
+<pre>
+gem update --system
+</pre>
+
+h4. Bug fixes
+
+* Added missing require for <tt>gem uninstall --format-executable</tt>
+* The correct name of the executable being uninstalled is now displayed with <tt>--format-executable</tt>
+* Fixed gem unpack uninstalled_gem default version picker
+* RubyGems no longer claims a nonexistent gem can be uninstalled
+* gem which no longer claims directories are requirable files
+* gem cleanup continues cleaning up gems if one can’t be uninstalled due to permissions. Issue #82
+* Gem repository directories are no longer created world-writable. Patch by Sakuro OZAWA. Ruby Bug #4930
