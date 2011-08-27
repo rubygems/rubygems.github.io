@@ -1,10 +1,9 @@
 ---
 layout: default
 ---
-<h2><a href="/">The Update</a></h2><h3>What's new on your community gem host</h3>
+<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 <div class='post'>
   <h4>
-    <a href='{{ page.url }}'>{{ page.title }}</a>
     published {{ page.date | date_to_string }} by {{ page.author }}
   </h4>
   {{ content }}
