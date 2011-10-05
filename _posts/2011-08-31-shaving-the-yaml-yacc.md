@@ -1,5 +1,5 @@
 ---
-title: Shaving a YAML Yack
+title: Shaving a YAML Yak
 layout: post
 author: tenderlove
 ---
