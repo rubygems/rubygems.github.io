@@ -25,7 +25,7 @@ Some photos from the event:
 
 I'm still in the process of working through the open pull requests and
 issues which need further commenting, but I wanted to provide some of
-the highlights, and welcome some of the soon-to-be new Rubygems.org committers.
+the highlights, and welcome some of the soon-to-be Rubygems.org committers.
 
 Please let me know if I missed you, or something you worked on in the list.
 It was amazing to see developers of all kinds, from companies such
