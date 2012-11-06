@@ -78,3 +78,7 @@ and maintain a community resource.
 [Andrew Szczepanski](https://github.com/Umofomia)
 
 * [Remove librato.yml containing API credentials](https://github.com/rubygems/rubygems.org/pull/480)
+
+[Jon Guymon](https://github.com/gnarg)
+
+* [Add size to versions](https://github.com/rubygems/rubygems.org/pull/484)
