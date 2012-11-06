@@ -45,7 +45,7 @@ and maintain a community resource.
 * [Gem name restrictions might be wrong](https://github.com/rubygems/rubygems.org/issues/426)
 
 [Jared McFarland](https://github.com/jaredonline) and
-[mildmojo](https://github.com/mildmojo)
+[Tim Knowlton](https://github.com/mildmojo)
 
 * [Issue #438](https://github.com/rubygems/rubygems.org/pull/474)
 * [Fixes tests: resets current directory in gemcutter After block.](https://github.com/rubygems/rubygems.org/pull/485)
