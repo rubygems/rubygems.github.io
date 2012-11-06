@@ -7,7 +7,7 @@ author: cmeik
 If you followed the twitter feed for Rubyconf this past week, you
 probably noticed that this years conference was the host of the first, of
 hopefully many more, Rubygems.org hackfests.  The hackfest started at
-6:30 PM, after Matz's chat with Evan wrapped up, and went to almost
+6:30 PM, after Matz's chat with Evan wrapped up, and went until almost
 11:00 PM, when we had scheduled to wrap up around 8:30.
 
 I am personally blown away by the amazing turnout we had, and especially
@@ -16,12 +16,19 @@ were no longer valid, almost every single attendee of the hackfest
 opened a pull request to fix either an outstanding bug, or add a new
 feature.
 
+Some photos from the event:
+
+![Hacking at the bar!](https://pbs.twimg.com/media/A61IcDFCUAEImDl.jpg:small)
+![Hacking!](https://pbs.twimg.com/media/A60S2muCYAEJrdq.jpg:small)
+![More Hacking!](https://pbs.twimg.com/media/A61InubCEAAtGP5.jpg:small)
+![Holy Hacking!](https://pbs.twimg.com/media/A60RvRxCYAEhg0Z.jpg:small)
+
 I'm still in the process of working through the open pull requests and
 issues which need further commenting, but I wanted to provide some of
 the highlights, and welcome some of the soon-to-be new Rubygems.org committers.
 
 Please let me know if I missed you, or something you worked on in the list.
-It was amazing to see developers of all kind, from companies such
+It was amazing to see developers of all kinds, from companies such
 as Yardstick, New Relic and Bluebox step up to assist in helping build
 and maintain a community resource.
 
