@@ -1,20 +1,26 @@
 {% if index %}
 <article class="{{ post.type }}">
-  <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {% if truncated %}
+    <h2 class="title">{{ post.title }}</h2>
+  {% else %}
+    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {% endif %}
   <section class="meta">
     <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
     <p>published <span class="date">{{ post.date | date_to_string }}</span></p>
   </section>
 {% else %}
 <article class="{{ page.type }}">
-  <h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+  <h2 class="title">{{ page.title }}</h2>
   <section class="meta">
     <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
     <p>published <span class="date">{{ page.date | date_to_string }}</span></p>
   </section>
 {% endif %}
 
-  <section class="content">
-    {{ content }}
-  </section>
+  {% if truncated != true %}
+    <section class="content">
+      {{ content }}
+    </section>
+  {% endif %}
 </article>

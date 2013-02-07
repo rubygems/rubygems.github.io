@@ -372,11 +372,16 @@ article {
     left: -80px; }
 
 .content-index {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
   .content-index li {
     list-style-type: none;
-    margin: 0; }
-    .content-index li:first-child article .content {
-      display: block; }
+    width: 100%; }
+    .content-index li:first-child {
+      display: none; }
+    .content-index li > a {
+      display: block;
+      margin: auto;
+      max-width: 800px; }
     .content-index li article .content {
       display: none; }

@@ -3,7 +3,7 @@ header, article, footer {
   @include box-sizing(border-box);
   display: block;
   margin: auto;
-  max-width: 800px;
+  max-width: $max-width;
   min-width: 400px;
   padding: 0 2em;
 }

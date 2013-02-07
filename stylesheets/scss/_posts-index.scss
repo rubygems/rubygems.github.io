@@ -1,14 +1,19 @@
 .content-index {
   margin: 0;
+  padding: 0;
 
   li {
     list-style-type: none;
-    margin: 0;
+    width: 100%;
 
     &:first-child {
-      article .content {
-        display: block;
-      }
+      display: none;
+    }
+
+    > a {
+      display: block;
+      margin: auto;
+      max-width: $max-width;
     }
 
     article .content {
