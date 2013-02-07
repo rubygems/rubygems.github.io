@@ -333,7 +333,7 @@ table {
 body {
   background: #eee; }
 
-header, article, footer {
+body > header, article, body > footer {
   background: #fff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -344,11 +344,11 @@ header, article, footer {
   min-width: 400px;
   padding: 0 2em; }
 
-header {
+body > header {
   margin-bottom: 2.5em;
   max-width: 100%;
   width: 100%; }
-  header h1 {
+  body > header h1 {
     margin: 0; }
 
 article {
@@ -362,14 +362,17 @@ article {
     display: block;
     padding-bottom: 0;
     padding-top: 0; }
-    article:not(.post) .meta img, article .changelog .meta img {
+    article:not(.post) footer, article .changelog footer {
+      display: none; }
+  article h2 a {
+    text-decoration: none; }
+  article footer p {
+    line-height: 50px; }
+    article footer p img {
+      float: left;
       height: 50px;
-      left: -50px;
+      margin-right: 1em;
       width: 50px; }
-  article .meta img {
-    position: absolute;
-    top: 0px;
-    left: -80px; }
 
 .content-index {
   margin: 0;
@@ -379,9 +382,19 @@ article {
     width: 100%; }
     .content-index li:first-child {
       display: none; }
+    .content-index li.year-mark {
+      text-align: center; }
     .content-index li > a {
+      color: #000;
       display: block;
       margin: auto;
-      max-width: 800px; }
+      max-width: 800px;
+      text-decoration: none; }
+      .content-index li > a article footer p {
+        line-height: 30px; }
+        .content-index li > a article footer p img {
+          height: 30px;
+          margin-right: .6em;
+          width: 30px; }
     .content-index li article .content {
       display: none; }

@@ -1,4 +1,4 @@
-header, article, footer {
+body > header, article, body > footer {
   background: #fff;
   @include box-sizing(border-box);
   display: block;
@@ -8,7 +8,7 @@ header, article, footer {
   padding: 0 2em;
 }
 
-header {
+body > header {
   margin-bottom: 2.5em;
   max-width: 100%;
   width: 100%;
@@ -31,16 +31,25 @@ article {
     padding-bottom: 0;
     padding-top: 0;
 
-    .meta img {
-      height: 50px;
-      left: -50px;
-      width: 50px;
+    footer {
+      display: none;
     }
   }
 
-  .meta {
-    img {
-      @include position(absolute, 0px 0 0 -80px);
+  h2 a {
+    text-decoration: none;
+  }
+
+  footer {
+    p {
+      line-height: 50px;
+
+      img {
+        float: left;
+        height: 50px;
+        margin-right: 1em;
+        width: 50px;
+      }
     }
   }
 }

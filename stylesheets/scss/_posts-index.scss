@@ -10,10 +10,26 @@
       display: none;
     }
 
+    &.year-mark {
+      text-align: center;
+    }
+
     > a {
+      color: #000;
       display: block;
       margin: auto;
       max-width: $max-width;
+      text-decoration: none;
+
+      article footer p {
+        line-height: 30px;
+
+        img {
+          height: 30px;
+          margin-right: .6em;
+          width: 30px;
+        }
+      }
     }
 
     article .content {
