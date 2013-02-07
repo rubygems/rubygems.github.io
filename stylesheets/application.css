@@ -332,5 +332,7 @@ table {
 
 .content-index article:first-child .content {
   display: block; }
+.content-index article .meta .author {
+  text-transform: capitalize; }
 .content-index article .content {
   display: none; }

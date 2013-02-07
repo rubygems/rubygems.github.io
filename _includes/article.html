@@ -1,15 +1,18 @@
-<article>
-  {% if index %}
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <section class="meta">
-      <p>published {{ post.date | date_to_string }} by {{ post.author }}</p>
-    </section>
-  {% else %}
-    <h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-    <section class="meta">
-      <p>published {{ page.date | date_to_string }} by {{ page.author }}</p>
-    </section>
-  {% endif %}
+{% if index %}
+<article class="{{ post.type }}">
+  <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <section class="meta">
+    <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
+    <p>published <span class="date">{{ post.date | date_to_string }}</span></p>
+  </section>
+{% else %}
+<article class="{{ page.type }}">
+  <h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+  <section class="meta">
+    <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
+    <p>published <span class="date">{{ page.date | date_to_string }}</span></p>
+  </section>
+{% endif %}
 
   <section class="content">
     {{ content }}

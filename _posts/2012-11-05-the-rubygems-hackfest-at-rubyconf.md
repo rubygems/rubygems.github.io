@@ -1,7 +1,9 @@
 ---
 title: Rubyconf / Rubygems Hackfest
 layout: post
+type: post
 author: cmeik
+author_email: christopher.meiklejohn@gmail.com
 ---
 
 If you followed the twitter feed for Rubyconf this past week, you

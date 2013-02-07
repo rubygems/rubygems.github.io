@@ -3,8 +3,10 @@ layout: default
 title: RubyGems Blog
 ---
 
-{% for post in site.posts %}
-  {% assign index = true %}
-  {% assign content = post.content %}
-  {% include article.html %}
-{% endfor %}
+<section class="content-index">
+  {% for post in site.posts %}
+    {% assign index = true %}
+    {% assign content = post.content %}
+    {% include article.html %}
+  {% endfor %}
+</section>

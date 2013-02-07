@@ -6,6 +6,20 @@
       }
     }
 
+    &.post {
+      
+    }
+
+    &:not(.post), .changelog {
+      
+    }
+
+    .meta {
+      .author {
+        text-transform: capitalize;
+      }
+    }
+
     .content {
       display: none;
     }

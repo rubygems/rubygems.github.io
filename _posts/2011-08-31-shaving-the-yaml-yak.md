@@ -1,7 +1,9 @@
 ---
 title: Shaving a YAML Yak
 layout: post
+type: post
 author: tenderlove
+author_email: aaron.patterson@gmail.com
 ---
 
 Have you ever seen this error?
