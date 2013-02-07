@@ -366,13 +366,15 @@ article {
       display: none; }
   article h2 a {
     text-decoration: none; }
-  article footer p {
-    line-height: 50px; }
-    article footer p img {
-      float: left;
-      height: 50px;
-      margin-right: 1em;
-      width: 50px; }
+  article footer {
+    overflow: auto; }
+    article footer p {
+      line-height: 50px; }
+      article footer p img {
+        float: left;
+        height: 50px;
+        margin-right: 1em;
+        width: 50px; }
 
 .content-index {
   margin: 0;

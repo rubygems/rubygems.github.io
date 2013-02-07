@@ -12,7 +12,6 @@
 <article class="{{ page.type }}">
   <h2 class="title">{{ page.title }}</h2>
   <section class="meta">
-    <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
     <p>published <span class="date">{{ page.date | date_to_string }}</span></p>
   </section>
 {% endif %}
@@ -25,8 +24,13 @@
 
   <footer>
     <p>
-      <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
-      {{ post.author }}
-  </p>
+      {% if index %}
+        <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
+        {{ post.author }}
+      {% else %}
+        <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
+        {{ page.author }}
+      {% endif %}
+    </p>
   </footer>
 </article>
