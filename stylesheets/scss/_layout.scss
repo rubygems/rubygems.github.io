@@ -1,0 +1,46 @@
+header, article, footer {
+  background: #fff;
+  @include box-sizing(border-box);
+  display: block;
+  margin: auto;
+  max-width: 800px;
+  min-width: 400px;
+  padding: 0 2em;
+}
+
+header {
+  margin-bottom: 2.5em;
+  max-width: 100%;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+article {
+  background: #fff;
+  margin-bottom: 2.5em;
+  min-height: 80px;
+  padding: 1em 2em;
+  position: relative;
+
+  &:not(.post), .changelog {
+    background: transparent;
+    display: block;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    .meta img {
+      height: 50px;
+      left: -50px;
+      width: 50px;
+    }
+  }
+
+  .meta {
+    img {
+      @include position(absolute, 0px 0 0 -80px);
+    }
+  }
+}

@@ -10,21 +10,20 @@
   <body>
     <header>
       <h1><a href="/" title="Home">RubyGems.org</a></h1>
+      <nav>
+        <ul>
+          <li><a href="http://rubygems.org/gems">all gems</a></li>
+          <li><a href="http://rubygems.org/sign_in">sign in</a></li>
+          <li><a href="http://rubygems.org/sign_up">sign up</a></li>
+        </ul>
+        <form action="http://rubygems.org/search" method="get">
+          <div class="text_field">
+            <input id="query" name="query" type="text" placeholder="Search gems&hellip;" />
+          </div>
+          <input id="search_submit" name="commit" type="submit" value="Search" />
+        </form>
+      </nav>
     </header>
-
-    <nav>
-      <ul>
-        <li><a href="http://rubygems.org/gems">all gems</a></li>
-        <li><a href="http://rubygems.org/sign_in">sign in</a></li>
-        <li><a href="http://rubygems.org/sign_up">sign up</a></li>
-      </ul>
-      <form action="http://rubygems.org/search" method="get">
-        <div class="text_field">
-          <input id="query" name="query" type="text" placeholder="Search gems&hellip;" />
-        </div>
-        <input id="search_submit" name="commit" type="submit" value="Search" />
-      </form>
-    </nav>
 
     {{ content }}
 

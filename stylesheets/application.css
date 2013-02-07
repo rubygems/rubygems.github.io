@@ -330,9 +330,53 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.content-index article:first-child .content {
-  display: block; }
-.content-index article .meta .author {
-  text-transform: capitalize; }
-.content-index article .content {
-  display: none; }
+body {
+  background: #eee; }
+
+header, article, footer {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  max-width: 800px;
+  min-width: 400px;
+  padding: 0 2em; }
+
+header {
+  margin-bottom: 2.5em;
+  max-width: 100%;
+  width: 100%; }
+  header h1 {
+    margin: 0; }
+
+article {
+  background: #fff;
+  margin-bottom: 2.5em;
+  min-height: 80px;
+  padding: 1em 2em;
+  position: relative; }
+  article:not(.post), article .changelog {
+    background: transparent;
+    display: block;
+    padding-bottom: 0;
+    padding-top: 0; }
+    article:not(.post) .meta img, article .changelog .meta img {
+      height: 50px;
+      left: -50px;
+      width: 50px; }
+  article .meta img {
+    position: absolute;
+    top: 0px;
+    left: -80px; }
+
+.content-index {
+  margin: 0; }
+  .content-index li {
+    list-style-type: none;
+    margin: 0; }
+    .content-index li:first-child article .content {
+      display: block; }
+    .content-index li article .content {
+      display: none; }

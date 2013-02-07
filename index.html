@@ -3,10 +3,18 @@ layout: default
 title: RubyGems Blog
 ---
 
-<section class="content-index">
+<ul class="content-index">
   {% for post in site.posts %}
     {% assign index = true %}
     {% assign content = post.content %}
-    {% include article.html %}
+
+    {% capture current_year %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% capture next_year %}{{post.next.date | date: "%Y"}}{% endcapture %}
+
+    {% if current_year != next_year and next_year != '' %}
+    <li class="year-mark"><h3>{{ post.date | date: "%Y" }}</h3></li>
+    {% endif %}
+
+    <li>{% include article.html %}</li>
   {% endfor %}
-</section>
+</ul>

@@ -1,0 +1,18 @@
+.content-index {
+  margin: 0;
+
+  li {
+    list-style-type: none;
+    margin: 0;
+
+    &:first-child {
+      article .content {
+        display: block;
+      }
+    }
+
+    article .content {
+      display: none;
+    }
+  }
+}

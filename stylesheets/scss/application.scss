@@ -1,3 +1,7 @@
 @import 'normalize';
+@import 'bourbon/bourbon';
 
-@import 'posts';
+@import 'base';
+@import 'layout';
+
+@import 'posts-index';
