@@ -329,3 +329,8 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.content-index article:first-child .content {
+  display: block; }
+.content-index article .content {
+  display: none; }

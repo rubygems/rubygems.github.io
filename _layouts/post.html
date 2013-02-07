@@ -1,14 +1,6 @@
 ---
 layout: default
+type: post
 ---
-<article>
-  <h2 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
 
-  <section class="meta">
-    <p>published {{ page.date | date_to_string }} by {{ page.author }}</p>
-  </section>
-
-  <section class="content">
-    {{ content }}
-  </section>
-</article>
+{% include article.html %}

@@ -1,0 +1,13 @@
+.content-index {
+  article {
+    &:first-child {
+      .content {
+        display: block;
+      }
+    }
+
+    .content {
+      display: none;
+    }
+  }
+}
