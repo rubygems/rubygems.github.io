@@ -7,3 +7,29 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   text-rendering: optimizelegibility;
 }
+
+p a, li a {
+  border-bottom: 1px solid $red;
+  color: $red;
+  padding-bottom: 1px;
+  text-decoration: none;
+
+  &:hover, &:visited {
+    border-color: $red-dark;
+    color: $red-dark;
+  }
+}
+
+p, li, code, h1, h2, h3, h4, h5 {
+  line-height: 1.4em;
+}
+
+li {
+  margin-bottom: .4em;
+}
+
+code {
+  font-family: $code-font;
+  font-size: 95%;
+  font-weight: 400;
+}

@@ -21,6 +21,10 @@
       max-width: $max-width;
       text-decoration: none;
 
+      article h2.title {
+        line-height: 1em;
+      }
+
       article footer p {
         line-height: 30px;
 

@@ -11,7 +11,6 @@ body > header, article, body > footer {
 body > header {
   background: $red;
   height: 115px;
-  margin-bottom: 2.5em;
   max-width: 100%;
   overflow: auto;
   width: 100%;
@@ -20,11 +19,16 @@ body > header {
     color: #eee;
     display: block;
     float: left;
-    margin-top: 1.35em;
+    margin-top: 1.5em;
     text-decoration: none;
+
+    &:visited {
+      color: #eee;
+    }
 
     h1 {
       font-size: 2.6em;
+      line-height: 1.2em;
       margin: 0;
     }
 
@@ -32,12 +36,26 @@ body > header {
       color: #d3baba;
       font-family: $condensed-font;
       font-size: 1.2em;
+      line-height: 1em;
       margin: -.2em 0 0 4.75em;
     }
   }
 
   nav {
     float: right;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+
+      li {
+        float: left;
+      }
+    }
+
+    form {
+      
+    }
   }
 }
 
@@ -59,8 +77,32 @@ article {
     }
   }
 
-  h2 a {
-    text-decoration: none;
+  h2.title {
+    font-size: 2em;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .meta p {
+    margin-top: 0;
+  }
+
+  pre {
+    background: #1d1f21;
+    padding: 1em;
+    position: relative;
+
+    code {
+      display: block;
+    }
+  }
+
+  // inline code
+  code {
+    background: #1d1f21;
   }
 
   footer {

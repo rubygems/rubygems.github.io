@@ -469,6 +469,26 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   text-rendering: optimizelegibility; }
 
+p a, li a {
+  border-bottom: 1px solid #aa0612;
+  color: #aa0612;
+  padding-bottom: 1px;
+  text-decoration: none; }
+  p a:hover, p a:visited, li a:hover, li a:visited {
+    border-color: #300405;
+    color: #300405; }
+
+p, li, code, h1, h2, h3, h4, h5 {
+  line-height: 1.4em; }
+
+li {
+  margin-bottom: .4em; }
+
+code {
+  font-family: "source-code-pro", courier, monospace, sans-serif;
+  font-size: 95%;
+  font-weight: 400; }
+
 body > header, article, body > footer {
   background: #fff;
   -webkit-box-sizing: border-box;
@@ -476,14 +496,13 @@ body > header, article, body > footer {
   box-sizing: border-box;
   display: block;
   margin: auto;
-  max-width: 800px;
+  max-width: 700px;
   min-width: 400px;
   padding: 0 2em; }
 
 body > header {
   background: #aa0612;
   height: 115px;
-  margin-bottom: 2.5em;
   max-width: 100%;
   overflow: auto;
   width: 100%; }
@@ -491,18 +510,27 @@ body > header {
     color: #eee;
     display: block;
     float: left;
-    margin-top: 1.35em;
+    margin-top: 1.5em;
     text-decoration: none; }
+    body > header a:visited {
+      color: #eee; }
     body > header a h1 {
       font-size: 2.6em;
+      line-height: 1.2em;
       margin: 0; }
     body > header a h2 {
       color: #d3baba;
       font-family: "proxima-nova-extra-condensed", sans-serif;
       font-size: 1.2em;
+      line-height: 1em;
       margin: -0.2em 0 0 4.75em; }
   body > header nav {
     float: right; }
+    body > header nav ul {
+      list-style-type: none;
+      margin: 0; }
+      body > header nav ul li {
+        float: left; }
 
 article {
   background: #fff;
@@ -517,8 +545,21 @@ article {
     padding-top: 0; }
     article:not(.post) footer, article .changelog footer {
       display: none; }
-  article h2 a {
-    text-decoration: none; }
+  article h2.title {
+    font-size: 2em;
+    margin-bottom: 0; }
+    article h2.title a {
+      text-decoration: none; }
+  article .meta p {
+    margin-top: 0; }
+  article pre {
+    background: #1d1f21;
+    padding: 1em;
+    position: relative; }
+    article pre code {
+      display: block; }
+  article code {
+    background: #1d1f21; }
   article footer {
     overflow: auto; }
     article footer p {
@@ -543,8 +584,10 @@ article {
       color: #000;
       display: block;
       margin: auto;
-      max-width: 800px;
+      max-width: 700px;
       text-decoration: none; }
+      .content-index li > a article h2.title {
+        line-height: 1em; }
       .content-index li > a article footer p {
         line-height: 30px; }
         .content-index li > a article footer p img {
