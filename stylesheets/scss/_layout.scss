@@ -1,5 +1,4 @@
 body > header, article, body > footer {
-  background: #fff;
   @include box-sizing(border-box);
   display: block;
   margin: auto;
@@ -27,15 +26,18 @@ body > header {
     }
 
     h1 {
+      font-family: $header-font;
       font-size: 2.6em;
+      font-weight: 600;
       line-height: 1.2em;
       margin: 0;
     }
 
     h2 {
       color: #d3baba;
-      font-family: $condensed-font;
+      font-family: $extra-condensed-font;
       font-size: 1.2em;
+      font-weight: 600;
       line-height: 1em;
       margin: -.2em 0 0 4.75em;
     }
@@ -47,20 +49,25 @@ body > header {
     ul {
       list-style-type: none;
       margin: 0;
+      padding: 0;
 
       li {
         float: left;
+        font-size: 100%;
+        margin-right: 1em;
       }
     }
 
     form {
-      
+      input {
+        border: 0;
+        padding: .2em .4em;
+      }
     }
   }
 }
 
 article {
-  background: #fff;
   margin-bottom: 2.5em;
   min-height: 80px;
   padding: 1em 2em;
@@ -77,9 +84,21 @@ article {
     }
   }
 
-  h2.title {
-    font-size: 2em;
+  h3, h4, h5, h6 {
+    border-top: 2px solid #999;
+    display: inline-block;
+    font-size: 100%;
     margin-bottom: 0;
+    margin-top: 1em;
+    padding-top: .2em;
+    text-transform: uppercase;
+  }
+
+  h2.title {
+    font-size: 200%;
+    line-height: 1em;
+    margin-bottom: 0;
+    text-transform: lowercase;
 
     a {
       text-decoration: none;
@@ -87,13 +106,18 @@ article {
   }
 
   .meta p {
-    margin-top: 0;
+    font-family: $serif-body-sc;
+    font-weight: 400;
+    margin: 0 0 3em 0;
+    text-transform: lowercase;
   }
 
   pre {
     background: #1d1f21;
+    margin-left: -1em;
     padding: 1em;
     position: relative;
+    width: 100%;
 
     code {
       display: block;
@@ -106,6 +130,7 @@ article {
   }
 
   footer {
+    margin: 4em 0 0 0;
     overflow: auto;
 
     p {

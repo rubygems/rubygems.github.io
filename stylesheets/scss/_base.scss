@@ -1,23 +1,27 @@
 body {
-  background: #eee;
+  background: #efefef;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: $header-font;
-  font-weight: 600;
+  font-family: $serif-body-sc;
+  font-weight: 500;
   text-rendering: optimizelegibility;
 }
 
-p a, li a {
-  border-bottom: 1px solid $red;
+a {
   color: $red;
   padding-bottom: 1px;
   text-decoration: none;
 
   &:hover, &:visited {
-    border-color: $red-dark;
     color: $red-dark;
   }
+}
+
+p, li {
+  font-family: $serif-body;
+  font-size: 120%;
+  font-weight: 500;
 }
 
 p, li, code, h1, h2, h3, h4, h5 {
