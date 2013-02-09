@@ -21,7 +21,7 @@ body > header {
     margin-top: 1.5em;
     text-decoration: none;
 
-    &:visited {
+    &:hover, &:visited {
       color: #eee;
     }
 
@@ -31,6 +31,7 @@ body > header {
       font-weight: 600;
       line-height: 1.2em;
       margin: 0;
+      text-transform: none;
     }
 
     h2 {
@@ -69,45 +70,27 @@ body > header {
 
 article {
   margin-bottom: 2.5em;
-  min-height: 80px;
   padding: 1em 2em;
   position: relative;
-
-  &:not(.post), .changelog {
-    background: transparent;
-    display: block;
-    padding-bottom: 0;
-    padding-top: 0;
-
-    footer {
-      display: none;
-    }
-  }
 
   h3, h4, h5, h6 {
     border-top: 2px solid #999;
     display: inline-block;
-    font-size: 100%;
+    font-size: 120%;
     margin-bottom: 0;
     margin-top: 1em;
-    padding-top: .2em;
-    text-transform: uppercase;
   }
 
   h2.title {
-    font-size: 200%;
+    font-size: 220%;
     line-height: 1em;
     margin-bottom: 0;
-    text-transform: lowercase;
-
-    a {
-      text-decoration: none;
-    }
   }
 
   .meta p {
     font-family: $serif-body-sc;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1em;
     margin: 0 0 3em 0;
     text-transform: lowercase;
   }
@@ -130,7 +113,7 @@ article {
   }
 
   footer {
-    margin: 4em 0 0 0;
+    margin: 2em 0 0 0;
     overflow: auto;
 
     p {

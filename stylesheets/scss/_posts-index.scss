@@ -1,40 +1,85 @@
 .content-index {
   margin: 0;
+  overflow: auto;
   padding: 0;
+  width: 100%;
 
   li {
+    @include box-sizing(border-box);
+    display: inline-block;
+    float: left;
     list-style-type: none;
-    width: 100%;
+    width: 20%;
 
     &:first-child {
       display: none;
     }
 
     &.year-mark {
-      text-align: center;
-    }
-
-    > a {
-      border: 0;
-      color: #000;
+      background: transparent;
+      clear: both;
       display: block;
-      margin: auto;
-      max-width: $max-width;
-      text-decoration: none;
+      float: none;
+      height: auto;
+      line-height: 1.5em;
+      margin: 1em;
+      padding: 0;
+      width: auto;
 
-      article footer p {
-        line-height: 30px;
-
-        img {
-          height: 30px;
-          margin-right: .6em;
-          width: 30px;
-        }
+      h3 {
+        display: inline;
+        border-top: 2px solid #999;
+        margin: 0;
       }
     }
 
-    article .content {
-      display: none;
+    > a {
+      display: block;
+      text-decoration: none;
+      width: 100%;
+
+      article {
+        min-width: auto;
+        padding: 0 1em;
+
+        &:not(.post), .changelog {
+          footer {
+            display: none;
+          }
+        }
+
+        h2.title {
+          font-size: 110%;
+        }
+
+        .meta p {
+          color: #999;
+          font-size: 110%;
+          margin-bottom: 1em;
+          text-transform: lowercase;
+        }
+
+        .content {
+          display: none;
+        }
+
+        footer {
+          margin: 0;
+          bottom: 0;
+
+          p {
+            font-size: 100%;
+            line-height: 30px;
+            margin: 0;
+
+            img {
+              height: 30px;
+              margin-right: .5em;
+              width: 30px;
+            }
+          }
+        }
+      }
     }
   }
 }

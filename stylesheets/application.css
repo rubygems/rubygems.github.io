@@ -467,10 +467,11 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: "ff-meta-serif-sc-web-pro", serif;
   font-weight: 500;
-  text-rendering: optimizelegibility; }
+  text-rendering: optimizelegibility;
+  text-transform: lowercase; }
 
 a {
-  color: #aa0612;
+  color: #b92731;
   padding-bottom: 1px;
   text-decoration: none; }
   a:hover, a:visited {
@@ -498,12 +499,12 @@ body > header, article, body > footer {
   box-sizing: border-box;
   display: block;
   margin: auto;
-  max-width: 700px;
+  max-width: 650px;
   min-width: 400px;
   padding: 0 2em; }
 
 body > header {
-  background: #aa0612;
+  background: #b92731;
   height: 115px;
   max-width: 100%;
   overflow: auto;
@@ -514,14 +515,15 @@ body > header {
     float: left;
     margin-top: 1.5em;
     text-decoration: none; }
-    body > header a:visited {
+    body > header a:hover, body > header a:visited {
       color: #eee; }
     body > header a h1 {
       font-family: "proxima-nova", sans-serif;
       font-size: 2.6em;
       font-weight: 600;
       line-height: 1.2em;
-      margin: 0; }
+      margin: 0;
+      text-transform: none; }
     body > header a h2 {
       color: #d3baba;
       font-family: "proxima-nova-extra-condensed", sans-serif;
@@ -545,34 +547,22 @@ body > header {
 
 article {
   margin-bottom: 2.5em;
-  min-height: 80px;
   padding: 1em 2em;
   position: relative; }
-  article:not(.post), article .changelog {
-    background: transparent;
-    display: block;
-    padding-bottom: 0;
-    padding-top: 0; }
-    article:not(.post) footer, article .changelog footer {
-      display: none; }
   article h3, article h4, article h5, article h6 {
     border-top: 2px solid #999999;
     display: inline-block;
-    font-size: 100%;
+    font-size: 120%;
     margin-bottom: 0;
-    margin-top: 1em;
-    padding-top: .2em;
-    text-transform: uppercase; }
+    margin-top: 1em; }
   article h2.title {
-    font-size: 200%;
+    font-size: 220%;
     line-height: 1em;
-    margin-bottom: 0;
-    text-transform: lowercase; }
-    article h2.title a {
-      text-decoration: none; }
+    margin-bottom: 0; }
   article .meta p {
     font-family: "ff-meta-serif-sc-web-pro", serif;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1em;
     margin: 0 0 3em 0;
     text-transform: lowercase; }
   article pre {
@@ -586,7 +576,7 @@ article {
   article code {
     background: #1d1f21; }
   article footer {
-    margin: 4em 0 0 0;
+    margin: 2em 0 0 0;
     overflow: auto; }
     article footer p {
       line-height: 50px; }
@@ -598,26 +588,59 @@ article {
 
 .content-index {
   margin: 0;
-  padding: 0; }
+  overflow: auto;
+  padding: 0;
+  width: 100%; }
   .content-index li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
     list-style-type: none;
-    width: 100%; }
+    width: 20%; }
     .content-index li:first-child {
       display: none; }
     .content-index li.year-mark {
-      text-align: center; }
-    .content-index li > a {
-      border: 0;
-      color: #000;
+      background: transparent;
+      clear: both;
       display: block;
-      margin: auto;
-      max-width: 700px;
-      text-decoration: none; }
-      .content-index li > a article footer p {
-        line-height: 30px; }
-        .content-index li > a article footer p img {
-          height: 30px;
-          margin-right: .6em;
-          width: 30px; }
-    .content-index li article .content {
-      display: none; }
+      float: none;
+      height: auto;
+      line-height: 1.5em;
+      margin: 1em;
+      padding: 0;
+      width: auto; }
+      .content-index li.year-mark h3 {
+        display: inline;
+        border-top: 2px solid #999999;
+        margin: 0; }
+    .content-index li > a {
+      display: block;
+      text-decoration: none;
+      width: 100%; }
+      .content-index li > a article {
+        min-width: auto;
+        padding: 0 1em; }
+        .content-index li > a article:not(.post) footer, .content-index li > a article .changelog footer {
+          display: none; }
+        .content-index li > a article h2.title {
+          font-size: 110%; }
+        .content-index li > a article .meta p {
+          color: #999;
+          font-size: 110%;
+          margin-bottom: 1em;
+          text-transform: lowercase; }
+        .content-index li > a article .content {
+          display: none; }
+        .content-index li > a article footer {
+          margin: 0;
+          bottom: 0; }
+          .content-index li > a article footer p {
+            font-size: 100%;
+            line-height: 30px;
+            margin: 0; }
+            .content-index li > a article footer p img {
+              height: 30px;
+              margin-right: .5em;
+              width: 30px; }
