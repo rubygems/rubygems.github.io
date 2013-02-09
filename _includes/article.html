@@ -26,10 +26,10 @@
     <p>
       {% if index %}
         <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
-        {{ post.author }}
+        <span>&mdash;</span> {{ post.author }}
       {% else %}
         <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
-        {{ page.author }}
+        <span>&mdash;</span> {{ page.author }}
       {% endif %}
     </p>
   </footer>

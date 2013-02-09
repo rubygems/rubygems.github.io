@@ -3,7 +3,6 @@ body > header, article, body > footer {
   display: block;
   margin: auto;
   max-width: $max-width;
-  min-width: 400px;
   padding: 0 2em;
 }
 
@@ -91,12 +90,13 @@ article {
     font-family: $serif-body-sc;
     font-weight: 500;
     line-height: 1em;
-    margin: 0 0 3em 0;
+    margin: .2em 0 3em 0;
     text-transform: lowercase;
   }
 
   pre {
     background: #1d1f21;
+    font-size: 120%;
     margin-left: -1em;
     padding: 1em;
     position: relative;
