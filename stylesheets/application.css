@@ -470,6 +470,9 @@ h1, h2, h3, h4, h5 {
   text-rendering: optimizelegibility;
   text-transform: lowercase; }
 
+img {
+  max-width: 100%; }
+
 a {
   color: #b92731;
   padding-bottom: 1px;
@@ -487,6 +490,10 @@ p, li, code, h1, h2, h3, h4, h5 {
 
 li {
   margin-bottom: .4em; }
+
+pre {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 code {
   font-family: "source-code-pro", courier, monospace, sans-serif;
