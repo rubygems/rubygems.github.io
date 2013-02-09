@@ -1,7 +1,17 @@
+.other-posts {
+  @include box-sizing(border-box);
+  font-size: 220%;
+  margin: auto;
+  margin-top: 1.5em;
+  max-width: $max-width;
+  padding: 0 2rem;
+}
+
 .content-index {
-  margin: 0;
+  @include box-sizing(border-box);
+  margin: 0 auto;
   overflow: auto;
-  padding: 0;
+  padding: 0 2em;
   width: 100%;
 
   li {

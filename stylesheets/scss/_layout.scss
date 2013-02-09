@@ -128,3 +128,26 @@ article {
     }
   }
 }
+
+body > footer {
+  background: $red-dark;
+  height: 115px;
+  margin-top: 2em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 2em;
+  width: 100%;
+
+  a, a:visited, a:hover {
+    color: rgba(255, 255, 255, .5);
+    display: block;
+    float: left;
+    font-family: $header-font;
+    line-height: 55px;
+    margin-right: 1.2em;
+  }
+
+  img {
+    height: 55px;
+  }
+}

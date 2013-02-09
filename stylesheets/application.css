@@ -483,7 +483,7 @@ p, li {
   font-weight: 500; }
 
 p, li, code, h1, h2, h3, h4, h5 {
-  line-height: 1.4em; }
+  line-height: 1.5em; }
 
 li {
   margin-bottom: .4em; }
@@ -586,10 +586,41 @@ article {
         margin-right: 1em;
         width: 50px; }
 
-.content-index {
-  margin: 0;
+body > footer {
+  background: #300405;
+  height: 115px;
+  margin-top: 2em;
+  max-width: 100%;
   overflow: auto;
-  padding: 0;
+  padding: 2em;
+  width: 100%; }
+  body > footer a, body > footer a:visited, body > footer a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    float: left;
+    font-family: "proxima-nova", sans-serif;
+    line-height: 55px;
+    margin-right: 1.2em; }
+  body > footer img {
+    height: 55px; }
+
+.other-posts {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 220%;
+  margin: auto;
+  margin-top: 1.5em;
+  max-width: 650px;
+  padding: 0 2rem; }
+
+.content-index {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 2em;
   width: 100%; }
   .content-index li {
     -webkit-box-sizing: border-box;
