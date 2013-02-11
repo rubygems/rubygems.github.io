@@ -623,9 +623,12 @@ article {
     margin-top: 1.2em;
     padding-top: .3em; }
   article h2.title {
+    font-family: "proxima-nova", sans-serif;
     font-size: 220%;
+    font-weight: bold;
     line-height: 1em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-transform: capitalize; }
   article .meta p {
     font-family: "ff-meta-serif-sc-web-pro", serif;
     font-weight: 500;
@@ -677,11 +680,14 @@ article {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: "proxima-nova", sans-serif;
     font-size: 220%;
+    font-weight: bold;
     margin: auto;
     margin-top: 1.5em;
     max-width: 650px;
-    padding: 0 2rem; }
+    padding: 0 2rem;
+    text-transform: capitalize; }
 
 .content-index {
   -webkit-box-sizing: border-box;
@@ -728,7 +734,8 @@ article {
         .content-index li > a article:not(.post) footer, .content-index li > a article .changelog footer {
           display: none; }
         .content-index li > a article h2.title {
-          font-size: 110%; }
+          font-size: 110%;
+          line-height: 1.2em; }
         .content-index li > a article .meta p {
           color: #999;
           font-size: 110%;

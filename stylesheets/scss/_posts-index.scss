@@ -4,11 +4,14 @@
 
   > h2 {
     @include box-sizing(border-box);
+    font-family: $header-font;
     font-size: 220%;
+    font-weight: bold;
     margin: auto;
     margin-top: 1.5em;
     max-width: $max-width;
     padding: 0 2rem;
+    text-transform: capitalize;
   }
 }
 
@@ -68,6 +71,7 @@
 
         h2.title {
           font-size: 110%;
+          line-height: 1.2em;
         }
 
         .meta p {

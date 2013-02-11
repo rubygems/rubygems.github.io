@@ -14,9 +14,12 @@ article {
   }
 
   h2.title {
+    font-family: $header-font;
     font-size: 220%;
+    font-weight: bold;
     line-height: 1em;
     margin-bottom: 0;
+    text-transform: capitalize;
   }
 
   .meta p {
