@@ -1,0 +1,70 @@
+article {
+  margin-bottom: 2.5em;
+  padding: 1em 2em;
+  position: relative;
+
+  h3, h4, h5, h6 {
+    border-top: 2px solid #999;
+    display: inline-block;
+    font-size: 120%;
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+
+  h2.title {
+    font-size: 220%;
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+
+  .meta p {
+    font-family: $serif-body-sc;
+    font-weight: 500;
+    line-height: 1em;
+    margin: .2em 0 3em 0;
+    text-transform: lowercase;
+  }
+
+  pre {
+    background: #1d1f21;
+    font-size: 120%;
+    margin-left: -1em;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+
+    code {
+      display: block;
+    }
+  }
+
+  // inline code
+  code {
+    background: #1d1f21;
+  }
+
+  footer {
+    margin: 2em 0 0 0;
+    overflow: auto;
+
+    p {
+      line-height: 50px;
+
+      img {
+        float: left;
+        height: 50px;
+        margin-right: 1em;
+        width: 50px;
+      }
+    }
+  }
+}
+
+.allposts {
+  display: inline-block;
+  font-family: $header-font;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 0 0 2.5em 0;
+  padding: 0 2em;
+}

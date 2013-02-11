@@ -20,10 +20,10 @@ feature.
 
 Some photos from the event:
 
-![Hacking at the bar!](https://pbs.twimg.com/media/A61IcDFCUAEImDl.jpg:small)
-![Hacking!](https://pbs.twimg.com/media/A60S2muCYAEJrdq.jpg:small)
-![More Hacking!](https://pbs.twimg.com/media/A61InubCEAAtGP5.jpg:small)
-![Holy Hacking!](https://pbs.twimg.com/media/A60RvRxCYAEhg0Z.jpg:small)
+![Hacking at the bar!](https://pbs.twimg.com/media/A61IcDFCUAEImDl.jpg:medium)
+![Hacking!](https://pbs.twimg.com/media/A60S2muCYAEJrdq.jpg:medium)
+![More Hacking!](https://pbs.twimg.com/media/A61InubCEAAtGP5.jpg:medium)
+![Holy Hacking!](https://pbs.twimg.com/media/A60RvRxCYAEhg0Z.jpg:medium)
 
 I'm still in the process of working through the open pull requests and
 issues which need further commenting, but I wanted to provide some of

@@ -1,5 +1,5 @@
 body {
-  background: #efefef;
+  background: rgb(250, 250, 250);
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,6 +27,10 @@ p, li {
   font-family: $serif-body;
   font-size: 120%;
   font-weight: 500;
+}
+
+li p, li li {
+  font-size: 100%;
 }
 
 p, li, code, h1, h2, h3, h4, h5 {

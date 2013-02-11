@@ -1,10 +1,15 @@
 .other-posts {
-  @include box-sizing(border-box);
-  font-size: 220%;
-  margin: auto;
-  margin-top: 1.5em;
-  max-width: $max-width;
-  padding: 0 2rem;
+  background: #eee;
+  border-top: 2px solid #e0e0e0;
+
+  > h2 {
+    @include box-sizing(border-box);
+    font-size: 220%;
+    margin: auto;
+    margin-top: 1.5em;
+    max-width: $max-width;
+    padding: 0 2rem;
+  }
 }
 
 .content-index {
@@ -18,8 +23,9 @@
     @include box-sizing(border-box);
     display: inline-block;
     float: left;
+    height: 180px;
     list-style-type: none;
-    width: 20%;
+    width: 185px;
 
     &:first-child {
       display: none;
@@ -30,10 +36,11 @@
       clear: both;
       display: block;
       float: none;
+      font-size: 100%;
       height: auto;
       line-height: 1.5em;
-      margin: 1em;
-      padding: 0;
+      margin: 0;
+      padding: 2.5em 1em 1em 1em;
       width: auto;
 
       h3 {
@@ -49,6 +56,7 @@
       width: 100%;
 
       article {
+        margin-bottom: 1em;
         min-width: auto;
         padding: 0 1em;
 
@@ -65,7 +73,7 @@
         .meta p {
           color: #999;
           font-size: 110%;
-          margin-bottom: 1em;
+          margin-bottom: 1.5em;
           text-transform: lowercase;
         }
 
@@ -81,6 +89,10 @@
             font-size: 100%;
             line-height: 30px;
             margin: 0;
+
+            span {
+              display: none;
+            }
 
             img {
               height: 30px;

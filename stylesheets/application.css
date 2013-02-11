@@ -462,7 +462,7 @@ li.L9 {
   /* */ }
 
 body {
-  background: #efefef; }
+  background: #fafafa; }
 
 h1, h2, h3, h4, h5 {
   font-family: "ff-meta-serif-sc-web-pro", serif;
@@ -484,6 +484,9 @@ p, li {
   font-family: "ff-meta-serif-web-pro", serif;
   font-size: 120%;
   font-weight: 500; }
+
+li p, li li {
+  font-size: 100%; }
 
 p, li, code, h1, h2, h3, h4, h5 {
   line-height: 1.5em; }
@@ -551,6 +554,29 @@ body > header {
       border: 0;
       padding: 0.2em 0.4em; }
 
+body > footer {
+  background: #300405;
+  max-width: 100%;
+  overflow: auto;
+  padding: 2em;
+  width: 100%; }
+  body > footer.stickbottom {
+    position: absolute;
+    bottom: 0px; }
+  body > footer a {
+    font-weight: bold; }
+  body > footer a, body > footer a:visited, body > footer a:hover, body > footer span {
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    float: left;
+    font-family: "proxima-nova", sans-serif;
+    line-height: 55px;
+    margin-right: 1.2em; }
+  body > footer a#thoughtbot, body > footer a#rubycentral {
+    line-height: 0; }
+  body > footer img {
+    height: 55px; }
+
 article {
   margin-bottom: 2.5em;
   padding: 1em 2em;
@@ -593,33 +619,26 @@ article {
         margin-right: 1em;
         width: 50px; }
 
-body > footer {
-  background: #300405;
-  height: 115px;
-  margin-top: 2em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 2em;
-  width: 100%; }
-  body > footer a, body > footer a:visited, body > footer a:hover {
-    color: rgba(255, 255, 255, 0.5);
-    display: block;
-    float: left;
-    font-family: "proxima-nova", sans-serif;
-    line-height: 55px;
-    margin-right: 1.2em; }
-  body > footer img {
-    height: 55px; }
+.allposts {
+  display: inline-block;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 0 0 2.5em 0;
+  padding: 0 2em; }
 
 .other-posts {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 220%;
-  margin: auto;
-  margin-top: 1.5em;
-  max-width: 650px;
-  padding: 0 2rem; }
+  background: #eee;
+  border-top: 2px solid #e0e0e0; }
+  .other-posts > h2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 220%;
+    margin: auto;
+    margin-top: 1.5em;
+    max-width: 650px;
+    padding: 0 2rem; }
 
 .content-index {
   -webkit-box-sizing: border-box;
@@ -635,8 +654,9 @@ body > footer {
     box-sizing: border-box;
     display: inline-block;
     float: left;
+    height: 180px;
     list-style-type: none;
-    width: 20%; }
+    width: 185px; }
     .content-index li:first-child {
       display: none; }
     .content-index li.year-mark {
@@ -644,10 +664,11 @@ body > footer {
       clear: both;
       display: block;
       float: none;
+      font-size: 100%;
       height: auto;
       line-height: 1.5em;
-      margin: 1em;
-      padding: 0;
+      margin: 0;
+      padding: 2.5em 1em 1em 1em;
       width: auto; }
       .content-index li.year-mark h3 {
         display: inline;
@@ -658,6 +679,7 @@ body > footer {
       text-decoration: none;
       width: 100%; }
       .content-index li > a article {
+        margin-bottom: 1em;
         min-width: auto;
         padding: 0 1em; }
         .content-index li > a article:not(.post) footer, .content-index li > a article .changelog footer {
@@ -667,7 +689,7 @@ body > footer {
         .content-index li > a article .meta p {
           color: #999;
           font-size: 110%;
-          margin-bottom: 1em;
+          margin-bottom: 1.5em;
           text-transform: lowercase; }
         .content-index li > a article .content {
           display: none; }
@@ -678,6 +700,8 @@ body > footer {
             font-size: 100%;
             line-height: 30px;
             margin: 0; }
+            .content-index li > a article footer p span {
+              display: none; }
             .content-index li > a article footer p img {
               height: 30px;
               margin-right: .5em;
