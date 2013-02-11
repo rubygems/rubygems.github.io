@@ -706,6 +706,11 @@ article {
     height: 180px;
     list-style-type: none;
     width: 185px; }
+    @media (max-device-width: 480px) {
+      .content-index li {
+        float: none;
+        height: auto;
+        width: 100%; } }
     .content-index li:first-child {
       display: none; }
     .content-index li.year-mark {
@@ -719,6 +724,9 @@ article {
       margin: 0;
       padding: 2.5em 1em 1em 1em;
       width: auto; }
+      @media (max-device-width: 480px) {
+        .content-index li.year-mark {
+          padding-left: 0; } }
       .content-index li.year-mark h3 {
         display: inline;
         border-top: 2px solid #999999;
@@ -731,6 +739,9 @@ article {
         margin-bottom: 1em;
         min-width: auto;
         padding: 0 1em; }
+        @media (max-device-width: 480px) {
+          .content-index li > a article {
+            padding: 0; } }
         .content-index li > a article:not(.post) footer, .content-index li > a article .changelog footer {
           display: none; }
         .content-index li > a article h2.title {

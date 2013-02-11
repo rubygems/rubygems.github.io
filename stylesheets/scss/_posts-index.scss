@@ -30,6 +30,12 @@
     list-style-type: none;
     width: 185px;
 
+    @include mobile {
+      float: none;
+      height: auto;
+      width: 100%;
+    }
+
     &:first-child {
       display: none;
     }
@@ -45,6 +51,10 @@
       margin: 0;
       padding: 2.5em 1em 1em 1em;
       width: auto;
+
+      @include mobile {
+        padding-left: 0;
+      }
 
       h3 {
         display: inline;
@@ -62,6 +72,10 @@
         margin-bottom: 1em;
         min-width: auto;
         padding: 0 1em;
+
+        @include mobile {
+          padding: 0;
+        }
 
         &:not(.post), .changelog {
           footer {
