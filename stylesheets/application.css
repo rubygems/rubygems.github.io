@@ -518,6 +518,10 @@ body > header {
   max-width: 100%;
   overflow: auto;
   width: 100%; }
+  @media (max-device-width: 480px) {
+    body > header {
+      height: auto;
+      padding-bottom: 2em; } }
   body > header a {
     color: #eee;
     display: block;
@@ -533,6 +537,10 @@ body > header {
       line-height: 1.2em;
       margin: 0;
       text-transform: none; }
+      @media (max-device-width: 480px) {
+        body > header a h1 {
+          font-size: 2.4em;
+          margin-right: .5em; } }
     body > header a h2 {
       color: #d3baba;
       font-family: "proxima-nova-extra-condensed", sans-serif;
@@ -540,8 +548,16 @@ body > header {
       font-weight: 600;
       line-height: 1em;
       margin: -0.2em 0 0 4.75em; }
+      @media (max-device-width: 480px) {
+        body > header a h2 {
+          font-size: 1.1em;
+          margin: -0.25em 0 0 4.65em; } }
   body > header nav {
-    float: right; }
+    float: right;
+    margin-top: .25em; }
+    @media (max-device-width: 480px) {
+      body > header nav {
+        float: left; } }
     body > header nav ul {
       list-style-type: none;
       margin: 0;
@@ -552,7 +568,24 @@ body > header {
         margin-right: 1em; }
     body > header nav form input {
       border: 0;
+      border-radius: 3px;
+      font-family: "proxima-nova", sans-serif;
+      font-size: 100%;
+      font-weight: bold;
       padding: 0.2em 0.4em; }
+      body > header nav form input[type="text"] {
+        width: 200px; }
+        @media (max-device-width: 480px) {
+          body > header nav form input[type="text"] {
+            width: 140px; } }
+      body > header nav form input[type="submit"] {
+        background: white;
+        -webkit-box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+        color: #300405; }
+        body > header nav form input[type="submit"]:focus, body > header nav form input[type="submit"]:active {
+          -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2); }
 
 body > footer {
   background: #300405;
@@ -585,8 +618,10 @@ article {
     border-top: 2px solid #999999;
     display: inline-block;
     font-size: 120%;
+    line-height: 1.2em;
     margin-bottom: 0;
-    margin-top: 1em; }
+    margin-top: 1.2em;
+    padding-top: .3em; }
   article h2.title {
     font-size: 220%;
     line-height: 1em;
@@ -625,7 +660,15 @@ article {
   font-size: 110%;
   font-weight: bold;
   margin: 0 0 2.5em 0;
-  padding: 0 2em; }
+  padding: 0 2em;
+  position: relative;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .allposts:hover {
+    left: -3px; }
 
 .other-posts {
   background: #eee;
@@ -689,7 +732,7 @@ article {
         .content-index li > a article .meta p {
           color: #999;
           font-size: 110%;
-          margin-bottom: 1.5em;
+          margin-bottom: .5em;
           text-transform: lowercase; }
         .content-index li > a article .content {
           display: none; }
