@@ -3,7 +3,7 @@
   {% if truncated %}
     <h2 class="title">{{ post.title }}</h2>
   {% else %}
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
   {% endif %}
   <section class="meta">
     <p>published <span class="date">{{ post.date | date_to_string }}</span></p>
