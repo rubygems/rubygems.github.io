@@ -13,21 +13,49 @@ article {
     padding-top: .3em;
   }
 
-  h2.title {
-    font-family: $header-font;
-    font-size: 220%;
-    font-weight: bold;
-    line-height: 1em;
-    margin-bottom: 0;
-    text-transform: capitalize;
+  hgroup {
+    h2.title {
+      font-family: $header-font;
+      font-size: 220%;
+      font-weight: 900;
+      line-height: 1em;
+      margin-bottom: 0;
+      text-transform: capitalize;
+    }
+
+    .meta p {
+      font-family: $serif-body-sc;
+      font-weight: 500;
+      line-height: 1em;
+      margin: .2em 0 3em 0;
+      text-transform: lowercase;
+    }
   }
 
-  .meta p {
-    font-family: $serif-body-sc;
-    font-weight: 500;
-    line-height: 1em;
-    margin: .2em 0 3em 0;
-    text-transform: lowercase;
+  &.post hgroup {
+    color: #999;
+    left: 2em;
+    margin-top: 3.6em;
+    position: fixed;
+    z-index: -1;
+
+    h2.title {
+      font-size: 500%;
+      margin-top: 0;
+    }
+
+    .meta p {
+      font-size: 150%;
+
+    }
+  }
+
+  &.post .content {
+    margin-top: 4em;
+
+    > p:first-child, > h3:first-child, > h4:first-child {
+      margin-top: 0;
+    }
   }
 
   pre {

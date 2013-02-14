@@ -1,35 +1,39 @@
 {% if index %}
-<article class="{{ post.type }}">
+<article class="index">
+  <hgroup>
   {% if truncated %}
     <h2 class="title">{{ post.title }}</h2>
   {% else %}
     <h2 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
   {% endif %}
-  <section class="meta">
-    <p>published <span class="date">{{ post.date | date_to_string }}</span></p>
-  </section>
+    <section class="meta">
+      <p>published <span class="date">{{ post.date | date_to_string }}</span></p>
+    </section>
+  </hgroup>
 {% else %}
-<article class="{{ page.type }}">
-  <h2 class="title">{{ page.title }}</h2>
-  <section class="meta">
-    <p>published <span class="date">{{ page.date | date_to_string }}</span></p>
-  </section>
+<article class="post">
+  <hgroup>
+    <h2 class="title">{{ page.title }}</h2>
+    <section class="meta">
+      <p>published <span class="date">{{ page.date | date_to_string }}</span></p>
+    </section>
+  </hgroup>
 {% endif %}
 
   {% if truncated != true %}
-    <section class="content">
-      {{ content }}
-    </section>
+  <section class="content">
+    {{ content }}
+  </section>
   {% endif %}
 
   <footer>
     <p>
       {% if index %}
-        <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
-        <span>&mdash;</span> {{ post.author }}
+      <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
+      <span>&mdash;</span> {{ post.author }}
       {% else %}
-        <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
-        <span>&mdash;</span> {{ page.author }}
+      <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
+      <span>&mdash;</span> {{ page.author }}
       {% endif %}
     </p>
   </footer>

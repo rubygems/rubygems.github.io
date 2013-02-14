@@ -622,19 +622,34 @@ article {
     margin-bottom: 0;
     margin-top: 1.2em;
     padding-top: .3em; }
-  article h2.title {
+  article hgroup h2.title {
     font-family: "proxima-nova", sans-serif;
     font-size: 220%;
-    font-weight: bold;
+    font-weight: 900;
     line-height: 1em;
     margin-bottom: 0;
     text-transform: capitalize; }
-  article .meta p {
+  article hgroup .meta p {
     font-family: "ff-meta-serif-sc-web-pro", serif;
     font-weight: 500;
     line-height: 1em;
     margin: 0.2em 0 3em 0;
     text-transform: lowercase; }
+  article.post hgroup {
+    color: #999;
+    left: 2em;
+    margin-top: 3.6em;
+    position: fixed;
+    z-index: -1; }
+    article.post hgroup h2.title {
+      font-size: 500%;
+      margin-top: 0; }
+    article.post hgroup .meta p {
+      font-size: 150%; }
+  article.post .content {
+    margin-top: 4em; }
+    article.post .content > p:first-child, article.post .content > h3:first-child, article.post .content > h4:first-child {
+      margin-top: 0; }
   article pre {
     background: #1d1f21;
     font-size: 120%;
@@ -746,6 +761,7 @@ article {
           display: none; }
         .content-index li > a article h2.title {
           font-size: 110%;
+          font-weight: 600;
           line-height: 1.2em; }
         .content-index li > a article .meta p {
           color: #999;
