@@ -84,7 +84,7 @@ body > header {
         border-radius: 3px;
         font-family: $header-font;
         font-size: 100%;
-        font-weight: bold;
+        font-weight: 600;
         padding: .2em .4em;
 
         &[type="text"] {
@@ -121,7 +121,7 @@ body > footer {
   }
 
   a {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   a, a:visited, a:hover, span {

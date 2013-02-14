@@ -571,7 +571,7 @@ body > header {
       border-radius: 3px;
       font-family: "proxima-nova", sans-serif;
       font-size: 100%;
-      font-weight: bold;
+      font-weight: 600;
       padding: 0.2em 0.4em; }
       body > header nav form input[type="text"] {
         width: 200px; }
@@ -597,7 +597,7 @@ body > footer {
     position: absolute;
     bottom: 0px; }
   body > footer a {
-    font-weight: bold; }
+    font-weight: 600; }
   body > footer a, body > footer a:visited, body > footer a:hover, body > footer span {
     color: rgba(255, 255, 255, 0.5);
     display: block;
@@ -676,7 +676,7 @@ article {
   display: inline-block;
   font-family: "proxima-nova", sans-serif;
   font-size: 110%;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0 0 2.5em 0;
   padding: 0 2em;
   position: relative;
@@ -697,7 +697,7 @@ article {
     box-sizing: border-box;
     font-family: "proxima-nova", sans-serif;
     font-size: 220%;
-    font-weight: bold;
+    font-weight: 600;
     margin: auto;
     margin-top: 1.5em;
     max-width: 650px;
