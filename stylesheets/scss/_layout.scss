@@ -1,36 +1,18 @@
-body > header, article, body > footer, .allcontent {
-  @include box-sizing(border-box);
-  display: block;
-  margin: auto;
-  max-width: $max-width;
-  padding: 0 2em;
-}
-
-.allcontent {
+body > header > nav, article, body > footer > nav, .allcontent {
+  @extend %fullwidth;
   position: relative;
 }
 
 body > header {
   background: $red;
   height: 240px;
-  max-width: 100%;
   overflow: auto;
-  padding: 0;
-  width: 100%;
-
-  @include mobile {
-    height: auto;
-    padding-bottom: 2em;
-  }
 
   nav {
-    @include box-sizing(border-box);
-    margin: auto;
-    max-width: $max-width;
-    padding: 0 2em;
+    @extend %fullwidth;
   }
 
-  nav > a {
+  .logo {
     color: #eee;
     display: block;
     float: left;
@@ -48,11 +30,6 @@ body > header {
       line-height: 1.2em;
       margin: 0;
       text-transform: none;
-
-      @include mobile {
-        font-size: 2.4em;
-        margin-right: .5em;
-      }
     }
 
     h2 {
@@ -62,11 +39,6 @@ body > header {
       font-weight: 600;
       line-height: 1em;
       margin: -.2em 0 0 4.75em;
-
-      @include mobile {
-        font-size: 1.1em;
-        margin: -.25em 0 0 4.65em;
-      }
     }
   }
 
@@ -74,10 +46,6 @@ body > header {
     float: right;
     margin-top: 64px;
     width: 280px;
-
-    @include mobile {
-      float: left;
-    }
 
     ul {
       list-style-type: none;
@@ -109,10 +77,6 @@ body > header {
 
         &[type="text"] {
           width: 195px;
-
-          @include mobile {
-            width: 140px;
-          }
         }
 
         &[type="submit"] {
@@ -131,24 +95,15 @@ body > header {
 
 body > footer {
   background: $red-dark;
-  max-width: 100%;
   overflow: auto;
   padding: 2em 0;
-  width: 100%;
 
   nav {
-    @include box-sizing(border-box);
-    margin: auto;
     max-width: $max-article-width;
-    padding: 0 2em;
   }
 
   &.stickbottom {
     @include position(absolute, 0 0 0px 0);
-  }
-
-  a {
-    font-weight: 600;
   }
 
   a, a:visited, a:hover, span {
@@ -160,11 +115,17 @@ body > footer {
     margin-right: 1.2em;
   }
 
-  a#thoughtbot, a#rubycentral {
-    line-height: 0;
+  a {
+    font-weight: 600;
   }
 
-  img {
-    height: 55px;
+  a#thoughtbot, a#rubycentral {
+    line-height: 0;
+
+    img {
+      height: 55px;
+    }
   }
+
 }
+

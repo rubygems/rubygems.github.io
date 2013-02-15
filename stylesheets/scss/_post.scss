@@ -4,8 +4,6 @@ article {
   margin-bottom: 2.5em;
   max-width: $max-article-width;
   padding: 1em 2em;
-  position: relative;
-  position: relative;
   top: -200px;
 
   h3, h4, h5, h6 {
@@ -20,12 +18,7 @@ article {
 
   hgroup {
     h2.title {
-      font-family: $header-font;
-      font-size: 220%;
-      font-weight: 900;
-      line-height: 1em;
-      margin: 1em 0 0 0;
-      text-transform: capitalize;
+      @extend %articletitle;
     }
 
     .meta p {
@@ -34,14 +27,6 @@ article {
       line-height: 1em;
       margin: .2em 0 3em 0;
       text-transform: lowercase;
-    }
-  }
-
-  &.post .content {
-    margin-top: 4em;
-
-    > p:first-child, > h3:first-child, > h4:first-child {
-      margin-top: 0;
     }
   }
 
@@ -77,22 +62,5 @@ article {
         width: 50px;
       }
     }
-  }
-}
-
-.allposts {
-  @include box-sizing(border-box);
-  display: block;
-  font-family: $header-font;
-  font-size: 110%;
-  font-weight: 600;
-  margin: 0 auto 2.5em auto;
-  max-width: $max-width;
-  padding: 0 2em;
-  position: relative;
-  @include transition(.2s);
-
-  &:hover {
-    left: -3px;
   }
 }
