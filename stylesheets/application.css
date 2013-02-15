@@ -503,18 +503,21 @@ code {
   font-size: 90%;
   font-weight: 400; }
 
-body > header, article, body > footer {
+body > header, article, body > footer, .allcontent {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   margin: auto;
-  max-width: 1140px;
+  max-width: 1260px;
   padding: 0 2em; }
+
+.allcontent {
+  position: relative; }
 
 body > header {
   background: #b92731;
-  height: 115px;
+  height: 240px;
   max-width: 100%;
   overflow: auto;
   padding: 0;
@@ -528,13 +531,13 @@ body > header {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: auto;
-    max-width: 1140px;
+    max-width: 1260px;
     padding: 0 2em; }
   body > header nav > a {
     color: #eee;
     display: block;
     float: left;
-    margin-top: 1.5em;
+    margin-top: 81px;
     text-decoration: none; }
     body > header nav > a:hover, body > header nav > a:visited {
       color: #eee; }
@@ -562,7 +565,8 @@ body > header {
           margin: -0.25em 0 0 4.65em; } }
   body > header .rubygems-actions {
     float: right;
-    margin-top: .25em; }
+    margin-top: 64px;
+    width: 280px; }
     @media (max-width: 650px) {
       body > header .rubygems-actions {
         float: left; } }
@@ -587,7 +591,7 @@ body > header {
       font-weight: 600;
       padding: 0.2em 0.4em; }
       body > header .rubygems-actions form input[type="text"] {
-        width: 200px; }
+        width: 195px; }
         @media (max-width: 650px) {
           body > header .rubygems-actions form input[type="text"] {
             width: 140px; } }
@@ -611,7 +615,7 @@ body > footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: auto;
-    max-width: 1140px;
+    max-width: 560px;
     padding: 0 2em; }
   body > footer.stickbottom {
     position: absolute;
@@ -631,10 +635,14 @@ body > footer {
     height: 55px; }
 
 article {
+  background: #f9f9f9;
+  border-radius: 3px;
   margin-bottom: 2.5em;
-  max-width: 600px;
+  max-width: 560px;
   padding: 1em 2em;
-  position: relative; }
+  position: relative;
+  position: relative;
+  top: -200px; }
   article h3, article h4, article h5, article h6 {
     border-top: 2px solid #999999;
     display: inline-block;
@@ -648,7 +656,7 @@ article {
     font-size: 220%;
     font-weight: 900;
     line-height: 1em;
-    margin: 2em 0 0 0;
+    margin: 1em 0 0 0;
     text-transform: capitalize; }
   article hgroup .meta p {
     font-family: "ff-meta-serif-sc-web-pro", serif;
@@ -691,7 +699,7 @@ article {
   font-size: 110%;
   font-weight: 600;
   margin: 0 auto 2.5em auto;
-  max-width: 1140px;
+  max-width: 1260px;
   padding: 0 2em;
   position: relative;
   -webkit-transition: 0.2s;
@@ -702,36 +710,21 @@ article {
   .allposts:hover {
     left: -3px; }
 
-.all-content {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  margin: auto;
-  max-width: 1140px;
-  overflow: hidden;
-  padding: 0 2em;
-  position: relative; }
-  .all-content article:first-child {
-    float: left;
-    padding: 0; }
-
 .other-posts {
   opacity: .4;
   overflow-y: scroll;
   position: absolute;
   top: 0px;
-  right: -10px;
+  right: 2em;
   bottom: 0px;
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
   -ms-transition: all 0.15s ease-out 0;
   -o-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
-  width: 35%; }
+  width: 280px; }
   .other-posts:hover {
-    opacity: 1;
-    right: 0; }
+    opacity: 1; }
   .other-posts > h2 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -741,7 +734,7 @@ article {
     font-weight: 900;
     line-height: 1em;
     margin: 2em 0 0 0;
-    max-width: 600px;
+    max-width: 560px;
     text-transform: capitalize; }
   .other-posts .content-index {
     -webkit-box-sizing: border-box;
@@ -777,8 +770,10 @@ article {
         overflow: auto;
         text-decoration: none; }
         .other-posts .content-index li > a article {
+          background: none;
           margin-bottom: 0;
-          padding: 0; }
+          padding: 0;
+          position: static; }
           @media (max-width: 650px) {
             .other-posts .content-index li > a article {
               padding: 0; } }

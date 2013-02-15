@@ -1,28 +1,12 @@
-.all-content {
-  @include box-sizing(border-box);
-  display: block;
-  margin: auto;
-  max-width: $max-width;
-  overflow: hidden;
-  padding: 0 2em;
-  position: relative;
-
-  article:first-child {
-    float: left;
-    padding: 0;
-  }
-}
-
 .other-posts {
   opacity: .4;
   overflow-y: scroll;
-  @include position(absolute, 0px -10px 0px 0);
+  @include position(absolute, 0px 2em 0px 0);
   @include transition;
-  width: 35%;
+  width: 280px;
 
   &:hover {
     opacity: 1;
-    right: 0;
   }
 
   > h2 {
@@ -77,8 +61,10 @@
         text-decoration: none;
 
         article {
+          background: none;
           margin-bottom: 0;
           padding: 0;
+          position: static;
 
           @include mobile {
             padding: 0;

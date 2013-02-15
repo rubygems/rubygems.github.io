@@ -7,4 +7,6 @@ $(function() {
     $('body > footer').addClass('stickbottom');
   }
 
+  $('.other-posts').height($(document).height() - 780);
+
 });

@@ -1,4 +1,4 @@
-body > header, article, body > footer {
+body > header, article, body > footer, .allcontent {
   @include box-sizing(border-box);
   display: block;
   margin: auto;
@@ -6,9 +6,13 @@ body > header, article, body > footer {
   padding: 0 2em;
 }
 
+.allcontent {
+  position: relative;
+}
+
 body > header {
   background: $red;
-  height: 115px;
+  height: 240px;
   max-width: 100%;
   overflow: auto;
   padding: 0;
@@ -30,7 +34,7 @@ body > header {
     color: #eee;
     display: block;
     float: left;
-    margin-top: 1.5em;
+    margin-top: 81px;
     text-decoration: none;
 
     &:hover, &:visited {
@@ -68,7 +72,8 @@ body > header {
 
   .rubygems-actions {
     float: right;
-    margin-top: .25em;
+    margin-top: 64px;
+    width: 280px;
 
     @include mobile {
       float: left;
@@ -103,7 +108,7 @@ body > header {
         padding: .2em .4em;
 
         &[type="text"] {
-          width: 200px;
+          width: 195px;
 
           @include mobile {
             width: 140px;
@@ -134,7 +139,7 @@ body > footer {
   nav {
     @include box-sizing(border-box);
     margin: auto;
-    max-width: $max-width;
+    max-width: $max-article-width;
     padding: 0 2em;
   }
 
