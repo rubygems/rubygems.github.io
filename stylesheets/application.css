@@ -530,7 +530,7 @@ body > header {
     color: #eee;
     display: block;
     float: left;
-    margin-top: 81px;
+    margin-top: 88px;
     text-decoration: none; }
     body > header .logo:hover, body > header .logo:visited {
       color: #eee; }
@@ -550,7 +550,7 @@ body > header {
       margin: -0.2em 0 0 4.75em; }
   body > header .rubygems-actions {
     float: right;
-    margin-top: 64px;
+    margin-top: 72px;
     width: 280px; }
     body > header .rubygems-actions ul {
       list-style-type: none;
