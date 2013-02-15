@@ -1,5 +1,5 @@
 {% if index %}
-<article class="index">
+<article class="index {{ post.type }}">
   <hgroup>
   {% if truncated %}
     <h2 class="title">{{ post.title }}</h2>
@@ -11,7 +11,7 @@
     </section>
   </hgroup>
 {% else %}
-<article class="post">
+<article class="post {{ page.type }}">
   <hgroup>
     <h2 class="title">{{ page.title }}</h2>
     <section class="meta">

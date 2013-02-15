@@ -15,20 +15,23 @@
   </head>
   <body>
     <header>
-      <a href="{{ site.baseurl }}/" title="Home">
-        <h1>RubyGems.org</h1>
-        <h2>your community gem host</h2>
-      </a>
       <nav>
-        <ul>
-          <li><a href="http://rubygems.org/gems">all gems</a></li>
-          <li><a href="http://rubygems.org/sign_in">sign in</a></li>
-          <li><a href="http://rubygems.org/sign_up">sign up</a></li>
-        </ul>
-        <form action="http://rubygems.org/search" method="get">
-          <input id="query" name="query" type="text" placeholder="Search gems&hellip;" />
-          <input id="search_submit" name="commit" type="submit" value="Search" />
-        </form>
+        <a href="{{ site.baseurl }}/" title="Home">
+          <h1>RubyGems.org</h1>
+          <h2>your community gem host</h2>
+        </a>
+
+        <section class="rubygems-actions">
+          <ul>
+            <li><a href="http://rubygems.org/gems">all gems</a></li>
+            <li><a href="http://rubygems.org/sign_in">sign in</a></li>
+            <li><a href="http://rubygems.org/sign_up">sign up</a></li>
+          </ul>
+          <form action="http://rubygems.org/search" method="get">
+            <input id="query" name="query" type="text" placeholder="Search gems&hellip;" />
+            <input id="search_submit" name="commit" type="submit" value="Search" />
+          </form>
+        </section>
       </nav>
     </header>
 

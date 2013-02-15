@@ -11,6 +11,7 @@ body > header {
   height: 115px;
   max-width: 100%;
   overflow: auto;
+  padding: 0;
   width: 100%;
 
   @include mobile {
@@ -18,7 +19,14 @@ body > header {
     padding-bottom: 2em;
   }
 
-  a {
+  nav {
+    @include box-sizing(border-box);
+    margin: auto;
+    max-width: $max-width;
+    padding: 0 2em;
+  }
+
+  nav > a {
     color: #eee;
     display: block;
     float: left;
@@ -58,7 +66,7 @@ body > header {
     }
   }
 
-  nav {
+  .rubygems-actions {
     float: right;
     margin-top: .25em;
 
@@ -75,6 +83,13 @@ body > header {
         float: left;
         font-size: 100%;
         margin-right: 1em;
+
+        a {
+          color: #eee;
+          display: block;
+          margin-top: 1.5em;
+          text-decoration: none;
+        }
       }
     }
 
@@ -113,8 +128,15 @@ body > footer {
   background: $red-dark;
   max-width: 100%;
   overflow: auto;
-  padding: 2em;
+  padding: 2em 0;
   width: 100%;
+
+  nav {
+    @include box-sizing(border-box);
+    margin: auto;
+    max-width: $max-width;
+    padding: 0 2em;
+  }
 
   &.stickbottom {
     @include position(absolute, 0 0 0px 0);
