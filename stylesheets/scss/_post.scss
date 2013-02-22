@@ -6,6 +6,12 @@ article {
   padding: 1em 2em;
   top: -200px;
 
+  .skip-to-archive, .skip-to-archive:visited {
+    color: $red;
+    display: none;
+    margin: 2.5em 0 0 0;
+  }
+
   @include medium {
     margin: 0;
     top: -100px;
@@ -15,6 +21,10 @@ article {
     padding: 0 1em;
     top: 0;
     margin: auto;
+
+    .skip-to-archive {
+      display: block;
+    }
   }
 
   h3, h4, h5, h6 {

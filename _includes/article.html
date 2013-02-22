@@ -1,5 +1,8 @@
 {% if index %}
 <article class="index {{ post.type }}">
+  {% if truncated != true %}
+  <a class="skip-to-archive" href="#archive">Skip to archived posts</a>
+  {% endif %}
   <hgroup>
   {% if truncated %}
     <h2 class="title">{{ post.title }}</h2>
@@ -12,6 +15,9 @@
   </hgroup>
 {% else %}
 <article class="post {{ page.type }}">
+  {% if truncated != true %}
+  <a class="skip-to-archive" href="#archive">Skip to archived posts</a>
+  {% endif %}
   <hgroup>
     <h2 class="title">{{ page.title }}</h2>
     <section class="meta">

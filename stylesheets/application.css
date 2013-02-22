@@ -661,6 +661,10 @@ article {
   max-width: 560px;
   padding: 1em 2em;
   top: -200px; }
+  article .skip-to-archive, article .skip-to-archive:visited {
+    color: #b92731;
+    display: none;
+    margin: 2.5em 0 0 0; }
   @media (max-width: 1210px) {
     article {
       margin: 0;
@@ -669,7 +673,9 @@ article {
     article {
       padding: 0 1em;
       top: 0;
-      margin: auto; } }
+      margin: auto; }
+      article .skip-to-archive {
+        display: block; } }
   article h3, article h4, article h5, article h6 {
     font-size: 120%;
     margin-bottom: 0;
