@@ -9,6 +9,8 @@
   @include small {
     @include box-sizing(border-box);
     height: auto !important; // override inline height
+    margin: auto;
+    max-width: $max-article-width;
     opacity: 1;
     padding: 0 1em;
     position: static;

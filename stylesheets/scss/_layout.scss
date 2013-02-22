@@ -9,12 +9,17 @@ body > header {
   overflow: auto;
 
   @include small {
-    padding: 2em 1em 3em;
     height: auto;
   }
 
   nav {
     @extend %fullwidth;
+
+    @include small {
+      margin: auto;
+      max-width: $max-article-width;
+      padding: 2em 1em 3em;
+    }
   }
 
   .logo {
@@ -125,8 +130,8 @@ body > footer {
   padding: 2em 0;
 
   @include small {
+    margin: 2.5em 0 0 0;
     padding: 2em 1em;
-    margin: 0;
   }
 
   nav {
