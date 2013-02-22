@@ -8,6 +8,11 @@ body > header {
   height: 240px;
   overflow: auto;
 
+  @include small {
+    padding: 2em 1em 3em;
+    height: auto;
+  }
+
   nav {
     @extend %fullwidth;
   }
@@ -18,6 +23,14 @@ body > header {
     float: left;
     margin-top: 88px;
     text-decoration: none;
+
+    @include medium {
+      margin-top: 38px;
+    }
+
+    @include small {
+      margin: 0 0 1em 0;
+    }
 
     &:hover, &:visited {
       color: #eee;
@@ -47,6 +60,15 @@ body > header {
     margin-top: 72px;
     width: 280px;
 
+    @include medium {
+      margin-top: 130px;
+    }
+
+    @include small {
+      margin-top: 0;
+      float: none;
+    }
+
     ul {
       list-style-type: none;
       margin: 0;
@@ -62,6 +84,10 @@ body > header {
           display: block;
           margin-top: 1.5em;
           text-decoration: none;
+
+          &:hover {
+            color: #fff;
+          }
         }
       }
     }
@@ -82,7 +108,7 @@ body > header {
         &[type="submit"] {
           background: white;
           @include box-shadow(inset 0 -2px 2px rgba(0, 0, 0, .2));
-          color: $red-dark;
+          color: #444;
 
           &:focus, &:active {
             @include box-shadow(inset 0 2px 2px rgba(0, 0, 0, .2));
@@ -97,6 +123,11 @@ body > footer {
   background: $red-dark;
   overflow: auto;
   padding: 2em 0;
+
+  @include small {
+    padding: 2em 1em;
+    margin: 0;
+  }
 
   nav {
     max-width: $max-article-width;
@@ -114,6 +145,11 @@ body > footer {
     font-family: $header-font;
     line-height: 55px;
     margin-right: 1.2em;
+
+    @include small {
+      float: none;
+      text-align: center;
+    }
   }
 
   a {

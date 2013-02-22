@@ -6,6 +6,16 @@ article {
   padding: 1em 2em;
   top: -200px;
 
+  @include medium {
+    margin: 0;
+    top: -100px;
+  }
+
+  @include small {
+    padding: 0 1em;
+    top: 0;
+  }
+
   h3, h4, h5, h6 {
     @extend %articlesubtitle;
     font-size: 120%;
@@ -14,15 +24,18 @@ article {
   }
 
   hgroup {
+    margin: 2.6em 0 2.5em 0;
+
     h2.title {
       @extend %articletitle;
+      margin: 0;
     }
 
     .meta p {
       font-family: $serif-body-sc;
       font-weight: 500;
       line-height: 1em;
-      margin: .2em 0 3em 0;
+      margin: .2em 0 0 0;
       text-transform: lowercase;
     }
   }

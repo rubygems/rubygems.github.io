@@ -470,6 +470,12 @@ article, body > footer > nav, .allcontent, body > header nav {
   max-width: 1350px;
   padding: 0 2em; }
 
+@media (max-width: 1210px) {
+  article, body > footer > nav, .allcontent, body > header nav {
+    max-width: 950px; } }
+@media (max-width: 920px) {
+  article, body > footer > nav, .allcontent, body > header nav {
+    padding: 0; } }
 article hgroup h2.title, .other-posts > h2 {
   font-family: "proxima-nova", sans-serif;
   font-size: 220%;
@@ -487,6 +493,9 @@ article h3, article h4, article h5, article h6, .other-posts .content-index li.y
 
 body {
   background: #f9f9f9; }
+  @media (max-width: 920px) {
+    body {
+      background: #fff; } }
 
 h1, h2, h3, h4, h5 {
   font-family: "ff-meta-serif-sc-web-pro", serif;
@@ -533,12 +542,22 @@ body > header {
   background: #b92731;
   height: 240px;
   overflow: auto; }
+  @media (max-width: 920px) {
+    body > header {
+      padding: 2em 1em 3em;
+      height: auto; } }
   body > header .logo {
     color: #eee;
     display: block;
     float: left;
     margin-top: 88px;
     text-decoration: none; }
+    @media (max-width: 1210px) {
+      body > header .logo {
+        margin-top: 38px; } }
+    @media (max-width: 920px) {
+      body > header .logo {
+        margin: 0 0 1em 0; } }
     body > header .logo:hover, body > header .logo:visited {
       color: #eee; }
     body > header .logo h1 {
@@ -559,6 +578,13 @@ body > header {
     float: right;
     margin-top: 72px;
     width: 280px; }
+    @media (max-width: 1210px) {
+      body > header .rubygems-actions {
+        margin-top: 130px; } }
+    @media (max-width: 920px) {
+      body > header .rubygems-actions {
+        margin-top: 0;
+        float: none; } }
     body > header .rubygems-actions ul {
       list-style-type: none;
       margin: 0;
@@ -572,6 +598,8 @@ body > header {
           display: block;
           margin-top: 1.5em;
           text-decoration: none; }
+          body > header .rubygems-actions ul li a:hover {
+            color: #fff; }
     body > header .rubygems-actions form input {
       border: 0;
       border-radius: 3px;
@@ -585,7 +613,7 @@ body > header {
         background: white;
         -webkit-box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
         box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
-        color: #300405; }
+        color: #444; }
         body > header .rubygems-actions form input[type="submit"]:focus, body > header .rubygems-actions form input[type="submit"]:active {
           -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2); }
@@ -594,6 +622,10 @@ body > footer {
   background: #300405;
   overflow: auto;
   padding: 2em 0; }
+  @media (max-width: 920px) {
+    body > footer {
+      padding: 2em 1em;
+      margin: 0; } }
   body > footer nav {
     max-width: 560px; }
   body > footer.stickbottom {
@@ -607,6 +639,10 @@ body > footer {
     font-family: "proxima-nova", sans-serif;
     line-height: 55px;
     margin-right: 1.2em; }
+    @media (max-width: 920px) {
+      body > footer a, body > footer a:visited, body > footer a:hover, body > footer span {
+        float: none;
+        text-align: center; } }
   body > footer a {
     font-weight: 600; }
   body > footer a#thoughtbot, body > footer a#rubycentral {
@@ -621,16 +657,28 @@ article {
   max-width: 560px;
   padding: 1em 2em;
   top: -200px; }
+  @media (max-width: 1210px) {
+    article {
+      margin: 0;
+      top: -100px; } }
+  @media (max-width: 920px) {
+    article {
+      padding: 0 1em;
+      top: 0; } }
   article h3, article h4, article h5, article h6 {
     font-size: 120%;
     margin-bottom: 0;
     margin-top: 1.5em; }
-  article hgroup .meta p {
-    font-family: "ff-meta-serif-sc-web-pro", serif;
-    font-weight: 500;
-    line-height: 1em;
-    margin: 0.2em 0 3em 0;
-    text-transform: lowercase; }
+  article hgroup {
+    margin: 2.6em 0 2.5em 0; }
+    article hgroup h2.title {
+      margin: 0; }
+    article hgroup .meta p {
+      font-family: "ff-meta-serif-sc-web-pro", serif;
+      font-weight: 500;
+      line-height: 1em;
+      margin: 0.2em 0 0 0;
+      text-transform: lowercase; }
   article pre {
     background: #1d1f21;
     font-size: 120%;
@@ -668,13 +716,26 @@ article {
   -o-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
   width: 280px; }
+  @media (max-width: 920px) {
+    .other-posts {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: auto !important;
+      opacity: 1;
+      padding: 0 1em;
+      position: static;
+      width: 100%; } }
   .other-posts:hover {
     opacity: 1; }
   .other-posts > h2 {
     font-weight: 600;
-    margin: 2em 0 0.7em 0;
-    margin: 2em 0 1.5rem 0;
+    margin: 1.75em 0 0.7em 0;
+    margin: 1.75em 0 1.5rem 0;
     max-width: 560px; }
+    @media (max-width: 920px) {
+      .other-posts > h2 {
+        margin-top: 1em; } }
   .other-posts .content-index {
     margin: 0;
     padding: 0; }
@@ -702,14 +763,14 @@ article {
           position: static; }
           .other-posts .content-index li a article:not(.post) footer, .other-posts .content-index li a article.changelog footer {
             display: none; }
-          .other-posts .content-index li a article h2.title {
-            font-size: 110%;
-            font-weight: 600;
-            margin: 0; }
-          .other-posts .content-index li a article .meta p {
-            color: #999;
-            font-size: 100%;
-            margin-bottom: .5em; }
+          .other-posts .content-index li a article hgroup {
+            margin: 0 0 0.5em; }
+            .other-posts .content-index li a article hgroup h2.title {
+              font-size: 110%;
+              font-weight: 600; }
+            .other-posts .content-index li a article hgroup .meta p {
+              color: #999;
+              font-size: 100%; }
           .other-posts .content-index li a article footer {
             margin: 0; }
             .other-posts .content-index li a article footer p {

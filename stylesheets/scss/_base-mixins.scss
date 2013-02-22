@@ -1,5 +1,11 @@
-@mixin mobile {
-  @media (max-width: 650px) {
+@mixin medium {
+  @media (max-width: 1210px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 920px) {
     @content;
   }
 }
@@ -10,6 +16,18 @@
   margin: auto;
   max-width: $max-width;
   padding: 0 2em;
+}
+
+@include medium {
+  %fullwidth {
+    max-width: $max-width-medium;
+  }
+}
+
+@include small {
+  %fullwidth {
+    padding: 0;
+  }
 }
 
 %articletitle {

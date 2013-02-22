@@ -1,5 +1,9 @@
 body {
   background: #f9f9f9;
+
+  @include small {
+    background: #fff;
+  }
 }
 
 h1, h2, h3, h4, h5 {
