@@ -467,7 +467,7 @@ article, body > footer > nav, .allcontent, body > header nav {
   box-sizing: border-box;
   display: block;
   margin: auto;
-  max-width: 1260px;
+  max-width: 1350px;
   padding: 0 2em; }
 
 article hgroup h2.title, .other-posts > h2 {
@@ -478,8 +478,15 @@ article hgroup h2.title, .other-posts > h2 {
   margin: 1.2em 0 0 0;
   text-transform: capitalize; }
 
+article h3, article h4, article h5, article h6, .other-posts .content-index li.year-mark h3 {
+  border-top: 2px solid black;
+  color: #000;
+  display: inline-block;
+  line-height: 1.1em;
+  padding-top: .15em; }
+
 body {
-  background: #f0f0f0; }
+  background: #f9f9f9; }
 
 h1, h2, h3, h4, h5 {
   font-family: "ff-meta-serif-sc-web-pro", serif;
@@ -591,7 +598,8 @@ body > footer {
     max-width: 560px; }
   body > footer.stickbottom {
     position: absolute;
-    bottom: 0px; }
+    bottom: 0px;
+    width: 100%; }
   body > footer a, body > footer a:visited, body > footer a:hover, body > footer span {
     color: rgba(255, 255, 255, 0.5);
     display: block;
@@ -607,20 +615,16 @@ body > footer {
       height: 55px; }
 
 article {
-  background: #f9f9f9;
+  background: #fff;
   border-radius: 3px;
   margin-bottom: 2.5em;
   max-width: 560px;
   padding: 1em 2em;
   top: -200px; }
   article h3, article h4, article h5, article h6 {
-    border-top: 2px solid #999999;
-    display: inline-block;
     font-size: 120%;
-    line-height: 1.2em;
     margin-bottom: 0;
-    margin-top: 1.2em;
-    padding-top: .3em; }
+    margin-top: 1.5em; }
   article hgroup .meta p {
     font-family: "ff-meta-serif-sc-web-pro", serif;
     font-weight: 500;
@@ -639,10 +643,11 @@ article {
   article code {
     background: #1d1f21; }
   article footer {
-    margin: 2em 0 0 0;
+    margin: 2.5em 0;
     overflow: auto; }
     article footer p {
-      line-height: 50px; }
+      line-height: 50px;
+      margin: 0; }
       article footer p img {
         float: left;
         height: 50px;
@@ -666,7 +671,9 @@ article {
   .other-posts:hover {
     opacity: 1; }
   .other-posts > h2 {
-    margin: 2em 0 0 0;
+    font-weight: 600;
+    margin: 2em 0 0.7em 0;
+    margin: 2em 0 1.5rem 0;
     max-width: 560px; }
   .other-posts .content-index {
     margin: 0;
@@ -681,10 +688,8 @@ article {
         background: transparent;
         font-size: 100%;
         line-height: 1.5em;
-        padding: 2.5em 0 1em 0; }
+        padding: 1.5em 0 1em 0; }
         .other-posts .content-index li.year-mark h3 {
-          border-top: 2px solid #999999;
-          display: inline;
           margin: 0; }
       .other-posts .content-index li a {
         display: block;

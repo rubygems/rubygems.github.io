@@ -12,7 +12,9 @@
 
   > h2 {
     @extend %articletitle;
-    margin: 2em 0 0 0;
+    font-weight: 600;
+    margin: 2em 0 .7em 0;
+    margin: 2em 0 1.5rem 0;
     max-width: $max-article-width;
   }
 
@@ -33,11 +35,10 @@
         background: transparent;
         font-size: 100%;
         line-height: 1.5em;
-        padding: 2.5em 0 1em 0;
+        padding: 1.5em 0 1em 0;
 
         h3 {
-          border-top: 2px solid #999;
-          display: inline;
+          @extend %articlesubtitle;
           margin: 0;
         }
       }

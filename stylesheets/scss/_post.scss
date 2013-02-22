@@ -1,5 +1,5 @@
 article {
-  background: #f9f9f9;
+  background: #fff;
   border-radius: 3px;
   margin-bottom: 2.5em;
   max-width: $max-article-width;
@@ -7,13 +7,10 @@ article {
   top: -200px;
 
   h3, h4, h5, h6 {
-    border-top: 2px solid #999;
-    display: inline-block;
+    @extend %articlesubtitle;
     font-size: 120%;
-    line-height: 1.2em;
     margin-bottom: 0;
-    margin-top: 1.2em;
-    padding-top: .3em;
+    margin-top: 1.5em;
   }
 
   hgroup {
@@ -49,11 +46,12 @@ article {
   }
 
   footer {
-    margin: 2em 0 0 0;
+    margin: 2.5em 0;
     overflow: auto;
 
     p {
       line-height: 50px;
+      margin: 0;
 
       img {
         float: left;
