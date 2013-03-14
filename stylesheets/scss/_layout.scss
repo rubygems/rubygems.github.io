@@ -136,6 +136,11 @@ body > footer {
 
   nav {
     max-width: $max-article-width;
+
+    .credits {
+      display: block;
+      clear: both;
+    }
   }
 
   &.stickbottom {

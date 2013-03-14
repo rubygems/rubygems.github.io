@@ -526,6 +526,9 @@ p, li, code, h1, h2, h3, h4, h5 {
 li {
   margin-bottom: .4em; }
 
+ul {
+  padding-left: 1.5em; }
+
 pre {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch; }
@@ -632,6 +635,9 @@ body > footer {
       padding: 2em 1em; } }
   body > footer nav {
     max-width: 560px; }
+    body > footer nav .credits {
+      display: block;
+      clear: both; }
   body > footer.stickbottom {
     position: absolute;
     bottom: 0px;
