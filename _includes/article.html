@@ -33,13 +33,13 @@
   {% endif %}
 
   <footer>
-    <p>
+    <p class="vcard">
       {% if index %}
-      <img data-author-email="{{ post.author_email }}" alt="{{ post.author }}" />
-      <span>&mdash;</span> {{ post.author }}
+      <img class="photo" data-author-email="{{ post.author_email }}" alt="{{ post.author }}" />
+      <span class="dash">&mdash;</span> <span class="fn">{{ post.author }}</span>
       {% else %}
-      <img data-author-email="{{ page.author_email }}" alt="{{ page.author }}" />
-      <span>&mdash;</span> {{ page.author }}
+      <img class="photo" data-author-email="{{ page.author_email }}" alt="{{ page.author }}" />
+      <span class="dash">&mdash;</span> <span class="fn">{{ page.author }}</span>
       {% endif %}
     </p>
   </footer>
