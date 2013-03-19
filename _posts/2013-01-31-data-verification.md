@@ -1,7 +1,9 @@
 ---
 title: Data Verification
 layout: post
-author: evan
+type: post
+author: Evan
+author_email: evan@fallingsnow.net
 ---
 
 __TL;DR:__ We were able to verify that all gems served by rubygems.org are tamper-free.

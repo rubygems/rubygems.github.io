@@ -1,17 +1,15 @@
-$(document).ready(function() {
-  var divs = "#flash_success, #flash_notice, #flash_error";
-  $(divs).each(function() {
-    humanMsg.displayMsg($(this).text());
-    return false;
-  });
+$(function() {
+  $('code').addClass('prettyprint');
+  prettyPrint();
 
-  if(window.location.href.search(/query=/) == -1) {
-    $("#query").click(function() {
-      $(this).val("");
-      $(this).unbind("click");
-    });
+  if ($('body').height() < $(window).height()) {
+    $('body > footer').addClass('stickbottom');
   }
-  
-  // give focus to the search input if it exists:
-  $("input#query").focus();
+});
+
+$(window).load(function() {
+  $('.other-posts').height(
+    $('.allcontent > article.post').outerHeight() + 
+    parseInt($('.allcontent > article.post').css('top'))
+  );
 });

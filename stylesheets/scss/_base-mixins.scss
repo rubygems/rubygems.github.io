@@ -1,0 +1,48 @@
+@mixin medium {
+  @media (max-width: 1210px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 920px) {
+    @content;
+  }
+}
+
+%fullwidth {
+  @include box-sizing(border-box);
+  display: block;
+  margin: auto;
+  max-width: $max-width;
+  padding: 0 2em;
+}
+
+@include medium {
+  %fullwidth {
+    max-width: $max-width-medium;
+  }
+}
+
+@include small {
+  %fullwidth {
+    padding: 0;
+  }
+}
+
+%articletitle {
+  font-family: $header-font;
+  font-size: 220%;
+  font-weight: 900;
+  line-height: 1em;
+  margin: 1.2em 0 0 0;
+  text-transform: capitalize;
+}
+
+%articlesubtitle {
+  border-top: 2px solid #000;
+  color: #000;
+  display: inline-block;
+  line-height: 1.1em;
+  padding-top: .15em;
+}

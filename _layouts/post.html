@@ -1,11 +1,7 @@
 ---
 layout: default
+type: post
 ---
-<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-<div class='post'>
-  <h4>
-    published {{ page.date | date_to_string }} by {{ page.author }}
-  </h4>
-  {{ content }}
-  <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/gemcutter-update/embed.js"></script><noscript><a href="http://gemcutter-update.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-</div>
+
+{% include article.html %}
+{% include archive.html %}
