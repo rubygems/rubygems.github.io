@@ -12,7 +12,7 @@
         <li class="year-mark"><h3>{{ post.date | date: "%Y" }}</h3></li>
       {% endif %}
 
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{% include article.html %}</a></li>
+      <li><a href="{{ post.url }}">{% include article.html %}</a></li>
     {% endfor %}
   </ul>
 </section>
