@@ -11,7 +11,3 @@ $ ->
     if email != ""
       hashes[email] ||= $.md5(email)
       $(this).attr("src", "https://secure.gravatar.com/avatar/#{hashes[email]}")
-
-$(window).load ->
-  post = $('.allcontent > article.post')
-  $('.other-posts').height post.outerHeight() + parseInt(post.css('top'))

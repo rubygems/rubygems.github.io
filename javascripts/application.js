@@ -16,9 +16,3 @@ $(function() {
     }
   });
 });
-
-$(window).load(function() {
-  var post;
-  post = $('.allcontent > article.post');
-  return $('.other-posts').height(post.outerHeight() + parseInt(post.css('top')));
-});
