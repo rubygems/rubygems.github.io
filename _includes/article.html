@@ -35,10 +35,10 @@
   <footer>
     <p>
       {% if index %}
-      <img src="{{ post.author_email | to_gravatar }}" alt="{{ post.author }}" />
+      <img data-author-email="{{ post.author_email }}" alt="{{ post.author }}" />
       <span>&mdash;</span> {{ post.author }}
       {% else %}
-      <img src="{{ page.author_email | to_gravatar }}" alt="{{ page.author }}" />
+      <img data-author-email="{{ page.author_email }}" alt="{{ page.author }}" />
       <span>&mdash;</span> {{ page.author }}
       {% endif %}
     </p>

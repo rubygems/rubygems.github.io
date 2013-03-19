@@ -2,7 +2,8 @@ desc "compile and run the site"
 task :default do
   pids = [
     spawn("jekyll"),
-    spawn("scss --watch stylesheets/scss:stylesheets")
+    spawn("scss --watch stylesheets/scss:stylesheets"),
+    spawn("coffee -b -w -o javascripts -c javascripts/*.coffee")
   ]
 
   trap "INT" do
