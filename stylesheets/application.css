@@ -797,7 +797,7 @@ article {
               font-size: 90%;
               line-height: 30px;
               margin: 0; }
-              .other-posts .content-index li a article footer p span {
+              .other-posts .content-index li a article footer p span.dash {
                 display: none; }
               .other-posts .content-index li a article footer p img {
                 height: 30px;
