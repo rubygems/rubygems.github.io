@@ -1,12 +1,12 @@
 RubyGems Blog
-===============
+=============
 
 The official RubyGems blog.
 
 Setup
 =====
 
-Make sure you have jekyll installed (`gem install jekyll`), and run:
+Make sure you have jekyll installed (`gem install bundler; bundle`), and run:
 
     $ jekyll --server
 
