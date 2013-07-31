@@ -11,7 +11,12 @@ task :default do
     exit 1
   end
 
-  loop do
-    sleep 1
+  trap "TERM" do
+    Process.kill "TERM", *pids
+    exit 1
+  end
+
+  pids.each do |pid|
+    Process.waitpid pid
   end
 end
