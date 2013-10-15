@@ -17,11 +17,11 @@ img {
   max-width: 100%;
 }
 
-a {
+:link, :visited {
   color: $red;
   text-decoration: none;
 
-  &:hover, &:visited {
+  &:hover {
     color: $red-dark;
   }
 }

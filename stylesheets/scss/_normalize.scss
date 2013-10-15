@@ -83,7 +83,8 @@ body {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
-a:focus {
+:link:focus,
+:visited:focus {
     outline: thin dotted;
 }
 
@@ -91,8 +92,10 @@ a:focus {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
-a:active,
-a:hover {
+:link:active,
+:visited:active,
+:link:hover,
+:visited:hover {
     outline: 0;
 }
 
