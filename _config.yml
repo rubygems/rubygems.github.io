@@ -1,2 +1,4 @@
 ---
+exclude:
+- vendor
 safe: true
