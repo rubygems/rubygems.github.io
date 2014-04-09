@@ -8,7 +8,7 @@ Setup
 
 Make sure you have jekyll installed (`gem install bundler; bundle`), and run:
 
-    $ jekyll --server
+    $ jekyll serve
 
 The pages will be available at http://localhost:4000/
 
