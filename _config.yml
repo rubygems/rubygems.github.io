@@ -2,3 +2,4 @@
 exclude:
 - vendor
 safe: true
+markdown: kramdown
