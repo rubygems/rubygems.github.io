@@ -1,46 +1,38 @@
-{% if index %}
-<article class="index {{ post.type }}">
-  {% if truncated != true %}
-  <a class="skip-to-archive" href="#archive">Skip to archived posts</a>
-  {% endif %}
-  <hgroup>
-  {% if truncated %}
-    <h2 class="title">{{ post.title }}</h2>
-  {% else %}
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  {% endif %}
-    <section class="meta">
-      <p>published <span class="date">{{ post.date | date_to_string }}</span></p>
-    </section>
-  </hgroup>
-{% else %}
-<article class="post {{ page.type }}">
-  {% if truncated != true %}
-  <a class="skip-to-archive" href="#archive">Skip to archived posts</a>
-  {% endif %}
-  <hgroup>
-    <h2 class="title">{{ page.title }}</h2>
-    <section class="meta">
-      <p>published <span class="date">{{ page.date | date_to_string }}</span></p>
-    </section>
-  </hgroup>
-{% endif %}
-
-  {% if truncated != true %}
-  <section class="content">
-    {{ content }}
-  </section>
-  {% endif %}
-
-  <footer>
-    <p class="vcard">
-      {% if index %}
-      <img class="photo" data-author-email="{{ post.author_email }}" alt="{{ post.author }}" />
-      <span class="dash">&mdash;</span> <span class="fn">{{ post.author }}</span>
-      {% else %}
-      <img class="photo" data-author-email="{{ page.author_email }}" alt="{{ page.author }}" />
-      <span class="dash">&mdash;</span> <span class="fn">{{ page.author }}</span>
+<div class="l-colspan--r">
+  {% if index %}
+    {% for post in site.posts %}
+      {% capture post_year %}{{post.date | date: "%Y"}}{% endcapture %}
+      {% if post_year != current_year %}
+        {% capture current_year %}{{post_year}}{% endcapture %}
+        <h2 class="blog__year" id="{{current_year}}">{{current_year}}</h2>
       {% endif %}
-    </p>
-  </footer>
-</article>
+      <a class="blog__post" href="{{ post.url }}">
+        <i class="blog__post__date">{{ post.date | date_to_string }}</i>
+        <b class="blog__post__title">{{ post.title }}</b>
+      </a>
+    {% endfor %}
+  {% else %}
+    {% if truncated != true %}
+      <a class="post__link--posts" data-icon="&lt;" href="/">
+        <span class="t-hidden">Back to blog posts</span>
+      </a>
+    {% endif %}
+
+    <p class="post__date--s">{{ page.date | date_to_string }}</p>
+    <h1 class="post__title">{{ page.title }}</h1>
+    <p class="post__author--s">by {{ page.author }}</p>
+
+    <div class="t-body">
+      {% if truncated != true %}
+        {{ content }}
+      {% endif %}
+    </div>
+
+    <footer class="post__footer">
+      <img alt="{{ page.author }}" data-author-email="{{ page.author_email }}" class="post__avatar">
+      <div class="blog__post__author-wrap">
+        <p class="post__author">{{ page.author }}</p>
+      </div>
+    </footer>
+  {% endif %}
+</div>
