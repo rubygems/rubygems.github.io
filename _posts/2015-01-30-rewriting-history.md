@@ -1,0 +1,54 @@
+---
+title: Writing history, actually re-writing it.
+layout: post
+author: Arthur Nogueira Neves
+author_email: arthurnn@gmail.com
+---
+
+# Problem
+Rubygems.org was getting out of hand, not in terms of code, but the repo was way too big. Everytime someone wanted to clone the repo, it would take a long time, as the repo was about 600MB. The code itself is not big at all, but as rubygems.org should be able to be deployed even if rubygems.org is down, we need to vendor all the gems we use, and vendoring more then 100 gems cost space, also everytime a new gem is updated, the old versions live forever in the history, and as Git is a distruibuted source control, when you clone the repo you clone all branches, tags and history attached to them. That said, the repository would just grow and became harder and harder to be cloned.
+
+# Alternative solution
+`git clone --depth=1` , that would be the easier solution, however the problem about this is that everyone that clones the repo would have to know about the `depth` flag. Another problem about it, is that you would not clone the history locally, so searches or things like `git-blame` would not work.
+
+# Solution
+Separete `vendor/cache` folder in a another git repository, and add that as a git sobmodule. If `vendor/cache` folder is not part of the main repo, history on that folder would not be tracked by the main repo, therefor the rubygems.org repository would not grow immensely.
+However that would not solve the problem of having a 600MB repository. In order to fix that, we would have to rewrite history of the repository to remove all the vendored files from history. And thats what we did. As we were rewriting history we also decided to remove other big folders/files from the history:
+
+* server/rubygems.html
+* rubygems.txt
+* server/rubygems.txt
+* vendor/bundler_gems
+* vendor/gems
+* vendor/rails
+* vendor/plugins
+
+And lastely we moved `vendor/cache` out of the history to another [repository](https://github.com/rubygems/rubygems.org-vendor)
+
+# Final results:
+<pre>
+<code class="bash">
+$ git clone git@github.com:rubygems/rubygems.org-backup.git
+$ du -skh .
+536M    .
+
+$ git clone git@github.com:rubygems/rubygems.org.git
+$ du -skh .
+11M    .
+</code>
+</pre>
+
+# FAQ
+
+## Why should I care?
+Everyone that has a PR on rubygems.org repo, should rebase the PR against the new history. Also if you have a local clone of the repo, you can either delete and clone it again, or just `git pull`.
+
+## How do I install the gems?
+Nothing changed, still `bundle install` will do its job.
+
+## How do I update a gem?
+Just run `bundle update gem_name`, and send a PR with changes to `Gemfile` and `Gemfile.lock` only, there is no need to update the `vendor/cache` folder anymore, or to send a PR to the vendor repo. The rubygems team will make sure to update the vendor folder.
+
+
+** [Ticket](https://github.com/rubygems/rubygems.org/issues/610)
+
