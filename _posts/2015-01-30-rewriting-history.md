@@ -16,7 +16,7 @@ Vendoring more than 100 gems cost space, also everytime a new gem is updated, th
 Running `git clone --depth=1` would be an easier solution. However the problem about this is that everyone that clones the repo would have to know about the `depth` flag. Another problem about it, is that you would not clone the history locally, so searches or things like `git-blame` would not work.
 
 # Solution
-Separete `vendor/cache` folder in a another git repository, and add that as a git sobmodule. If `vendor/cache` folder is not part of the main repo, history on that folder would not be tracked by the main repo. Therefore the RubyGems.org repository would not grow immensely with every gem update.
+Create a separate `vendor/cache` folder in a another git repository, and add that as a git submodule. If `vendor/cache` folder is not part of the main repo, history on that folder would not be tracked by the main repo. Therefore the RubyGems.org repository would not grow immensely with every gem update.
 
 However that would not solve the problem of having a 600MB repository. In order to fix that, we would have to rewrite history of the repository to remove all the vendored files from history. And that's exactly what we did. As we were rewriting history we also decided to remove a few other big folders and files from the history:
 
@@ -28,9 +28,9 @@ However that would not solve the problem of having a 600MB repository. In order 
 * vendor/rails
 * vendor/plugins
 
-And lastely we moved `vendor/cache` out of the history to [another repository](https://github.com/rubygems/rubygems.org-vendor)
+And lastly we moved `vendor/cache` out of the history to [another repository](https://github.com/rubygems/rubygems.org-vendor)
 
-# Final results:
+# Final results
 <pre>
 <code class="bash">
 $ git clone git@github.com:rubygems/rubygems.org-backup.git
@@ -43,13 +43,13 @@ $ du -skh .
 </code>
 </pre>
 
-# FAQ
+# Impact on development
 
-## Why should I care?
-Everyone that has a PR on the RubyGems.org repo, should rebase the PR against the new history. Also if you have a local clone of the repo, you can either delete and clone it again, or just `git pull`.
+## Everyone must rebase
+Everyone that has a PR to `rubygems/rubygems.org`, must rebase against the new history. Locally, this means that clones of `rubygems/rubygems.org` can either delete and clone it again, or just `git fetch --all; git pull --rebase`.
 
-## How do I install the gems?
+## Installing dependencies
 Nothing changed, still `bundle install` will do its job.
 
-## How do I update a gem?
-Just run `bundle update gem_name`, and send a PR with changes to `Gemfile` and `Gemfile.lock` only. There is no need to update the `vendor/cache` folder anymore, or to send a PR to the vendor repo. The RubyGems team will make sure to update the vendor folder.
+## Updating or adding a new gem
+Just add the gem to `Gemfile` or run `bundle update gem_name`, and send a PR with changes to `Gemfile` and `Gemfile.lock` only. There is no need to update the `vendor/cache` folder anymore, or to send a PR to the vendor repo. The RubyGems team will make sure to update the vendor folder.
