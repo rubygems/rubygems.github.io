@@ -30,6 +30,9 @@ However that would not solve the problem of having a 600MB repository. In order 
 
 And lastly we moved `vendor/cache` out of the history to [another repository](https://github.com/rubygems/rubygems.org-vendor)
 
+# Why?
+RubyGems.org is an open source project, and contributions are always welcome, so a small and faster repository is key to make the project more approachable for the community.
+
 # Final results
 <pre>
 <code class="bash">
