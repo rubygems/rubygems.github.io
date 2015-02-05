@@ -7,7 +7,7 @@ author_email: arthurnn@gmail.com
 
 # Problem
 RubyGems.org was getting out of hand, not in terms of code, but the git repository was way too big. Everytime someone wanted to clone the repo, it would take a long time, as the repo was over 500MB. The code itself is not big at all, but we need to vendor all the gems we use.
-You might be wondering why we need to vender the RubyGems.org gem dependencies. Most projects can simply install gems from RubyGems.org when they are deployed. But RubyGems.org itself might have a critical bug that causes it to be unavailable. The only way to deploy a fix to such a bug is to ensure the RubyGems.org codebase does not depend on the RubyGems.org service being available.
+You might be wondering why we need to vendor the RubyGems.org gem dependencies. Most projects can simply install gems from RubyGems.org when they are deployed. But RubyGems.org itself might have a critical bug that causes it to be unavailable. The only way to deploy a fix to such a bug is to ensure the RubyGems.org codebase does not depend on the RubyGems.org service being available.
 Vendoring more than 100 gems cost space, also everytime a new gem is updated, the old versions live forever in the history. Git is distruibuted source control, and when you clone the repo you clone all branches, tags and history attached to them. That said, the repository would just grow and became harder and harder to be cloned.
 
 ([See GitHub issue](https://github.com/rubygems/rubygems.org/issues/610))
