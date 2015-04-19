@@ -1,5 +1,5 @@
 ---
-title: Policy change: Yank will now delete the .gem file
+title: Policy change about gem yank
 layout: post
 author: Arthur Nogueira Neves
 author_email: arthurnn@gmail.com
@@ -7,7 +7,7 @@ author_email: arthurnn@gmail.com
 
 # Heads up: Policy change about `gem yank`
 
-`gem yank` now deletes the gem permanently as of __DATE__. (Finally!)
+`gem yank` now deletes the gem permanently as of April 19th, 2015. (Finally!)
 
 ## Why?
 
