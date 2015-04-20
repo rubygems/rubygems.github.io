@@ -7,7 +7,7 @@ author_email: arthurnn@gmail.com
 
 # Heads up: Policy change about `gem yank`
 
-`gem yank` now deletes the gem permanently as of April 19th, 2015. (Finally!)
+`gem yank` now deletes the gem permanently as of April 20th, 2015. (Finally!)
 
 ## Why?
 
