@@ -21,6 +21,6 @@ The policy around pushing the same version has not changed. A gem version can no
 
 ## A final note
 
-A concern of ours about `gem yank` and its behavior was that someone could maliciously or accidentally remove gems that others depended on. However, we've been using an Amazon S3 bucket to store the gems for years now [with versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) on - so if someone does remove gems that are necessary, we can easily restore them if necessary. We hope it won't ever be.
+A concern of ours about `gem yank` and its behavior was that someone could maliciously or accidentally remove gems that others depended on. However, we've been using an Amazon S3 bucket to store the gems for years now [with versioning](http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) on - so if someone does remove gems that are necessary, we can easily restore them. We hope it won't ever be.
 
 Hopefully we'll see this reduce [our support load](http://help.rubygems.org). Thanks for bearing with us if you've had to deal with `gem yank`'s behavior in the past.
