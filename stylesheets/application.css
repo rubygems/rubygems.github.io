@@ -701,7 +701,8 @@ article {
       text-transform: lowercase; }
   article pre {
     background: #1d1f21;
-    font-size: 120%;
+    color: white;
+    font-size: 1em;
     margin-left: -1em;
     padding: 1em;
     position: relative;
