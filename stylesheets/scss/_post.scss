@@ -5,6 +5,7 @@ article {
   max-width: $max-article-width;
   padding: 1em 2em;
   top: -200px;
+  word-wrap: break-word;
 
   .skip-to-archive, .skip-to-archive:visited {
     color: $red;
