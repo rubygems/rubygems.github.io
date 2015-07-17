@@ -131,7 +131,7 @@ You can see this problem manifest itself on the rubygems.org website if you look
 
 ![runtime deps screenshot](https://img.skitch.com/20110901-dcmqkfy9eyu69dp1xfbqyfe9wg.jpg)
 
-A simple [google search](http://www.google.com/search?hl=en&safe=off&q=defaultkey+site%3Arubygems.org&oq=defaultkey+site%3Arubygems.org&aq=f&aqi=&aql=&gs_sm=e&gs_upl=2623l8510l0l8586l57l29l0l12l0l3l348l2937l0.1.7.3l12l0) will show that this is not an uncommon problem.
+A simple [google search](https://www.google.com/search?hl=en&safe=off&q=defaultkey+site%3Arubygems.org&oq=defaultkey+site%3Arubygems.org&aq=f&aqi=&aql=&gs_sm=e&gs_upl=2623l8510l0l8586l57l29l0l12l0l3l348l2937l0.1.7.3l12l0) will show that this is not an uncommon problem.
 
 ### Command line errors
 
