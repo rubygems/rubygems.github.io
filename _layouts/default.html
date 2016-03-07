@@ -1,67 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if index %}
-    <meta name="description" content="The blog, for RubyGems!" />
-    <title>RubyGems.org</title>
+      <title>Blog - RubyGems</title>
     {% else %}
-    <title>{{ page.title }} | RubyGems.org</title>
+      <title>{{ page.title }} - RubyGems Blog</title>
     {% endif %}
     <link rel="shortcut icon" href="https://rubygems.org/favicon.ico" type="image/x-icon">
     <link href="/atom.xml" rel="alternate" title="RSS" type="application/rss+xml" />
     <link href="/stylesheets/application.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="https://use.typekit.net/uqv7epg.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link href="http://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100&subset=greek,latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="/javascripts/modernizr.js"></script>
     <script type="text/javascript" src="/javascripts/selectivizr.js"></script>
     <script type="text/javascript" src="/javascripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/javascripts/jquery.md5.js"></script>
     <script type="text/javascript" src="/javascripts/prettify.js"></script>
     <script type="text/javascript" src="/javascripts/application.js"></script>
+    <script type="text/javascript" src="/javascripts/mobile-nav.js"></script>
+    <script type="text/javascript" src="/javascripts/application.js"></script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <!--[if IE 8]>
+      <script src="/assets/html5shiv.js"></script>
+      <link href="/assets/modules/ie8.css" rel="stylesheet" type="text/css">
+    <![endif]-->
   </head>
+
   <body>
-    <header>
-      <nav>
-        <a class="logo" href="/" title="Home">
-          <h1>RubyGems.org</h1>
-          <h2>your community gem host</h2>
+    <header class="header header--interior">
+      <div class="l-wrap--header">
+        <a class="header__logo-wrap" href="https://rubygems.org/">
+          <span class="header__logo" data-icon="⬡">⬢</span>
+          <span class="t-hidden">RubyGems</span>
+        </a>
+        <a class="header__club-sandwich" href="#">
+          <span class="t-hidden">Navigation menu</span>
         </a>
 
-        <section class="rubygems-actions">
-          <ul>
-            <li><a href="https://rubygems.org/gems">all gems</a></li>
-            <li><a href="https://rubygems.org/sign_in">sign in</a></li>
-            <li><a href="https://rubygems.org/sign_up">sign up</a></li>
-          </ul>
-          <form action="https://rubygems.org/search" method="get">
-            <input id="query" name="query" type="text" placeholder="Search gems&hellip;" />
-            <input id="search_submit" name="commit" type="submit" value="Search" />
+        <div class="header__nav-links-wrap">
+          <form accept-charset="UTF-8" action="https://rubygems.org/search" class="header__search-wrap" id="main-search" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+            <input class="header__search" id="query" name="query" placeholder="Search Gems&hellip;" type="search" />
+            <label for="query">
+              <span class="t-hidden">Search gems</span>
+            </label>
+            <input class="header__search__icon" id="search_submit" type="submit" value="⌕" />
           </form>
-        </section>
-      </nav>
+
+          <nav class="header__nav-links">
+            <a class="header__nav-link" href="http://rubygems.org/gems">Gems</a>
+            <a class="header__nav-link" href="http://guides.rubygems.org/">Guides</a>
+            <a class="header__nav-link" href="http://guides.rubygems.org/contributing/">Contribute</a>
+          </nav>
+        </div>
+      </div>
     </header>
 
-    <section class="allcontent">
-      {{ content }}
-    </section>
+    <main class="main--interior">
+      <div class="l-wrap--b">
+        <h1><a class="t-display page__heading t-link--black is-active" href="/">Blog</a></h1>
 
-    <footer>
-      <nav>
-        <a href="https://rubygems.org/pages/about">About</a>
-        <a href="http://help.rubygems.org">Help</a>
-        <a href="https://github.com/rubygems">Code</a>
-        <a href="https://twitter.com/rubygems">Status</a>
-        <a href="http://guides.rubygems.org">Guides</a>
-        <section class="credits">
-          <span>Designed by</span>
-          <a href="https://thoughtbot.com" id="thoughtbot" title="Designed by Thoughtbot"><img alt="Thoughtbot" src="/images/thoughtbot.png?1253763695" /></a>
-          <span>Supported by</span>
-          <a href="http://rubycentral.org" id="rubycentral" title="Supported by Ruby Central"><img alt="Rubycentral" src="/images/rubycentral.png?1258418593" /></a>
-      </section>
-      </nav>
+        <div class="l-overflow">
+          {{ content }}
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="l-wrap--footer">
+        <div class="l-overflow">
+          <div class="nav--v l-col--r--pad">
+            <a class="nav--v__link--footer" href="https://status.rubygems.org">Status</a>
+            <a class="nav--v__link--footer" href="http://uptime.rubygems.org">Uptime</a>
+            <a class="nav--v__link--footer" href="https://github.com/rubygems/rubygems.org">Code</a>
+            <a class="nav--v__link--footer" href="https://rubygems.org/pages/data">Data</a>
+            <a class="nav--v__link--footer" href="https://groups.google.com/group/rubygems-org">Discuss</a>
+            <a class="nav--v__link--footer" href="https://rubygems.org/stats">Stats</a>
+            <a class="nav--v__link--footer" href="/">Blog</a>
+              <a class="nav--v__link--footer" href="https://rubygems.org/pages/about">About</a>
+            <a class="nav--v__link--footer" href="http://help.rubygems.org">Help</a>
+            <a class="nav--v__link--footer" href="http://guides.rubygems.org/rubygems-org-api">API</a>
+          </div>
+          <div class="l-colspan--l colspan--l--has-border">
+            <p class="footer__about">RubyGems.org is the Ruby community&rsquo;s gem hosting service. Instantly publish your gems and install them. Use the API to interact and find out more information about available gems. Become a contributor and enhance the site with your own changes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__sponsors-wrap">
+        <div class="footer__sponsors">
+          <a class="footer__sponsor" href="http://rubycentral.org/" target="_blank">
+            Supported by
+            <span class="t-hidden">Ruby Central</span>
+          </a>
+          <a class="footer__sponsor" href="https://www.bluebox.net/" target="_blank">
+            Hosted by
+            <span class="t-hidden">Blue Box</span>
+          </a>
+          <a class="footer__sponsor" href="https://dockyard.com/" target="_blank">
+            Designed by
+            <span class="t-hidden">DockYard</span>
+          </a>
+          <a class="footer__sponsor" href="https://dnsimple.link/resolving-rubygems" target="_blank">
+            Resolved with
+            <span class="t-hidden">DNSimple</span>
+          </a>
+          <a class="footer__sponsor" href="https://newrelic.com/" target="_blank">
+            Optimized by
+            <span class="t-hidden">New Relic</span>
+          </a>
+          <a class="footer__sponsor" href="http://get.gaug.es/" target="_blank">
+            Tracking by
+            <span class="t-hidden">Gauges</span>
+          </a>
+          <a class="footer__sponsor" href="https://www.runscope.com/" target="_blank">
+            Monitored by
+            <span class="t-hidden">Runscope</span>
+          </a>
+          <a class="footer__sponsor" href="https://www.fastly.com/" target="_blank">
+            Gems served by
+            <span class="t-hidden">Fastly</span>
+          </a>
+        </div>
+      </div>
     </footer>
+
     <script type="text/javascript">
       var _gauges = _gauges || [];
       (function() {
