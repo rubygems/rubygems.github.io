@@ -46,10 +46,10 @@ We can now serve all gem downloads directly from Fastly, our CDN provider. Hereâ
 At the time this was written we are still serving gems via nginx and a redirect to Fastly. This will be changed in the near future as we complete the full transition to Fastly. Expect another blog post explaining this transition too.
 
 ## Links
-[https://github.com/rubygems/rubygems-infrastructure/issues/35](https://github.com/rubygems/rubygems-infrastructure/issues/35)
-[https://github.com/rubygems/rubygems.org/issues/1208](https://github.com/rubygems/rubygems.org/issues/1208)
-[https://github.com/rubygems/rubygems.org/issues/1089](https://github.com/rubygems/rubygems.org/issues/1089)
-[https://github.com/rubygems/rubygems.org/pull/1176](https://github.com/rubygems/rubygems.org/pull/1176)
+* [https://github.com/rubygems/rubygems-infrastructure/issues/35](https://github.com/rubygems/rubygems-infrastructure/issues/35)
+* [https://github.com/rubygems/rubygems.org/issues/1208](https://github.com/rubygems/rubygems.org/issues/1208)
+* [https://github.com/rubygems/rubygems.org/issues/1089](https://github.com/rubygems/rubygems.org/issues/1089)
+* [https://github.com/rubygems/rubygems.org/pull/1176](https://github.com/rubygems/rubygems.org/pull/1176)
 
 ## Special thanks to:
 [Aaron Suggs](https://github.com/ktheory), [David Radcliffe](https://github.com/dwradcliffe), [Arthur Neves](https://github.com/arthurnn) for working hard on this project.
