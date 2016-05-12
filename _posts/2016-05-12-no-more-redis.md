@@ -14,22 +14,22 @@ Not at all, if used correctly! A lot of companies use Redis, and there are a lot
 One of the problems we encountered multiple times with Redis, was that if an instance would go down, it would take many minutes to bring it up again, as it needs everything in memory. We had some Redis failures that took us about 45 minutes to bring it back up. This is not usually a problem when you don’t have a lot of data in Redis, like the background job case.
 
 ## Our previous stats architecture with Redis
-We mainly were using Redis for the gem download counts. The architecture for many years was this:
-Every time a gem was downloaded the request would first pass through our Nginx load balancers.
-Nginx would send a secondary http request to an internal service with the gem information before redirecting the user to our gem CDN.
-This internal service was a small C backend that would parse the request, and increment counters in Redis.
-Those counters from Redis were shown on the various RubyGems.org pages and API responses.
+We mainly were using Redis for the gem download counts. The architecture for many years was this:  
+1. Every time a gem was downloaded the request would first pass through our Nginx load balancers.  
+2. Nginx would send a secondary http request to an internal service with the gem information before redirecting the user to our gem CDN.  
+3. This internal service was a small C backend that would parse the request, and increment counters in Redis.  
+4. Those counters from Redis were shown on the various RubyGems.org pages and API responses.  
 
 As you can imagine, RubyGems.org recives a lot of download requests. We wanted to serve downloads directly from our CDN but we needed the requests to hit Nginx first to track the downloads. Also, if any part of this architecture was down we would permanently lose download counts.
 
 ## What are we using now
-We can now serve all gem downloads directly from Fastly, our CDN provider. Here’s what our new architecture looks like:
-Gems download requests hit Fastly, where the gems may already be cached geographically close to the user.
-Fastly generates a log file every five minutes, and pushes that log file to S3.
-S3 pushes a SQS notification message to a queue.
-The RubyGems.org rails app consumes those SQS messages and schedules a background job to process each new S3 file.
-DelayedJob works the background job and updates the counters in PostgreSQL.
-The rails app can now use the counters directly from the PostgreSQL database.
+We can now serve all gem downloads directly from Fastly, our CDN provider. Here’s what our new architecture looks like:  
+1. Gems download requests hit Fastly, where the gems may already be cached geographically close to the user.  
+2. Fastly generates a log file every five minutes, and pushes that log file to S3.  
+3. S3 pushes a SQS notification message to a queue.  
+4. The RubyGems.org rails app consumes those SQS messages and schedules a background job to process each new S3 file.  
+5. DelayedJob works the background job and updates the counters in PostgreSQL.  
+6. The rails app can now use the counters directly from the PostgreSQL database.  
 
 ## Drawbacks of the new architecture
 - Counters are only updated every five minutes. However this is a small price to pay and actually allows us to do more caching.
