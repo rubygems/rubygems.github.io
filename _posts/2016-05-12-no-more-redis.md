@@ -11,7 +11,7 @@ Today we have some good news to announce: We no longer need Redis to run RubyGem
 
 ## Is Redis bad?
 Not at all, if used correctly! A lot of companies use Redis, and there are a lot of use cases for it. One of the main use cases for Redis is to use it as a queue for background jobs. We use PostgreSQL and DelayedJob for our background jobs instead, so we don't need Redis for that. Our problems came from the way we were using it, and how much data we were storing. We were storing all the data in a permanent, never expiring fashion with quite a bit of storage and memory growth.
-One of the problems we encountered multiple times with Redis, was that if an instance would go down, it would take many minutes to bring it up again, as it needs everything in memory. We had some Redis failures that took us about 45 minutes to bring it back up. This is not usually a problem when you don’t have a lot of data in Redis, like the background job case.
+The main problem we encountered with Redis, was that if an instance would go down, it would take many minutes to bring it up again, as it needs everything in memory. We had some Redis failures that took us about 45 minutes to bring it back up. This is not usually a problem when you don’t have a lot of data in Redis, like the background job case.
 
 ## Our previous stats architecture with Redis
 We mainly were using Redis for the gem download counts. The architecture for many years was this:  
