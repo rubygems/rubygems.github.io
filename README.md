@@ -6,7 +6,7 @@ The official RubyGems blog.
 Setup
 =====
 
-Make sure you have jekyll installed (`gem install bundler; bundle`), and run:
+Run `bin/setup` to install Bundler + all the gems you'll need to get started. Then:
 
     $ jekyll serve
 

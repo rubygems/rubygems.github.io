@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+export PATH="$(dirname "$0")/../bin:$PATH"  # Use binstubs
+
+if [ "$1" = "-v" ]; then
+  exec 3>&1
+else
+  exec 3>/dev/null
+fi
+
+# Install dependencies
+echo "Installing libraries and plugins"
+{ gem list -i bundler || gem install bundler
+  bundle
+} >&3 2>&1
+
+echo "Done! Run \`bundle exec jekyll serve\` to start the server, then visit http://localhost:4000/"
