@@ -3,7 +3,6 @@ title: RubyGems.org 2016 Push
 layout: post
 author: Nick Quaranto
 author_email: nick@quaran.to
-draft: true
 ---
 
 Here's a few ideas for directions to push RubyGems.org into a better place for the rest of 2016. If you love RubyGems and hope to see it improve, this is for you!
