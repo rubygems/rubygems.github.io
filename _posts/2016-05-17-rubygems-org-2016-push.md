@@ -18,8 +18,8 @@ Recently, [RubyTogether](http://rubytogether.org) has helped out by paying devel
 Let's make this process open. Here's what I'd love to see:
 
 1. A new team page on RubyGems.org showing who's on it, and what roles are (active, advisory, retired, etc)
-1. Explain how RubyGems.org relates to other projects + organizations in the RubyGems ecosystem better
-1. Clear, defined ways to get on the team, how to "move up" from being on the outside, to committing, to deploying, and how to "retire" if need be
+2. Explain how RubyGems.org relates to other projects + organizations in the RubyGems ecosystem better
+3. Clear, defined ways to get on the team, how to "move up" from being on the outside, to committing, to deploying, and how to "retire" if need be
 
 We owe it to the community and to ourselves to make this an empowering and inclusive process, and to keep this critical piece of infrastructure not just well-oiled, but well-kept.
 
