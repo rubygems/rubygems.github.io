@@ -28,7 +28,7 @@ As you can imagine, RubyGems.org receives a lot of download requests. We wanted 
 
 <img src="/images/stats_changes_after.png" width="100%" />
 
-We can now serve all gem downloads directly from Fastly, our CDN provider. Here’s what our new architecture looks like:  
+We can now serve all gem downloads directly from [Fastly](https://www.fastly.com), our CDN provider. Here’s what our new architecture looks like:  
 1. Gems download requests hit Fastly, where the gems may already be cached geographically close to the user.  
 2. Fastly generates a log file every five minutes, and pushes that log file to S3.  
 3. S3 pushes a SQS notification message to a queue.  
@@ -49,7 +49,7 @@ We can now serve all gem downloads directly from Fastly, our CDN provider. Here�
 - We can pause the background processing or even recount download counts altogether if needed.
 
 ## Future plans
-At the time this was written we are still serving gems via Nginx and a redirect to Fastly. This will be changed in the near future as we complete the full transition to Fastly. Expect another blog post explaining this transition too.
+At the time this was written we are still serving gems via Nginx and a redirect to Fastly. This will be changed in the near future as we complete the full transition to [Fastly](https://www.fastly.com). Expect another blog post explaining this transition too.
 
 ## Links
 * [https://github.com/rubygems/rubygems-infrastructure/issues/35](https://github.com/rubygems/rubygems-infrastructure/issues/35)
