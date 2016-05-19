@@ -29,7 +29,9 @@
     </div>
 
     <footer class="post__footer">
-      <img alt="{{ page.author }}" data-author-email="{{ page.author_email }}" class="post__avatar">
+      {% if page.author_email %}
+        <img alt="{{ page.author }}" data-author-email="{{ page.author_email }}" class="post__avatar">
+      {% endif %}
       <div class="blog__post__author-wrap">
         <p class="post__author">{{ page.author }}</p>
       </div>
