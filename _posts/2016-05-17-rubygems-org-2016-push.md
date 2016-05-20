@@ -11,7 +11,7 @@ Here's a few ideas for directions to push RubyGems.org into a better place for t
 
 ## Team Formation
 
-We've historically had a team of people that have been interested in working on RubyGems.org. When Gemcutter first started, I used to give commit access to anyone who had a Pull Request or commit accepted into the repo, following the pattern that Rubinius used. As time went on, that fell out of practice. People would still get involved through the same channels: GitHub Issues or helping on the #rubygems IRC channel, but it's kind of unclear now how people join.
+Historically, we've had a team of people that have been interested in working on RubyGems.org. When Gemcutter first started, I used to give commit access to anyone who had a Pull Request or commit accepted into the repo, following the pattern that Rubinius used. As time went on, that fell out of practice. People would still get involved through the same channels: GitHub Issues or helping on the #rubygems IRC channel, but it's kind of unclear now how people join.
 
 Recently, [RubyTogether](http://rubytogether.org) has helped out by paying developers to work on RubyGems.org and Bundler. This is huge! But from the outside it's hard to tell how this works, or how to get involved. We have a big [Contribution Guide](http://guides.rubygems.org/contributing/) but it spans across all RubyGems projects. Our [CONTRIBUTING.md](https://github.com/rubygems/rubygems.org/blob/master/CONTRIBUTING.md) covers mostly technical aspects and not the social ones.
 
