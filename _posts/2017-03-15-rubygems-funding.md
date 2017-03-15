@@ -23,7 +23,7 @@ An explicit team -- the Rubygems Infrastructure Team -- is being put together to
 
 Who is on that team and how it will function will be announced at a later time.
 
-_NOTE: A previous iteration of this post spelled out specific team members. While those individuals are still involved, they were explicitly removed because their inclusion made it sound like the hard working members on those various projects not listed were being removed. That was far from the case, and so we're looking to make announcements about the team at a future time._
+_NOTE: A previous iteration of this post spelled out specific team members. While those individuals are still involved, the post was revised because their inclusion made it sound like the hard working members on those various projects not listed were being removed. That was far from the case, and so we're looking to make announcements about the team at a future time._
 
 Ruby Central has also worked with Ruby Together to clear up some of the language and positioning that could have contributed to these past misunderstandings. Ruby Central and the new RubyGems Infrastructure Team will continue to work closely with developers paid by Ruby Together to improve and strengthen the gem distribution system.
 
