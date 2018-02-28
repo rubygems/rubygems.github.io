@@ -1,5 +1,5 @@
 ---
-title: Weak Cryptographic Standards Removal Notice
+title: TLS 1.0 and 1.1 Deprecation Notice
 layout: post
 author: David Radcliffe and André Arko
 author_email: radcliffe.david@gmail.com
