@@ -11,6 +11,14 @@ With this post, we are announcing the immediate deprecation and future disabling
 
 As of February 2018, almost all HTTPS traffic to RubyGems.org already uses TLSv1.2. Based on current usage statistics, we expect this cutoff to impact less than 1.5% of requests made to RubyGems.org.
 
+### Why disable old versions of TLS?
+
+There are several reasons, but ultimately all of the reasons come down to keeping HTTPS connections as secure as they claim to be. Connections that use TLSv1.0 or TLSv1.1 are no longer considered fully secure by the industry, and it is misleading to allow "secure" connections that are not truly secure.
+
+The various security issues with older versions of TLS have resulted in industry-wide changes to stop supporting them. The [PCI Security Standards Council](https://www.pcisecuritystandards.org) has mandated that any website that processes payments [must stop using TLSv1.0 or TLSv1.1](https://www.pcisecuritystandards.org/documents/Migrating_from_SSL_Early_TLS_Information%20Supplement_v1.pdf). As a result of those requirements, developer websites like GitHub and our upstream provider Fastly will also be [removing support for older TLS versions](https://www.fastly.com/blog/phase-two-our-tls-10-and-11-deprecation-plan) by June 30, 2018, at the latest.
+
+While we don't process payments directly on RubyGems.org, we serve code that is used to process payments. To keep our users secure, we will be adopting the same security standards as the PCI SSC and the rest of the industry.
+
 ### Compatibility check and troubleshooting
 We have created an [automatic SSL check](https://github.com/indirect/ruby-ssl-check/blob/master/check.rb) to tell you whether your Ruby will be able to connect to RubyGems.org after April 30. To run that script immediately, use this command: `$ curl -sL https://git.io/vQhWq | ruby`. If you’d like more details about the situation, including troubleshooting steps if you run into problems, check out the [Bundler and RubyGems TLS/SSL troubleshooting guide](http://bundler.io/v1.16/guides/rubygems_tls_ssl_troubleshooting_guide.html#why-am-i-seeing-read-server-hello-a).
 
