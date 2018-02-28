@@ -3,3 +3,4 @@ exclude:
 - vendor
 safe: true
 markdown: kramdown
+url: https://blog.rubygems.org
