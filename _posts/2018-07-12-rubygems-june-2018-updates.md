@@ -1,3 +1,4 @@
+---
 title: June 2018 RubyGems Updates
 layout: post
 author: Stephanie Morillo
@@ -21,7 +22,5 @@ RubyGems saw a lot of activity this month, with 29 merged pull requests. Changes
 After releasing 2.7.7, we merged several fixes for installing gems directly from an AWS S3 bucket source, improved some warning messages, and fixed issues activating gems when the same gem is installed for more than one platform at once.
 
 In total, RubyGems gained 67 new commits, contributed by 12 authors. There were 439 additions and 62 deletions across 24 files.
-
----
 
 Learn more about contributing to RubyGems by visiting the [RubyGems Contributing Guide](https://github.com/rubygems/rubygems/blob/master/CONTRIBUTING.rdoc#how-to-contribute). We welcome all kinds of contributions, including bug fixes, feature implementations, writing and/or updating documentation, and bug triage.
