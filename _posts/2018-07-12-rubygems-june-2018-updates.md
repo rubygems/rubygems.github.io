@@ -5,13 +5,13 @@ author: Stephanie Morillo
 author_email: stephaniemorillo@riseup.net
 ---
 
-Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org), we publish a recap of the work that we've done the previous month. Read on to find out what updates were made to RubyGems and RubyGems.org in March.
+Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org), we publish a recap of the work that we've done the previous month. Read on to find out what updates were made to RubyGems and RubyGems.org in June.
 
 ## RubyGems.org News
 
 In June, we updated over 25 dependencies, including nokogiri and the sprockets security release, and updated to Rails 5.1. We also fixed a longstanding and frustrating issue where multiple CI builds pushing a new gem version at the same time could result in a checksum error when trying to install the new version. On June 27, we deprecated the “gem edit” page and it will be removed altogether on July 10.
 
-Instead of editing gem metadata at rubygems.org, we recommend using the gem specification itself. Use `Gem::Specification#metadata` to setting links to a gem’s homepage, changelog, documentation, and other websites. This will help us reduce the complexity of rubygems.org by making `Gem::Specification#metadata` the single source of truth and it will also allow gem owners to set different URLs by version.
+Instead of editing gem metadata at rubygems.org, we recommend using the gem specification itself. Use [`Gem::Specification#metadata`](https://guides.rubygems.org/specification-reference/#metadata) to setting links to a gem’s homepage, changelog, documentation, and other websites. This will help us reduce the complexity of rubygems.org by making `Gem::Specification#metadata` the single source of truth and it will also allow gem owners to set different URLs by version.
 
 This month, rubygems.org saw 28 commits making 159 additions and 74 deletions across 29 files.
 
