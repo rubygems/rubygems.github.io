@@ -10,7 +10,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 In RubyGems.org news, lead RubyGems.org maintainer [@dwradcliffe](https://github.com/dwradcliffe) completed porting the production RubyGems.org deployment to use Kubernetes! This didn’t cause any user-facing changes, but makes it easier for others to develop locally, and will help us with our efforts to avoid downtime.
 
-Another major development was enabling two factor authentication, a Google Summer of Code project that can greatly improve the security of logging in and publishing new gems, for any gem authors who enable it.
+Another major development was [enabling two factor authentication](https://guides.rubygems.org/setting-up-multifactor-authentication/), a Google Summer of Code project that can greatly improve the security of logging in and publishing new gems, for any gem authors who enable it.
 
 In addition to those major developments, we continued to fix bugs, improve translations, and generally keep things humming along.
 
