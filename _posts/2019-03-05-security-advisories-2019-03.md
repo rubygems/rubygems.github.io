@@ -78,7 +78,7 @@ the preinstall check.
 
 ### Reporter
 
-nyangawa
+nyangawa of Chaitin Tech
 
 ## CVE-2019-8325: Escape sequence injection vulnerability in errors
 
