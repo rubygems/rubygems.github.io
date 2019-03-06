@@ -7,7 +7,7 @@ author: Hiroshi SHIBATA
 Today we're disclosing several vulnerablities to RubyGems. They have all been reported via [hackerone](https://hackerone.com/rubygems).
 
 We strongly recommend to upgrade the latest stable version of RubyGems 3.0.3 or 2.7.8.
-If you can't upgrade RubyGems 2.7 or 3.0, please use [this patch](https://bugs.ruby-lang.org/attachments/7662) for RubyGems 2.6.
+If you can't upgrade RubyGems 2.7 or 3.0, please use [this patch](https://bugs.ruby-lang.org/attachments/7669) for RubyGems 2.6.
 
 ## CVE-2019-8320: Delete directory using symlink when decompressing tar
 
