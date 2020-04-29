@@ -1,0 +1,12 @@
+{
+  "name": "rubygems-blog",
+  "scripts": {
+  },
+  "env": {
+    "LANG": "en_US.UTF-8",
+    "RACK_ENV": "production"
+  },
+  "addons": [
+
+  ]
+}
