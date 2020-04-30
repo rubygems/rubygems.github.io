@@ -35,4 +35,4 @@ Aditya was also able to complete a grab bag of other useful work, including:
 For the month, RubyGems.org received [80 commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) from 6 authors, who made 294 additions and 206 deletions across 17 files.
 
 ---
-Learn more about contributing to RubyGems by visiting the [RubyGems Contributing Guide](https://github.com/rubygems/rubygems/blob/master/CONTRIBUTING.rdoc#how-to-contribute). We welcome all kinds of contributions, including bug fixes, feature implementation, writing and/or updating documentation, and bug triage.
+Learn more about contributing to RubyGems by visiting the [RubyGems Contributing Guide](https://github.com/rubygems/rubygems/blob/master/CONTRIBUTING.md#how-to-contribute). We welcome all kinds of contributions, including bug fixes, feature implementation, writing and/or updating documentation, and bug triage.
