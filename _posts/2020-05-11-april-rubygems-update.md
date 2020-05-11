@@ -10,7 +10,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 ## RubyGems News
 RubyGems changes in April included a fix for a recent regression in RubyGems to interfere with common bundler usages, improvement to a [missing spec error](https://github.com/rubygems/rubygems/pull/3559), and shipping a new RSpec runner that works better with parallelization. We also updated our CI to ruby 2.7 and made a PR to manage bundler development dependencies through bundler.
 
-For the month, [Rubygems](https://github.com/rubygems/rubygems) gained [181 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-04-01%7D...master@%7B2020-04-30%7D), contributed by 15 authors. There were 1857 additions and 1015 deletions across 132 files.
+For the month, [RubyGems](https://github.com/rubygems/rubygems) gained [181 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-04-01%7D...master@%7B2020-04-30%7D), contributed by 15 authors. There were 1857 additions and 1015 deletions across 132 files.
 
 
 ## RubyGems.org News
