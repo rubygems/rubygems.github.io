@@ -35,7 +35,7 @@ In addition to that, We made a PR to [send mail update confirmation when a user 
 - updated [rake task to remove duplicate runtime dependencies](https://github.com/rubygems/rubygems.org/pull/2382)
 - updated `versions.list` [source location from bundler-api to s3.](https://github.com/rubygems/rubygems.org/pull/2380) and added [cronjob to update the file monthly.](https://github.com/rubygems/rubygems.org/pull/2403)
 
-- ran rake tasks related to `compact_index` on staging and production.
+- ran rake tasks related to `compact_index` which enabled bundler to make fewer requests to our server when installing some gems and fixed install of gems with multiple Ruby or Rubygems requirements
 
 - updated correct checksum task to use non-caching info_checksum calc, rerun the task, and expire info cache of gems changed from production.
 
