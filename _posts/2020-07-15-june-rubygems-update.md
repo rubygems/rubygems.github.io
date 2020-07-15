@@ -32,7 +32,7 @@ This month, we added terraform module for RDS monitors and added alerts on `rubg
 In addition to that, We made a PR to [send mail update confirmation when a user changes their email address](https://github.com/rubygems/rubygems.org/pull/2392),  added a RubyGems.org guide for rate limits, and made the following improvements:
 
 + increased Strict-Transport-Security max-time to ensure HTTPS-only access
-- ran rake tasks locally and [added PR to update ext dep task to remove duplicate runtime deps.](https://github.com/rubygems/rubygems.org/pull/2382)
+- updated [rake task to remove duplicate runtime dependencies](https://github.com/rubygems/rubygems.org/pull/2382)
 - updated `versions.list` [source location from bundler-api to s3.](https://github.com/rubygems/rubygems.org/pull/2380) and added [cronjob to update the file monthly.](https://github.com/rubygems/rubygems.org/pull/2403)
 
 - ran rake tasks related to `compact_index` on staging and production.
