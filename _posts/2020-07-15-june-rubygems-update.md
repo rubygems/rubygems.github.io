@@ -9,16 +9,13 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-In June, RubyGems saw significant improvements on Bundler and RubyGems development. We worked on synchronizing the latest versions of both libraries with ruby-core, and fixed issues that came up. We also [enforced our ruby-core workflow](https://github.com/rubygems/rubygems/pull/3725) to try to prevent further tedious integrations with ruby-core in the future by catching issues early and minimizing the back and forth of patches between upstream and downstream.
+In June, RubyGems saw significant improvements on Bundler and RubyGems development. We released [Bundler 2.2.0.rc.1](https://github.com/rubygems/rubygems/releases/tag/bundler-v2.2.0.rc.1) and [RubyGems 3.2.0.rc.1](https://github.com/rubygems/rubygems/releases/tag/v3.2.0.rc.1)! 🎉
+
+We also worked on synchronizing the latest versions of both libraries with ruby-core, and fixed issues that came up. We also [enforced our ruby-core workflow](https://github.com/rubygems/rubygems/pull/3725) to try to prevent further tedious integrations with ruby-core in the future by catching issues early and minimizing the back and forth of patches between upstream and downstream.
 
 We changed [bundler specs to raise by default when any subcommand fails](https://github.com/rubygems/rubygems/pull/3685). This action helped reveal two bugs (which we of course, fixed!). We've adapted bundler release tasks to a [new repository layout](https://github.com/rubygems/rubygems/pull/3703) and now have the changelog draft up-to-date.
 
-
-We've also implemented a fix to [stop soft-validating gemspecs](https://github.com/rubygems/rubygems/pull/3668) (e.g. giving validations that only warn) except for in gem-authoring contexts. We also added a [slack notification to the maintainers channel](https://github.com/rubygems/rubygems/pull/3689) that triggers whenever the  `ruby-head` builds starts failing.
-
-We [simplified our CI Workflows](https://github.com/rubygems/rubygems/pull/3769) and did some final cleanup PRs related to CI failures on `jruby`.
-
-Lastly, onto great news for the month: we released Bundler 2.2.0.rc.1! 🎉
+We've also implemented a fix to [stop soft-validating gemspecs](https://github.com/rubygems/rubygems/pull/3668) (e.g. giving validations that only warn) except for in gem-authoring contexts. We also added a [slack notification to the maintainers channel](https://github.com/rubygems/rubygems/pull/3689) that triggers whenever the  `ruby-head` builds starts failing. We [simplified our CI Workflows](https://github.com/rubygems/rubygems/pull/3769) and did some final cleanup PRs related to CI failures on `jruby`.
 
 Outside of these major highlights, we continue to fix bugs, review PRs, improve our documentation, cleanup test suites, and continue our usual ongoing maintenance.
 
@@ -26,7 +23,7 @@ In total, [RubyGems](https://github.com/rubygems) gained [243 new commits](https
 
 ## RubyGems.org News
 
-This month, we added terraform module for RDS monitors and added alerts on `rubgems-production`, `rubygems-staging` and `shipit` instances. We followed up with fixes on RubyGems.org that have now been deployed and verified! We also debugged failed delayed jobs in production and created a [fix for issues we found with regex validation with user email.](https://github.com/rubygems/rubygems.org/pull/2389)
+This month, we added terraform module for RDS monitors and added alerts on `rubgems-production`, `rubygems-staging` and `shipit` instances. We followed up with fixes on RubyGems.org that have now been deployed and verified! We also debugged failed delayed jobs in production and created a [fix for issues we found with regex validation with user email.](https://github.com/rubygems/rubygems.org/pull/2389) [rubygems/rubygems.org/pull/2406](https://github.com/rubygems/rubygems.org/pull/2406) [rubygems/rubygems.org/pull/2388](https://github.com/rubygems/rubygems.org/pull/2388)
 
 
 In addition to that, We made a PR to [send mail update confirmation when a user changes their email address](https://github.com/rubygems/rubygems.org/pull/2392),  added a RubyGems.org guide for rate limits, and made the following improvements:
@@ -37,7 +34,7 @@ In addition to that, We made a PR to [send mail update confirmation when a user 
 
 - ran rake tasks related to `compact_index` which enabled bundler to make fewer requests to our server when installing some gems and fixed install of gems with multiple Ruby or Rubygems requirements
 
-- updated correct checksum task to use non-caching info_checksum calc, rerun the task, and expire info cache of gems changed from production.
+- updated correct checksum task to use non-caching info_checksum calc, rerun the task, and expire info cache of gems changed from production
 
 - [rebased and updated API keys scope PR](https://github.com/rubygems.org/pull/1962)
 
