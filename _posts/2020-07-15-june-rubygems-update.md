@@ -42,7 +42,7 @@ In addition to that, We made a PR to [send mail update confirmation when a user 
 - [rebased and updated API keys scope PR](https://github.com/rubygems.org/pull/1962)
 
 - updated and deployed rate limit changes to fix merge conflict and use test helpers. [rubygems.org#2330](https://github.com/rubygems.org/pull/2330)
-- added script and mailer for resetting leaked API keys.
+- reset a few leaked API keys and send mail to affected users
 
 As always, we continued to fix bugs, and provide help on [help.rubygems.org](https://help.rubygems.org) and ongoing support work.
 
