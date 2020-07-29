@@ -27,7 +27,7 @@ It's important to note that versions are immutable, so once a version was legiti
 
 Only users who subscribe to their personal dashboard RSS feed in an RSS reader could be affected.
 
-The leaked API keys were all sent in the query string for the customized dashboard RSS feed. Unfortunately, many RSS clients are unable to send authorization headers, and so sending a token in the URL is the only way for many RSS clients to view their personalized dashboard.Â 
+The leaked API keys were all sent in the query string for the customized dashboard RSS feed. Unfortunately, many RSS clients are unable to send authorization headers, and so sending a token in the URL is the only way for many RSS clients to view their personalized dashboard.
 
 When we originally set up the Honeycomb integration, this feature was overlooked, and API keys in GET requests for the dashboard were not scrubbed from the logs.
 
