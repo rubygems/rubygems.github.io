@@ -36,11 +36,7 @@ Over on [help.rubygems.org](help.rubygems.org) we resolved tickets, fixed a Typ
 
 In addition to those improvements, we completed the following:
 
--  restored Fastly logs from the last 22 months, copied to standard s3 bucket and evaluated time for running s3 select.
-
-- used Athena to query Fastly logs and filter valid API keys from the query result.
-
-- worked on a [PR to reset API key mailer](https://github.com/rubygems/rubygems.org/pull/2463) and remove support for api_key in param.
+- searched 22 months of logs from s3 and [created a new email](https://github.com/rubygems/rubygems.org/pull/2463) to [remediate a possible API key leak](https://blog.rubygems.org/2020/07/28/api-key-leak.html).
 
 - debugged Outlook marking RubyGems.org mails as spam and filed a support ticket for shared IP update.
 
