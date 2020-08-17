@@ -8,7 +8,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-In July, we improved [Bundler's Issue Template](https://github.com/rubygems/rubygems/pull/3784) for our maintainers and contributors. Along with that, we worked on [improving performance optimizations](https://github.com/rubygems/rubygems/pull/3784) and we simplified our CI Workflow to make all [Bundler testing combinations easier to maintain.](https://github.com/rubygems/rubygems/pull/3769)
+In July, we improved [Bundler's Issue Template](https://github.com/rubygems/rubygems/pull/3784) for our maintainers and contributors. Along with that, we worked on [improving performance optimizations](https://github.com/rubygems/rubygems/pull/3793) and we simplified our CI Workflow to make all [Bundler testing combinations easier to maintain.](https://github.com/rubygems/rubygems/pull/3769)
 
 We made improvements and cleaned up PRs related to JRuby ([#3770](https://github.com/rubygems/rubygems/pull/3770), [#3771](https://github.com/rubygems/rubygems/pull/3771), [#3774](https://github.com/rubygems/rubygems/pull/3774)) and merged a follow up [PR to have a clean rubocop on new gems.](https://github.com/rubygems/rubygems/pull/3765)
 
