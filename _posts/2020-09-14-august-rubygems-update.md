@@ -8,9 +8,9 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-This Month, We made improvements to our [man page generation process](https://github.com/rubygems/rubygems/pull/3923) to ease contribution to the Bundler Documentation and reviewed and merged some PR's from our Contributors, we're thankful for our supportive community. 
+This Month, we made improvements to the [man page generation process](https://github.com/rubygems/rubygems/pull/3923) to ease contribution to the Bundler documentation. We also and reviewed and merged some PRs from various contributors. We're thankful for our supportive community. <3
 
-We did some work on Ruby-Core regarding versioning and default gems - ([#3937](https://github.com/rubygems/rubygems/pull/3937) , [#3938](https://github.com/rubygems/rubygems/pull/3938)) and [fixed an issue with configuration priority](https://github.com/rubygems/rubygems/pull/3933).
+We coordinated with the Ruby core team about versioning default gems in ([#3937](https://github.com/rubygems/rubygems/pull/3937) and [#3938](https://github.com/rubygems/rubygems/pull/3938)), as well as [fixing an issue with configuration priority](https://github.com/rubygems/rubygems/pull/3933).
 
 We also deprecated [`bundle cache --all`](https://github.com/rubygems/rubygems/pull/3932) in favor of explicitly configuring `bundle config set --local cache_all true`.
 
@@ -21,7 +21,7 @@ In total, [Rubygems](https://github.com/rubygems) gained [71 new commits](https:
 
 ## RubyGems.org News
 
-In August, We added a webhook configuration to slack, explored `tf modules` for lambda-slack notification and completed the following tests, improvements and fixes:  
+In August, we added a webhook configuration to Slack, set up Terraform modules sending Slack notifications from AWS Lambda, and completed the following tests, improvements and fixes:  
 
 * tested and deployed a PR for [blocking -/_ variations of the gem names](https://github.com/rubygems/rubygems.org/pull/2341) -- which are most commonly abused by malicious actors -- and fixing SQL query missing index.
 * debugged failing rspec failing builds and [updated  backfill required_rubygems_version task to required_ruby_version](https://github.com/rubygems/rubygems.org/pull/2474)
