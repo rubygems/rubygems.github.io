@@ -12,11 +12,11 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 This month, We did a lot of work triaging issues and so far we're "**winning the pulse**" with over **80 issues**  closed in relation to only **14 opened**, and **44 PRs** merged in relation to **8 opened**. We've also fixed a couple of new and outstanding issues some of which include:
 
 * [Fixed Resolver recently generating duplicate spec groups](https://github.com/rubygems/rubygems/pull/3965) making debug output much more verbose than it should.
-* Installed a [local `gemspec` without dependencies unnecessarily hitting the network](https://github.com/rubygems/rubygems/pull/3968).
-* [Bundler showing some unnecessary warnings from git when using submodules](https://github.com/rubygems/rubygems/pull/3969).
-* Fixed `--build-root` [option to gem install broken on Windows](https://github.com/rubygems/rubygems/pull/3975).
-* Fixed `--build-root` option to [gem install broken when gems with rubygems plugins are present on the system](https://github.com/rubygems/rubygems/pull/3972).
-* Fixed Ruby `setup.rb` unnecessarily [rewriting the bundler gemspec](https://github.com/rubygems/rubygems/pull/3980).
+* Fixed installing a local `gemspec` without dependencies [unnecessarily hitting the network](https://github.com/rubygems/rubygems/pull/3968).
+* Fixed bundler showing [some unnecessary warnings from git when using submodules](https://github.com/rubygems/rubygems/pull/3969).
+* Fixed [`--build-root` option to gem install broken on Windows](https://github.com/rubygems/rubygems/pull/3975).
+* Fixed [`--build-root` option to gem install broken when gems with rubygems plugins are present on the system](https://github.com/rubygems/rubygems/pull/3972).
+* Fixed `ruby setup.rb` [unnecessarily rewriting the bundler gemspec](https://github.com/rubygems/rubygems/pull/3980).
 * Fixed situations where [bundler would crash if running on a path including brackets.](https://github.com/rubygems/rubygems/pull/3854)
 * We've [shipped the `bundle fund` command](https://github.com/rubygems/rubygems/pull/3390) that lists out all the URLs for `gems` whose maintainers are actively looking for funding.
 * Responded to HackerOne reports for RubyGems.
@@ -35,21 +35,16 @@ In addition, we worked on other fixes including enabling disable_multisource an
 In September, Rubygems gained [150 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-09-01%7D...master@%7B2020-09-30%7D), contributed by 12 authors. There were 1263 additions and 4300 deletions across 176 files.
 
 ## RubyGems.org News
-In September, RubyGems.org saw some changes 
-* imported [fastly rubygems.org production configuration to terraform](https://github.com/rubygems/rubygems-terraform/pull/4)
-* [updated fastly `vcl` to unset `X-Forwarded-Host` from requests to fix a HO report.](https://github.com/rubygems/rubygems-terraform/pull/5)
-* [added regex whitelist for url on honeycomb logs export](https://github.com/rubygems/rubygems-terraform/pull/7)  to ensure we don't inadvertently send any sensitive info.
-* bulk update rubygems downloads count to [reduce 95th percentile processing time of FastlyLog Processor up to 40 sec.](https://github.com/rubygems/rubygems.org/pull/2527)
-* [fixed total count show in search pagination.](https://github.com/rubygems/rubygems.org/pull/2526)
+In September, we released the work done during GSoC 2020 for adding support of [managing owners using UI](https://guides.rubygems.org/managing-owners-using-ui/) and confirmation of ownership addition. Many thanks to rubygems.org GSoC student [@vachhanihpavan](https://github.com/vachhanihpavan) for doing an excellent job.
 * refactored and deployed [GSoC project on managing owners from the web UI and requirement of ownership confirmation.](https://github.com/rubygems/rubygems.org/pull/2357)
-* debugged increased delay in fastly logs processor jobs and profile the`#perform method.` 
-* updated `bulk_update` of [GemDownload to use single query for versions and making the job almost twice as faster.](https://github.com/rubygems/rubygems.org/pull/2510)
+* profiled `#perform` method of Fastly log processor job and [updated it to fetch versions from DB in bulk.](https://github.com/rubygems/rubygems.org/pull/2510)
 *  updated client side PR to identify scope as per the command and update scope in case of forbidden response. ([#1962](https://github.com/rubygems/rubygems.org/pull/1962) and [#3840](https://github.com/rubygems/rubygems/pull/3840))
 * updated [IPv4 fallback PR to add configuration, flag and tests for the configuration and made a failed attempt at adding tests for the fallback.](https://github.com/rubygems/rubygems/pull/2662)
 * [verified ownership and deploy namespace release of `ruby stdlib`](https://github.com/rubygems/rubygems.org/pull/2506)
 * updated [API scopes client PR to fix OTP fallback and with tests](https://github.com/rubygems/rubygems/pull/3840)
 * setup zendesk slack integration and explore using their web widget as stand alone web form.
 * removed gauges javascript file from [rg.org](https://rg.org) site and made a PR to migrate help links to zendesk ([#3840](https://github.com/rubygems/rubygems/pull/3840) and [#2518](https://github.com/rubygems/rubygems.org/pull/2518))
+* deprecated [help.rubygems.org](https://help.rubygems.org/) in favor of [support@ruubygems.org](mailto:support@rubygmes.org) to resolve the issue of genuine help tickets being marked as spam.
 * responded to support tickets and google group threads.
 
 This month, Rubygems.org gained [31 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-09-01%7D...master@%7B2020-09-30%7D), contributed by 5 authors. There were 2467 additions and 292 deletions across 85 files.
