@@ -44,7 +44,7 @@ In September, we released the work done during GSoC 2020 for adding support of [
 * updated [API scopes client PR to fix OTP fallback and with tests](https://github.com/rubygems/rubygems/pull/3840)
 * setup zendesk slack integration and explore using their web widget as stand alone web form.
 * removed gauges javascript file from [rg.org](https://rg.org) site and made a PR to migrate help links to zendesk ([#3840](https://github.com/rubygems/rubygems/pull/3840) and [#2518](https://github.com/rubygems/rubygems.org/pull/2518))
-* deprecated [help.rubygems.org](https://help.rubygems.org/) in favor of [support@ruubygems.org](mailto:support@rubygmes.org) to resolve the issue of genuine help tickets being marked as spam.
+* deprecated [help.rubygems.org](https://help.rubygems.org/) in favor of [support@rubygems.org](mailto:support@rubygems.org) to resolve the issue of genuine help tickets being marked as spam.
 * responded to support tickets and google group threads.
 
 This month, Rubygems.org gained [31 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-09-01%7D...master@%7B2020-09-30%7D), contributed by 5 authors. There were 2467 additions and 292 deletions across 85 files.
