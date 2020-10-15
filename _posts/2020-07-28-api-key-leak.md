@@ -47,7 +47,7 @@ Anyone affected by this leak has had their API key reset already. If you want to
 
 ### Future steps
 
-  - As mentioned above, we reset all API keys that were ever sent to Honeycomb.
-  - We no longer allow API actions authenticated via query string parameter. This is a breaking change, but we feel it is necessary for a secure ecosystem.
-  - We will soon change the RSS feed to have its own key that does not have access to the API, reducing the risk of using the RSS feed.
-  - Once we are confident we are filtering API keys out of the data, we will re-enable the Honeycomb integration.
+  * As mentioned above, we reset all API keys that were ever sent to Honeycomb.
+  * We no longer allow API actions authenticated via query string parameter. This is a breaking change, but we feel it is necessary for a secure ecosystem.
+  * We will soon change the RSS feed to have its own key that does not have access to the API, reducing the risk of using the RSS feed.
+  * Once we are confident we are filtering API keys out of the data, we will re-enable the Honeycomb integration.

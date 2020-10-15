@@ -19,13 +19,13 @@ In April, we worked on keeping [RubyGems.org](http://rubygems.org/) dependencies
 
 In addition to those developments, we worked on the following:
 
-- Merged bundler-site and RubyGems guides PRs.
-- Updated our ElasticSearch Index to support prefix queries; previously these were returning incomplete search results.
-- Investigated Intermittent CI failure [rubygems/bundler-site/issues/519](https://github.com/rubygems/bundler-site/issues/519).
-- PR to add validation to string columns with user input rubygems/rubygems.org#2346 
-- Fixed the broken animation on stats page and ensured Github stars count were using the metadata URI attributes [rubygems/rubygems.org#2335](https://github.com/rubygems/rubygems.org/pull/2335)
-- Worked on optimizations for our stats and just_updated endpoints, this will help us reduce 1200ms and 600ms in response time respectively. [rubygems/rubygems.org#2333](https://github.com/rubygems/rubygems.org/pull/2335)
-- Finished work on reset of rate limit on successful gem push [rubygems/rubygems.org#2311](https://github.com/rubygems/rubygems.org/pull/2311)
+* Merged bundler-site and RubyGems guides PRs.
+* Updated our ElasticSearch Index to support prefix queries; previously these were returning incomplete search results.
+* Investigated Intermittent CI failure [rubygems/bundler-site/issues/519](https://github.com/rubygems/bundler-site/issues/519).
+* PR to add validation to string columns with user input rubygems/rubygems.org#2346 
+* Fixed the broken animation on stats page and ensured Github stars count were using the metadata URI attributes [rubygems/rubygems.org#2335](https://github.com/rubygems/rubygems.org/pull/2335)
+* Worked on optimizations for our stats and just_updated endpoints, this will help us reduce 1200ms and 600ms in response time respectively. [rubygems/rubygems.org#2333](https://github.com/rubygems/rubygems.org/pull/2335)
+* Finished work on reset of rate limit on successful gem push [rubygems/rubygems.org#2311](https://github.com/rubygems/rubygems.org/pull/2311)
 
  Thanks to @johnfrancismccann, our releases page shows a consistent number of items per page.
 

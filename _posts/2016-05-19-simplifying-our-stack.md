@@ -37,16 +37,16 @@ We can now serve all gem downloads directly from [Fastly](https://www.fastly.com
 6. The Rails app can now use the counters directly from the PostgreSQL database.  
 
 ## Drawbacks of the new architecture
-- Counters are only updated every five minutes. However this is a small price to pay and allows us to do more caching.
+* Counters are only updated every five minutes. However this is a small price to pay and allows us to do more caching.
 
 ## Wins on the new architecture
-- We can serve .gem downloads directly from CDN at edge locations.
-- The number of permanent data stores goes down from 2 to 1, which is a huge win for the resiliency of our service.
-- Nginx is no longer required for gem downloads, removing a SPOF.
-- Our stack became simpler.
-- Smaller downtimes windows.
-- Easier local development setup.
-- We can pause the background processing or even recount download counts altogether if needed.
+* We can serve .gem downloads directly from CDN at edge locations.
+* The number of permanent data stores goes down from 2 to 1, which is a huge win for the resiliency of our service.
+* Nginx is no longer required for gem downloads, removing a SPOF.
+* Our stack became simpler.
+* Smaller downtimes windows.
+* Easier local development setup.
+* We can pause the background processing or even recount download counts altogether if needed.
 
 ## Future plans
 At the time this was written we are still serving gems via Nginx and a redirect to Fastly. This will be changed in the near future as we complete the full transition to [Fastly](https://www.fastly.com). Expect another blog post explaining this transition too.

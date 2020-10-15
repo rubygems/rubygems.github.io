@@ -36,19 +36,19 @@ Over on [help.rubygems.org](help.rubygems.org) we resolved tickets, fixed a Typ
 
 In addition to those improvements, we completed the following:
 
-- searched 22 months of logs from s3 and [created a new email](https://github.com/rubygems/rubygems.org/pull/2463) to [remediate a possible API key leak](https://blog.rubygems.org/2020/07/28/api-key-leak.html).
+* searched 22 months of logs from s3 and [created a new email](https://github.com/rubygems/rubygems.org/pull/2463) to [remediate a possible API key leak](https://blog.rubygems.org/2020/07/28/api-key-leak.html).
 
-- debugged Outlook marking RubyGems.org mails as spam and filed a support ticket for shared IP update.
+* debugged Outlook marking RubyGems.org mails as spam and filed a support ticket for shared IP update.
 
-- worked on a PR for client side support of API key scopes and updated the server-side PR.
+* worked on a PR for client side support of API key scopes and updated the server-side PR.
 
-- cleaned up failed jobs with `retry/delete`.
+* cleaned up failed jobs with `retry/delete`.
 
-- ran `rake task` to delete dangling dependency reports and set `unresolved_name` manually.
+* ran `rake task` to delete dangling dependency reports and set `unresolved_name` manually.
 
-- fixed `NoMethodError` on transitive dependency page.
+* fixed `NoMethodError` on transitive dependency page.
 
-- removed unused dependencies from dockerfile [#2449](https://github.com/rubygems/rubygems.org/pull/2449)
+* removed unused dependencies from dockerfile [#2449](https://github.com/rubygems/rubygems.org/pull/2449)
 
 
 In total, [RubyGems.org](https://github.com/rubygems.org) gained [72 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-07-01%7D...master@%7B2020-07-31%7D), contributed by 8 authors. There were 335 additions and 111 deletions across 53 files.
