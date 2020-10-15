@@ -29,17 +29,17 @@ This month, we added terraform module for RDS monitors and added alerts on `rubg
 In addition to that, We made a PR to [send mail update confirmation when a user changes their email address](https://github.com/rubygems/rubygems.org/pull/2392),  added a RubyGems.org guide for rate limits, and made the following improvements:
 
 + increased Strict-Transport-Security max-time to ensure HTTPS-only access
-- updated [rake task to remove duplicate runtime dependencies](https://github.com/rubygems/rubygems.org/pull/2382)
-- updated `versions.list` [source location from bundler-api to s3.](https://github.com/rubygems/rubygems.org/pull/2380) and added [cronjob to update the file monthly.](https://github.com/rubygems/rubygems.org/pull/2403)
+* updated [rake task to remove duplicate runtime dependencies](https://github.com/rubygems/rubygems.org/pull/2382)
+* updated `versions.list` [source location from bundler-api to s3.](https://github.com/rubygems/rubygems.org/pull/2380) and added [cronjob to update the file monthly.](https://github.com/rubygems/rubygems.org/pull/2403)
 
-- ran rake tasks related to `compact_index` which enabled bundler to make fewer requests to our server when installing some gems and fixed install of gems with multiple Ruby or Rubygems requirements
+* ran rake tasks related to `compact_index` which enabled bundler to make fewer requests to our server when installing some gems and fixed install of gems with multiple Ruby or Rubygems requirements
 
-- updated correct checksum task to use non-caching info_checksum calc, rerun the task, and expire info cache of gems changed from production
+* updated correct checksum task to use non-caching info_checksum calc, rerun the task, and expire info cache of gems changed from production
 
-- [rebased and updated API keys scope PR](https://github.com/rubygems.org/pull/1962)
+* [rebased and updated API keys scope PR](https://github.com/rubygems.org/pull/1962)
 
-- updated and deployed rate limit changes to fix merge conflict and use test helpers. [rubygems.org#2330](https://github.com/rubygems.org/pull/2330)
-- reset a few leaked API keys and send mail to affected users
+* updated and deployed rate limit changes to fix merge conflict and use test helpers. [rubygems.org#2330](https://github.com/rubygems.org/pull/2330)
+* reset a few leaked API keys and send mail to affected users
 
 As always, we continued to fix bugs, and provide help on [help.rubygems.org](https://help.rubygems.org) and ongoing support work.
 

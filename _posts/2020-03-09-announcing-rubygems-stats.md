@@ -23,8 +23,8 @@ At that point, André started work on a webapp that could display that data, but
 
 The display webapp is comprised of the following components:
 
-- A daily rake task, to download data from S3 into Postgres. Data is uploaded to S3 by kirby (the log parser) after it processes log data.
-- A JSON API, with the following endpoints:
+* A daily rake task, to download data from S3 into Postgres. Data is uploaded to S3 by kirby (the log parser) after it processes log data.
+* A JSON API, with the following endpoints:
     * /versions/{thing}
     * /comparison/{thing1}/{thing2}
 
