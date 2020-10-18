@@ -59,7 +59,7 @@ On [Ruby Toolbox](https://www.ruby-toolbox.com/) we've added a display of the [r
 * An official command line client that gives you quick access to data served by the recently launched API, including a report on the health status of your dependencies
 * Providing an alternate database dump that excludes historical gem download stats, since they make up the majority of the dump size and make imports very slow, so if you just want some real data to work with it's become a bit cumbersome at this point
 
-Thanks [@colszowka](https://github.com/colszowka) for your work on this project!Thanks [@colszowka](https://github.com/colszowka) for your work on this project!
+Thanks [@colszowka](https://github.com/colszowka) for your work on this project!
 
 ---
 
