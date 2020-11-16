@@ -15,7 +15,7 @@ We also made the following changes and improvements:
 * merged a PR that stops changing the CWD for building extensions, which should allow concurrent extension compilation without any contention. - [#3498](https://github.com/rubygems/rubygems/pull/3498)
 * worked on PRs to improve independence between test and lib code (simplifies and helps packagers), and added some changes to improve specs.
 * added improvements to require more default gems lazily.
-* fixed an issue with help commands when Bundler installed from `ruby-core` installer and `man` are not available. - [#3997](https://github.com/rubygems/rubygems/pull/3997)
+* fixed an issue with help commands when Bundler has been installed by `ruby-core` installer and `man` is not available. - [#3997](https://github.com/rubygems/rubygems/pull/3997)
 * wrapped up a PR to allow installing plugins from local paths. - [#4020](https://github.com/rubygems/rubygems/pull/4020)
 * fixed daily Bundler CI by marking the new `pathname` default gem as unsupported. - [#4029](https://github.com/rubygems/rubygems/pull/4029)
 * fixed a `Kernel.warn` stackoverflow. - [#3987](https://github.com/rubygems/rubygems/pull/3987)
