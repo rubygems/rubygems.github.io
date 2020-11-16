@@ -12,7 +12,7 @@ In October we released a new Bundler version --- **`2.2.0.rc.2`**. We also upgra
 
 We also made the following changes and improvements:
 * fixed an [issue with the `specific_platform` setting.](https://github.com/rubygems/rubygems/pull/4022) 
-* merged a PR that stops changing the CWD for building extensions, which should allow concurrent extension compilation without any contention.
+* merged a PR that stops changing the CWD for building extensions, which should allow concurrent extension compilation without any contention. - [#3498](https://github.com/rubygems/rubygems/pull/3498)
 * worked on PRs to improve independence between test and lib code (simplifies and helps packagers), and added some changes to improve specs.
 * added improvements to require more default gems lazily.
 * fixed an issue with help commands when Bundler installed from `ruby-core` installer and `man` are not available. - [#3997](https://github.com/rubygems/rubygems/pull/3997)
