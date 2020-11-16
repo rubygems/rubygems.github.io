@@ -6,7 +6,7 @@ author: Gift Egwuenu
 
 Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org), we publish a recap of the work that we've done the previous month. Read on to find out what updates were made to RubyGems and RubyGems.org in March.
 
-## rubygems news
+## RubyGems news
 
 We have great news! Bundler merged into RubyGems! Major props to @hsbt for sending the PR to combine repositories, as well as @deivid-rodruiguez for helping troubleshoot, fix CI, and get the PR landed.
 
@@ -15,7 +15,7 @@ On top of that huge accomplishment, RubyGems saw ongoing maintenance and bugfixe
 In March, RubyGems gained [more than 10,000 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-03-01%7D...master@%7B2020-03-31%7D) (which includes all of Bundler's history!) contributed by 21 authors. There were 96,617 additions and 961 deletions across 1,423 files.
 
 
-## rubygems.org news
+## RubyGems.org News
 
 In March, thanks to Aditya and Colby we were able to update most of our gem dependencies, which included a security release to Rails. Additionally, he helped us fix the incorrect rate limit on the gem push endpoint. This should be a big improvement for users with high release volume like AWS, which publishes hundreds of gems every time they update `aws-sdk`. We also resolved some related rate limit issues with multi-factor authentication.
 
