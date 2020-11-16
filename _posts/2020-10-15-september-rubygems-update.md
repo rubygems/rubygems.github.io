@@ -4,8 +4,6 @@ layout: post
 author: Gift Egwuenu
 ---
 
-# September 2020 RubyGems Updates
-
 Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org/), we publish a recap of the work that we’ve done the previous month. Read on to find out what updates were made to RubyGems, Ruby Toolbox and RubyGems.org in September.
 
 ## RubyGems News
