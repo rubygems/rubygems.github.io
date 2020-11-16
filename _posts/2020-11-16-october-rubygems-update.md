@@ -8,9 +8,10 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-In October we released a new Bundler version --- **`2.2.0.rc.2`**. We also upgraded Bundler's & Rubygems' vendored Molinillo to **`0.7.0`**  (it's latest release). - [#3402](https://github.com/rubygems/rubygems/pull/3402), [#3388](https://github.com/rubygems/rubygems/pull/3388). 
+In October we released a new Bundler version --- **`2.2.0.rc.2`** and RubyGems version --- **`3.2.0.rc.2`**. 
 
 We also made the following changes and improvements:
+* upgraded Bundler & RubyGems vendored Molinillo to **`0.7.0`**  (it's latest release). - [#3402](https://github.com/rubygems/rubygems/pull/3402), [#3388](https://github.com/rubygems/rubygems/pull/3388)
 * fixed an [issue with the `specific_platform` setting.](https://github.com/rubygems/rubygems/pull/4022) 
 * merged a PR that stops changing the CWD for building extensions, which should allow concurrent extension compilation without any contention. - [#3498](https://github.com/rubygems/rubygems/pull/3498)
 * worked on PRs to improve independence between test and lib code (simplifies and helps packagers), and added some changes to improve specs.
@@ -28,21 +29,21 @@ In October, Rubygems gained [143 new commits](https://github.com/rubygems/rubyge
 
 ## RubyGems.org News
 
-This month we implemented a [bulk update to RubyGem downloads count](https://github.com/rubygems/rubygems.org/pull/2527) to reduce the processing time for `FastlyLogProcessor` by about 95%, up to 40 seconds. We studied an old HackerOne Report and proposed a solution for it that will get implemented into RubyGems.org. 
+This month we implemented a [bulk update to RubyGem downloads count](https://github.com/rubygems/rubygems.org/pull/2527) to reduce the average processing time for `FastlyLogProcessor` by about 20 seconds. We studied an old HackerOne Report and proposed a solution for it that will get implemented into RubyGems.org. 
 
 We also made the following changes and improvements:
 
-* imported Fastly rubygems.org production configuration to Terraform. - [#4](https://github.com/rubygems/rubygems-terraform/pull/4) 
-* updated Fastly `vcl` to unset X-Forwarded-Host from requests to fix a HO report. - [#5](https://github.com/rubygems/rubygems-terraform/pull/5)
-* added regex whitelist for URL on honeycomb logs export to ensure we don't inadvertently send any sensitive information. - [#7](https://github.com/rubygems/rubygems-terraform/pull/7)
+* imported Fastly rubygems.org production configuration to Terraform.
+* updated Fastly `vcl` to unset X-Forwarded-Host from requests to fix a HO report. 
+* added regex whitelist for URL on honeycomb logs export to ensure we don't inadvertently send any sensitive information.
 * fixed total count shown on search pagination. - [#2526](https://github.com/rubygems/rubygems.org/pull/2526)
 * rebased and updated a PR to separate the edit profile and account settings, making options like MFA registration easier to find. - [#2537](https://github.com/rubygems/rubygems.org/pull/2537)
-* updated `staging.rubygems.org` to support **TLS 1.3** as recommended by the most recent TLS documentation of Fastly.
+* updated [staging.rubygems.org](staging.rubygems.org) to support **TLS 1.3** as recommended by the most recent TLS documentation of Fastly.
 * created a support ticket on Fastly to request a limit increase on TLS certificates and enable the limited offering of GlobalSign certificates.
 * updated **DMARC** record of rubygems.org to use Slack group and Postmarkapp.
-* replyed to support tickets and google group threads.
+* replied to support tickets and google group threads.
  
-Finaly, we deployed an option to review changes thanks to [@mensfeld](https://github.com/mensfeld); users can now compare differences between releases. 
+Finaly, we [deployed an option to review changes](https://github.com/rubygems/rubygems.org/pull/2499) thanks to [@mensfeld](https://github.com/mensfeld), users can now compare differences between releases. 
 
 In total, Rubygems.org gained [46 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-10-01%7D...master@%7B2020-10-31%7D), contributed by 8 authors. There were 694 additions and 442 deletions across 63 files.
 
