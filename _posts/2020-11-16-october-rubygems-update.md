@@ -13,7 +13,7 @@ In October we released a new Bundler version --- **`2.2.0.rc.2`**. We also upgra
 We also made the following changes and improvements:
 * fixed an [issue with the `specific_platform` setting.](https://github.com/rubygems/rubygems/pull/4022) 
 * merged a PR that stops changing the CWD for building extensions, which should allow concurrent extension compilation without any contention.
-* worked on PRs to improve independence between test and lib code (simplifies and helps packagers), and changes to improve specs.
+* worked on PRs to improve independence between test and lib code (simplifies and helps packagers), and added some changes to improve specs.
 * added improvements to require more default gems lazily.
 * fixed an issue with help commands when Bundler installed from `ruby-core` installer and `man` are not available. - [#3997](https://github.com/rubygems/rubygems/pull/3997)
 * wrapped up a PR to allow installing plugins from local paths. - [#4020](https://github.com/rubygems/rubygems/pull/4020)
@@ -53,4 +53,3 @@ This month we made a couple of improvements to the Gemstash project documentatio
 ---
 
 Learn more about contributing to RubyGems by visiting the [RubyGems Contributing Guide](https://github.com/rubygems/rubygems/blob/master/CONTRIBUTING.md#how-to-contribute). We welcome all kinds of contributions, including bug fixes, feature implementation, writing and/or updating documentation, and bug triage.tation, writing and/or updating documentation, and bug triage.
-
