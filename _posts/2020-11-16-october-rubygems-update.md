@@ -4,7 +4,7 @@ layout: post
 author: Gift Egwuenu
 ---
 
-Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org/), we publish a recap of the work that we’ve done the previous month. Read on to find out what updates were made to RubyGems, Ruby Toolbox and RubyGems.org in September.
+Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org/), we publish a recap of the work that we’ve done the previous month. Read on to find out what updates were made to RubyGems, Gemstash and RubyGems.org in October.
 
 ## RubyGems News
 
