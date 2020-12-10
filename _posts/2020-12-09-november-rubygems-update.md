@@ -9,7 +9,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-In November, we worked on the [Bundler Version Locking RFC](https://github.com/rubygems/rfcs/pull/29) that allows a user to specify a required Bundler version in the Gemfile/gemspec with a working [proof of concept](https://github.com/rubygems/rfcs/pull/29#issuecomment-731333194). We also made the following improvements and fixes:
+In November, we worked on the [Bundler Version Locking RFC](https://github.com/rubygems/rfcs/pull/29) that allows a user to specify a required Bundler version in the Gemfile/gemspec with a working [proof of concept](https://github.com/rubygems/rfcs/pull/29#issuecomment-731333194). We also made improvements to platform support by enabling the `specific_platform` functionality by default, and decided to delay the change to resolve all Gemfile platforms automatically in addition to that, we made the following improvements and fixes:
 
 * fixed a missing require issue. [#4036](https://github.com/rubygems/rubygems/pull/4036)
 * fixed a couple of minor "Windows paths" issues. [#4038](https://github.com/rubygems/rubygems/pull/4038), [#4039](https://github.com/rubygems/rubygems/pull/4039)
@@ -30,24 +30,20 @@ In November, we worked on the [Bundler Version Locking RFC](https://github.com/r
 
 In November, [RubyGems](https://github.com/rubygems/rubygems) gained [58 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2020-11-01%7D...master@%7B2020-11-30%7D), contributed by 10 authors. There were 816 additions and 426 deletions across 79 files.
 
-
 ## RubyGems.org News
 This month, we coordinated with Fastly support to enable Globalsign certs and AAAA records in our TLS config. We updated [RubyGems CLI gem signin](https://github.com/rubygems/rubygems/pull/3840) according to changes requested in a review and also made the following fixes and improvements:
 
 * added a new way to match RubyGems versions using the `build-arg` in docker image. [#2548](https://github.com/rubygems/rubygems.org/pull/2548)
 * fixed failing tests in `shoulda-matchers` update and reported an issue of invalid objects should `belong_to` tests on `shoulda-matchers` repo. [#1375]( https://github.com/thoughtbot/shoulda-matchers/issues/1375)
 * investigated `DelegationError` for ownership records with nil `user_id`.
-* resolved HO#200743 email spooling by setting DMARC policy to quarantine.
-* resolved HO#795112 and disallowed duplicate canonical version numbers. [#2559](https://github.com/rubygems/rubygems.org/pull/2559)
+* updated our DMARC policy to ensure that spoofed emails with [rubygems.org](https://rubygems.org) in sender get marked as spam.
+* worked on a PR to resolve a HackerOne report, disallowing duplicate canonical version numbers. [#2559](https://github.com/rubygems/rubygems.org/pull/2559)
 * read privacy policy of other package manager websites and researched the requirements for CCPA and GDPR.
 * add `Pagerduty` integration for Cloudwatch ALB alerts.
 
 As always, we continue to fix bugs, review and merge PR's and reply to support tickets.
 
-In November, [RubyGems.org](https://github.com/rubygems/rubygems.org) gained [11 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-11-01%7D...master@%7B2020-11-30%7D), contributed by  authors. There were 63 additions and 4 deletions across 8 files.
-
-
-
+In November, [RubyGems.org](https://github.com/rubygems/rubygems.org) gained [23 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-11-01%7D...master@%7B2020-11-30%7D), contributed by 3 authors. There were 89 additions and 15 deletions across 12 files.
 
 ---
 
