@@ -9,9 +9,9 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-In December, we finally released `bundler 2.2` and `rubygems 3.2` 🎉. We also received the corresponding feedback and regression reports, and addressed almost everything reported through 4 patch level releases of each library. In particular, we made it on time for Ruby's Christmas release and managed to include `rubygems 3.2.3` and `bundler 2.2.3` with the final release of `ruby 3.0`.
+In December, we finally released `bundler 2.2` and `rubygems 3.2` 🎉. On the bundler side, this minor release provides some major enhancements in how bundler treats platforms, and also a few extra features. Check [this blog post about bundler-v2-2 release](https://bundler.io/blog/2020/12/09/bundler-v2-2.html) for details. On the rubygems side, the release provides a lot of bug fixes, a noticiable boot time speed up, better integration in ruby-core and alternative implementations, and adds support for a change in the server side that allows using scoped API keys.
 
-To be mentioned apart, together with `rubygems 3.2.3` we released a fix to a longstanding gem install issue. From now on, gem install will respect the running ruby version, and install the latest version of the target gem that supports it. See [#4110](https://github.com/rubygems/rubygems/pulls/4110) for more information.
+After the releases, we also received the corresponding feedback and regression reports, and addressed almost everything reported through 4 patch level releases of each library. In particular, we made it on time for Ruby's Christmas release and managed to include `rubygems 3.2.3` and `bundler 2.2.3` with the final release of `ruby 3.0`.
 
 This month, [RubyGems](https://github.com/rubygems/rubygems) gained [203 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2020-12-01%7D...master@%7B2020-12-21%7D), contributed by 13 authors. There were 4191 additions and 2066 deletions across 1184 files.
 
