@@ -10,7 +10,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 ## RubyGems News
 This Month in RubyGems, we released new versions for **RubyGems** [v3.2.16](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/CHANGELOG.md#3216--2021-04-08), [v3.2.17](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/CHANGELOG.md#3217--2021-05-05) and corresponding versions for **Bundler** [v2.2.16](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/bundler/CHANGELOG.md#2216-april-8-2021) and [v2.2.17](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/bundler/CHANGELOG.md#2217-may-5-2021). 
 
-In addition to that, we made the following improvement and fixes:
+As part of those releases, we made the following improvements and fixes:
 
 - fixed an issue affecting custom `sidekiq-pro` gem servers, which was preventing users from upgrading their sidekiq-pro version - [#4563](https://github.com/rubygems/rubygems/pull/4563).
 - made Bundler more secure by preventing any credentials from being logged to the screen, thus potentially preventing users from unintentionally leaking them when pasting them to a Github issue or similar situations - [#4564](https://github.com/rubygems/rubygems/pull/4564), [#4566](https://github.com/rubygems/rubygems/pull/4566).
