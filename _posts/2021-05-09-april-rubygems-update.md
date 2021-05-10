@@ -21,12 +21,14 @@ In April, Rubygems gained [101 new commits](https://github.com/rubygems/rubygems
 ## RubyGems.org News
 In April, RubyGems.org saw several bug fixes and updates this month, some of which include the following:
 
-- [enable auth requirement for URL purge requests to Fastly](https://github.com/rubygems/rubygems.org/commit/da99700a6c727a4381648e4b687d4d3f08f67a25).
-- updated to elasticsearch 7 - [#2701](https://github.com/rubygems/rubygems.org/pull/2701).
+- enabled support of non-SNI traffic on rubygems.org by migration fastly endpoints to dedicated IP -[#4228](https://github.com/rubygems/rubygems/issues/4228).
+- [enabled auth requirement for URL purge requests to Fastly](https://github.com/rubygems/rubygems.org/commit/da99700a6c727a4381648e4b687d4d3f08f67a25).
+- fixed failing background jobs for sending the email confirmation - [#2694](https://github.com/rubygems/rubygems.org/pull/2694), [#2695](https://github.com/rubygems/rubygems.org/pull/2695).
 - added validation for `unconfirmed_email` regex - [#2694](https://github.com/rubygems/rubygems.org/pull/2694).
 - fixed `RecordNotFound` in `OwnershipConfirmation` mailer - [#2695](https://github.com/rubygems/rubygems.org/pull/2695).
 - reduced abusers rate limit to 30 rps - [#2703](https://github.com/rubygems/rubygems.org/pull/2703).
 - enabled Multi-Factor Authentication(MFA) instruction only if `current_user` has MFA disabled - [#2705](https://github.com/rubygems/rubygems.org/pull/2705).
+- thanks to[@arthurnn](https://github.com/arthurnn) and [@greysteil](https://github.com/greysteil), we now support automatic revocation of API keys committed to GitHub repositories - [#2687](https://github.com/rubygems/rubygems.org/pull/2687) Note that this is only supported for new API key format, please check our [guide for migration from legacy API key](https://guides.rubygems.org/api-key-scopes/#migration-from-legacy-api-key).
 
 For this Month, [RubyGems.org](https://github.com/rubygems/rubygems.org) gained [45 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2021-04-01%7D...master@%7B2021-04-30%7D), contributed by 9 authors. There were 424 additions and 52 deletions across 34 files.
 
