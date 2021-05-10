@@ -8,16 +8,13 @@ author_email: laurandidi21@gmail.com
 Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together](http://rubytogether.org/), we publish a recap of the work that we’ve done the previous month. Read on to find out what updates were made to [RubyGems](https://github.com/rubygems/rubygems) and [RubyGems.org](https://github.com/rubygems/rubygems.org) in April.
 
 ## RubyGems News
-This Month in RubyGems, we released a new version for **RubyGems(3.2.16)** and **Bundler(2.2.16)**. 
+This Month in RubyGems, we released new versions for **RubyGems** [v3.2.16](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/CHANGELOG.md#3216--2021-04-08), [v3.2.17](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/CHANGELOG.md#3217--2021-05-05) and corresponding versions for **Bundler** [v2.2.16](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/bundler/CHANGELOG.md#2216-april-8-2021) and [v2.2.17](https://github.com/rubygems/rubygems/blob/bb93b974100e9ddff7043e648d762e8a412be04e/bundler/CHANGELOG.md#2217-may-5-2021). 
 
-RubyGems saw several bug fixes and updates this month, some of which include the following:
+In addition to that, we made the following improvement and fixes:
 
-- made sure specs are fetched from the right source when materializing - [#4562](https://github.com/rubygems/rubygems/pull/4562). 
-- merged a PR [#2836](https://github.com/rubygems/rubygems/pull/2836) that correctly handles symlinks when building gem packages by not adding any special handling.
-- improved `bundle pristine` error if `BUNDLE_GEMFILE` does not exist - [#4536](https://github.com/rubygems/rubygems/pull/4536).
-- fixed CI pipeline that was broken by third party releases of development dependencies.
-- fixed ``"Permission denied"`` error when running Bundler specs that resulted in finding `ruby-install + chruby` to be the fix to the error - [#3957](https://github.com/rubygems/rubygems/issues/3957).
-- fixed `bundle cache` with an up-to-date lockfile and specs not already installed - [#4554](https://github.com/rubygems/rubygems/pull/4554) 
+- fixed an issue affecting custom `sidekiq-pro` gem servers, which was preventing users from upgrading their sidekiq-pro version - [#4563](https://github.com/rubygems/rubygems/pull/4563).
+- made Bundler more secure by preventing any credentials from being logged to the screen, thus potentially preventing users from unintentionally leaking them when pasting them to a Github issue or similar situations - [#4564](https://github.com/rubygems/rubygems/pull/4564), [#4566](https://github.com/rubygems/rubygems/pull/4566).
+- fixed a few resolution & materialization issues in Bundler - [#4556](https://github.com/rubygems/rubygems/pull/4556), [#4562](https://github.com/rubygems/rubygems/pull/4562), and also improved RubyGems handling of repositories including symlinks - [#2836](https://github.com/rubygems/rubygems/pull/2836).``
 
 In April, Rubygems gained [101 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-04-01%7D...master@%7B2021-04-30%7D), contributed by 15 authors. There were 1591 additions and 391 deletions across 134 files.
 
