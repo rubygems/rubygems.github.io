@@ -26,7 +26,7 @@ In May, Rubygems gained [132 new commits](https://github.com/rubygems/rubygems/c
 In May, RubyGems.org saw several bug fixes and updates, some of which include the following:
 
 - investigated and fixed cache poisoning by using `x-forwarded-scheme` header. The issue was reported on HackerOne.
-- set form-action and frame-ancestor CSP policy - [#2718](https://github.com/rubygems/rubygems.org/pull/2718).
+- set form-action and frame-ancestor CSP policy to mitigate bypass of X-Frame-Options using a proxy  - [#2718](https://github.com/rubygems/rubygems.org/pull/2718).
 - researched verified publisher implementation for package manager - [#2698](https://github.com/rubygems/rubygems.org/pull/2698#issuecomment-846356370).
 - added copy link to recovery code page and disabled continue link - [#2717](https://github.com/rubygems/rubygems.org/pull/2717).
 
