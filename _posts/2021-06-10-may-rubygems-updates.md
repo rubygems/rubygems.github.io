@@ -29,6 +29,7 @@ In May, RubyGems.org saw several bug fixes and updates, some of which include th
 - set form-action and frame-ancestor CSP policy to mitigate bypass of X-Frame-Options using a proxy  - [#2718](https://github.com/rubygems/rubygems.org/pull/2718).
 - researched verified publisher implementation for package manager - [#2698](https://github.com/rubygems/rubygems.org/pull/2698#issuecomment-846356370).
 - added copy link to recovery code page and disabled continue link - [#2717](https://github.com/rubygems/rubygems.org/pull/2717).
+- tested upgrade of Elasticsearch 7 on staging environment and estimated downtime requirements.
 
 For this month, Rubygems.org gained [23 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2021-05-01%7D...master@%7B2021-05-31%7D), contributed by 3 authors. There were 155 additions and 100 deletions across 11 files.
 
