@@ -43,7 +43,7 @@ We launched `gem dependencies` in the [Ruby Toolbox](https://github.com/rubytool
 
 A specialty of this feature is that right next to the dependency you can also find the corresponding project health indicators so if you're looking at a library you can also see an indication of the status of it's dependencies as well.
 
-Read more about this on the upcoming monthly update. You can sign up to [receive updates every month as soon as they are released!](https://www.getdrip.com/forms/6239290/submissions)
+Read more about this on the upcoming monthly update. You can sign up to [receive updates every month as soon as they are released!](https://www.getdrip.com/forms/6239290/submissions/new)
 
 ---
 Learn more about contributing to RubyGems by visiting the [RubyGems Contributing Guide](https://github.com/rubygems/rubygems/blob/master/CONTRIBUTING.md#how-to-contribute). We welcome all kinds of contributions, including bug fixes, feature implementation, writing and updating documentation, and bug triage.
