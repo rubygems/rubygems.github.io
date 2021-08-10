@@ -15,14 +15,13 @@ In addition to that, RubyGems saw several bug fixes and updates this month, some
 
 - investigated various RubyGems and Bundler issues on GitHub such as [#4717](https://github.com/rubygems/rubygems/pull/4717) and [#4719](https://github.com/rubygems/rubygems/pull/4719)
 - worked on the Bundler Version Locking RFC - [#29](https://github.com/rubygems/rfcs/pull/29).
-- merged an enhancement that will make setting the `RUBYGEMS_GEMDEPS` environment variable used for avoiding the need to use `bundle exec`.
+- merged an enhancement that will make setting the `RUBYGEMS_GEMDEPS` environment variable used for avoiding the need to use the `bundle exec` command.
 - worked on automating the process of reproducing builds for gems - [#3118](https://github.com/rubygems/rubygems/issues/3118)
-- improved performance of Bundler, shipped some bug fixes, and simplified Bundler internals.
-- fixed several outdated definition issues (detecting Gemfile changes over the lock file or not, to skip re-resolving them potentially. 
--  fixed the `--conservative` flag to allow finer-grained bundle updates. 
+- fixed several outdated definition issues (detecting whether there are Gemfile changes over the lockfile or not, to potentially reuse the information in the lockfile and avoid having to resolve dependencies at all) 
+- fixed the `--conservative` flag to allow finer-grained bundle updates. 
 - worked on smoothing the transition to secure RubyGems sources fully and fixed the regressions we create as we proceed.
 
-In addition to making all these improvements, we achieved even faster Bundler/setup performance.
+While working on these changes, we also simplified bundler internals and achieved faster bundler/setup performance.
 
 In July, Rubygems gained [169 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-07-01%7D...master@%7B2021-07-31%7D), contributed by 14 authors. There were 1878 additions and 1237 deletions across 152 files.
 
