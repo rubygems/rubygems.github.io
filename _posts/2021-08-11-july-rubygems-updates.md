@@ -13,25 +13,25 @@ This month in RubyGems, We released new versions of RubyGems ([3.2.22](https://g
 
 In addition to that, RubyGems saw several bug fixes and updates this month, some of which include the following:
 
-- investigated various RubyGems and Bundler issues on GitHub such as [#4717](https://github.com/rubygems/rubygems/pull/4717) and [#4719](https://github.com/rubygems/rubygems/pull/4719)
+- investigated various RubyGems and Bundler issues on GitHub such as [#4717](https://github.com/rubygems/rubygems/pull/4717) and [#4719](https://github.com/rubygems/rubygems/pull/4719).
 - worked on the Bundler Version Locking RFC - [#29](https://github.com/rubygems/rfcs/pull/29).
-- merged an enhancement that will make setting the `RUBYGEMS_GEMDEPS` environment variable used for avoiding the need to use the `bundle exec` command.
-- worked on automating the process of reproducing builds for gems - [#3118](https://github.com/rubygems/rubygems/issues/3118)
+- merged an enhancement that will make setting the `RUBYGEMS_GEMDEPS` environment variable used for avoiding the need to use the`bundle exec` command.
+- worked on automating the process of reproducing builds for gems - [#3118](https://github.com/rubygems/rubygems/issues/3118).
 - fixed several outdated definition issues (detecting whether there are Gemfile changes over the lockfile or not, to potentially reuse the information in the lockfile and avoid having to resolve dependencies at all) 
 - fixed the `--conservative` flag to allow finer-grained bundle updates. 
 - worked on smoothing the transition to secure RubyGems sources fully and fixed the regressions we create as we proceed.
 
 While working on these changes, we also simplified bundler internals and achieved faster bundler/setup performance.
 
-In July, Rubygems gained [169 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-07-01%7D...master@%7B2021-07-31%7D), contributed by 14 authors. There were 1878 additions and 1237 deletions across 152 files.
+In July, Rubygems gained [169 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-07-01%7D...master@%7B2021-07-31%7D), contributed by 14 authors. There were 1,878 additions and 1,237 deletions across 152 files.
 
 ## RubyGems.org News
 
 In July, RubyGems.org saw several bug fixes and updates, some of which include the following:
 
 - updated Kubernetes from version `1.16` to `1.20`.
-- debugged and resolved CPU spike on the database by removing page entries info from gem index page - [#2738](https://github.com/rubygems/rubygems.org/pull/2738)
-- enabled `rails 6.1` default `preload_links_header` - [#3737](https://github.com/rubygems/rubygems.org/pull/2737)
+- debugged and resolved CPU spikes on the database by removing page entries info from the gem index page - [#2738](https://github.com/rubygems/rubygems.org/pull/2738).
+- enabled `rails 6.1` default `preload_links_header` - [#3737](https://github.com/rubygems/rubygems.org/pull/2737).
 
 This month, Rubygems.org gained [27 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2021-07-01%7D...master@%7B2021-07-31%7D), contributed by 3 authors. There were 865 additions and 747 deletions across 13 files.
 
