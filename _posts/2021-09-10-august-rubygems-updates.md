@@ -9,7 +9,9 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 ## RubyGems News
 
-This month in RubyGems, We released a new version of RubyGems - _[v3.2.36](https://github.com/rubygems/rubygems/releases/tag/v3.2.26)_.
+This month in RubyGems, We released a new version of RubyGems - _[3.2.36](https://github.com/rubygems/rubygems/releases/tag/v3.2.26)_. This release features experimental support for the `RUBYGEMS_GEMDEPS` environment variable, which allows using locked versions of executables without the need of prepending `bundle exec` to them. It also fixes an issue with the loading of RubyGems plugin and improves reporting of errors inside operating system customizations of RubyGems.
+
+On Bundler, we released Bundler [2.2.26](https://rubygems.org/gems/bundler/versions/2.2.26), which includes several small fixes and improvements further [details in the changelog](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2226-august-17-2021).
 
 In August, Rubygems gained [133 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-08-01%7D...master@%7B2021-08-31%7D), contributed by 11 authors. There were 1299 additions and 896 deletions across 192 files.
 
