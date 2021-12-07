@@ -11,7 +11,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Together
 
 This month, we released new versions for RubyGems [3.2.31](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3231--2021-11-08), and [3.2.32](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3232--2021-11-23), and Bundler [2.2.31](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2231-november-8-2021), and [2.2.32](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2232-november-23-2021).
 
-The following is a non-exhaustive list of the improvements included in the above releases for RubyGems and Bundler(see the changelogs for more details):
+The following is a non-exhaustive list of the improvements included in the above releases for RubyGems and Bundler (see the changelogs for more details):
 
 - fixed a `gem fetch` vs. `gem install` inconsistency about platform-specific gems - [#5037](https://github.com/rubygems/rubygems/pull/5037).
 -  fixed issues with `--destdir` and `--prefix` options to RubyGems installer to help OS packagers. 
