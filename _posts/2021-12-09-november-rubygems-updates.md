@@ -18,21 +18,21 @@ The following is a non-exhaustive list of the improvements included in the above
 - improved an error message about git being missing - [#5036](https://github.com/rubygems/rubygems/pull/5036), and fixed an issue where Bundler hid the system man pages - [#5039](https://github.com/rubygems/rubygems/pull/5039).
 - adapted both clients to a recent gemification of some libraries (`optparse,` `pathname`).
 - improved `bundle install` usability by automatically unlocking dependencies if a lock file got expired by Gemfile changes, instead of logging an error message - [#5090](https://github.com/rubygems/rubygems/pull/5090).
--  fixed a `bundle update` issue not being able to downgrade Gemfile dependencies properly and worked on some promising refactorings of bundler internals in the context of ensuring we never generated corrupted lock files, no matter what - [#5078](https://github.com/rubygems/rubygems/pull/5078).
+-  fixed a `bundle update` issue related to not being able to downgrade Gemfile dependencies properly, and worked on some promising refactorings of Bundler internals in the context of ensuring we never generate corrupted lock files - [#5078](https://github.com/rubygems/rubygems/pull/5078).
 - started doing work on Bundle version switching.
 
-In November, Rubygems gained [140 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-11-01%7D...master@%7B2021-11-30%7D), contributed by 12 authors. There were 3,853 additions and 774 deletions across  144 files.
+In November, Rubygems gained [134 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2021-11-01%7D...master@%7B2021-11-30%7D), contributed by 12 authors. There were 3,815 additions and 743 deletions across 137 files.
 
 ## RubyGems.org News
 
 This month, RubyGems.org saw several bug fixes and updates, some of which include the following:
 
-- updated and released support for ownership calls and requests - [#2748](https://github.com/rubygems/rubygems.org/pull/2748)
-- wrote a blog post for gem adoption - [#95](https://github.com/rubygems/rubygems.github.io/pull/95)
-- tested Ruby 3.0.3 for memory leak and deployed an update to Ruby 3 - [#2876]( https://github.com/rubygems/rubygems.org/pull/2876)
+- updated and released support for ownership calls and requests - [#2748](https://github.com/rubygems/rubygems.org/pull/2748).
+- wrote a blog post for gem adoption - [#95](https://github.com/rubygems/rubygems.github.io/pull/95).
+- tested Ruby 3.0.3 for memory leak and deployed an update to Ruby 3 - [#2876]( https://github.com/rubygems/rubygems.org/pull/2876).
 - debugged high CPU alert on Postgres.
 
-In November, Rubygems.org gained [56 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2021-11-01%7D...master@%7B2021-11-30%7D), contributed by 8 authors. There were 439 additions and  209 deletions across 63 files.
+In November, Rubygems.org gained [52 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2021-11-01%7D...master@%7B2021-11-30%7D), contributed by 8 authors. There were 438 additions and  308 deletions across 63 files.
 
 As always, we continue to fix bugs, review and merge PR's and reply to support tickets.
 
