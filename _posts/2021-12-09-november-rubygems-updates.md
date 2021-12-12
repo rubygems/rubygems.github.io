@@ -17,7 +17,7 @@ The following is a non-exhaustive list of the improvements included in the above
 -  fixed issues with `--destdir` and `--prefix` options to RubyGems installer to help OS packagers. 
 - improved an error message about git being missing - [#5036](https://github.com/rubygems/rubygems/pull/5036), and fixed an issue where Bundler hid the system man pages - [#5039](https://github.com/rubygems/rubygems/pull/5039).
 - adapted both clients to a recent gemification of some libraries (`optparse,` `pathname`).
-- improved `bundle install` usability by automatically unlocking dependencies if a lock file got expired by Gemfile changes, instead of logging an error message - [#5090](https://github.com/rubygems/rubygems/pull/5090).
+- improved `bundle install` usability by automatically unlocking dependencies if a lock file got expired by Gemfile changes, instead of logging an error message - [#5068](https://github.com/rubygems/rubygems/pull/5068).
 -  fixed a `bundle update` issue related to not being able to downgrade Gemfile dependencies properly, and worked on some promising refactorings of Bundler internals in the context of ensuring we never generate corrupted lock files - [#5078](https://github.com/rubygems/rubygems/pull/5078).
 - started doing work on Bundle version switching.
 
