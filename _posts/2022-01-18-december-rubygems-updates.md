@@ -5,8 +5,6 @@ author: Gift Egwuenu
 author_email: laurandidi21@gmail.com
 ---
 
-# December 2021 Monthly Update
-
 Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Central](http://rubytogether.org/), we publish a recap of the work that we've done the previous month. Read on to find out what updates were made to [RubyGems](https://github.com/rubygems/rubygems) and [RubyGems.org](https://github.com/rubygems/rubygems.org) in December.
 
 ## RubyGems News
