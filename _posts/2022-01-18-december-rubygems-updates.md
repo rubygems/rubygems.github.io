@@ -19,7 +19,7 @@ This month, Rubygems gained [209 new commits](https://github.com/rubygems/rubyge
 
 ## RubyGems.org News
 
-In December,  we enabled multifactor authenticator on specific `api_keys` and updated UI to reflect the change - [#2846](https://github.com/rubygems/rubygems.org/pull/2846).
+In December,  we enabled multifactor authenticator on specific `api_keys` and updated the website UI to reflect the change - [#2846](https://github.com/rubygems/rubygems.org/pull/2846).
 
 This month, Rubygems.org gained [36 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2021-12-01%7D...master@%7B2021-12-31%7D), contributed by 6 authors. There were 2693 additions and 139 deletions across 89 files.
 
