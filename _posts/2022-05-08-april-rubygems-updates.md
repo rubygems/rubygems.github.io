@@ -12,17 +12,15 @@ Welcome to the RubyGems monthly update! As part of our efforts at [Ruby Central]
 
 In April, we released new versions of RubyGems [3.3.11](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3311--2022-04-07), [3.3.12](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3312--2022-04-20) and Bundler [2.3.11](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2311-april-7-2022), [2.3.12](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2312-april-20-2022).
 
-The following is a non-exhaustive list of the improvements included in the above releases (see the changelog for further information):
+The main highlight of this month's update is that RubyGems now has experimental built-in support for Rust extensions, thanks to the work done on [#5175](https://github.com/rubygems/rubygems/pull/5175).
+
+The following is a non-exhaustive list of other improvements included in the above releases (see the changelog for further information):
 
 - added modern rubies as valid platform values in Gemfile DSL - [#5469](https://github.com/rubygems/rubygems/pull/5469)
-- fixed missing RubyGems version when using old APIs - [#5496](https://github.com/rubygems/rubygems/pull/5496).
 - stopped considering `RUBY_PATCHLEVEL` for resolution - [#5472](https://github.com/rubygems/rubygems/pull/5472).
-- added cargo builder for Rust extensions - [#5175](https://github.com/rubygems/rubygems/pull/5175).
 - enabled multi-factor authentication on specific keys during `gem signin` - [#5305](https://github.com/rubygems/rubygems/pull/5305).
 
-This month, RubyGems gained [86 new commits](
-https://github.com/rubygems/rubygems.org/compare/master@%7B2022-04-01%7D...master@%7B2022-04-30%7D), contributed by 13 authors. There were 977 additions and 599 deletions across 64 files.
-
+This month, RubyGems gained [86 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2022-04-01%7D...master@%7B2022-04-30%7D), contributed by 13 authors. There were 977 additions and 599 deletions across 64 files.
 
 # RubyGems.org News
 
