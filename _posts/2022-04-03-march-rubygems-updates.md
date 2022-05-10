@@ -29,7 +29,7 @@ This month, RubyGems.org saw several bug fixes and updates, some of which includ
 - refactored `link_to_github` code - [#2980](https://github.com/rubygems/rubygems.org/pull/2980).
 - fixed deprecations recording when running tests - [#2979](https://github.com/rubygems/rubygems.org/pull/2979).
 
-In March, RubyGems gained [38 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2022-03-01%7D...master@%7B2022-03-31%7D), contributed by 6 authors. There were 811 additions and 531 deletions across 30 files.
+In March, RubyGems.org gained [38 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2022-03-01%7D...master@%7B2022-03-31%7D), contributed by 6 authors. There were 811 additions and 531 deletions across 30 files.
 
 ---
 Learn more about contributing to RubyGems by visiting the [RubyGems Contributing Guide](https://github.com/rubygems/rubygems/blob/master/CONTRIBUTING.md#how-to-contribute). We welcome all kinds of contributions, including bug fixes, feature implementation, writing and updating documentation, and bug triage.
