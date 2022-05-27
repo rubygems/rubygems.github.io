@@ -260,7 +260,7 @@ GEM
     puma (4.3.12)
       nio4r (~> 2.0)
     racc (1.6.0)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rake (13.0.3)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
