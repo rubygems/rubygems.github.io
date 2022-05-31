@@ -1,8 +1,8 @@
 ---
 title: Making popular Ruby packages more secure
 layout: post
-author:
-author_email:
+author: Betty Li
+author_email: betty.li@shopify.com
 ---
 
 Attacks on the software supply chain are increasing. Our community has not gone unscathed. RubyGems has been affected by supply chain attacks in the past. It’s important for us to mitigate these risks as much as possible. Recommending stronger security practices like enabling multi-factor authentication (MFA) on high-impact packages will be a first step in improving security of the RubyGems ecosystem.
