@@ -11,6 +11,6 @@ Account takeovers are the second most common attack on software supply chains ([
 
 Starting today, the maintainers of the top 100 RubyGems packages will begin to see reminders on the RubyGems command-line tool and website if MFA is not enabled on their accounts. Anybody who maintains a gem with more than 165 million downloads will see this recommendation.
 
-Although this is currently just a recommendation, we will enforce MFA on the top 100 gems in the future. This policy will bring us in line with other package ecosystems (e.g. [npm](https://github.blog/2022-02-01-top-100-npm-package-maintainers-require-2fa-additional-security/)).
+Although this is currently just a recommendation, we will enforce MFA on the top 100 gems in the future. This policy will bring us in line with other package ecosystems (e.g. [npm](https://github.blog/2022-02-01-top-100-npm-package-maintainers-require-2fa-additional-security/)) as well as [GitHub](https://github.blog/2022-05-04-software-security-starts-with-the-developer-securing-developer-accounts-with-2fa/).
 
 We are committed to fostering a safer, more secure ecosystem for Rubyists. This is one of many steps we plan to take over the coming months in order to maintain a healthy, reliable ecosystem for everyone. Stay tuned!
