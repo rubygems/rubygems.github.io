@@ -11,7 +11,7 @@ Account takeovers are the [second most common](https://arxiv.org/abs/2002.01139)
 
 As proposed in the [MFA rollout RFC](https://github.com/rubygems/rfcs/blob/master/text/0007-mfa-rollout.md), RubyGems is beginning to move towards greater adoption of multi-factor authentication for gem maintainers.
 
-Starting today (June 13, 2022), the maintainers of at least the top 100 RubyGems packages will begin to see reminders on the RubyGems command-line tool and website if MFA is not enabled on their accounts. Anybody who maintains a gem with more than 165 million downloads will see this recommendation.
+Starting today (June 13, 2022), the maintainers of at least the top 100 RubyGems packages will begin to see warnings on the RubyGems command-line tool and website if MFA is not enabled on their accounts. Anybody who maintains a gem with more than 165 million downloads will see this recommendation.
 
 Although this is currently just a recommendation, we will begin to enforce MFA for maintainers of those gems in two months’ time (August 15, 2022). This policy will bring us in line with other package ecosystems (e.g. [npm](https://github.blog/2022-02-01-top-100-npm-package-maintainers-require-2fa-additional-security/)) as well as [GitHub](https://github.blog/2022-05-04-software-security-starts-with-the-developer-securing-developer-accounts-with-2fa/).
 
