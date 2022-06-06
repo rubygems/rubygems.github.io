@@ -5,7 +5,7 @@ author: Betty Li
 author_email: betty.li@shopify.com
 ---
 
-Attacks on the software supply chain are increasing and our community has not gone unscathed. RubyGems has been affected by supply chain attacks in the past, so it’s important for us to mitigate these risks as much as possible. Recommending stronger security practices like enabling multi-factor authentication (MFA) on popular packages is a first step towards improving security of the RubyGems ecosystem.
+Attacks on the software supply chain are increasing and our community has not gone unscathed. RubyGems has been affected by supply chain attacks in the past, so it’s important for us to mitigate these risks as much as possible. Recommending stronger security practices like enabling multi-factor authentication (MFA) on popular packages is a first step towards improving the security of the RubyGems ecosystem.
 
 Account takeovers are the [second most common](https://arxiv.org/abs/2002.01139) attack on software supply chains. The countermeasure against this type of attack is simple: enabling MFA. Doing so can [prevent 99.9 percent](https://www.microsoft.com/security/blog/2019/08/20/one-simple-action-you-can-take-to-prevent-99-9-percent-of-account-attacks/) of account takeover attacks.
 
