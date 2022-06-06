@@ -4,6 +4,9 @@ layout: post
 author: Betty Li
 author_email: betty.li@shopify.com
 ---
+<p align="center">
+    <img src="/images/gem-with-mfa-flag.png" alt="Doodle of a RubyGem wearing an MFA hat, holding a flag with a checkmark" width="300"/>
+</p>
 
 Attacks on the software supply chain are increasing and our community has not gone unscathed. RubyGems has been affected by supply chain attacks in the past, so it’s important for us to mitigate these risks as much as possible. Recommending stronger security practices like enabling multi-factor authentication (MFA) on popular packages is a first step towards improving the security of the RubyGems ecosystem.
 
