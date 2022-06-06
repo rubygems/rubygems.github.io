@@ -17,4 +17,6 @@ Although this is currently just a recommendation, we will begin to enforce MFA f
 
 Maintainers affected by this policy will receive email reminders to enable MFA one-month and one-week before the enforcement goes into effect. We recommend that maintainers set their MFA [authentication level](https://guides.rubygems.org/setting-up-multifactor-authentication/#authentication-levels) to `UI and API`. However, `UI and gem signin` is acceptable too.
 
+Once these policy changes are fully complete for maintainers of the most popular gems, we intend to increase coverage by extending the MFA requirement to more gems in future. We’ll communicate any proposed changes in advance, but in the meantime please contact us in the [Bundler Slack workspace](https://slack.bundler.io/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues) if you have any feedback, questions or concerns.
+
 We are committed to fostering a safer, more secure ecosystem for Rubyists. This is one of many steps we plan to take over the coming months in order to maintain a healthy, reliable ecosystem for everyone. Stay tuned!
