@@ -18,7 +18,7 @@ Starting today (June 13, 2022), the maintainers of at least the top 100 RubyGems
 
 Although this is currently just a recommendation, we will begin to enforce MFA for maintainers of those gems in two months’ time (August 15, 2022). This policy will bring us in line with other package ecosystems (e.g. [npm](https://github.blog/2022-02-01-top-100-npm-package-maintainers-require-2fa-additional-security/)) as well as [GitHub](https://github.blog/2022-05-04-software-security-starts-with-the-developer-securing-developer-accounts-with-2fa/).
 
-Maintainers affected by this policy will receive email reminders to enable MFA one month and one week before the enforcement goes into effect. We recommend that maintainers set their MFA [authentication level](https://guides.rubygems.org/setting-up-multifactor-authentication/#authentication-levels) to `UI and API`. However, `UI and gem signin` is acceptable too.
+Maintainers affected by this policy will receive email reminders to enable MFA one month before, and again one week before, the enforcement goes into effect. We recommend that maintainers set their MFA [authentication level](https://guides.rubygems.org/setting-up-multifactor-authentication/#authentication-levels) to `UI and API`. However, `UI and gem signin` is acceptable too.
 
 Once these policy changes are fully complete for maintainers of the most popular gems, we intend to increase coverage by extending the MFA requirement to more gems in future. We’ll communicate any proposed changes in advance, but in the meantime please contact us in the [Bundler Slack workspace](https://slack.bundler.io/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues) if you have any feedback, questions or concerns.
 
