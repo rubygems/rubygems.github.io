@@ -15,26 +15,26 @@ The following is a non-exhaustive list of other improvements included in the abo
 
 - fixed a regression when loading old marshaled specs - [#5610](https://github.com/rubygems/rubygems/pull/5610).
 - improved performance of installing gems from gem server sources -  [#5614](https://github.com/rubygems/rubygems/pull/5614).
-- fixed incorrect password redaction when there's an error in gem source `-a` - [#5623](https://github.com/rubygems/rubygems/pull/5623).
-- fixed some errors printed twice in `--verbose` mode - [#5654](https://github.com/rubygems/rubygems/pull/5654).
+- fixed incorrect password redaction when there's an error in `gem source -a` - [#5623](https://github.com/rubygems/rubygems/pull/5623).
+- fixed some errors being printed twice in `--verbose` mode - [#5654](https://github.com/rubygems/rubygems/pull/5654).
 - created documentation on how to run `rake setup` as a regular user - [#5662](https://github.com/rubygems/rubygems/pull/5662).
 - added clear and descriptive messages when `gem update` fails to update some gems -  [#5676](https://github.com/rubygems/rubygems/pull/5676).
 
-In June, RubyGems gained [171 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2022-06-01%7D...master@%7B2022-06-31%7D), contributed by 13 authors. There were 1,644 additions and 1,233 deletions across 165 files.
+In June, RubyGems gained [168 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2022-06-01%7D...master@%7B2022-06-31%7D), contributed by 13 authors. There were 1,610 additions and 1,233 deletions across 165 files.
 
 # RubyGems.org News
 
 In June, RubyGems.org saw several bug fixes and updates, some of which include the following:
 
 - fixed confusion in MFA behaviour - [#3079](https://github.com/rubygems/rubygems.org/pull/3079).
-- added prompt to notify user leaving without copying MFA recovery codes - [#3082](https://github.com/rubygems/rubygems.org/pull/3082).
-- removed API key `rubygems_id` from form url query string - [#3085](https://github.com/rubygems/rubygems.org/pull/3085).
-- separate MFA methods from User to its own concern `UserMultifactorMethods` - [#3108](https://github.com/rubygems/rubygems.org/pull/3108).
-- added case insensitive uniqueness validation to user handle - [#3120](https://github.com/rubygems/rubygems.org/pull/3120).
-- added a per user rate limit to `gem push` command - [#3121](https://github.com/rubygems/rubygems.org/pull/3121).
+- added a prompt to notify users leaving without copying MFA recovery codes - [#3082](https://github.com/rubygems/rubygems.org/pull/3082).
+- removed API key `rubygems_id` from the form url query string - [#3085](https://github.com/rubygems/rubygems.org/pull/3085).
+- separated MFA methods from `User.rb` to its own concern `UserMultifactorMethods` - [#3108](https://github.com/rubygems/rubygems.org/pull/3108).
+- added case insensitive uniqueness validation to user handles - [#3120](https://github.com/rubygems/rubygems.org/pull/3120).
+- added a per user rate limit to the `gem push` command - [#3121](https://github.com/rubygems/rubygems.org/pull/3121).
 - added a Capybara find method to wait for page to load when running tests - [#3124](https://github.com/rubygems/rubygems.org/pull/3124).
 
-This month, RubyGems.org gained [76 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2022-06-01%7D...master@%7B2022-06-31%7D), contributed by 13 authors. There were 1,015 additions and 263 deletions across 63 files.
+This month, RubyGems.org gained [74 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2022-06-01%7D...master@%7B2022-06-31%7D), contributed by 13 authors. There were 1,015 additions and 263 deletions across 63 files.
 
 As always, we continue to fix bugs, review and merge PR’s and reply to support tickets.
 
