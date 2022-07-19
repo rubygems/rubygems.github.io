@@ -16,7 +16,7 @@ As proposed in the [MFA rollout RFC](https://github.com/rubygems/rfcs/blob/maste
 
 Starting today (June 13, 2022), the maintainers of at least the top 100 RubyGems packages will begin to see warnings on the RubyGems command-line tool and website if MFA is not enabled on their accounts. Anybody who maintains a gem with more than 165 million downloads will see this recommendation.
 
-Although this is currently just a recommendation, we will begin to enforce MFA for maintainers of those gems in two months’ time (August 15, 2022). This policy will bring us in line with other package ecosystems (e.g. [npm](https://github.blog/2022-02-01-top-100-npm-package-maintainers-require-2fa-additional-security/)) as well as [GitHub](https://github.blog/2022-05-04-software-security-starts-with-the-developer-securing-developer-accounts-with-2fa/).
+Although this is currently just a recommendation, in two months’ time (August 15, 2022), we will begin to enforce MFA for owners of gems with more than 180 million downloads. This policy will bring us in line with other package ecosystems (e.g. [npm](https://github.blog/2022-02-01-top-100-npm-package-maintainers-require-2fa-additional-security/)) as well as [GitHub](https://github.blog/2022-05-04-software-security-starts-with-the-developer-securing-developer-accounts-with-2fa/).
 
 Maintainers affected by this policy will receive email reminders to enable MFA one month before, and again one week before, the enforcement goes into effect. We recommend that maintainers set their MFA [authentication level](https://guides.rubygems.org/setting-up-multifactor-authentication/#authentication-levels) to `UI and API`. However, `UI and gem signin` is acceptable too.
 
