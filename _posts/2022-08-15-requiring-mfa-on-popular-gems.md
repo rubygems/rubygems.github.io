@@ -5,7 +5,7 @@ author: Jenny Shen
 author_email: jenny.shen@shopify.com
 ---
 <p align="center">
-    <img src="/images/gem-with-mfa-flag-dropshadow.png" alt="Doodle of a RubyGem wearing an MFA hat, holding a flag with a checkmark" width="300"/>
+    <img src="/images/gem-with-thumbs-up-mfa-dropshadow.png" alt="Doodle of a RubyGem wearing a MFA hat, giving a thumbs up" width="300"/>
 </p>
 
 Two months ago, we outlined our [commitment](https://blog.rubygems.org/2022/06/13/making-packages-more-secure.html) to making Ruby’s supply chain more secure. To combat account takeovers — the second most common software supply chain attack —  we announced a policy to require MFA on at least the top-100 RubyGems packages.
