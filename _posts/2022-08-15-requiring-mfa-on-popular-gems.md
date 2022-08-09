@@ -14,6 +14,8 @@ Today (August 15th, 2022), we will begin to enforce MFA on owners of gems with o
 
 Maintainers of gems that surpass 165 million total downloads will continue to receive recommendation reminders on the UI and CLI until the gem reaches 180 million total downloads. At that point, MFA will be required.
 
-This policy would bring us in line with the policies made by other package ecosystems. We have plans to increase MFA adoption on RubyGems, which will be announced in the near future. In addition, we are also currently working on adding support for [WebAuthn](https://webauthn.guide/). Maintainers would be able to use hardware tokens, biometric keys, and other WebAuthn-supported devices as their multi-factor device of choice.
+This policy would bring us in line with the policies made by other package ecosystems. We have plans to increase MFA adoption on RubyGems. If you have ideas on how future rollouts should be approached, join this [discussion](https://github.com/rubygems/rfcs/issues/42) in our RFC repository! 
+
+In addition, we are also currently working on adding support for [WebAuthn](https://webauthn.guide/). Maintainers would be able to use hardware tokens, biometric keys, and other WebAuthn-supported devices as their multi-factor device of choice.
 
 Be sure to stay tuned for updates! As always, if you have any feedback, questions or ideas on how to make RubyGems better and more secure, please contact us in the [Bundler Slack workspace](https://slack.bundler.io/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues).
