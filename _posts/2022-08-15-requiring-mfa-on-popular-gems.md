@@ -18,4 +18,4 @@ This policy would bring us in line with the policies made by other package ecosy
 
 In addition, we are also currently working on adding support for [WebAuthn](https://webauthn.guide/). Maintainers would be able to use hardware tokens, biometric keys, and other WebAuthn-supported devices as their multi-factor device of choice.
 
-Be sure to stay tuned for updates! As always, if you have any feedback, questions or ideas on how to make RubyGems better and more secure, please contact us in the [Bundler Slack workspace](https://slack.bundler.io/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues).
+Be sure to stay tuned for updates! As always, if you have any feedback, questions or ideas on how to make RubyGems better and more secure, please contact us in the [Bundler Slack workspace](https://slack.bundler.io/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues). If you require account assistance based on the changes rolled out today, please reach out to [support@rubygems.org](mailto:support@rubygems.org).
