@@ -351,6 +351,7 @@ a.t-list__item {
     word-break: normal; }
 .t-body code {
   font-weight: bold;
+  word-spacing: -0.3em;
   font-family: "courier", monospace; }
 .t-body ul, .t-body ol {
   margin-top: 18px; }
