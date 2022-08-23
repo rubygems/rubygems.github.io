@@ -8,7 +8,7 @@ author_email: kevin.lin@shopify.com
 # Summary
 
 The `UI only` multi-factor authentication level is being removed.
-Users who remain on the UI only MFA level will be migrated to the UI and gem signin level on September 22nd, 2022.
+Users who remain on the `UI only` MFA level will be migrated to the `UI and gem signin` level on September 22nd, 2022.
 
 # Why is this happening?
 
