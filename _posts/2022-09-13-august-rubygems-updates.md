@@ -11,7 +11,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 
 This month in RubyGems, we released new versions of RubyGems [3.3.20](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3320--2022-08-10), [3.3.21](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3321--2022-08-24) and Bundler [2.3.20](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2320-august-10-2022), [2.3.21](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2321-august-24-2022).
 
-The following is a non-exhaustive list of other improvements included in the above releases (see the changelog for further information):
+The following are the main improvements shipped during this month (see the changelog for more improvements and fixes):
 
 - added `Bundler.settings[:only]` to install gems of the only specified groups - [#5759](https://github.com/rubygems/rubygems/pull/5759).
 - shipped a feature to allow ignore funding messages by adding the `ignore_funding_requests` config flag - [#5767](https://github.com/rubygems/rubygems/pull/5767).
