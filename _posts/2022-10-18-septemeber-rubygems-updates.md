@@ -11,16 +11,16 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 
 This month in RubyGems, we released RubyGems [v3.3.22](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3322--2022-09-07) and Bundler [v2.3.22](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2322-september-7-2022).
 
-We also shipped the following improvements and fixes (see the changelog for more):
+The following improvements and fixes are also included in these releases (see the changelog for more information):
 
 - added `bundle-console` command in Bundler's documentation - [#5901](https://github.com/rubygems/rubygems/pull/5901). 
 - updated the Bundler metadata source code URI for accuracy in gemspec - [#5896](https://github.com/rubygems/rubygems/pull/5896).
 - removed warning for old TLS version connections - [#5928](https://github.com/rubygems/rubygems/pull/5928).
 - removed no longer needed `fiddle` hacks since RubyInstaller released patch versions to not load `fiddle` on boot - [#5902](https://github.com/rubygems/rubygems/pull/5902).
 
-In addition to the above, this month we've been working on migrating Bundler's internal resolver engine to use Pub Grub, which should result in a much better error messages and resolution performance. We hope to release this work soon. 
+In addition, this month we've been working on migrating Bundler's internal resolver engine to use PubGrub, which should result in much better error messages and resolution performance. We hope to release this work soon. 
 
-Also, we have removed the feature of auto-sudo'ing when not having enough permissions to perform certain operations, because it was considered harmful and hardly useful. This removal will be released with Bundler 2.4.
+We have also removed the feature of auto-sudo'ing when there are not enough permissions to perform certain operations, because it was considered harmful and hardly useful. This removal will be released with Bundler 2.4.0
 
 In September, RubyGems gained [94 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2022-09-01%7D...master@%7B2022-09-31%7D), contributed by 19 authors. There were 1,678 additions and 1,869 deletions across 161 files.
 
