@@ -12,7 +12,7 @@ This month in RubyGems, we released new versions of RubyGems [3.3.25](https://gi
 
 The following improvements and fixes are also included in these releases (see the changelog for more information):
 
-- avoid installing everything under `lib` at the top in all test files - [#6074]( https://github.com/rubygems/rubygems/pull/6074).
+- improve some test times and fix warning by not installing documentation. - [#6074](https://github.com/rubygems/rubygems/pull/6074).
 - fixed broken link in `bundle-platform` man page - [#6071](https://github.com/rubygems/rubygems/pull/6071).
 - added permission restrictions to GitHub actions - [#6081](https://github.com/rubygems/rubygems/pull/6081).
 - removed reference to RVM documentation in the message returned when you run `bundler outdated` - [#6083](https://github.com/rubygems/rubygems/pull/6083).
