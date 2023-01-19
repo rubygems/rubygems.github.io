@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.0.3'
+ruby '3.0.5'
 
 gem 'coffee-script'
 gem 'github-pages'
