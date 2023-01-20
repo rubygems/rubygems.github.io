@@ -25,7 +25,7 @@ In addition to that, we made the following improvements and fixes(see the change
 - updated generated CI scripts to be able to compile Rust extensions - [#6168](https://github.com/rubygems/rubygems/pull/6168).
 - added a spec to make sure global gemspecs can't confuse Bundler - [#6086](https://github.com/rubygems/rubygems/pull/6086).
 
-We also dropped support for old Rubies (2.3, 2.4, and 2.5) and [finally removed the the `auto-sudo` feature](https://blog.rubygems.org/2022/10/18/septemeber-rubygems-updates.html) in Bundler 2.4, a longstanding request of our users because of being considered harmful.
+We also dropped support for old Rubies (2.3, 2.4, and 2.5) and finally removed the `auto-sudo` feature in Bundler 2.4, [a longstanding request of our users](https://blog.rubygems.org/2022/10/18/septemeber-rubygems-updates.html/#rubygems-news) because of being considered harmful.
 
 
 In December, RubyGems gained [242 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2022-12-01%7D...master@%7B2022-12-31%7D), contributed by 20 authors. There were 77,119 additions and 3,466 deletions across 2,051 files.
