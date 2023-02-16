@@ -38,7 +38,7 @@ In January, RubyGems.org saw several bug fixes and updates, some of which includ
 - the addition of telemetry to capture MFA login durations - [#3376](https://github.com/rubygems/rubygems.org/pull/3376).
 - introducing a timeout after inactivity on the OTP page - [#3325](https://github.com/rubygems/rubygems.org/pull/3325).
 
-![OTP Timeout](https://user-images.githubusercontent.com/71022385/211091850-84d7f2e3-ee43-44bd-928e-1051130c3ede.png)
+![OTP Timeout](https://res.cloudinary.com/lauragift/image/upload/w_650,h_400/v1676537149/211091850-84d7f2e3-ee43-44bd-928e-1051130c3ede_vq4tfk.png)
 
 This month, RubyGems.org gained [86 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-01-01%7D...master@%7B2023-01-31%7D), contributed by 12 authors. There were 584 additions and 395 deletions across 46 files.
 
