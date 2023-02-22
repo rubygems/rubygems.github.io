@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '3.0.5'
 
-gem 'coffee-script'
 gem 'github-pages'
 gem 'pathutil', github: 'https://github.com/envygeeks/pathutil/pull/5'
 gem 'webrick'
