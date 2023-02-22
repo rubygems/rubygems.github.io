@@ -3,7 +3,6 @@ task :default do
   pids = [
     spawn("bundle exec jekyll serve --watch"),
     spawn("bundle exec scss --quiet --watch stylesheets/scss:stylesheets"),
-    spawn("coffee -b -w -o javascripts -c javascripts/*.coffee")
   ]
 
   trap "INT" do
