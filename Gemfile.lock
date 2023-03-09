@@ -10,7 +10,7 @@ GIT
 GIT
   remote: https://github.com/envygeeks/pathutil.git
   revision: 3451a10c362fc867b20c7e471a551b31c40a0246
-  ref: refs/pull/5/head
+  branch: refs/pull/5/head
   specs:
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -239,7 +239,7 @@ GEM
     puma (4.3.12)
       nio4r (~> 2.0)
     racc (1.6.2)
-    rack (2.2.6.2)
+    rack (2.2.6.3)
     rake (13.0.3)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
