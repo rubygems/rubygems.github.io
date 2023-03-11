@@ -33,6 +33,8 @@ In February, RubyGems gained [108 new commits](https://github.com/rubygems/rubyg
 
 This month, we made significant progress on the backend admin dashboard. We implemented robust auditing of all changes and added support for resetting users' MFA, blocking a user, and deleting webhooks. 
 
+![admin dashboard](https://i.imgur.com/tv3a5ve.png)
+
 We [announced](https://blog.rubygems.org/2023/02/22/dependency-api-deprecation.html) the deprecation of the dependency API, and we plan to implement brownouts and remove the endpoint entirely. We also migrated all RDS instances to be managed by Terraform and tested the migration of managed node groups on the rubygems.org EKS cluster.
 
 In addition to these updates, RubyGems.org saw several bug fixes and updates, some of which include:
@@ -49,7 +51,7 @@ In addition to these updates, RubyGems.org saw several bug fixes and updates, so
 
 In February, RubyGems.org gained [209 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-02-01%7D...master@%7B2023-02-28%7D), contributed by 17 authors. There were 7,602 additions and 1,071 deletions across 273 files.
 
-## Ruby Ecosystemf News 
+## Ruby Ecosystem News 
 
 Here we outline additional exciting updates made to other projects in the Ruby Ecosystem.
 
