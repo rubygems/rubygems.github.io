@@ -33,7 +33,7 @@ In February, RubyGems gained [108 new commits](https://github.com/rubygems/rubyg
 
 This month, we made significant progress on the backend admin dashboard. We implemented robust auditing of all changes and added support for resetting users' MFA, blocking a user, and deleting webhooks. 
 
-![admin dashboard](https://i.imgur.com/tv3a5ve.png)
+![admin dashboard](https://res.cloudinary.com/lauragift/image/upload/w_650,h_400/v1678564247/admin_ys7u5k.png)
 
 We [announced](https://blog.rubygems.org/2023/02/22/dependency-api-deprecation.html) the deprecation of the dependency API, and we plan to implement brownouts and remove the endpoint entirely. We also migrated all RDS instances to be managed by Terraform and tested the migration of managed node groups on the rubygems.org EKS cluster.
 
