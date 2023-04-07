@@ -5,7 +5,9 @@ author: Samuel Giddins
 author_email: segiddins@segiddins.me
 ---
 
-We're deprecating [the Dependency API](https://guides.RubyGems.org/rubygems-org-api/#misc-methods) on RubyGems.org. To learn more, read on, or see the original [RFC][rfc] about this deprecation.
+**Update:** The Dependency API [will be disabled on May 10 instead](/2023/04/07/dependency-api-deprecation-delayed.html), one month later than mentioned here. If you are having issues with Nexus, Artifactory, Chef, or another product that uses the dependency API, read [the post about delaying the deprecation](/2023/04/07/dependency-api-deprecation-delayed.html)
+
+We're deprecating [the Dependency API](https://guides.rubygems.org/rubygems-org-api/#misc-methods) on RubyGems.org. To learn more, read on, or see the original [RFC][rfc] about this deprecation.
 
 [rfc]: https://github.com/segiddins/rfcs/blob/segiddins/deprecate-dependency-api/0000-deprecate-dependency-api.md
 
@@ -15,7 +17,7 @@ The dependency API was the primary way Bundler fetched dependency info for Gemfi
 
 The API has a single endpoint, `/api/v1/dependencies` (returning responses as Marshal or as JSON), accepting a single comma-separated `gems` query parameter.
 
-For example, <https://index.RubyGems.org/api/v1/dependencies.json?gems=rails> returns every dependency for every version of the gem `rails`.
+For example, <https://index.rubygems.org/api/v1/dependencies.json?gems=rails> returns every dependency for every version of the gem `rails`.
 
 ### Why is the Dependency API being deprecated?
 
