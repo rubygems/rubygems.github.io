@@ -44,7 +44,7 @@ end
 
 ### Artifactory issues
 
-JFrog has already posted [an official solution to the problem](), which consists of enabling a single configuration flag in Artifactory to provide the newer compact index format instead.
+JFrog has already posted [an official solution to the problem](https://jfrog.com/help/r/artifactory-rubygems-org-dependency-api-deprecation), which consists of enabling a single configuration flag in Artifactory to provide the newer compact index format instead.
 
 There is [a public Jira ticket](https://jfrog.atlassian.net/browse/RTFACT-29525) that includes discussion of the problem, as well as an nginx or apache-based workaround that can also be applied.
 
@@ -60,4 +60,8 @@ If you are having problems using Nexus, please [contact Sonatype support](https:
 
 If you are seeing a problem while using Artifactory, Nexus, Chef, Puppet, or any other software that depends on RubyGems, please contact the vendor for that product directly for support.
 
+If you are having a problem directly with RubyGems.org, please [open a ticket in our public issue tracker](https://github.com/rubygems/rubygems.org/issues) instead of asking for private support. Please avoid contacting maintainers directly to ask for help.
+
 The RubyGems.org team is only a few people, and none of us are able to work on RubyGems as our full-time job. We are providing a free service because we love the Ruby community, but we are not a commercial product with revenue that would allow us to have full-time staff to help with problems.
+
+We are happy to listen to your feedback, and try to work with you to find a solution with the best outcome for you, the Ruby community, and the maintainers of RubyGems.
