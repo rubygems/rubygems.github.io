@@ -7,7 +7,7 @@ author_email: jenny.shen@shopify.com
 
 In a world where many maintainer accounts are being targeted to distribute malicious code via our packages, it is crucial to add more measures that will help prevent these account takeovers. At the end of 2022, we [announced](https://blog.rubygems.org/2022/12/21/introducing-hardware-security-token-and-passkey-support.html) the addition of hardware security token and passkey support (aka WebAuthn) to help secure your RubyGems’ account in the browser.
 
-Starting today, you can now use your registered security device as a multi-factor method on the RubyGems CLI! This feature is available in [RubyGems 3.4.11](https://blog.rubygems.org/#2023) and above.
+Starting today, you can now use your registered security device as a multi-factor method on the RubyGems CLI! This feature is available in [RubyGems 3.4.12](https://blog.rubygems.org/2023/04/11/3.4.12-released.html) and above.
 
 If you have a security device registered, you will be redirected to the browser to authenticate using your security device when signing in on the command line. The same process can also apply for other MFA-required commands if enabled.
 
