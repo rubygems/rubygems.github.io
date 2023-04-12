@@ -10,7 +10,7 @@ GIT
 GIT
   remote: https://github.com/envygeeks/pathutil.git
   revision: 3451a10c362fc867b20c7e471a551b31c40a0246
-  branch: refs/pull/5/head
+  ref: refs/pull/5/head
   specs:
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -229,7 +229,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.18.0)
     nio4r (2.5.8)
-    nokogiri (1.14.2)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     octokit (4.25.1)
