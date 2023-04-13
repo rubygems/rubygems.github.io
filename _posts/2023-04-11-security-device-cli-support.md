@@ -18,4 +18,4 @@ We are still working to make WebAuthn be a drop-in replacement for time-based on
 
 We are still investing to make a safer, more secure ecosystem for Rubyists, so be sure to stay tuned for updates!
 
-If you have any feedback, questions or ideas on how to make RubyGems better and more secure, please contact us in the [Bundler Slack workspace](https://slack.bundler.io/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues).
+If you have any feedback, questions or ideas on how to make RubyGems better and more secure, please contact us in the [Bundler Slack workspace](https://bundler.slack.com/) or open a [GitHub issue](https://github.com/rubygems/rubygems.org/issues).
