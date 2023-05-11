@@ -5,6 +5,8 @@ author: Samuel Giddins
 author_email: segiddins@segiddins.me
 ---
 
+**Update**: The Dependency API will be disabled on May 24, after a [final two week extension](/2023/04/07/dependency-api-deprecation-delayed.html)
+
 **Update:** The Dependency API [will be disabled on May 10 instead](/2023/04/07/dependency-api-deprecation-delayed.html), one month later than mentioned here. If you are having issues with Nexus, Artifactory, Chef, or another product that uses the dependency API, read [the post about delaying the deprecation](/2023/04/07/dependency-api-deprecation-delayed.html)
 
 We're deprecating [the Dependency API](https://guides.rubygems.org/rubygems-org-api/#misc-methods) on RubyGems.org. To learn more, read on, or see the original [RFC][rfc] about this deprecation.

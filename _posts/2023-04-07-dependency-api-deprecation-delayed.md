@@ -5,7 +5,9 @@ author: André Arko
 author_email: andre@arko.net
 ---
 
-**tl;dr**: the Dependency API will stick around for an extra month to allow downstream projects more time to handle the change. New brownout dates: April 10, 17, 24, May 1, 3, 5. New removal date: May 10.
+**Update**: Based on additional feedback from community members, we have pushed back the removal by two weeks and added an exception until August 8 for Java users. New brownout dates are May 12, 15, 17, 19, 22, and the removal date is moved from May 10 to May 24.
+
+**tl;dr**: the Dependency API will stick around for an extra month to allow downstream projects more time to handle the change. New brownout dates: April 10, 17, 24, May 1, 3, 5, 12, 15, 17, 19, 22. New removal date: May 24.
 
 ### What happened
 
@@ -25,8 +27,13 @@ Because of this unexpected impact on end users, we have decided to push back rem
 - May 01 00:00:01 to 23:59:59 (UTC)
 - May 03 00:00:01 to 23:59:59 (UTC)
 - May 05 00:00:01 to 23:59:59 (UTC)
+- May 12 00:00:01 to 23:59:59 (UTC)
+- May 15 00:00:01 to 23:59:59 (UTC)
+- May 17 00:00:01 to 23:59:59 (UTC)
+- May 19 00:00:01 to 23:59:59 (UTC)
+- May 22 00:00:01 to 23:59:59 (UTC)
 
-The dependency API will be disabled on May 10, 2023, at 00:00:01 UTC.
+The dependency API will be disabled on May 24, 2023, at 00:00:01 UTC.
 
 ### Gemfile workaround
 
