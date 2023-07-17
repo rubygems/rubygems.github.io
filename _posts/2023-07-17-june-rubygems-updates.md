@@ -35,7 +35,8 @@ This month, RubyGems.org saw several bug fixes and updates, some of which includ
 - made `create_between` consistent for versions with same`created_at` timeframe - [#3887](https://github.com/rubygems/rubygems.org/pull/3887).
 - added an admin action to reserve a gem namespace - [#3875](https://github.com/rubygems/rubygems.org/pull/3875).
 
-![admin dashboard](https://user-images.githubusercontent.com/1946610/248446070-a0eeaafa-1d52-4825-b73c-ccfa7a77228d.png)
+![admin dashboard](https://res.cloudinary.com/lauragift/image/upload/w_650,h_500/v1689579722/248446070-a0eeaafa-1d52-4825-b73c-ccfa7a77228d_xqcueg.png)
+
 
 In June, RubyGems gained [113 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-06-01%7D...master@%7B2023-06-30%7D) contributed by 11 authors. There were 2,262 additions and 463 deletions across 76 files.
 
