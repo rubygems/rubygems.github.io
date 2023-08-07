@@ -9,13 +9,15 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 
 ## RubyGems News
 
-This month in RubyGems, we released [3.4.16](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3416--2023-07-10), [3.4.17](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3417--2023-07-14) and Bundler [2.4.16](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2416-july-10-2023), [2.4.17](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2417-july-14-2023).
+This month in RubyGems, we released [3.4.16](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3416--2023-07-10), [3.4.17](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3417--2023-07-14) and Bundler [2.4.16](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2416-july-10-2023), [2.4.17](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2417-july-14-2023). 
 
-The following improvements and fixes are included in these releases (see the changelog for more information):
+In RubyGems, we improved certain gem install invocations that had gotten slower since the dependencies API was phased out. In Bundler, the releases included several improvements such as fixes related to locked platforms, improvements to make sections related to git gems stable, and some other regression fixes.
 
+Some other improvements that landed into our repo this month but that are not included in the above releases are:
+
+- improvements to RubyGems require - [#6827](https://github.com/rubygems/rubygems/pull/6827).
+- improvements related to the Security Devices support feature, such as [#6774](https://github.com/rubygems/rubygems/pull/6774).
 - updated Magnus version in Rust extension gem template - [#6843](https://github.com/rubygems/rubygems/pull/6843).
-- set thread configurations in the thread-local manner - [#6842](https://github.com/rubygems/rubygems/pull/6842).
-- restored support for Pathname objects in the replaced require - [#6837](https://github.com/rubygems/rubygems/pull/6837).
 - removed side effects when unmarshaling old `Gem::Specification` - [#6825](https://github.com/rubygems/rubygems/pull/6825).
 - used `File::NULL `instead of hard coded null device names - [#6809](https://github.com/rubygems/rubygems/pull/6809).
 - added Automatiek improvements - [#6788](https://github.com/rubygems/rubygems/pull/6788).
