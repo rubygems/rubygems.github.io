@@ -9,9 +9,9 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 
 ## RubyGems News
 
-This month in RubyGems, we released [3.4.16](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3416--2023-07-10), [3.4.17](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3417--2023-07-14) and Bundler [2.4.16](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2416-july-10-2023), [2.4.17](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2417-july-14-2023). 
+This month in RubyGems, we released [3.4.16](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3416--2023-07-10), [3.4.17](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3417--2023-07-14) and Bundler [2.4.16](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2416-july-10-2023), [2.4.17](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2417-july-14-2023).
 
-In RubyGems, we improved certain gem install invocations that had gotten slower since the dependencies API was phased out. In Bundler, the releases included several improvements such as fixes related to locked platforms, improvements to make sections related to git gems stable, and some other regression fixes.
+In RubyGems, we [improved](https://github.com/rubygems/rubygems/pull/6810) certain `gem install` invocations that had gotten slower since the dependencies API was phased out. In Bundler, the above releases include several improvements such as [fixes](https://github.com/rubygems/rubygems/pull/6784) related to locked platforms, [improvements](https://github.com/rubygems/rubygems/pull/6786) to make sections related to git gems stable, and some other regression fixes.
 
 Some other improvements that landed into our repo this month but that are not included in the above releases are:
 
@@ -21,9 +21,6 @@ Some other improvements that landed into our repo this month but that are not in
 - removed side effects when unmarshaling old `Gem::Specification` - [#6825](https://github.com/rubygems/rubygems/pull/6825).
 - used `File::NULL `instead of hard coded null device names - [#6809](https://github.com/rubygems/rubygems/pull/6809).
 - added Automatiek improvements - [#6788](https://github.com/rubygems/rubygems/pull/6788).
-- fixed another incorrect removal of "Ruby" platform from lockfile when changing path sources - [#6784](https://github.com/rubygems/rubygems/pull/6784).
-- fixed git source lockfile instability - [#6786](https://github.com/rubygems/rubygems/pull/6786).
-- excluded Bundler from missing locked dependencies check - [#6792](https://github.com/rubygems/rubygems/pull/6792).
 
 In July, RubyGems gained [96 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-07-01%7D...master@%7B2023-07-31%7D) contributed by 13 authors. There were 1,559 additions and 695 deletions across 86 files.
 
