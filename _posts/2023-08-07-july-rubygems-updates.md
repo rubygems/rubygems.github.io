@@ -15,8 +15,8 @@ In RubyGems, we improved certain gem install invocations that had gotten slower 
 
 Some other improvements that landed into our repo this month but that are not included in the above releases are:
 
-- improvements to RubyGems require - [#6827](https://github.com/rubygems/rubygems/pull/6827).
-- improvements related to the Security Devices support feature, such as [#6774](https://github.com/rubygems/rubygems/pull/6774).
+- improved RubyGems `require` - [#6827](https://github.com/rubygems/rubygems/pull/6827).
+- improvements related to the Security Devices support feature - [#6774](https://github.com/rubygems/rubygems/pull/6774).
 - updated Magnus version in Rust extension gem template - [#6843](https://github.com/rubygems/rubygems/pull/6843).
 - removed side effects when unmarshaling old `Gem::Specification` - [#6825](https://github.com/rubygems/rubygems/pull/6825).
 - used `File::NULL `instead of hard coded null device names - [#6809](https://github.com/rubygems/rubygems/pull/6809).
