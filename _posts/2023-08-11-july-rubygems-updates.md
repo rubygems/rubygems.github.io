@@ -11,15 +11,15 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 
 This month in RubyGems, we released [3.4.16](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3416--2023-07-10), [3.4.17](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3417--2023-07-14) and Bundler [2.4.16](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2416-july-10-2023), [2.4.17](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2417-july-14-2023).
 
-In RubyGems, we [improved](https://github.com/rubygems/rubygems/pull/6810) certain `gem install` invocations that had gotten slower since the dependencies API was phased out. In Bundler, the above releases include several improvements such as [fixes](https://github.com/rubygems/rubygems/pull/6784) related to locked platforms, [improvements](https://github.com/rubygems/rubygems/pull/6786) to make sections related to git gems stable, and some other regression fixes.
+In RubyGems, we [improved](https://github.com/rubygems/rubygems/pull/6810) certain `gem install` invocations that had gotten slower since the dependencies API was phased out. In Bundler, the above releases include several improvements such as [fixes](https://github.com/rubygems/rubygems/pull/6784) related to locked platforms, [improvements](https://github.com/rubygems/rubygems/pull/6786) to make sections related to Git gems stable, and some other regression fixes.
 
 Some other improvements that landed into our repo this month but that are not included in the above releases are:
 
 - improved RubyGems `require` - [#6827](https://github.com/rubygems/rubygems/pull/6827).
 - improvements related to the Security Devices support feature - [#6774](https://github.com/rubygems/rubygems/pull/6774).
-- updated Magnus version in Rust extension gem template - [#6843](https://github.com/rubygems/rubygems/pull/6843).
-- removed side effects when unmarshaling old `Gem::Specification` - [#6825](https://github.com/rubygems/rubygems/pull/6825).
-- used `File::NULL `instead of hard coded null device names - [#6809](https://github.com/rubygems/rubygems/pull/6809).
+- updated the Magnus version in the Rust extension gem template - [#6843](https://github.com/rubygems/rubygems/pull/6843).
+- removed side effects when unmarshaling old `Gem::Specification` files- [#6825](https://github.com/rubygems/rubygems/pull/6825).
+- made up update to use `File::NULL `instead of hard coded null device names - [#6809](https://github.com/rubygems/rubygems/pull/6809).
 - added Automatiek improvements - [#6788](https://github.com/rubygems/rubygems/pull/6788).
 
 In July, RubyGems gained [96 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-07-01%7D...master@%7B2023-07-31%7D) contributed by 13 authors. There were 1,559 additions and 695 deletions across 86 files.
@@ -29,20 +29,20 @@ In July, RubyGems gained [96 new commits](https://github.com/rubygems/rubygems/c
 This month, RubyGems.org saw several bug fixes and updates, some of which include:
 
 - reduced the size of the deployed docker image from >350MB to 277MB - [#3894](https://github.com/rubygems/rubygems.org/pull/3894).
-- redirect MFA Required users to edit settings page - [#3902](https://github.com/rubygems/rubygems.org/pull/3902).
-- extracted `GEM_NAME_RESERVED_LIST` into database and include in admin panel.- #[3897](https://github.com/rubygems/rubygems.org/pull/3897).
+- redirected MFA Required users to the edit settings page - [#3902](https://github.com/rubygems/rubygems.org/pull/3902).
+- extracted `GEM_NAME_RESERVED_LIST` into database and included in admin panel.- #[3897](https://github.com/rubygems/rubygems.org/pull/3897).
 - added user validation on MFA Level - [#3905](https://github.com/rubygems/rubygems.org/pull/3905).
-- added enabled/disabled badge for OTP & Webauthn - [#3936](https://github.com/rubygems/rubygems.org/pull/3936).
-- fixed limiting allowed methods in nginx - [#3941](https://github.com/rubygems/rubygems.org/pull/3941).
-- used `setup_webauthn_authentication` helper method in updating MFA level - [#3963](https://github.com/rubygems/rubygems.org/pull/3963).
+- added "enabled/disabled" badge for OTP & Webauthn - [#3936](https://github.com/rubygems/rubygems.org/pull/3936).
+- fixed issue that led to limiting allowed methods in nginx - [#3941](https://github.com/rubygems/rubygems.org/pull/3941).
+- implemented the `setup_webauthn_authentication` helper method in updating MFA level - [#3963](https://github.com/rubygems/rubygems.org/pull/3963).
 - implemented Avo actions to enqueue compact index file upload jobs - [#3970](https://github.com/rubygems/rubygems.org/pull/3970).
-- redirected user to signin after webauthn error has occurred - [#3962](https://github.com/rubygems/rubygems.org/pull/3962).
-- added `maintenance_tasks` engine for running one-off tasks - [#3971](https://github.com/rubygems/rubygems.org/pull/3971).
-- refactored the mailer content to specify the MFA implementation used (TOTP) - [#3903](https://github.com/rubygems/rubygems.org/pull/3903).
+- redirected users to signin after webauthn error occurrances - [#3962](https://github.com/rubygems/rubygems.org/pull/3962).
+- added a `maintenance_tasks` engine for running one-off tasks - [#3971](https://github.com/rubygems/rubygems.org/pull/3971).
+- refactored the mailer content to specify the MFA implementation used (TOTP) - [#3903](https://github.com/rubygems/rubygems.org/pull/3903) (shown below).
 
 ![Auth with Yubikey](https://res.cloudinary.com/lauragift/image/upload/w_650/v1691405747/251542232-7b70ce3f-c92e-41a2-a5a4-279d3ccbd062_ekruea.png)
 
-In July, RubyGems gained [100 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-07-01%7D...master@%7B2023-07-31%7D) contributed by 18 authors. There were 2,496 additions and 1,602 deletions across 130 files.
+In July, RubyGems gained [99 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-07-01%7D...master@%7B2023-07-31%7D) contributed by 18 authors. There were 2,460 additions and 1,566 deletions across 128 files.
 
 ## Thank you
 
