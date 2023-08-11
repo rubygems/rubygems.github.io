@@ -40,7 +40,7 @@ This month, RubyGems.org saw several bug fixes and updates, some of which includ
 - added a `maintenance_tasks` engine for running one-off tasks - [#3971](https://github.com/rubygems/rubygems.org/pull/3971).
 - refactored the mailer content to specify the MFA implementation used (TOTP) - [#3903](https://github.com/rubygems/rubygems.org/pull/3903) (shown below).
 
-![Auth with Yubikey](https://res.cloudinary.com/lauragift/image/upload/w_650/v1691405747/251542232-7b70ce3f-c92e-41a2-a5a4-279d3ccbd062_ekruea.png)
+![Auth with Yubikey](https://res.cloudinary.com/lauragift/image/upload/w_300/v1691405747/251542232-7b70ce3f-c92e-41a2-a5a4-279d3ccbd062_ekruea.png)
 
 In July, RubyGems gained [99 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-07-01%7D...master@%7B2023-07-31%7D) contributed by 18 authors. There were 2,460 additions and 1,566 deletions across 128 files.
 
