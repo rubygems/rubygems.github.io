@@ -12,14 +12,15 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 This month in RubyGems, we released [3.4.18](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3418--2023-08-02), [3.4.19](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3419--2023-08-17) and Bundler [2.4.18](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2418-august-2-2023), [2.4.19](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2419-august-17-2023).
 
 
-In RubyGems, we improved the documentation performance by speeding up the build process when updating RubyGems - [#6864](https://github.com/rubygems/rubygems/pull/6864). We added a poller to fetch WebAuthn OTPs - [#6774](https://github.com/rubygems/rubygems/pull/6774), and removed some side effects when unmarshalling old `Gem::Specifications`- [#6825](https://github.com/rubygems/rubygems/pull/6825).
+In RubyGems, we improved the documentation performance by speeding up the build process when updating RubyGems - [#6864](https://github.com/rubygems/rubygems/pull/6864). We added a poller to fetch WebAuthn OTPs - [#6774](https://github.com/rubygems/rubygems/pull/6774), added a `file` option to the Ruby method in the Gemfile - [#6876](https://github.com/rubygems/rubygems/pull/6876) and removed some side effects when unmarshalling old `Gem::Specifications`- [#6825](https://github.com/rubygems/rubygems/pull/6825).
 
 Some other improvements that landed into our repo this month but that are not included in the above releases are:
 
 - optimized memory usage in `Bundler::Settings`, resulting in a faster boot time - [#6884](https://github.com/rubygems/rubygems/pull/6884).
-- added a `file` option to the Ruby method in the Gemfile- [#6876](https://github.com/rubygems/rubygems/pull/6876).
 - raised `Gem::Package::FormatError` when gem encounters corrupt EOF - [#6882](https://github.com/rubygems/rubygems/pull/6882).
 - resolved Ruby version file relative to bundle root - [#6892](https://github.com/rubygems/rubygems/pull/6892).
+- added support for ruby file `.tool-versions` in Gemfile - [#6898](https://github.com/rubygems/rubygems/pull/6898).
+- fixed a regression that could cause some legacy Gemfiles with multiple sources to take much longer to resolve - [#6916](https://github.com/rubygems/rubygems/pull/6916).
 - improved warning messages for bundled gems - [#6921](https://github.com/rubygems/rubygems/pull/6921).
 
 In August, RubyGems gained [109 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-08-01%7D...master@%7B2023-08-31%7D) contributed by 17 authors. There were 1,030 additions and 266 deletions across 97 files.
@@ -34,6 +35,8 @@ This month, RubyGems.org saw several bug fixes and updates, some of which includ
 - removed WebAuthn banner from homepage - [#4003](https://github.com/rubygems/rubygems.org/pull/4003).
 - added `Avo` to sponsors page - [#3999](https://github.com/rubygems/rubygems.org/pull/3999).
 - uploaded capybara test screenshots on failure -[#3990](https://github.com/rubygems/rubygems.org/pull/3990).
+- fixed compact index files when gems are yanked - [commit](https://github.com/rubygems/rubygems.org/commit/207be52ef6ce4fb9ee5eaed97c09f02277911da2).
+- enabled `OIDC` to fetch API tokens - [#3716](https://github.com/rubygems/rubygems.org/pull/3716).
 
 In August, RubyGems gained [83 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-08-01%7D...master@%7B2023-08-31%7D) contributed by 15 authors. There were 6,625 additions and 1,967 deletions across 224 files.
 
