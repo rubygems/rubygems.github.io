@@ -22,7 +22,7 @@ Some other improvements that landed into our repo this month but that are not in
 - improved release scripts - [#6999](https://github.com/rubygems/rubygems/pull/6999).
 - fixed safe marshal test on jruby - [#6984](https://github.com/rubygems/rubygems/pull/6984).
 
-In September, RubyGems gained [114 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 14 authors. There were 2,455 additions and 571 deletions across 105 files.
+In September, RubyGems gained [112 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 14 authors. There were 2,402 additions and 517 deletions across 101 files.
 
 ## RubyGems.org News
 
@@ -39,7 +39,7 @@ Some other improvements that landed into our repo this month but that are not in
 - only validate version metadata on create/change - [#4100](https://github.com/rubygems/rubygems.org/pull/4100).
 - updated RubyGems & Bundler - [#4103](https://github.com/rubygems/rubygems.org/pull/4103).
 
-In September, RubyGems gained [64 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 5 authors. There were 1,855 additions and 1,070 deletions across 90 files.
+In September, RubyGems.org gained [64 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 5 authors. There were 1,855 additions and 1,070 deletions across 90 files.
 
 ## Thank you
 
