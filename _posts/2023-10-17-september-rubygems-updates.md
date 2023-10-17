@@ -10,37 +10,37 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 ## RubyGems News
 This month in RubyGems, we released RubyGems [3.4.20](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#3420--2023-09-27) and Bundler [2.4.20](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#2420-september-27-2023).
 
-Building on the work of [@segiddins](https://github.com/segiddins) and [@mercedesb](https://github.com/mercedesb), we worked on adding support for `SHA256` checksum verification of Bundled gems during installation, as described in this [RFC](https://github.com/rubygems/rfcs/pull/50) and supported, reviewed, and contributed to improvements in Bundler’s performance and memory efficiency. We worked on allowing RubyGems to gracefully fall back to a user install if the default `gem home` isn't writable. This will resolve a request users of RubyGems have been wanting for 8 years - [#5327 ](https://github.com/rubygems/rubygems/pull/5327). 
+One of the goals of this RubyGems release was to work on allowing RubyGems to gracefully fall back to a user install if the default `gem home` isn't writable. This will resolve a request users of RubyGems have been wanting for eight years - [#5327](https://github.com/rubygems/rubygems/pull/5327). Additionally, we sought to update the SPDX license list from 2023-04-28,  2023-06-18, to 2023-01-26, raised `Gem::Package::FormatError` when gem encounters corrupt EOF [#6882](https://github.com/rubygems/rubygems/pull/6882), and ensure that loading multiple gemspecs with legacy YAML class references does not warn [#6889](https://github.com/rubygems/rubygems/pull/6889).
 
-Additionally, we updated the SPDX license list from 2023-04-28,  2023-06-18, to 2023-01-26, raised `Gem::Package::FormatError` when gem encounters corrupt EOF [#6882](https://github.com/rubygems/rubygems/pull/6882), and ensured that loading multiple gemspecs with legacy YAML class references does not warn [#6889](https://github.com/rubygems/rubygems/pull/6889)
+In this month's Bundler release, our goal was to  build on the work of [@segiddins](https://github.com/segiddins) and [@mercedesb](https://github.com/mercedesb), by adding support for `SHA256` checksum verification of Bundled gems during installation, as described in this [RFC](https://github.com/rubygems/rfcs/pull/50). We also focused on Bundler’s performance and memory efficiency; supporting, reviewing, and contributing to improvements there. 
 
 Some other improvements that landed into our repo this month but that are not included in the above releases are:
 
 - added `universal-java-19` to CI test setup Gemfile locks - [#6942](https://github.com/rubygems/rubygems/pull/6942).
-- fixed false positive SymlinkError in symbolic link directory - [#6947](https://github.com/rubygems/rubygems/pull/6947).
-- added support for the `ruby-3.2.2` format in the `ruby file:` Gemfile directive, and explicitly test the `3.2.2@gemset` format as rejected - [#6954](https://github.com/rubygems/rubygems/pull/6954).
+- fixed a false positive SymlinkError in the symbolic link directory - [#6947](https://github.com/rubygems/rubygems/pull/6947).
+- added support for the `ruby-3.2.2` format in the `ruby file:` Gemfile directive, and added a test to explicitly test the `3.2.2@gemset` format as rejected - [#6954](https://github.com/rubygems/rubygems/pull/6954).
 - reduced allocations for stub specifications - [#6972](https://github.com/rubygems/rubygems/pull/6972).
 - allowed standalone mode to work on a Windows edge case - [#6989](https://github.com/rubygems/rubygems/pull/6989).
 - improved release scripts - [#6999](https://github.com/rubygems/rubygems/pull/6999).
-- fixed safe marshal test on jruby - [#6984](https://github.com/rubygems/rubygems/pull/6984).
+- fixed the SafeMarshal test on jruby - [#6984](https://github.com/rubygems/rubygems/pull/6984).
 
-In September, RubyGems gained [112 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 14 authors. There were 2,402 additions and 517 deletions across 101 files.
+In September, RubyGems gained [116 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 14 authors. There were 2,455 additions and 571 deletions across 105 files.
 
 ## RubyGems.org News
 
-This month in RubyGems.org, we improved how [gravatar exposed user email](https://github.com/rubygems/rubygems.org/issues/3278) by ensuring they are not publicly exposed - [#3731](https://github.com/rubygems/rubygems.org/pull/3731), [#4104](https://github.com/rubygems/rubygems.org/pull/4104). We added this change to keep our users information private and well secured and also opened an [RFC](https://github.com/rubygems/rfcs/pull/51) to enhance user profile in general. 
+This month in RubyGems.org, we improved how [gravatar exposed user email](https://github.com/rubygems/rubygems.org/issues/3278) by ensuring they are not publicly exposed - [#3731](https://github.com/rubygems/rubygems.org/pull/3731), [#4104](https://github.com/rubygems/rubygems.org/pull/4104). We added this change to keep our users' information private and well secured. We also opened an [RFC](https://github.com/rubygems/rfcs/pull/51) to enhance user profile in general. 
 
 Support for PostgreSQL 11 version will end next February, so we have created a plan, wrote reference scripts and started documenting the upgrade in the following RFCs to get feedback - [#52](https://github.com/rubygems/rfcs/pull/52 ), [#53](https://github.com/rubygems/rfcs/pull/53).
 
 Some other improvements that landed into our repo this month but that are not included in the above releases are:
 
 - added a log in Pusher when notify is called - [#4072](https://github.com/rubygems/rubygems.org/pull/4072).
-- added versions index on `lower(gem_full_name)` - [#4095](https://github.com/rubygems/rubygems.org/pull/4095).
+- added a versions index on `lower(gem_full_name)` - [#4095](https://github.com/rubygems/rubygems.org/pull/4095).
 - added backfill for `spec_sha256` on versions - [#4083](https://github.com/rubygems/rubygems.org/pull/4083).
-- handled nil `api_key` in dashboards controller -[#4081](https://github.com/rubygems/rubygems.org/pull/4081).
-- precompile assets on CI before running tests - [#4059](https://github.com/rubygems/rubygems.org/pull/4059).
-- made all texts in about page translatable. - [#4063](https://github.com/rubygems/rubygems.org/pull/4063).
-- only validate version metadata on create/change - [#4100](https://github.com/rubygems/rubygems.org/pull/4100).
+- handled nil `api_key` in the dashboards controller -[#4081](https://github.com/rubygems/rubygems.org/pull/4081).
+- added a fix to precompile assets on CI before running tests - [#4059](https://github.com/rubygems/rubygems.org/pull/4059).
+- made all texts in the about page translatable. - [#4063](https://github.com/rubygems/rubygems.org/pull/4063).
+- made an update to only validate version metadata on create/change - [#4100](https://github.com/rubygems/rubygems.org/pull/4100).
 - updated RubyGems & Bundler - [#4103](https://github.com/rubygems/rubygems.org/pull/4103).
 
 In September, RubyGems.org gained [64 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2023-09-01%7D...master@%7B2023-09-30%7D) contributed by 5 authors. There were 1,855 additions and 1,070 deletions across 90 files.
