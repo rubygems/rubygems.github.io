@@ -7,7 +7,7 @@ author_email: segiddins@segiddins.me
 
 Hi all!
 
-I'm excited to share a new feature that will help make RubyGems.org more secure, as well as making it easier to automate gem publishing. We're calling it [Trusted Publishing](https://guides.rubygems.org/trusted-publishing/).
+I'm excited to share a new feature that will help make RubyGems.org more secure, as well as making it easier to automate gem publishing. Inspired by the Python package index, we're calling it [Trusted Publishing](https://guides.rubygems.org/trusted-publishing/).
 
 ## Backstory
 
@@ -15,11 +15,11 @@ Over the past few years, we've [increased the minimum multi-factor authenticatio
 
 On the flip side, we want to encourage gem authors to push their gems from trusted environments, based on the state of public repositories. For many, that means using GitHub Actions (as a CI/CD platform) for gems with repos hosted on GitHub.com.
 
-Until now, the desire to require MFA everywhere and to encourage automated gem pushing have been in opposition. Setting up automated publishing required disabling MFA on an API key that is stored as a long-lived secret on GitHub Actions. Even worse, given it was a clunky, multi-step process, many gem authors simply pushed gems from their laptops.
+Until now, MFA has been incompatible with automated gem pushes. You needed an API key with MFA disabled, stored by GitHub as a long-lived secret, and provided to every CI job. Even worse, given it was a clunky, multi-step process, many gem authors simply pushed gems from their laptops rather than go through the steps required to set that up.
 
 ## Trusted Publishing
 
-Enter the subject of today's announcement: [Trusted Publishing](https://guides.rubygems.org/trusted-publishing/). Before getting into the details, I'd like to quickly thank our friends over at [PyPi](https://pypi.org/) for blazing this trail, providing helpful guidance, and writing some pretty great [docs](https://docs.pypi.org/trusted-publishers/).
+Enter the subject of today's announcement: [Trusted Publishing](https://guides.rubygems.org/trusted-publishing/). Before getting into the details, I'd like to quickly thank our friends over at [PyPI](https://pypi.org/) for blazing this trail, providing helpful guidance, and writing some pretty great [docs](https://docs.pypi.org/trusted-publishers/).
 
 Trusted Publishing is a term for using OpenID Connect (OIDC) to exchange short-lived identity tokens between a trusted third-party service and RubyGems.org. This allows obtaining short-lived API tokens in an automated environment (such as CI) without having to store long-lived API tokens or username/password credentials.
 
@@ -51,8 +51,8 @@ jobs:
 
 This mechanism has significant security & usability advantages compared to traditional authentication mechanisms:
 
-- **Usability**: trusted publishing does not require manually creating & storing API tokens from RubyGems.org. The only manual step is configuring the trusted publisher on RubyGems.org.
-- **Security**: RubyGems.org’s normal API tokens are long-lived, meaning an attacker who obtains one can use it indefinitely. Trusted publishing tokens are short-lived, meaning they can only be used for a short period of time.
+- **Usability**: trusted publishing does not require manually creating & storing API tokens from RubyGems.org. The only manual step is a one-time form to tell RubyGems.org about the trusted publisher.
+- **Security**: Trusted publishing tokens are short-lived, meaning they can only be used for a short period of time. This is a big improvement over RubyGems.org’s long-lived API tokens, which can be kept and reused by an attacker if they are ever stolen. 
 - **Trust**: pushing is done via a trusted environment, in a way that is transparent to users of a gem, leading to higher confidence that what is released matches what is in the repo.
 
 ## What's Next
@@ -62,4 +62,4 @@ This mechanism has significant security & usability advantages compared to tradi
 
 Stay tuned!
 
-This work was made possible thanks to support from the Sovereign Tech Fund, as well as AWS sponsoring my work now as the Security Engineer in Residence.
+This work was organized by [Ruby Central](https://rubycentral.org), and made possible by funding from Ruby Central members, the [Sovereign Tech Fund](https://www.sovereigntechfund.de), and the [AWS Security Residency](https://rubycentral.org/news/ruby-central-welcomes-new-software-engineer-in-residence-sponsored-by-aws/).
