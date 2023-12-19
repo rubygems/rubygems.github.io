@@ -20,8 +20,7 @@ Some other improvements that landed into our repo this month that are NOT includ
 - an added response body on `fetch_http error` ([#7148](https://github.com/rubygems/rubygems/pull/7148)).
 - a more robust writability check for gem home ([#7211](https://github.com/rubygems/rubygems/pull/7211)).
 - an update to the Magnus library in the Rust extension gem template ([#7204](https://github.com/rubygems/rubygems/pull/7204)).
-- reporting possible errors prior to checking the output of gem uninstall ([#7149](https://github.com/rubygems/rubygems/pull/7149)).
-- locked gem versions for C extension dependencies ([#7161](https://github.com/rubygems/rubygems/pull/7161)).
+- an update to gem uninstall error reporting ([#7149](https://github.com/rubygems/rubygems/pull/7149)).
 - an added `--json` output option to bundle-outdated ([#7167](https://github.com/rubygems/rubygems/pull/7167)).
 - a fix for invalid platform removal omitting adjacent platforms ([#7170 ](https://github.com/rubygems/rubygems/pull/7170)).
 - fixed universal lockfiles regression  ([#7177](https://github.com/rubygems/rubygems/pull/7177)).
