@@ -24,6 +24,11 @@ Some other improvements that landed into our repo this month that are NOT includ
 - Avoid some allocations when evaluating ruby Gemfile DSL ([#7251](https://github.com/rubygems/rubygems/pull/7251)).
 - Improved install advice when some gems are not found ([#7265](https://github.com/rubygems/rubygems/pull/7265)).
 - A fix was implemented for the `bundler test` on the Ruby package ([#7298](https://github.com/rubygems/rubygems/pull/7298)).
+- `bundle lock` always touch the lockfile (even when nothing changed) to improve Make-style compatibility ([#7220](https://github.com/rubygems/rubygems/pull/7220)
+- Improve rubygems and Bundler CI detection ([#7205](https://github.com/rubygems/rubygems/pull/7205)
+- Stream output from ext builds when `--verbose` ([#7240](https://github.com/rubygems/rubygems/pull/7240))
+- Allow bundle pristine to run in parallel, resulting in a remarkable speed improvement ([#6927](https://github.com/rubygems/rubygems/pull/6927)
+- Ensure gem install respects system umask ([#7300](https://github.com/rubygems/rubygems/pull/7300))
 
 In December, RubyGems gained [280 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2023-12-01%7D...master@%7B2023-12-31%7D) contributed by 17 authors. There were 28,544 additions and 8,338 deletions across 761 files.
 
