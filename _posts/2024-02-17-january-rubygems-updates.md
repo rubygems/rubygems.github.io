@@ -47,9 +47,9 @@ The following are highlights of what the team worked on this month:
 
     We introduced a user-visible log of security events that have happened on their account. This will help maintainers stay on top of how their account is being used, and events that happen on the gems they own, reducing mean time to remediation for unexpected actions. This also helps the RubyGems.org security team by providing a trail that can be followed in response to security incidents.
 
-    Critical events such as logins, password changes, email updates, API token generation and revocation, and ruby gem ownership changes are now logged. These logs are user-specific for account activities, while gem-related events are accessible to all owners of the respective gem. Check out [#4367](https://github.com/rubygems/rubygems.org/pull/4367 ) for more information.
+    Critical events such as logins, password changes, email updates, API token generation and revocation, and ruby gem ownership changes are now logged. These logs are user-specific for account activities, while gem-related events are accessible to all owners of the respective gem. Check out [(#4367)](https://github.com/rubygems/rubygems.org/pull/4367 ) for more information.
     
-    ![rubygems-org-profile-security_events.1](https://hackmd.io/_uploads/rykoTmOop.png)
+    ![rubygems-org-profile-security_events](https://res.cloudinary.com/lauragift/image/upload/w_490,h_450/v1708150450/rykoTmOop_vnbkhk.png)
 
 - **Resolution of a multi-factor authentication (MFA) bypass on password reset vulnerability**
 
