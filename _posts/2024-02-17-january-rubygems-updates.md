@@ -9,7 +9,7 @@ Welcome to the RubyGems monthly update! As part of our efforts at Ruby Central, 
 
 ## RubyGems News
 
-In January in RubyGems, we released RubyGems [3.5.5](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#355--2024-01-18) and Bundler [2.5.5](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#255-january-18-2024). These releases included fixes to: [the caching specifictions directory](https://github.com/rubygems/rubygems/pull/7331), [development dependency ommission](https://github.com/rubygems/rubygems/pull/7358) and [formatting of compact index requests headers](https://github.com/rubygems/rubygems/pull/7352), as part of our continuous effort to enhance the Ruby development experience.
+In January in RubyGems, we released RubyGems [3.5.5](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#355--2024-01-18) and Bundler [2.5.5](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#255-january-18-2024). These releases included fixes for: [caching specifictions directory](https://github.com/rubygems/rubygems/pull/7331), [development dependency ommission](https://github.com/rubygems/rubygems/pull/7358) and [formatting of compact index requests headers](https://github.com/rubygems/rubygems/pull/7352), as part of our continuous effort to enhance the Ruby development experience.
 
 Some other important accomplishments from the team this month include:
 
@@ -34,6 +34,10 @@ Some other important accomplishments from the team this month include:
 - **Addressing an ENV resetting issue in RubyGems**
 
     Restoring Bundler-related ENV variables to empty prevents downstream issues related to trying to invoke Bundler from subprocesses, as one of our users [Edouard-chin](https://github.com/Edouard-chin) pointed out. An investigation led to the identification of a bug related to special casing empty ENV variables. The decision was made to remove this exception and the fix. Its implications are detailed in [#7383](https://github.com/rubygems/rubygems/pull/7383).
+
+- **Introduction of a Gem Rebuild Command**
+
+    [Ellen Dash](https://github.com/duckinator) is leading the development of a gem rebuild command to facilitate reproducible builds. Reproducible builds allow people to identify problems such as compromised build environments or builds not using the published source. For a few years now, it’s been technically possible to reproduce a build if you knew enough about the original build environment. The `gem rebuild` command’s purpose is to automate as much of this as possible.
 
 In January, RubyGems gained [163 new commits](https://github.com/rubygems/rubygems/compare/master@%7B2024-1-01%7D...master@%7B2024-1-31%7D) contributed by 18 authors. There were 6,051 additions and 1,059 deletions across 244 files.
 
@@ -63,11 +67,7 @@ The following are highlights of what the team worked on this month:
 
   We updated RubyGems.org to Rails 7.1 to keep dependencies of the Rails app up to date. The update involved a long-running pull request that addressed dependency issues. The merge and deployment proceeded smoothly after ensuring all upstream dependencies supported Rails 7.1, along with an update to the Rails configuration to align with 7.1 defaults.
 
-- **Introduction of a Gem Rebuild Command**
-
-    [Ellen Dash](https://github.com/duckinator) is leading the development of a gem rebuild command to facilitate reproducible builds. Reproducible builds allow people to identify problems such as compromised build environments or builds not using the published source. For a few years now, it’s been technically possible to reproduce a build if you knew enough about the original build environment. The `gem rebuild` command’s purpose is to automate as much of this as possible.
-
-In December, RubyGems.org gained [85 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2024-1-01%7D...master@%7B2024-1-31%7D) contributed by 8 authors. There were 2,490 additions and 1,238 deletions across 224 files.
+In January, RubyGems.org gained [85 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2024-1-01%7D...master@%7B2024-1-31%7D) contributed by 8 authors. There were 2,490 additions and 1,238 deletions across 224 files.
 
 ## Thank you
 
