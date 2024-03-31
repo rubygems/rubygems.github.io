@@ -10,7 +10,7 @@ The past few days have seen the security world focused on the revelation of the 
 In response to this, I have undertaken an exposure assesment of the vulnerability on RubyGems.org and the broader RubyGems ecosystem.
 I am happy to report that RubyGems.org is not vulnerable to this issue, as we use a `musl` based operating system (Alpine) for our RubyGems.org containers.
 
-Furthermore, I am happy to confirm that there is no evidence that gems in the RubyGems ecosystem have been used an attack vector for this vulnerability.
+Furthermore, I am happy to confirm that there is no evidence that gems in the RubyGems ecosystem have been used as an attack vector for this vulnerability.
 Thanks to the data consolidated in the [rubygems-research](https://github.com/segiddins/rubygems-research) project (available publicly at [research.rubygems.info](https://research.rubygems.info)), we can confirm that no gems contain any references to the vulnerable `liblzma` library.
 
 I would like to thank the rest of the RubyGems.org security team for their support in this investigation, and for their continued dedication to the security of the ecosystem. I would also like to thank AWS for their continued support of RubyGems security, sponsoring myself as [Ruby Central's security engineer in residence](https://rubycentral.org/news/ruby-central-welcomes-new-software-engineer-in-residence-sponsored-by-aws/), and funding the development of the [rubygems-research](https://github.com/segiddins/rubygems-research) project, which proved instrumental in confirming the absence of `liblzma` across all million and a half gem versions hosted on RubyGems.org.
