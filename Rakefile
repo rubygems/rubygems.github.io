@@ -2,7 +2,7 @@ desc "compile and run the site"
 task :default do
   pids = [
     spawn("bundle exec jekyll serve --watch"),
-    spawn("bundle exec scss --quiet --watch stylesheets/scss:stylesheets"),
+    spawn("bundle exec scss --quiet --watch stylesheets/scss:_site/stylesheets"),
   ]
 
   trap "INT" do
