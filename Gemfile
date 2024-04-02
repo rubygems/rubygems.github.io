@@ -1,12 +1,11 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 ruby file: ".ruby-version"
 
-gem 'jekyll', '~> 4.0'
-gem 'puma', '~> 5.6'
-gem 'rake'
-gem 'sass'
-gem 'webrick'
-
-gem "csv", "~> 3.3"
 gem "base64", "~> 0.2.0"
 gem "bigdecimal", "~> 3.1"
+gem "csv", "~> 3.3"
+gem "jekyll", "~> 4.0"
+gem "puma", "~> 6.0"
+gem "rack-jekyll", "~> 0.5.0", github: "adaoraul/rack-jekyll"
+gem "rake", "~> 13.0"
+gem "sass", "~> 3.7"
