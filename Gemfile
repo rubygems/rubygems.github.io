@@ -1,11 +1,11 @@
-source 'https://rubygems.org'
-ruby '3.0.5'
+source "https://rubygems.org"
+ruby file: ".ruby-version"
 
-gem 'github-pages'
-gem 'pathutil', github: 'https://github.com/envygeeks/pathutil/pull/5'
-gem 'webrick'
-gem 'puma', '~> 5.6'
-gem 'rack', '< 3'
-gem 'rack-jekyll', '~> 0.5.0', github: 'adaoraul/rack-jekyll'
-gem 'rake'
-gem 'sass'
+gem "base64", "~> 0.2.0"
+gem "bigdecimal", "~> 3.1"
+gem "csv", "~> 3.3"
+gem "jekyll", "~> 4.0"
+gem "puma", "~> 6.0"
+gem "rack-jekyll", "~> 0.5.0", github: "adaoraul/rack-jekyll"
+gem "rake", "~> 13.0"
+gem "sass", "~> 3.7"
