@@ -36,7 +36,7 @@ The following are highlights of what the team worked on this month:
 
 - This significant update was carried out to ensure that application dependencies remain up-to-date. Notably, this is the second upgrade effort, moving from PostgreSQL version 12 to 13, following the original upgrade to version 12 in response to the end of life (EOL) for PostgreSQL 11 on Amazon RDS.
 - The upgrade process utilized `pgbouncer` and a manually managed blue/green environment to achieve zero downtime. For detailed scripts and an explanation of the procedure, visit the [project’s GitHub page](https://github.com/rubygems/pg-major-update).
-- Additional information and related updates can be found in [#4482](https://github.com/rubygems/rubygems.org/pull/4482) and [#4500](https://github.com/rubygems/rubygems.org/pull/4500).
+- A detailed blog post with additional details will be released soon.
 
 In March, RubyGems.org gained [69 new commits](https://github.com/rubygems/rubygems.org/compare/master@%7B2024-2-01%7D...master@%7B2024-2-31%7D) contributed by 12 authors. There were 466 additions and 1,263 deletions across 75 files.
 
