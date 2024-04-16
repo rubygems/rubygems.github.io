@@ -29,7 +29,7 @@ Digging deeper, we discovered that these accounts linked to a gem with over 100,
 
 ## Addressing the Issue
 
-This realization led us to tighten our gem publishing limitations and increase monitoring for non-malicious but unexpected user behaviors. During the cleanup, we had minor delays in gem index updates; however, it was temporary. We also took strict action against accounts solely created for spamming, ensuring they didn't disrupt the community further.
+This realization led us to tighten our gem publishing limitations and increase monitoring for non-malicious but unexpected user behaviors. During the cleanup, we had minor, temporary delays in gem index updates. We also took strict action against accounts solely created for spamming, ensuring they didn't disrupt the community further.
 
 ## Conclusion and Appeal
 
