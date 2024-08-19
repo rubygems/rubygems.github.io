@@ -34,7 +34,7 @@ In July, RubyGems gained [171 new commits](https://github.com/rubygems/rubygems/
 
 The updates made this month to RubyGems.org reflect a strong commitment to improving user experience, enhancing security, and modernizing the platform. Sponsored hosting for RubyGems.org in July was provided by AWS, Fastly, and DataDog. The following are highlights of what the team worked on this month:
 
-**Discontinued Auto Sign-In** [**After Email Confirmation](https://github.com/rubygems/rubygems.org/pull/4810) [and Password Reset](https://github.com/rubygems/rubygems.org/pull/4811)**
+**Discontinued Auto Sign-In [After Email Confirmation](https://github.com/rubygems/rubygems.org/pull/4810) and [Password Reset](https://github.com/rubygems/rubygems.org/pull/4811)**
 
 - The primary goal for this change is to simplify login flows, reducing the likelihood of mistakes or bypasses.
 - This change aligns with best practices recommended by [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html#user-resets-password) and will enhance security and streamline the login process for both users and developers.
