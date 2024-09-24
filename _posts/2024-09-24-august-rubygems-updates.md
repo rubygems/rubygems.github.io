@@ -35,9 +35,9 @@ Some other important accomplishments from the team this month include:
 
 [**Fixed Issues With the`--prefer-local` Flag in `bundle install`**](https://github.com/rubygems/rubygems/pull/7951)
 
-- We resolved problems where the `-prefer-local` flag wasn't working effectively; it didn't fallback to remote gems when local ones didn't satisfy requirements and didn't prefer local gems for sub-dependencies.
+- We resolved problems where the `--prefer-local` flag wasn't working effectively; it didn't fallback to remote gems when local ones didn't satisfy requirements and didn't prefer local gems for sub-dependencies.
 - We implemented a solution similar to how we handle prereleases: for each gem, first prefer local versions; if conflicts arise, allow remote versions for those specific gems.
-- This was inspired by [@gouravkhunger](https://github.com/gouravkhunger), who uses `-prefer-local` to help package Ruby for his Jekyllex project.
+- This was inspired by [@gouravkhunger](https://github.com/gouravkhunger), who uses `--prefer-local` to help package Ruby for his Jekyllex project.
 
 [**Helped Appraisals Maintainers Run Tests With Latest Bundler**](https://github.com/rubygems/rubygems/pull/7950)
 
