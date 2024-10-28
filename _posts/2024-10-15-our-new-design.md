@@ -3,6 +3,7 @@ title: New Design for RubyGems.org
 layout: post
 author: Martin Emde
 author_email: me@martinemde.com
+og_image: /images/hammy-og.jpg
 ---
 
 We are excited to announce the initial release of the new design for RubyGems.org!

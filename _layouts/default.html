@@ -21,6 +21,9 @@
     <script type="text/javascript" src="/javascripts/mobile-nav.js"></script>
     <script type="text/javascript" src="/javascripts/application.js"></script>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    {% if page.og_image %}
+    <meta property="og:image" content="{{ page.og_image }}">
+    {% endif %}
     <!--[if IE 8]>
       <script src="/assets/html5shiv.js"></script>
       <link href="/assets/modules/ie8.css" rel="stylesheet" type="text/css">
