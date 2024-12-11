@@ -52,9 +52,9 @@ One of the most valuable outcomes on the infrastructure side was the clarity it 
 
 **We are using the audit’s findings to shape the next steps for security updates on RubyGems.org:**
 
-**- Short-term:** We’ve already implemented many small, immediate improvements, such as stricter TLS enforcement and better access controls.
-**- Longer-term:** We are working to secure funding to bring in a DevOps expert on a fixed-term contract to help modernize our infrastructure. This specialist will help us strengthen RubyGems.org’s security and establish a better foundation for maintaining and scaling the platform moving forward. 
-**- Sustainable practices:** With guidance from Trail of Bits, we’re creating systems for continuous improvement, including regular security reviews and automation of critical processes.
+- **Short-term:** We’ve already implemented many small, immediate improvements, such as stricter TLS enforcement and better access controls.
+- **Longer-term:** We are working to secure funding to bring in a DevOps expert on a fixed-term contract to help modernize our infrastructure. This specialist will help us strengthen RubyGems.org’s security and establish a better foundation for maintaining and scaling the platform moving forward. 
+- **Sustainable practices:** With guidance from Trail of Bits, we’re creating systems for continuous improvement, including regular security reviews and automation of critical processes.
 
 The audit reinforced that RubyGems.org is performing well given its age, scale, and relatively limited resources as an open source project. Now, with a clearer understanding of where to focus our efforts, we can work to make it even more secure and reliable for the countless developers and companies that depend on it.
 
