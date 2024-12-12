@@ -1,0 +1,66 @@
+html {
+  width: 1200px;
+  height: 630px;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(251, 251, 251);
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 100;
+  font-size: 46px;
+  color: #141c22;
+  text-align: center;
+  padding: 64px;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  align-self: center;
+  flex-shrink: 1;
+  text-align: end;
+  line-height: 1.25;
+}
+
+.excerpt {
+  line-height: 1.25;
+  flex: 1;
+  text-align: initial;
+  font-size: 2rem;
+  vertical-align: middle;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  display: inline-block;
+  color: #e9573f;
+  flex: 1 0 300px;
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 1;
+  text-wrap: balance;
+  width: 100%;
+  gap: 1rem;
+}
