@@ -21,8 +21,18 @@
     <script type="text/javascript" src="/javascripts/mobile-nav.js"></script>
     <script type="text/javascript" src="/javascripts/application.js"></script>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <meta property="og:site_name" content="RubyGems Blog">
+    <meta property="twitter:domain" content="blog.rubygems.org">
     {% if page.og_image %}
     <meta property="og:image" content="{{ page.og_image }}">
+    {% elsif page.auto_preview %}
+    <meta property="og:image" content="{{ site.url | absolute_url }}/images/previews/{{ page.slug }}.png">
+    {% endif %}
+    {% if page.layout == "post" %}
+      <meta property="og:title" content="{{ page.title }}">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="{{ page.url | absolute_url }}">
+      <meta property="og:description" content="{{ page.excerpt | strip_html }}">
     {% endif %}
     <!--[if IE 8]>
       <script src="/assets/html5shiv.js"></script>
