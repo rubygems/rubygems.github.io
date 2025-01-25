@@ -46,7 +46,7 @@ This is where we highlight other exciting updates made to Ruby infrastructure pr
 
 **Ruby Toolbox**
 
-[**Keeping the Ruby Toolbox Up to Date and Stable](https://github.com/rubytoolbox/rubytoolbox/pull/1524):** to ensure Ruby Toolbox remains modern and stable, we’ve upgraded the application to Rails 8 and Ruby 3.4.
+**[Keeping the Ruby Toolbox Up to Date and Stable](https://github.com/rubytoolbox/rubytoolbox/pull/1524):** to ensure Ruby Toolbox remains modern and stable, we’ve upgraded the application to Rails 8 and Ruby 3.4.
 
 ## Thank you
 
