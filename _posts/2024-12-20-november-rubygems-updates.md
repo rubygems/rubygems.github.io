@@ -83,7 +83,6 @@ Thank you to all the contributors of RubyGems and [RubyGems.org](http://rubygems
 - [@simi](https://github.com/simi) Josef Šimánek
 - [@deivid-rodriguez](https://github.com/deivid-rodriguez) David Rodríguez
 - [@hsbt](https://github.com/hsbt) Hiroshi Shibata
-- [@simi](https://github.com/simi) Josef Šimánek
 - [@jeromedalbert](https://github.com/jeromedalbert) Jerome Dalbert
 - [@duckinator](https://github.com/duckinator) Ellen Marie Dash
 - [@samisalamiws](https://github.com/samisalamiws) Samisalamiws
