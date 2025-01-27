@@ -3,6 +3,7 @@ title: RubyGems.org Completes First Security Audit With Trail of Bits
 layout: post
 author: Rhiannon Payne
 author_email: rhiannon@rubycentral.org
+auto_preview: true
 ---
 
 At Ruby Central, ensuring the security of RubyGems.org—the central hub for Ruby packages—is one of our top priorities. With over 184 billion downloads, RubyGems.org is crucial to the Ruby ecosystem, supporting developers, businesses, and open source projects worldwide. 
