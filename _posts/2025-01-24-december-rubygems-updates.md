@@ -15,7 +15,7 @@ We’ll be cutting our reporting on the monthly RubyGems and RubyGems.org GitHub
 
 In December, we released RubyGems [3.6.0](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#360--2024-12-16), [3.6.1](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#361--2024-12-17), [3.6.2](https://github.com/rubygems/rubygems/blob/master/CHANGELOG.md#362--2024-12-23) and Bundler [2.6.0](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#260-december-16-2024), [2.6.1](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#261-december-17-2024), [2.6.2](https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md#262-december-23-2024) by mid-December, addressing and resolving identified regressions, and coordinating with the Ruby core team to ensure the new versions were integrated with Ruby ahead of its December 25th release. Ultimately, we shipped RubyGems 3.6.2 and Bundler 2.6.2 alongside Ruby 3.4, resolving several regressions from the initial releases.
 
-The release of [Bundler 2.6](https://bundler.io/blog/2024/12/19/bundler-v2-6.html) and [RubyGems 3.6](https://blog.rubygems.org/2024/12/16/3.6.0-released.html) ****is the culmination of previous years’ work, particularly in regard to the lockfile checksum’s feature that we decided to delay and not ship with Bundler 2.5. 
+The release of [Bundler 2.6](https://bundler.io/blog/2024/12/19/bundler-v2-6.html) and [RubyGems 3.6](https://blog.rubygems.org/2024/12/16/3.6.0-released.html) is the culmination of previous year's work, particularly in regard to the lockfile checksum’s feature that we decided to delay and not ship with Bundler 2.5. 
 
 Other notable improvements include fixing an issue where [`gem info` tagged some non-default gems as default](https://github.com/rubygems/rubygems/pull/8321), adding [a `--attestation` option to `gem push`](https://github.com/rubygems/rubygems/pull/8239) for improved security, [introducing `bundle lock --add-checksums`](https://bundler.io/blog/2024/12/19/bundler-v2-6.html) to add checksums to existing lockfiles and [fixing JRuby warnings when using `bundler/setup` with Ruby's `-w` flag](https://github.com/rubygems/rubygems/pull/8205).
 
@@ -46,7 +46,7 @@ This is where we highlight other exciting updates made to Ruby infrastructure pr
 
 **Ruby Toolbox**
 
-**[Keeping the Ruby Toolbox Up to Date and Stable](https://github.com/rubytoolbox/rubytoolbox/pull/1524):** to ensure Ruby Toolbox remains modern and stable, we’ve upgraded the application to Rails 8 and Ruby 3.4.
+[**Keeping the Ruby Toolbox Up to Date and Stable**](https://github.com/rubytoolbox/rubytoolbox/pull/1524): to ensure Ruby Toolbox remains modern and stable, we’ve upgraded the application to Rails 8 and Ruby 3.4.
 
 ## Thank you
 
