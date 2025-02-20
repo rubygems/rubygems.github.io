@@ -1,6 +1,10 @@
 ---
 exclude:
-- vendor
-safe: true
+  - vendor
+safe: false
 markdown: kramdown
 url: https://blog.rubygems.org
+plugins:
+  - jekyll-feed
+feed:
+  path: atom.xml
