@@ -7,16 +7,16 @@ author_email: marty@rubycentral.org
 
 We’re pleased to introduce several key policies for RubyGems.org for community review. These include a [Terms of Service](https://rubygems.org/policies/terms-of-service), [Privacy Notice](https://rubygems.org/policies/privacy), [Acceptable Use Policy](https://rubygems.org/policies/acceptable-use), and [Copyright Policy](https://rubygems.org/policies/copyright). While these policies align with how RubyGems has always operated, the absence of formal documentation created ambiguity around acceptable use. These new policies provide clarity and transparency regarding our operations, how we protect user data, and our commitment to maintaining a safe and respectful environment for all RubyGems users.
 
-[Terms of Service](https://rubygems.org/policies/terms-of-service)  
+### [Terms of Service](https://rubygems.org/policies/terms-of-service)  
 The Terms of Service define the rules and guidelines for using RubyGems.org. They cover everything from account responsibilities to intellectual property rights, ensuring a fair and consistent experience for all users.
 
-[Privacy Notice](https://rubygems.org/policies/privacy)  
+### [Privacy Notice](https://rubygems.org/policies/privacy)  
 Our Privacy Notice outlines how we collect, use, and safeguard your personal information. We’re committed to protecting your data and ensuring compliance with applicable privacy laws.
 
-[Acceptable Use Policy](https://rubygems.org/policies/acceptable-use)  
+### [Acceptable Use Policy](https://rubygems.org/policies/acceptable-use)  
 The Acceptable Use Policy sets clear expectations for behavior on our platform. It prohibits activities that could harm the service or other users, such as abuse, spam, or malicious actions.
 
-[Copyright Policy](https://rubygems.org/policies/copyright)  
+### [Copyright Policy](https://rubygems.org/policies/copyright)  
 Our Copyright Policy outlines the rules and procedures for handling copyright-related issues so that we ensure intellectual property rights are respected.
 
 These policies aim to improve transparency around our handling of user data and to guide how we will respond to situations where we may be required to take action to ensure a secure and trustworthy ecosystem for everyone.
