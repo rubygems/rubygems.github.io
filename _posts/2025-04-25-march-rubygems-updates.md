@@ -19,7 +19,7 @@ Some other important accomplishments from the team this month include:
 - Their suggestions included [setting a default `SOURCE_DATE_EPOCH` value of `315619200`](https://github.com/rubygems/rubygems/pull/8568) and [sorting metadata values in gemspecs](https://github.com/rubygems/rubygems/pull/8569). These updates improve compatibility with tools like Debian’s *reprotest*, making it easier to verify that gem builds are consistent across environments.
 - This work was inspired by the paper [*An Empirical Study on Reproducible Packaging in Open-Source Ecosystems*](https://www.cs.cmu.edu/~ckaestne/pdf/icse25_rb.pdf?utm_source=chatgpt.com), which will be presented at the [2025 International Conference on Software Engineering.](https://conf.researchr.org/home/icse-2025)
 
-![*Building RubyGems itself is trivially reproducible now without needing to specify SOURCE_DATE_EPOCH*](https://res.cloudinary.com/lauragift/image/upload/w_1090,h_450/v1745614708/image_fwcmz0.png)
+![*Building RubyGems itself is trivially reproducible now without needing to specify SOURCE_DATE_EPOCH*](https://res.cloudinary.com/lauragift/image/upload/w_600,h_300/v1745614708/image_fwcmz0.png)
 
 *Building RubyGems itself is trivially reproducible now without needing to specify SOURCE_DATE_EPOCH*
 
