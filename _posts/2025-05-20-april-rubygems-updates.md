@@ -18,7 +18,7 @@ Some other important accomplishments from the team this month include:
 **Progress on gems with precompiled binaries**
 
 - Following community interest and questions about the initial **“wheels” proposal**, We opened a [GitHub discussion](https://github.com/rubygems/rubygems/discussions/8645) to gather feedback and facilitate conversation. We also invited input from members of the **OpenSSF Securing Software Repositories Working Group** to help align Ruby’s approach with best practices from other language ecosystems.
-- We are now focused on collecting ****this feedback into a concrete list of features that will make it easier to use and develop gems with precompiled binaries, guiding the future of RubyGems in this space.
+- We are now focused on collecting this **feedback into a concrete list of features** that will make it easier to use and develop gems with precompiled binaries, guiding the future of RubyGems in this space.
 
 **Development of a Bundler 4 roadmap**
 
@@ -48,7 +48,7 @@ Looking at Bundler gem downloads trends, usage data shows a clear shift towards 
 - **Ruby 2.7**, EOL since March 2023, dropped from **20.4% to 16.1%**.
 - Older versions (2.6 and below) continued their gradual decline.
 
-These trends reflect a strong migration toward actively maintained, supported Ruby versions. Analytics were powered by ****[Clickhouse](https://clickhouse.com/).
+These trends reflect a strong migration toward actively maintained, supported Ruby versions. Analytics were powered by **[ClickHouse](https://clickhouse.com/)**.
 
 The following are highlights of what the team worked on this month:
 
