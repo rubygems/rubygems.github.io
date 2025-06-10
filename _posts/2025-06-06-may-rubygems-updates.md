@@ -27,22 +27,42 @@ Another important accomplishment from the team this month include:
 
 The updates made this month to [RubyGems.org](http://rubygems.org/) reflect a strong commitment to improving user experience, enhancing security, and modernizing the platform. Sponsored hosting for [RubyGems.org](http://rubygems.org/) in May was provided by [AWS](https://aws.amazon.com/?ref=rubycentral.org), [Fastly](https://www.fastly.com/?ref=rubycentral.org) and [Datadog](https://www.datadoghq.com/?ref=rubycentral.org).
 
-[RubyGems.org](http://rubygems.org/) served **4.06 billion gems** in May 2025 — up from **2.87 billion** in May 2024. The busiest day was Wednesday, May 14th, with a record-breaking 193 million downloads, while the quietest was Saturday, May 31st, with 36 million.  Star of the Month goes to [`gitlab-crystalbal](https://rubygems.org/gems/gitlab-crystalball/)l` (gem inspired by [Predicting Test Failures](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html#) post by top [RubyGems.org](http://rubygems.org/) maintainer [tenderlove](https://rubygems.org/profiles/tenderlove)), a new gem published on May 8th, already reaching 785,000 downloads in its debut month!
+[RubyGems.org](http://rubygems.org/) served **4.06 billion gems** in May 2025 — up from **2.87 billion** in May 2024. The busiest day was Wednesday, May 14th, with a record-breaking 193 million downloads, while the quietest was Saturday, May 31st, with 36 million.  Star of the Month goes to [gitlab-crystalbal](https://rubygems.org/gems/gitlab-crystalball/) (gem inspired by [Predicting Test Failures](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html#) post by top [RubyGems.org](http://rubygems.org/) maintainer [tenderlove](https://rubygems.org/profiles/tenderlove), revived by [GitLab](https://gitlab.com/)), a new gem published on May 8th, already reaching 785,000 downloads in its debut month!
 
 **Ruby Usage Stats 2024-2025**
 
-Ruby version usage continues to trend steadily toward modern releases. In May 2025, Ruby 3.3 became the most widely used version, growing to 24.25%, while Ruby 3.4, released in December 2024, jumped to 9.3% adoption in just five months. Ruby 3.2 held stable at 33%, but its share may begin declining soon as newer versions take over. Meanwhile, Ruby 3.1, which reached end-of-life on March 31, 2025, dropped from 25.3% a year ago to 14.5%. Ruby 3.0, already EOL since April 2024, continues to decline (now 3.5%), and older Ruby 2.x versions are steadily fading as the ecosystem moves forward.
+Ruby version usage continues to trend steadily toward modern releases. In May 2025, Ruby 3.3 became trending, growing to 24.25%, while Ruby 3.4, released in December 2024, jumped to 9.3% adoption in just five months. Ruby 3.2 held stable at 33%, but its share may begin declining soon as newer versions take over. Meanwhile, Ruby 3.1, which reached end-of-life on March 31, 2025, dropped from 25.3% a year ago to 14.5%. Ruby 3.0, already EOL since April 2024, continues to decline (now 3.5%), and older Ruby 2.x versions are steadily fading as the ecosystem moves forward.
 
-*Note: These numbers represent all downloads in given month, not only downloads of Bundler gem as in previous month*
+*Note: These numbers represent all downloads in given month, not only downloads of Bundler gem as in previous monthly summary.*
 
-The following are highlights of what the team worked on this month:
+| Ruby Version | May 2025 | April 2025 | May 2024 | Notes                   |
+| ------------ | -------- | ---------- | -------- | ----------------------- |
+| **3.4**      | 9.30%    | 8.12%      | 0.00%    | New release (Dec 2024)  |
+| **3.3**      | 24.25%   | 23.46%     | 11.47%   | Trending                |
+| **3.2**      | 33.10%   | 33.11%     | 24.14%   | Peak usage              |
+| **3.1**      | 14.52%   | 15.76%     | 25.30%   | EOL: Mar 31, 2025       |
+| **3.0**      | 3.48%    | 4.00%      | 9.92%    | EOL: Apr 23, 2024       |
+| **2.7**      | 8.25%    | 8.66%      | 15.78%   | EOL: Mar 2023           |
+| **2.6**      | 2.91%    | 2.84%      | 6.23%    | EOL                     |
+| **2.5**      | 1.74%    | 1.70%      | 2.56%    | EOL                     |
+| **2.4**      | 0.43%    | 0.40%      | 0.98%    | EOL                     |
+| **2.3**      | 0.41%    | 0.43%      | 0.72%    | EOL                     |
+| **2.2**      | 0.04%    | 0.04%      | 0.07%    | EOL                     |
+| **2.1**      | 0.12%    | 0.11%      | 0.09%    | EOL                     |
+| **2.0**      | 0.07%    | 0.07%      | 0.16%    | EOL                     |
+| **1.9**      | 0.02%    | 0.02%      | 0.03%    | EOL                     |
+| **1.8**      | 0.002%   | 0.002%     | 0.004%   | EOL                     |
+| *(unknown)*  | 1.21%    | 1.10%      | 2.42%    | Missing user agent info |
+
+
+## Ruby news
 
 **Experimental Namespacing Lands in Ruby Master**
 
-- A new **experimental namespacing** feature has been introduced in Ruby master, allowing the creation of **virtual top-level namespaces**.
+- A new **experimental namespacing** feature [has been introduced in Ruby master](https://bugs.ruby-lang.org/issues/21311), allowing the creation of **virtual top-level namespaces**.
 - This enables applications to `require` or `load` libraries in isolation from the global namespace—including `.rb` files and native extensions. Dependencies loaded within a namespace remain confined to it.
 - Namespacing helps avoid **name conflicts** between libraries that define the same modules or classes, and prevents **unintended sharing of global objects**.
-- The feature is fully compatible with libraries that use relative name resolution and opens the door for safer, more modular Ruby applications.
+- The feature opens the door for safer, more modular Ruby applications.
 
 ## Thank you
 
