@@ -55,7 +55,7 @@ Ruby version usage continues to trend steadily toward modern releases. In May 20
 | *(unknown)*  | 1.21%    | 1.10%      | 2.42%    | Missing user agent info |
 
 
-## Ruby news
+## Interesting Ruby news
 
 **Experimental Namespacing Lands in Ruby Master**
 
@@ -63,6 +63,37 @@ Ruby version usage continues to trend steadily toward modern releases. In May 20
 - This enables applications to `require` or `load` libraries in isolation from the global namespace—including `.rb` files and native extensions. Dependencies loaded within a namespace remain confined to it.
 - Namespacing helps avoid **name conflicts** between libraries that define the same modules or classes, and prevents **unintended sharing of global objects**.
 - The feature opens the door for safer, more modular Ruby applications.
+- Join the discussions (for example [the one about feature final name](https://bugs.ruby-lang.org/issues/21385)) and help shaping the future of Ruby!
+
+```ruby
+# app1.rb
+PORT = 2048
+class App
+  def self.port = ::PORT
+end
+```
+
+```ruby
+# app2.rb
+PORT = 4096
+class App
+  def self.port = ::PORT
+end
+```
+
+```ruby
+# main.rb
+app1 = Namespace.new
+app1.require('/app1.rb')
+
+app2 = Namespace.new
+app2.require('/app2.rb')
+
+puts app1::App.port # => 2048
+puts app2::App.port # => 4096
+
+puts defined?(PORT) # => nl
+```
 
 ## Thank you
 
