@@ -13,27 +13,22 @@ In May, we released RubyGems [3.6.9](https://github.com/rubygems/rubygems/blob/m
 
 Notable improvements include [fixing the `doctor` command’s parsing of `otool` output](https://github.com/rubygems/rubygems/pull/8665), [adding SSL troubleshooting to `bundle doctor`](https://github.com/rubygems/rubygems/pull/8624), [printing WebAuthn authentication links on a separate line for easier access](https://github.com/rubygems/rubygems/pull/8663), [adding an `mtime` argument to `Gem::Package::TarWriter#add_file`](https://github.com/rubygems/rubygems/pull/8673), and [removing the unnecessary `shellwords` autoload](https://github.com/rubygems/rubygems/pull/8644).
 
-We also made substantial progress on the upcoming **Bundler 4** release. We're planning to introduce an environment variable or CLI flag that lets users **opt in to upcoming functionality** and share feedback ahead of the final release.
+We also made substantial progress on the upcoming Bundler 4 release. We're planning to introduce an environment variable or CLI flag that lets users opt in to upcoming functionality and share feedback ahead of the final release.
 
-Another important accomplishment from the team this month include:
+Another important accomplishment from the team this month includes:
 
-**Improved Support for Precompiled Binaries**
+**Improved support for precompiled binaries**
 
-- This month, we laid foundational work toward bringing Python-style **wheels** to RubyGem, aimed at improving the overall experience of both **using and producing gems with native extensions**.
-- Following several rounds of community feedback, the focus has shifted toward a broader vision: combining **compatibility tags**, **sigstore attestations**, and **common platform build workflows** (with SLSA, trusted publishing, etc.) to streamline how precompiled gems are distributed and consumed.
-- We’re actively incorporating the feedback we've received and will be sharing **updated, concrete proposals** for these improvements soon.
-
+- This month, we laid foundational work toward bringing Python-style wheels to RubyGems, with the goal of enhancing the experience of both using and producing gems with native extensions.
+- Following several rounds of community feedback, the focus has shifted toward a broader vision: combining compatibility tags, sigstore attestations, and common platform build workflows (with SLSA, trusted publishing, etc.) to streamline how precompiled gems are distributed and consumed.
+- We’re actively incorporating the feedback we've received and will be sharing updated, concrete proposals for these improvements soon.
+  
 ## RubyGems.org News
-
 The updates made this month to [RubyGems.org](http://rubygems.org/) reflect a strong commitment to improving user experience, enhancing security, and modernizing the platform. Sponsored hosting for [RubyGems.org](http://rubygems.org/) in May was provided by [AWS](https://aws.amazon.com/?ref=rubycentral.org), [Fastly](https://www.fastly.com/?ref=rubycentral.org) and [Datadog](https://www.datadoghq.com/?ref=rubycentral.org).
 
-[RubyGems.org](http://rubygems.org/) served **4.06 billion gems** in May 2025 — up from **2.87 billion** in May 2024. The busiest day was Wednesday, May 14th, with a record-breaking 193 million downloads, while the quietest was Saturday, May 31st, with 36 million.  Star of the Month goes to [gitlab-crystalbal](https://rubygems.org/gems/gitlab-crystalball/) (gem inspired by [Predicting Test Failures](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html#) post by top [RubyGems.org](http://rubygems.org/) maintainer [tenderlove](https://rubygems.org/profiles/tenderlove), revived by [GitLab](https://gitlab.com/)), a new gem published on May 8th, already reaching 785,000 downloads in its debut month!
+[RubyGems.org](http://rubygems.org/) served 4.06 billion gems in May 2025 — up from 2.87 billion in May 2024. The busiest day was Wednesday, May 14th, with a record-breaking 193 million downloads, while the quietest was Saturday, May 31st, with 36 million.  Star of the Month goes to [`gitlab-crystalbal](https://rubygems.org/gems/gitlab-crystalball/)l` (a gem inspired by a [Predicting Test Failures](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html#) post by top Ruby and Rails contributor [tenderlove](https://rubygems.org/profiles/tenderlove)), a new gem published on May 8th, which has already reaching 785,000 downloads in its debut month!
 
 **Ruby Usage Stats 2024-2025**
-
-Ruby version usage continues to trend steadily toward modern releases. In May 2025, Ruby 3.3 became trending, growing to 24.25%, while Ruby 3.4, released in December 2024, jumped to 9.3% adoption in just five months. Ruby 3.2 held stable at 33%, but its share may begin declining soon as newer versions take over. Meanwhile, Ruby 3.1, which reached end-of-life on March 31, 2025, dropped from 25.3% a year ago to 14.5%. Ruby 3.0, already EOL since April 2024, continues to decline (now 3.5%), and older Ruby 2.x versions are steadily fading as the ecosystem moves forward.
-
-*Note: These numbers represent all downloads in given month, not only downloads of Bundler gem as in previous monthly summary.*
 
 | Ruby Version | May 2025 | April 2025 | May 2024 | Notes                   |
 | ------------ | -------- | ---------- | -------- | ----------------------- |
@@ -54,16 +49,20 @@ Ruby version usage continues to trend steadily toward modern releases. In May 20
 | **1.8**      | 0.002%   | 0.002%     | 0.004%   | EOL                     |
 | *(unknown)*  | 1.21%    | 1.10%      | 2.42%    | Missing user agent info |
 
+Ruby version usage continues to trend steadily toward modern releases. In May 2025, Ruby 3.3 became trending, growing to 24.25%, while Ruby 3.4, released in December 2024, jumped to 9.3% adoption in just five months. Ruby 3.2 held stable at 33%, but its share may begin declining soon as newer versions take over. Meanwhile, Ruby 3.1, which reached end-of-life on March 31, 2025, dropped from 25.3% a year ago to 14.5%. Ruby 3.0, already EOL since April 2024, continues to decline (now 3.5%), and older Ruby 2.x versions are steadily fading as the ecosystem moves forward.
 
-## Interesting Ruby news
+*Note: These numbers represent all downloads in given month, not only downloads of Bundler gem as in previous monthly summary.*
 
-**Experimental Namespacing Lands in Ruby Master**
+## RubyGems Ecosystem News
 
-- A new **experimental namespacing** feature [has been introduced in Ruby master](https://bugs.ruby-lang.org/issues/21311), allowing the creation of **virtual top-level namespaces**.
+This is where we highlight exciting updates made to Ruby infrastructure projects that support our RubyGems work.
+
+**Experimental namespacing lands in Ruby Master**
+
+- A new experimental namespacing feature has been introduced in Ruby master, allowing the creation of virtual top-level namespaces.
 - This enables applications to `require` or `load` libraries in isolation from the global namespace—including `.rb` files and native extensions. Dependencies loaded within a namespace remain confined to it.
-- Namespacing helps avoid **name conflicts** between libraries that define the same modules or classes, and prevents **unintended sharing of global objects**.
-- The feature opens the door for safer, more modular Ruby applications.
-- Join the discussions (for example [the one about feature final name](https://bugs.ruby-lang.org/issues/21385)) and help shaping the future of Ruby!
+- Currently Ruby has only one global shared namespace. The proposed namespacing feature will help avoid name conflicts between libraries that define the same modules or classes, and prevent unintended sharing of global objects.
+- The feature is fully compatible with libraries that use relative name resolution and opens the door for safer, more modular Ruby applications.
 
 ```ruby
 # app1.rb
@@ -120,6 +119,7 @@ A huge thank you to all the contributors to RubyGems and [RubyGems.org](http://r
 - [@voxik](https://github.com/voxik) Vít Ondruch
 - [@antoinem](https://github.com/antoinem) Antoine Marguerie
 - [@woodruffw](https://github.com/woodruffw) William Woodruff
+- [@mperham](https://github.com/mperham) Mike Perham
 
 ### Contributors to [RubyGems.org](http://rubygems.org/):
 
