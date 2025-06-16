@@ -26,7 +26,7 @@ Another important accomplishment from the team this month includes:
 ## RubyGems.org News
 The updates made this month to [RubyGems.org](http://rubygems.org/) reflect a strong commitment to improving user experience, enhancing security, and modernizing the platform. Sponsored hosting for [RubyGems.org](http://rubygems.org/) in May was provided by [AWS](https://aws.amazon.com/?ref=rubycentral.org), [Fastly](https://www.fastly.com/?ref=rubycentral.org) and [Datadog](https://www.datadoghq.com/?ref=rubycentral.org).
 
-[RubyGems.org](http://rubygems.org/) served 4.06 billion gems in May 2025 — up from 2.87 billion in May 2024. The busiest day was Wednesday, May 14th, with a record-breaking 193 million downloads, while the quietest was Saturday, May 31st, with 36 million.  Star of the Month goes to [`gitlab-crystalbal](https://rubygems.org/gems/gitlab-crystalball/)l` (a gem inspired by a [Predicting Test Failures](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html#) post by top Ruby and Rails contributor [tenderlove](https://rubygems.org/profiles/tenderlove)), a new gem published on May 8th, which has already reaching 785,000 downloads in its debut month!
+[RubyGems.org](http://rubygems.org/) served 4.06 billion gems in May 2025 — up from 2.87 billion in May 2024. The busiest day was Wednesday, May 14th, with a record-breaking 193 million downloads, while the quietest was Saturday, May 31st, with 36 million.  Star of the Month goes to [gitlab-crystalbal](https://rubygems.org/gems/gitlab-crystalball/) (a gem inspired by a [Predicting Test Failures](https://tenderlovemaking.com/2015/02/13/predicting-test-failues.html) post by top Ruby and Rails contributor [tenderlove](https://rubygems.org/profiles/tenderlove), revived by [GitLab](https://gitlab.com/)), a new gem published on May 8th, which has already reaching 785,000 downloads in its debut month!
 
 **Ruby Usage Stats 2024-2025**
 
@@ -53,7 +53,7 @@ Ruby version usage continues to trend steadily toward modern releases. In May 20
 
 *Note: These numbers represent all downloads in given month, not only downloads of Bundler gem as in previous monthly summary.*
 
-## RubyGems Ecosystem News
+## Interesting Ruby News
 
 This is where we highlight exciting updates made to Ruby infrastructure projects that support our RubyGems work.
 
