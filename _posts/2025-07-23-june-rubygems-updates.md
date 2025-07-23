@@ -57,9 +57,9 @@ The following are highlights of what the team worked on this month:
 - We have started updating [RubyGems.org](http://rubygems.org/) PostgreSQL, and are currently testing it in a staging environment. PostgreSQL is the main source of truth for [RubyGems.org](http://rubygems.org/) and the currently in use PostgreSQL 13 is slowly reaching EOL. We aim to upgrade to PostgreSQL 17 by the end of the summer.
 - We will be using the approach explained in [pg major update](https://github.com/rubygems/pg-major-update/), which has been successfully used in previous upgrades, to achieve zero-downtime. A separate blog post with more details on the process is forthcoming.
 
-## **RubyGems Ecosystem News**
+## **Interesting Ruby News**
 
-This is where we highlight exciting updates made to Ruby infrastructure projects that support our RubyGems work.
+This is where we highlight exciting updates made to Ruby project.
 
 **Experimental namespacing progress:**
 
