@@ -6,11 +6,11 @@ author_email: marty@rubycentral.org
 ---
 We are aware of [a recent report about malicious gems](https://socket.dev/blog/60-malicious-ruby-gems-used-in-targeted-credential-theft-campaign) that were targeting social media credentials. **Our team first detected this activity on July 20th and began removing the affected gems immediately through our regular security processes.** 
 
-We want to reassure the Ruby community that this issue has already been taken care of and is no longer an active threat. **It involved a small number of gems from shady actors and does *not* impact widely used or trusted packages.**
+We want to reassure the Ruby community that this issue has already been taken care of and is no longer an active threat. **It involved a small number of gems from bad actors and does *not* impact widely used or trusted packages.**
 
 Security is part of our daily operations. We remove suspicious gems regularly, typically before issues are reported by third parties (our systems detect 70-80% of the gems we ultimately remove). While we don’t announce every action we take, our monitoring systems are working as intended, and our security team is always actively working to protect the RubyGems ecosystem. 
 
-Additionally, there were some inaccuracies in the information that has been reported about our security team's actions and the timeline of events. For transparency, we will be publishing a more detailed breakdown of this incident, including information on how we handle threats like these, next week.
+For transparency, we would like to add more context from our team to the existing reporting, and will be publishing a more detailed breakdown of this incident next week, including information on how we typically handle threats like these.
 
 **In the meantime, we encourage developers to:**
 
