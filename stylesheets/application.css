@@ -303,12 +303,12 @@ a.t-list__item {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.66; }
+.t-body strong {
+  font-weight: 800; }
 .t-body p, .t-body ul, .t-body ol, .t-body pre, .t-body table {
   margin-bottom: 30px; }
 .t-body a {
   word-wrap: break-word; }
-.t-body b, .t-body strong {
-  font-weight: 500; }
 .t-body h1, .t-body h2 {
   margin-bottom: 24px;
   font-weight: 800;
