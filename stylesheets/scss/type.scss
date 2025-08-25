@@ -183,6 +183,11 @@ a.t-list__item {
     }
     line-height: 1.66;
   }
+  strong {
+    font: {
+      weight: 800;
+    }
+  }
 
   p, ul, ol, pre, table {
     margin-bottom: 30px;

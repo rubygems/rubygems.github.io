@@ -15,23 +15,23 @@ is doing each day to keep the ecosystem safe.
 
 **RubyGems.org security uses a proactive and multi-layered approach:**
 
-1.  **Automated detection:** Every gem upload is analyzed using both
-    static and dynamic code analysis, including behavioral checks and
-    metadata review. Much of this capability comes from Mend.io’s
-    supply chain security tooling (originally built by our own Maciej
-    Mensfeld, a maintainer on the RubyGems team).
+**1. Automated detection:** Every gem upload is analyzed using both
+static and dynamic code analysis, including behavioral checks and
+metadata review. Much of this capability comes from Mend.io’s
+supply chain security tooling (originally built by our own Maciej
+Mensfeld, a maintainer on the RubyGems team).
 
-2.  **Risk scoring:** Each package is given a score. Higher-risk gems
-    are escalated for manual review by a member of our security team.
+**2. Risk scoring:** Each package is given a score. Higher-risk gems
+are escalated for manual review by a member of our security team.
 
-3.  **Retroactive scanning:** As detection techniques improve, older
-    packages are automatically rescanned, which allows us to catch
-    threats that may have slipped through in the past. (This is how we
-    found the threat actor that Socket.dev later investigated.)
+**3. Retroactive scanning:** As detection techniques improve, older
+packages are automatically rescanned, which allows us to catch
+threats that may have slipped through in the past. (This is how we
+found the threat actor that Socket.dev later investigated.)
 
-4.  **External sources:** We sometimes receive alerts from vulnerability
-    databases, industry partners, and cross-registry collaborations,
-    which help us identify patterns across ecosystems.
+**4. External sources:** We sometimes receive alerts from vulnerability
+databases, industry partners, and cross-registry collaborations,
+which help us identify patterns across ecosystems.
 
 Through steps 1 - 3, our team detects the majority (roughly 70-80%) of
 malicious packages before they are ever reported to us or the public.
@@ -40,22 +40,22 @@ malicious packages before they are ever reported to us or the public.
 
 **Once a gem is flagged, we:**
 
-1.  **Verify:** A RubyGems security engineer reviews the code to confirm
-    malicious intent (about 95% of flagged packages prove to be
-    legitimate).
+**1. Verify:** A RubyGems security engineer reviews the code to confirm
+malicious intent (about 95% of flagged packages prove to be
+legitimate).
 
-2.  **Double-check:** When there’s any doubt, we seek a second opinion
-    within the team.
+**2. Double-check:** When there’s any doubt, we seek a second opinion
+within the team.
 
-3.  **Remove:** Confirmed malicious gems are removed via a standardized
-    process in our admin panel.
+**3. Remove:** Confirmed malicious gems are removed via a standardized
+process in our admin panel.
 
-4.  **Document:** Every action is logged with reasoning for
-    traceability.
+**4. Document:** Every action is logged with reasoning for
+traceability.
 
-5.  **Protect further:** In some cases, we preemptively block suspicious
-    gem names (for example, ones mimicking company internals) to
-    prevent possible abuse.
+**5. Protect further:** In some cases, we preemptively block suspicious
+gem names (for example, ones mimicking company internals) to
+prevent possible abuse.
 
 # This Incident
 
