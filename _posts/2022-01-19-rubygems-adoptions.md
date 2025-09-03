@@ -5,6 +5,12 @@ author: sonalkr132
 author_email: aditya.prakash132@gmail.com
 ---
 
+**Important note: this article describe a feature which has since been [removed from rubygems.org](https://github.com/rubygems/rubygems.org/pull/5356) (see the [corresponding RFC](https://github.com/rubygems/rfcs/blob/master/text/0017-remove-adoptions.md)).  It is kept for posterity.**
+
+Original article:
+
+----
+
 No matter how near and dear a project was once to your heart, we all know that with time priorities change. You may no longer have the time or enthusiasm toward solving the issues of strangers on the internet as you once used to. It is reasonable for you to expect that the members of the community who have benefited from your work all this time will step up and carry your legacy (pun intended) forward. After all, it is in everyone's interest that a project used by the wider community doesn't get stalled.
 
 We are trying to introduce a formal process to deal with scenarios where owners may be interested in handing over the stewardship of a gem to new members or just need more helping hands. [Github issues](https://github.com/bootstrap-ruby/bootstrap_form/issues/577), [Twitter posts](https://twitter.com/yugui/status/22490349662), Mailing lists, [Codeshelter](https://www.codeshelter.co/projects/), and [maintainer-wanted](https://github.com/pickhardt/maintainers-wanted) are great ways to reach out to the community. However, they may not have the visibility needed to find new maintainers quickly. RubyGems.org can be of great help here.
