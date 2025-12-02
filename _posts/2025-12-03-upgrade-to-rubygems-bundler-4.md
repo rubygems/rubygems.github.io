@@ -7,23 +7,21 @@ author_email: hsbt@ruby-lang.org
 
 We introduced breaking changes in RubyGems/Bundler 4 in order to improve usability, security, and maintainability of the tool. This document describes the changes that you will find when upgrading to RubyGems 4 and Bundler 4, and how to prepare for them while still using Bundler 2.7.
 
-## RubyGems 4
+## RubyGems 4: CLI behavior changes
 
-### CLI behavior changes
-
-#### Removed `gem query` command
+### Removed `gem query` command
 
 Please use `gem search` or `gem list` instead.
 
-#### Completely removed `gem install --default` feature
+### Completely removed `gem install --default` feature
 
 The `--default` option was confusing for RubyGems users and caused broken installs.
 
 This was an unfinished feature originally intended to install gems directly into the Ruby standard library location, but it only generated executables without properly copying library files. This partial implementation led to a complicated environment with no real benefit for users.
 
-### API behavior changes
+## RubyGems 4: API behavior changes
 
-#### No replacements for removed deprecated methods
+### No replacements for removed deprecated methods
 
 The following deprecated methods have been removed with no replacement:
 
@@ -34,17 +32,15 @@ The following deprecated methods have been removed with no replacement:
 * `Gem::Specification#default_executable`
 * `Gem::Installer#unpack`
 
-#### Removed deprecated Gem::Platform.match
+### Removed deprecated Gem::Platform.match
 
 Please use `Gem::Platform.match_spec?` or `match_gem?` instead.
 
-#### Removed deprecated `Gem::BasicSpecification.default_specifications_dir`
+### Removed deprecated `Gem::BasicSpecification.default_specifications_dir`
 
 Please use `Gem.default_specifications_dir` instead.
 
-## Bundler 4
-
-### Bundler 4 simulation mode
+## Bundler 4 simulation mode
 
 In order to prepare for Bundler 4, you can easily configure Bundler 2.7 to behave exactly like Bundler 4 will behave.  To do so, you have three options:
 
@@ -56,9 +52,9 @@ From now on in this document we will assume that all three of these configuratio
 
 The following is a summary of the changes that we introduced in Bundler 4, and why we made those changes. Some of them should be well known already by existing users, because we have been printing deprecation messages for years, but some of them are defaults that were switched in Bundler 4.
 
-### CLI behavior changes
+## Bundler 4: CLI behavior changes
 
-#### Running just `bundle` to mean `bundle install` is not recommended anymore
+### Running just `bundle` to mean `bundle install` is not recommended anymore
 
 We changed this default to make Bundler more friendly for new users. We do understand that long time users already know how Bundler works and found it useful that just `bundle` defaulted to `bundle install`.
 
@@ -78,7 +74,7 @@ bundle config set default_cli_command cli_help --global
 
 Please use `bundle install` explicitly in your scripts and documentation, so that everyone is clear about what is happening.
 
-#### Flags passed to `bundle install` that relied on being remembered across invocations have been removed
+### Flags passed to `bundle install` that relied on being remembered across invocations have been removed
 
 In particular, the `--clean`, `--deployment`, `--frozen`, `--no-prune`, `--path`, `--shebang`, `--system`, `--without`, and `--with` options to `bundle install`.
 
@@ -90,7 +86,7 @@ The problem with this behavior was that very common workflows were relying on it
 
 This magic has been removed from Bundler 4, and you now explicitly need to configure it, either through environment variables, application configuration, or machine configuration. For example, with `bundle config set --local without development test`.
 
-#### `bundle viz` has been removed and extracted to a plugin.
+### `bundle viz` has been removed and extracted to a plugin.
 
 This was the only bundler command requiring external dependencies, both an OS dependency (the `graphviz` package) and a gem dependency (the `ruby-graphviz` gem). Removing these dependencies made development easier and it was also seen by the bundler team as an opportunity to develop a bundler plugin that is officially maintained by the RubyGems team, and that users can take as a reference to develop their own plugins.
 
@@ -98,7 +94,7 @@ The new plugin is called `bundler-graph` and it is available at https://github.c
 
 The plugin contains the same code as the old core command, the only difference being that the command is now implemented as `bundle graph` which is much easier to understand.
 
-#### The `bundle install` command no longer accepts a `--binstubs` flag.
+### The `bundle install` command no longer accepts a `--binstubs` flag.
 
 The `--binstubs` option has been removed from `bundle install` and replaced with the `bundle binstubs` command.
 
@@ -110,25 +106,26 @@ If you still want to create binstubs for all gems, you can run:
 bundle binstubs --all
 ```
 
-#### The `bundle inject` command has been replaced with `bundle add`
+### The `bundle inject` command has been replaced with `bundle add`
 
 We believe the new command fits the user's mental model better and it supports a wider set of use cases.
 
 The interface supported by `bundle inject` works exactly the same in `bundle add`, so it should be easy to migrate to the new command.
 
-### Gemfile and lockfile behavior changes
+## Bundler 4: Gemfile and lockfile behavior changes
 
-#### Bundler includes checksums in new lockfiles by default
+### Bundler includes checksums in new lockfiles by default
 
 We shipped this security feature and turned it on by default, so that everyone benefits from the extra security assurances. So whenever you create a new lockfile, Bundler now includes a CHECKSUMS section.
 
 Bundler will not automatically add a CHECKSUMS section to existing lockfiles, though, unless explicitly requested through `bundle lock --add-checksums`.
 
-#### Strict source pinning in Gemfile is enforced by default
+### Strict source pinning in Gemfile is enforced by default
 
 In Bundler 4, the source for every dependency is now unambiguously defined, and Bundler refuses to run otherwise.
 
-##### Multiple global Gemfile sources are no longer supported.
+* Multiple global Gemfile sources are no longer supported.
+
 Instead of something like this:
 
 ```ruby
@@ -151,7 +148,7 @@ source "https://another_source" do
 end
 ```
 
-##### Global `path` and `git` sources are no longer supported.
+* Global `path` and `git` sources are no longer supported.
 
 Instead of something like this:
 
@@ -186,21 +183,21 @@ git "https://my_git_repo_with_gems" do
 end
 ```
 
-### Cache behavior changes
+## Bundler 4: Cache behavior changes
 
-#### Git and Path gems are included in `vendor/cache` by default
+### Git and Path gems are included in `vendor/cache` by default
 
 If you have a `vendor/cache` directory (to support offline scenarios, for example), Bundler now includes gems from `path` and `git` sources in there.
 
 We're unsure why these gems were treated specially so we'll start caching them normally.
 
-#### Bundler uses cached local data if available when network issues are found during resolution
+### Bundler uses cached local data if available when network issues are found during resolution
 
 Just trying to provide a more resilient behavior here.
 
-### API behavior changes
+## Bundler 4: API behavior changes
 
-#### `Bundler.clean_env`, `Bundler.with_clean_env`, `Bundler.clean_system`, and `Bundler.clean_exec` have been removed
+### `Bundler.clean_env`, `Bundler.with_clean_env`, `Bundler.clean_system`, and `Bundler.clean_exec` have been removed
 
 All of these helpers ultimately used `Bundler.clean_env` under the hood, which made sure all bundler-related environment variables were removed inside the block it yields.
 
@@ -208,32 +205,29 @@ After quite a lot of user reports, we noticed that users don't usually want this
 
 There are however some specific cases where the good old `Bundler.clean_env` behavior can be useful. For example, when testing Rails generators, you really want an environment where `bundler` is out of the picture. This is why we decided to keep the old behavior under a new more clear name, because we figured the word "clean" was too ambiguous. So we introduced `Bundler.unbundled_env`, `Bundler.with_unbundled_env`, `Bundler.unbundled_system`, and `Bundler.unbundled_exec`.
 
-#### `Bundler.environment` has been deprecated in favor of `Bundler.load`.
+### `Bundler.environment` has been deprecated in favor of `Bundler.load`.
 
 We're not sure how people might be using this directly but we removed the `Bundler::Environment` class which was instantiated by `Bundler.environment` since we realized the `Bundler::Runtime` class was the same thing. `Bundler.environment` now delegates to `Bundler.load`, which holds the reference to the `Bundler::Runtime`.
 
-#### Removed public methods of `Bundler::SpecSet`
+### Removed public methods of `Bundler::SpecSet`
 
-The following public methods of `Bundler::SpecSet` have been removed with no replacement:
+`SpecSet#-` and `SpecSet#<<` have been removed with no replacement:
 
-* `SpecSet#-`
-* `SpecSet#<<`
-
-#### `SpecSet#for` always implicitly performs validation
+### `SpecSet#for` always implicitly performs validation
 
 `SpecSet#for` received a `check` parameter, but that's no longer used and deprecated. Please remove this parameter.
 
-#### `CurrentRuby#maglev?` was removed with no replacement.
+### `CurrentRuby#maglev?` was removed with no replacement.
 
 Please use the built-in Ruby `RUBY_ENGINE` constant to check the Ruby implementation you are running on.
 
-#### `Bundler.rubygems.all_specs` has been removed
+### `Bundler.rubygems.all_specs` has been removed
 
 Please use `Bundler.rubygems.installed_specs` instead.
 
-### Other notable changes
+## Bundler 4: Other notable changes
 
-#### Deployment helpers for `vlad` and `capistrano` have been removed.
+### Deployment helpers for `vlad` and `capistrano` have been removed.
 
 These were natural deprecations since the `vlad` tool has had no activity for years whereas `capistrano` 3 has built-in Bundler integration in the form of the `capistrano-bundler` gem, and everyone using Capistrano 3 should already be using that instead. If for some reason, you are still using Capistrano 2, feel free to copy the Capistrano tasks out of the Bundler 2 file `lib/bundler/deployment.rb` and put them into your app.
 
