@@ -215,7 +215,7 @@ We're not sure how people might be using this directly but we removed the `Bundl
 
 ### Removed public methods of `Bundler::SpecSet`
 
-`SpecSet#-` and `SpecSet#<<` have been removed with no replacement:
+`SpecSet#-` and `SpecSet#<<` have been removed with no replacement.
 
 ### `SpecSet#for` always implicitly performs validation
 
