@@ -60,7 +60,7 @@ We changed this default to make Bundler more friendly for new users. We do under
 
 Currently, Bundler uses `install_or_cli_help` by default for backward compatibility. This automatically uses `bundle install` or shows help depending on the context.
 
-If you want to keep the current behavior (defaulting to `bundle install`), you can explicitly configure:
+If you want to keep the current behavior in the future, you can explicitly configure:
 
 ```sh
 bundle config set default_cli_command install_or_cli_help --global
@@ -185,7 +185,7 @@ end
 
 ### Change Ruby and Bundler version format
 
-In the `BUNDLED WITH` and `RUBY` sections of the lockfile, we fixed the three space indentation to be just two spaces, to be consistent with the rest of the lockfile format. and we also removed the patch version from the Ruby version, since it's not relevant for Ruby versioning policy.
+In the `RUBY VERSION` and `BUNDLED WITH` sections of the lockfile, we fixed the three space indentation to be just two spaces, to be consistent with the rest of the lockfile format. and we also removed the patch version from the Ruby version, since it's not relevant for Ruby versioning policy.
 
 ## Bundler 4: Cache behavior changes
 
