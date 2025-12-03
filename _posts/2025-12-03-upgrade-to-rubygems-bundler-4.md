@@ -183,6 +183,10 @@ git "https://my_git_repo_with_gems" do
 end
 ```
 
+### Change Ruby and Bundler version format
+
+In the `BUNDLED WITH` and `RUBY` sections of the lockfile, we fixed the three space indentation to be just two spaces, to be consistent with the rest of the lockfile format. and we also removed the patch version from the Ruby version, since it's not relevant for Ruby versioning policy.
+
 ## Bundler 4: Cache behavior changes
 
 ### Git and Path gems are included in `vendor/cache` by default
