@@ -90,7 +90,7 @@ This magic has been removed from Bundler 4, and you now explicitly need to confi
 
 This was the only bundler command requiring external dependencies, both an OS dependency (the `graphviz` package) and a gem dependency (the `ruby-graphviz` gem). Removing these dependencies made development easier and it was also seen by the bundler team as an opportunity to develop a bundler plugin that is officially maintained by the RubyGems team, and that users can take as a reference to develop their own plugins.
 
-The new plugin is called `bundler-graph` and it is available at https://github.com/rubygems/bundler-grap now.
+The new plugin is called `bundler-graph` and it is available at https://github.com/rubygems/bundler-graph now.
 
 The plugin contains the same code as the old core command, the only difference being that the command is now implemented as `bundle graph` which is much easier to understand.
 
