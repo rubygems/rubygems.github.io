@@ -26,7 +26,7 @@ This was an unfinished feature originally intended to install gems directly into
 The following deprecated methods have been removed with no replacement:
 
 * `Gem::Specification#has_rdoc`, `has_rdoc=` and `has_rdoc?`
-* `Gem::DependencyInstaller#find_gems_with_sources` has been removed
+* `Gem::DependencyInstaller#find_gems_with_sources`
 * `Gem::Util.silent_system`
 * `Gem::Specification#validate_metadata`, `validate_dependencies` and `validate_permissions`
 * `Gem::Specification#default_executable`
