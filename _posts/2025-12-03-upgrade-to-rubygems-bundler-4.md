@@ -56,14 +56,16 @@ The following is a summary of the changes that we introduced in Bundler 4, and w
 
 ### Running just `bundle` to mean `bundle install` is not recommended anymore
 
+**Update for version 4.0.1: `install_or_cli_help` is merged into `install` for backward compatibility of Bundler 2.x. We recommend using `install` instead of `install_or_cli_help`.**
+
 We changed this default to make Bundler more friendly for new users. We do understand that long time users already know how Bundler works and found it useful that just `bundle` defaulted to `bundle install`.
 
-Currently, Bundler uses `install_or_cli_help` by default for backward compatibility. This automatically uses `bundle install` or shows help depending on the context.
+Currently, Bundler uses `install` by default for backward compatibility. This automatically uses `bundle install` or shows help depending on the context.
 
 If you want to keep the current behavior in the future, you can explicitly configure:
 
 ```sh
-bundle config set default_cli_command install_or_cli_help --global
+bundle config set default_cli_command install --global
 ```
 
 However, if you want to adopt the new behavior immediately where `bundle` only shows help, you can configure:
