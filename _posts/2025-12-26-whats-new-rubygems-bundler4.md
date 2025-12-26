@@ -11,7 +11,7 @@ Since [my previous post focused on migration and compatibility concerns](https:/
 
 ## Parallelization of C-extension Gem Builds
 
-https://github.com/ruby/rubygems/pull/9131
+[Add `MAKEFLAGS=-j` by default before compiling](https://github.com/ruby/rubygems/pull/9131)
 
 When installing gems with C extensions (such as `mysql2` or `pg`), RubyGems now automatically adds `MAKEFLAGS=-j` to the make command for parallel execution. Users previously had to manually configure this themselves. By leveraging multi-core CPUs by default, installation times are significantly reduced.
 
@@ -21,7 +21,7 @@ While convenient for local development, we discovered after implementation that 
 
 ## Unified Parallel Job Execution Options
 
-https://github.com/ruby/rubygems/pull/9171
+[Pass down value of `BUNDLE_JOBS` to RubyGems before compiling & introduce a new `gem install -j` flag](https://github.com/ruby/rubygems/pull/9171)
 
 To prevent resource exhaustion in virtual environments, a new `-j` flag for `gem install` and automatic passing of `BUNDLE_JOBS` to RubyGems have been introduced.
 
@@ -31,23 +31,23 @@ However, even with these changes, worst-case scenarios remain (where `BUNDLE_JOB
 
 While the specifics are still in development, this should eliminate worst-case scenarios. We've also learned that Go's `GOMAXPROCS` handles containerized environments like CircleCI by reading CPU info from cgroup:
 
-https://bugs.ruby-lang.org/issues/21797
+[Feature #21797: Improve Etc.nprocessors for cgroup environment](https://bugs.ruby-lang.org/issues/21797)
 
 By incorporating this approach into Ruby core and combining it with a jobserver, we expect to achieve optimal build speeds while fully utilizing available CPUs. Stay tuned!
 
 ## Increased Connection Pool and Efficient Network Communication
 
-https://github.com/ruby/rubygems/pull/9087
+[Increase connection pool to allow for up to 70% speed increase on `bundle install`](https://github.com/ruby/rubygems/pull/9087)
 
 The default connection pool for Bundler and RubyGems network requests has been expanded to 5 parallel connections. This improvement reportedly reduces `bundle install` times by up to 70%.
 
-https://github.com/ruby/rubygems/pull/9071
+[Adjust the API_REQUEST_LIMIT to make less network roundtrip](https://github.com/ruby/rubygems/pull/9071)
 
 Additionally, `API_REQUEST_LIMIT` (which controls batch sizes of dependency information) has increased from 50 to 100, doubling the gems per request. For example, a Gemfile with 400 dependencies now requires just 4 network requests instead of 8.
 
 ## Pattern Matching Support for Gem::NameTuple and Gem::Platform
 
-https://github.com/ruby/rubygems/pull/9062
+[Add pattern matching support to Gem::Platform](https://github.com/ruby/rubygems/pull/9062)
 
 When writing scripts that need to inspect gem names, versions, or platforms, you can now use Ruby's pattern matching for cleaner and safer logic.
 
@@ -66,13 +66,13 @@ end
 
 Pattern matching support for `Gem::Version` is still under consideration and may not move forward.
 
-https://github.com/ruby/rubygems/pull/9060
+[Add pattern matching support to Gem::Version](https://github.com/ruby/rubygems/pull/9060)
 
 The proposal suggested decomposing versions into `major`, `minor`, and `build` components, but real-world versions include strings like `4.0.0.beta3` or `4.0.0.beta.3`. It would be inconsistent for these to equal `4.0.0`, and equally confusing for `beta3` and `beta.3` to be treated as equivalent. Additionally, since `build` is sometimes called `tiny` or `patch` and lacks a clear definition, I'm hesitant about introducing this feature.
 
 ## JSON Output for bundle list
 
-https://github.com/ruby/rubygems/pull/8728
+[Introduce `bundle list --format=json`](https://github.com/ruby/rubygems/pull/8728)
 
 A new `--format=json` option for `bundle list` makes it easy to integrate Bundler with external tools.
 
@@ -85,25 +85,25 @@ $ bundle list --format=json | jq -r '.gems[] | select(.name == "json") | .versio
 
 ## bundle install Without Generating a Lockfile
 
-https://github.com/ruby/rubygems/pull/9059
+[Add support for lockfile in Gemfile and bundle install --no-lock](https://github.com/ruby/rubygems/pull/9059)
 
 The `bundle install --no-lock` flag now skips lockfile generation, which is convenient when you want to test dependency resolution without creating or modifying lockfile artifacts.
 
 ## Specifying the Generated Lockfile Name
 
-https://github.com/ruby/rubygems/pull/9111
+[Support bundle install --lockfile option](https://github.com/ruby/rubygems/pull/9111)
 
 You can now specify a custom lockfile name using `bundle install --gemfile=foo --lockfile=bar`. This defaults to the `.lock` extension if not specified, but is useful when working with variants like `Gemfile.next` or `Gemfile.rails81`.
 
 ## Creating Go-extension Gems
 
-https://github.com/ruby/rubygems/pull/8183
+[Add `--ext=go` to `bundle gem`](https://github.com/ruby/rubygems/pull/8183)
 
 RubyGems' gem scaffolding and build tools previously supported C and Rust extensions. Support for Go has now been added. You can create a Go-extension gem template with `bundle gem --ext=go foo`.
 
 ## Using did_you_mean for Bundler Typo Checks
 
-https://github.com/ruby/rubygems/pull/3857
+[Use DidYouMean::SpellChecker for gem suggestions in Bundler](https://github.com/ruby/rubygems/pull/3857)
 
 Bundler's typo detection and command suggestions previously used a custom implementation. This has now been updated to use `did_you_mean`, keeping it consistent with other Ruby tools.
 
