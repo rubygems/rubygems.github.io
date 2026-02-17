@@ -1,5 +1,6 @@
 ---
 title: Announcing Ruby Together
+layout: post
 date: 2015-03-19 02:56 UTC
 ---
 

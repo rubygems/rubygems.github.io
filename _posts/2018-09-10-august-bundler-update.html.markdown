@@ -1,5 +1,6 @@
 ---
 title: "August 2018 Bundler Update"
+layout: post
 author: Stephanie Morillo
 ---
 

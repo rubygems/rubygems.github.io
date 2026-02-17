@@ -1,5 +1,6 @@
 ---
 title: Gem not found error on 1.7.0
+layout: post
 date: 2014-08-15 17:02 UTC
 author: André Arko
 ---

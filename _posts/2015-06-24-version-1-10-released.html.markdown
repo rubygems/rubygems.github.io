@@ -1,5 +1,6 @@
 ---
 title: Version 1.10 released
+layout: post
 date: 2015-06-24 05:36 UTC
 author: André Arko
 ---

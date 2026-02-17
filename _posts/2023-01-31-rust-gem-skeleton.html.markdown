@@ -1,5 +1,6 @@
 ---
 title: "Generate gem skeleton with Rust extension"
+layout: post
 date: 2023-01-31 14:42 UTC
 author: Josef Šimánek
 ---

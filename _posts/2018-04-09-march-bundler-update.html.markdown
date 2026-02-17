@@ -1,5 +1,6 @@
 ---
 title: "March 2018 Bundler Update"
+layout: post
 date: 2018-04-09 15:01 UTC
 author: Stephanie Morillo
 ---

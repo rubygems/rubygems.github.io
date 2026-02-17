@@ -1,6 +1,7 @@
 ---
 
 title: "Bundler v2.2: Multiplatform, Funding, and more."
+layout: post
 date: 2020-12-09 16:32 UTC
 author: David Rodríguez
 ---

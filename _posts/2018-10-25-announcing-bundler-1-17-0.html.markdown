@@ -1,5 +1,6 @@
 ---
 title: "Announcing Bundler 1.17.0"
+layout: post
 author: Colby Swandale
 ---
 

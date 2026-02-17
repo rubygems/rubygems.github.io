@@ -1,5 +1,6 @@
 ---
 title: Bundler template moves bins to exe
+layout: post
 date: 2015-03-20 00:00 UTC
 author: Benjamin Fleischer
 ---

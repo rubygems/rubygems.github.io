@@ -1,5 +1,6 @@
 ---
 title: "Bundler v2.6: lockfile checksums are finally there"
+layout: post
 date: 2024-12-19 17:01 UTC
 author: David Rodríguez
 ---

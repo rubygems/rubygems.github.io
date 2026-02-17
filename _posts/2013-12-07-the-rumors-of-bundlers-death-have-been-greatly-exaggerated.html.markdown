@@ -1,5 +1,6 @@
 ---
 title: The rumors of Bundler's death have been greatly exaggerated
+layout: post
 date: 2013/12/07
 draft: false
 author: André Arko

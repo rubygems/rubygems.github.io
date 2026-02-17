@@ -1,5 +1,6 @@
 ---
 title: "Bundler 1.14: So many fixes"
+layout: post
 date: 2017-03-28 07:15 UTC
 author: André Arko
 ---

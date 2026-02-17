@@ -1,6 +1,7 @@
 ---
 title: Monthly update for December and yearly update for 2017
 author: "André Arko"
+layout: post
 date: 2018-01-08 17:09 UTC
 ---
 

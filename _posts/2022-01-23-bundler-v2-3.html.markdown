@@ -1,5 +1,6 @@
 ---
 title: "Bundler v2.3: Locking the version of Bundler itself"
+layout: post
 date: 2022-01-23 16:07 UTC
 author: David Rodríguez
 ---

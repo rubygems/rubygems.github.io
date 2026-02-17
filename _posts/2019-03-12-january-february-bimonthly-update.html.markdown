@@ -1,5 +1,6 @@
 ---
 title: "January and February Bundler Update"
+layout: post
 author: Stephanie Morillo
 ---
 

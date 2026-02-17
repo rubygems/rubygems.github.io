@@ -1,5 +1,6 @@
 ---
 title: "Bundler v2.7: last release before Bundler 4"
+layout: post
 date: 2025-07-17 07:13 +0000
 author: David Rodríguez
 ---

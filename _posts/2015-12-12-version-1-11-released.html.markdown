@@ -1,5 +1,6 @@
 ---
 title: Version 1.11 released
+layout: post
 date: 2015-12-12 19:00 UTC
 author: Samuel Giddins
 ---

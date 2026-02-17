@@ -1,5 +1,6 @@
 ---
 title: "Announcing Bundler 2.0"
+layout: post
 author: Colby Swandale
 ---
 

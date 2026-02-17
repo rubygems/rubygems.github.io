@@ -1,5 +1,6 @@
 ---
 title: "Bundler v2.4: new resolver, gems with Rust extensions, and more"
+layout: post
 date: 2023-01-31 14:43 UTC
 author: David Rodríguez
 ---

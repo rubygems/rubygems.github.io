@@ -1,5 +1,6 @@
 ---
 title: Goodbye Bundler 1.4, Hello Bundler 1.5
+layout: post
 date: 2013/10/12
 draft: false
 author: Terence Lee

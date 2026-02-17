@@ -1,6 +1,7 @@
 ---
 
 title: "A more secure bundler: We fixed our source priorities."
+layout: post
 date: 2021-02-15 11:33 UTC
 author: David Rodríguez
 ---

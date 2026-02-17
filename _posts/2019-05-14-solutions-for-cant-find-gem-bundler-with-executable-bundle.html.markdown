@@ -1,5 +1,6 @@
 ---
 title: "Solutions for 'Cant find gem bundler (>= 0.a) with executable bundle'"
+layout: post
 author: Colby Swandale
 ---
 

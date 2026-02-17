@@ -1,5 +1,6 @@
 ---
 title: "March Bundler Update"
+layout: post
 author: Gift Egwuenu
 ---
 
@@ -13,4 +14,3 @@ From this point forward, Bundler news will be reported together with RubyGems ne
 
 ---
 Interested in contributing to Bundler? We always welcome contributions in the forms of triaging bugs, adding new features, writing docs, and engaging with the wider community. Visit the [Bundler Contributor Guidelines](/doc/readme.html) on GitHub to get started. Don’t have time to contribute, but want to support our work? Sign up as a member of [Ruby Together](https://rubytogether.org/) to help fund our work to keep Bundler working for everyone.
-

@@ -1,5 +1,6 @@
 ---
 title: "An update on the Bundler 2 release"
+layout: post
 author: Colby Swandale
 ---
 

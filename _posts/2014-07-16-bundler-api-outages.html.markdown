@@ -1,5 +1,6 @@
 ---
 title: Bundler API outages on July 15 & 16, 2014
+layout: post
 date: 2014-07-16 23:29 UTC
 author: André Arko
 ---

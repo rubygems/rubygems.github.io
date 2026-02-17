@@ -1,5 +1,6 @@
 ---
 title: Hello, Bundler 1.9!
+layout: post
 date: 2015-03-21 00:00 UTC
 author: Samuel Giddins
 ---

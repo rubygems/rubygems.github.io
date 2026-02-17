@@ -1,5 +1,6 @@
 ---
 title: "Bundler 1.16: 2.0 Is So Close!"
+layout: post
 date: 2017-10-31 19:50 UTC
 author: Samuel Giddins
 ---

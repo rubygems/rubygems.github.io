@@ -1,5 +1,6 @@
 ---
 title: A New Bundler Website
+layout: post
 date: 2016-07-10 21:44 UTC
 author: Jakub Kruczek
 ---

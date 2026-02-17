@@ -1,5 +1,6 @@
 ---
 title: "An Update on Bundler 2.0"
+layout: post
 author: Colby Swandale & André Arko
 ---
 
