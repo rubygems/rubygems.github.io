@@ -1,8 +1,6 @@
 ---
 title: "Solutions for 'Cant find gem bundler (>= 0.a) with executable bundle'"
-tags:
 author: Colby Swandale
-category: release
 ---
 
 TL;DR: run

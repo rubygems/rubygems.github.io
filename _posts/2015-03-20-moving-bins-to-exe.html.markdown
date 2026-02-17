@@ -2,8 +2,6 @@
 title: Bundler template moves bins to exe
 date: 2015-03-20 00:00 UTC
 author: Benjamin Fleischer
-author_url: http://www.benjaminfleischer.com/2015/02/18/til-rubygem-executables-now-go-in-exe/
-category: release
 ---
 
 [Bundler 1.8](https://github.com/rubygems/bundler/blob/v1.8.0/lib/bundler/templates/newgem/newgem.gemspec.tt)

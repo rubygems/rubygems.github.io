@@ -1,8 +1,6 @@
 ---
 title: "Announcing Bundler 1.17.0"
-tags:
 author: Colby Swandale
-category: release
 ---
 
 The Bundler team is excited to announce Bundler v1.17.0, our next feature-packed release! Most of the changes in this release are the result of the work from our wonderful contributors whom we would like to thank. ❤️

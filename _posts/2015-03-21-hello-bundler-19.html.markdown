@@ -2,8 +2,6 @@
 title: Hello, Bundler 1.9!
 date: 2015-03-21 00:00 UTC
 author: Samuel Giddins
-author_url: http://segiddins.me
-category: release
 ---
 
 A mere month and a half after the release of Bundler 1.8, we're happy to announce our next act: Bundler 1.9.

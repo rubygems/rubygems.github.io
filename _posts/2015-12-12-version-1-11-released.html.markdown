@@ -1,10 +1,7 @@
 ---
 title: Version 1.11 released
 date: 2015-12-12 19:00 UTC
-tags:
 author: Samuel Giddins
-author_url: http://segiddins.me
-category: release
 ---
 
 Bundler 1.11 is here! Six and a half months after the last big release, we're

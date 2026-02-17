@@ -1,10 +1,7 @@
 ---
 title: The new index format, Fastly, and Bundler 1.12
 date: 2016-04-28 23:00 UTC
-tags:
 author: André Arko
-author_url: https://arko.net
-category: release
 ---
 
 A new version of Bundler has arrived! With 1.12, we’re shipping one huge change and several smaller changes—the short version is that Bundler is getting faster and more capable.

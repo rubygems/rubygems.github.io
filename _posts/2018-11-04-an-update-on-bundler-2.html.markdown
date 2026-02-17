@@ -1,8 +1,6 @@
 ---
 title: "An Update on Bundler 2.0"
-tags:
 author: Colby Swandale & André Arko
-category: release
 ---
 
 For the past few years the Bundler core team has been working hard on a major release of Bundler. We've been solving problems that users have seen since Bundler 1.0 first came out, but weren't able to release without breaking changes. At the same time, we've spent a lot of time thinking about how to release a new major version with as little breakage and as few surprises as possible. We've come up with a system that allows everyone to use multiple major versions of Bundler at the same time, and we think that system will make future breaking changes much easier to handle.

@@ -3,8 +3,6 @@ title: Goodbye Bundler 1.4, Hello Bundler 1.5
 date: 2013/10/12
 draft: false
 author: Terence Lee
-author_url: https://hone.herokuapp.com
-category: release
 ---
 
 People [have been asking](#) why we jumped from a 1.4 release candidate to a 1.5 one without ever releasing Bundler 1.4.0. The Bundler core team takes releases very seriously and tries to be an example of thoughtful release practices to the Ruby community. Since we follow [standard releases candidate](#) policies, release candidates are automatically under a feature freeze. Each release candidate gets roughly two weeks of testing, and any significant bugfixes result in a new release candidate and the timer starting over. The exact code from the first release candidate with no significant bugs will be the code released as the final version.

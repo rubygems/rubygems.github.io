@@ -1,10 +1,7 @@
 ---
 title: Version 1.10 released
 date: 2015-06-24 05:36 UTC
-tags:
 author: André Arko
-author_url: https://arko.net
-category: release
 ---
 
 Bundler 1.10 is out! In fact, Bundler 1.10.5 is out today, so we thought it was high time to let everyone know about it. 

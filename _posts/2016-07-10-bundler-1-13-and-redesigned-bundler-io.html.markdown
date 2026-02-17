@@ -1,10 +1,7 @@
 ---
 title: A New Bundler Website
 date: 2016-07-10 21:44 UTC
-tags:
 author: Jakub Kruczek
-author_url: https://github.com/kruczjak
-category: release
 ---
 
 Announcing... the new Bundler website! As part of Google Summer of Code 2016, Bundler has a new, prettier, and better website. The most visible changes are a completely new design and color scheme. In addition, the entire site is now responsive and easy to read on mobile devices using the [Bootstrap framework](http://getbootstrap.com/).

@@ -1,8 +1,6 @@
 ---
 title: "An update on the Bundler 2 release"
-tags:
 author: Colby Swandale
-category: release
 ---
 
 Yesterday I released Bundler 2.0 that introduced a number of breaking changes. One of the those changes was setting Bundler to require RubyGems v3.0.0. After making the release, it has become clear that lots of our users are running into issues with Bundler 2 requiring a really new version of RubyGems.

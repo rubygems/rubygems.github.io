@@ -1,8 +1,6 @@
 ---
 title: "Announcing Bundler 2.0"
-tags:
 author: Colby Swandale
-category: release
 ---
 
 The Bundler team is excited to announce the release of Bundler 2.0 🎉!

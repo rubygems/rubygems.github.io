@@ -1,9 +1,7 @@
 ---
 title: "June 2018 Bundler Update"
 date: 2018-07-12 09:01 UTC
-tags:
 author: Stephanie Morillo
-author_url: http://www.stephaniemorillo.co
 ---
 
 Welcome to the June Bundler update!

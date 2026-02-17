@@ -1,10 +1,7 @@
 ---
 title: "Bundler v2.6: lockfile checksums are finally there"
 date: 2024-12-19 17:01 UTC
-tags: checksums, lockfile
 author: David Rodríguez
-author_url: https://github.com/deivid-rodriguez
-category: release
 ---
 
 We're happy to announce Bundler 2.6, featuring gem checksum verification, right

@@ -1,6 +1,5 @@
 ---
 title: "January and February Bundler Update"
-tags:
 author: Stephanie Morillo
 ---
 

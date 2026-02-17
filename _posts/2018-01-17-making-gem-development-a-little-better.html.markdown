@@ -1,10 +1,7 @@
 ---
 title: "Making gem development a little better"
 date: 2018-01-17 15:01 UTC
-tags:
 author: Hiren Mistry
-author_url: https://github.com/hmistry
-category: release
 ---
 
 You may have experienced this before: you're excited about a gem, and want to contribute to its development. You clone the gem repo and run `bundle install` only to see the horror of installation issues or a failing test suite. What to do? Do you debug this unsure of how deep the rabbit hole goes, or perhaps leave it for another day as you're short on time?

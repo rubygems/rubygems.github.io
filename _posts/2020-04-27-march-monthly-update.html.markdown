@@ -1,6 +1,5 @@
 ---
 title: "March Bundler Update"
-tags:
 author: Gift Egwuenu
 ---
 

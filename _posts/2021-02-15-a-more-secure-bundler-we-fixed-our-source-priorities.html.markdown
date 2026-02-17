@@ -2,11 +2,7 @@
 
 title: "A more secure bundler: We fixed our source priorities."
 date: 2021-02-15 11:33 UTC
-tags:
 author: David Rodríguez
-author_url: https://github.com/deivid-rodriguez/
-category: security
-
 ---
 
 > __NOTE__: Whereas the issue was initially fixed in bundler 2.2.10, it had to

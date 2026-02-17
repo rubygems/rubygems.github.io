@@ -1,10 +1,7 @@
 ---
 title: "Generate gem skeleton with Rust extension"
 date: 2023-01-31 14:42 UTC
-tags:
 author: Josef Šimánek
-author_url: https://github.com/simi
-category: feature
 ---
 
 Do you think [dynamically typed](https://en.wikipedia.org/wiki/Dynamic_programming_language) [interpreted](https://en.wikipedia.org/wiki/Interpreter_(computing)) [Ruby language](https://www.ruby-lang.org/) and [statically typed](https://en.wikipedia.org/wiki/Type_system#Static_type_checking) [compiled](https://en.wikipedia.org/wiki/Compiled_language) [Rust language](https://www.rust-lang.org/) could be friends? Yes, they can! And actually, they are!

@@ -2,7 +2,6 @@
 title: Monthly update for December and yearly update for 2017
 author: "André Arko"
 date: 2018-01-08 17:09 UTC
-tags: 
 ---
 
 Welcome to the Bundler monthly (and yearly) update! We've been writing monthly updates about Bundler for several years as part of the [Ruby Together monthly updates](https://rubytogether.org/news), and finally realized that we should be posting those monthly updates here, as well. Here's to many more monthly updates to come!

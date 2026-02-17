@@ -1,8 +1,6 @@
 ---
 title: "July 2018 Bundler Update"
-tags:
 author: Stephanie Morillo
-author_url: http://www.stephaniemorillo.co
 ---
 
 Welcome to the July Bundler update!

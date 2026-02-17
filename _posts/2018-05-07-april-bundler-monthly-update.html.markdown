@@ -1,9 +1,7 @@
 ---
 title: "April 2018 Bundler Update"
 date: 2018-05-07 00:00
-tags:
 author: Stephanie Morillo
-author_url: http://www.stephaniemorillo.co
 ---
 
 Welcome to the Bundler monthly update! 

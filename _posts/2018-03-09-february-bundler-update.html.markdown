@@ -1,10 +1,7 @@
 ---
 title: "February 2018 Bundler Update"
 date: 2018-03-09 15:01 UTC
-tags:
 author: Stephanie Morillo
-author_url: http://www.stephaniemorillo.co
-category: release
 ---
 
 Welcome to the Bundler monthly update! 

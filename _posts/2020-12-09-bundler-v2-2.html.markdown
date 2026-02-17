@@ -2,10 +2,7 @@
 
 title: "Bundler v2.2: Multiplatform, Funding, and more."
 date: 2020-12-09 16:32 UTC
-tags:
 author: David Rodríguez
-author_url: https://github.com/deivid-rodriguez/
-category: release
 ---
 
 After an intense year of work, we're finally ready to announce the release of
