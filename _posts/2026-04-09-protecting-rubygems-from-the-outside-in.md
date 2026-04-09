@@ -1,5 +1,5 @@
 ---
-title: "Protecting rubygems.org from the outside in: DOS prevention and compromised passwords"
+title: "Protecting rubygems.org from the outside in: DoS prevention and compromised passwords"
 layout: post
 author: Colby Swandale
 author_email: colby@rubygems.org
