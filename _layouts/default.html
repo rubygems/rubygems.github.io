@@ -1,149 +1,181 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    {% if index %}
-      <title>Blog - RubyGems</title>
-    {% else %}
-      <title>{{ page.title }} - RubyGems Blog</title>
-    {% endif %}
-    <link rel="shortcut icon" href="https://rubygems.org/favicon.ico" type="image/x-icon">
-    <link href="/atom.xml" rel="alternate" title="RSS" type="application/rss+xml" />
-    <link href="/stylesheets/application.css" type="text/css" rel="stylesheet" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:100&subset=greek,latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="/javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="/javascripts/selectivizr.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.md5.js"></script>
-    <script type="text/javascript" src="/javascripts/prettify.js"></script>
-    <script type="text/javascript" src="/javascripts/application.js"></script>
-    <script type="text/javascript" src="/javascripts/mobile-nav.js"></script>
-    <script type="text/javascript" src="/javascripts/application.js"></script>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
-    {% if page.og_image %}
-    <meta property="og:image" content="{{ page.og_image }}">
-    {% endif %}
-    <!--[if IE 8]>
-      <script src="/assets/html5shiv.js"></script>
-      <link href="/assets/modules/ie8.css" rel="stylesheet" type="text/css">
-    <![endif]-->
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  {% if index %}
+    <title>Blog - RubyGems</title>
+  {% else %}
+    <title>{{ page.title }} - RubyGems Blog</title>
+  {% endif %}
+  <link rel="shortcut icon" href="https://rubygems.org/favicon.ico" type="image/x-icon">
+  <link href="/atom.xml" rel="alternate" title="RSS" type="application/rss+xml" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Titillium Web"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            orange: {
+              '050': '#FFF8F1',
+              100: '#FFF0EC',
+              200: '#FFC6AD',
+              300: '#FFA983',
+              400: '#FF7539',
+              500: '#F74C27',
+              DEFAULT: '#F74C27',
+              600: '#E04300',
+              700: '#AD2F14',
+              800: '#761A05',
+              900: '#581A0C',
+              950: '#3A1007',
+            },
+            neutral: {
+              '000': '#FFFFFF',
+              '050': '#FBFBFB',
+              100: '#EEF1F3',
+              200: '#E3E7EA',
+              300: '#D7DEE3',
+              400: '#C6CED5',
+              500: '#AEB8C1',
+              600: '#6C7583',
+              700: '#434B59',
+              800: '#333A45',
+              900: '#222831',
+              950: '#16191E',
+              1000: '#000000',
+            },
+          },
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: 'none',
+                color: '#333A45',
+                a: {
+                  color: '#F74C27',
+                  textDecoration: 'underline',
+                  '&:hover': { color: '#AD2F14' },
+                },
+                'code::before': { content: '""' },
+                'code::after': { content: '""' },
+                code: {
+                  backgroundColor: '#EEF1F3',
+                  padding: '0.125rem 0.375rem',
+                  borderRadius: '0.25rem',
+                  fontWeight: '400',
+                },
+                pre: {
+                  backgroundColor: '#222831',
+                  color: '#EEF1F3',
+                },
+                h1: { color: '#333A45' },
+                h2: { color: '#333A45' },
+                h3: { color: '#333A45' },
+                h4: { color: '#333A45' },
+                strong: { color: '#333A45' },
+                blockquote: { borderLeftColor: '#F74C27' },
+              },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  {% if page.og_image %}
+  <meta property="og:image" content="{{ page.og_image }}">
+  {% endif %}
+</head>
+<body class="bg-neutral-050 font-sans">
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white">
+      <div class="py-4 px-8 border-b border-neutral-400">
+        <div class="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
+          <!-- Logo -->
+          <a href="https://rubygems.org/" title="RubyGems" class="flex items-center text-orange">
+            <svg class="w-7 h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span class="ml-1 text-xl lg:text-2xl font-semibold text-orange">RubyGems</span>
+          </a>
 
-  <body>
-    <header class="header header--interior">
-      <div class="l-wrap--header">
-        <a class="header__logo-wrap" href="https://rubygems.org/">
-          <span class="header__logo" data-icon="⬡">⬢</span>
-          <span class="t-hidden">RubyGems</span>
-        </a>
-        <a class="header__club-sandwich" href="#">
-          <span class="t-hidden">Navigation menu</span>
-        </a>
-
-        <div class="header__nav-links-wrap">
-          <form accept-charset="UTF-8" action="https://rubygems.org/search" class="header__search-wrap" id="main-search" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-            <input class="header__search" id="query" name="query" placeholder="Search Gems&hellip;" type="search" />
-            <label for="query">
-              <span class="t-hidden">Search gems</span>
-            </label>
-            <input class="header__search__icon" id="search_submit" type="submit" value="⌕" />
-          </form>
-
-          <nav class="header__nav-links">
-            <a class="header__nav-link" href="https://rubygems.org/releases">Releases</a>
-            <a class="header__nav-link is-active" href="/">Blog</a>
-            <a class="header__nav-link" href="https://rubygems.org/gems">Gems</a>
-            <a class="header__nav-link" href="https://guides.rubygems.org/">Guides</a>
-            <a class="header__nav-link" href="https://guides.rubygems.org/contributing/">Contribute</a>
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-7 text-lg text-neutral-800">
+            <a href="/" class="text-orange font-semibold hover:text-orange-700">Blog</a>
+            <a href="https://rubygems.org/stats" class="hover:text-neutral-600">Statistics</a>
+            <a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600">Docs</a>
+            <a href="https://rubygems.org/pages/about" class="hover:text-neutral-600">About</a>
           </nav>
+
+          <!-- Mobile Menu Button -->
+          <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden px-2 py-1 rounded text-white bg-orange hover:bg-orange-600 focus:outline-none" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden lg:hidden max-w-screen-xl mx-auto mt-4 pt-4 border-t border-neutral-300">
+          <div class="flex flex-col space-y-3 text-lg text-neutral-800">
+            <a href="/" class="text-orange font-semibold">Blog</a>
+            <a href="https://rubygems.org/stats" class="hover:text-neutral-600">Statistics</a>
+            <a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600">Docs</a>
+            <a href="https://rubygems.org/pages/about" class="hover:text-neutral-600">About</a>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <main class="main--interior">
-      <div class="l-wrap--b">
-        <h1><a class="t-display page__heading t-link--black is-active" href="/">Blog</a></h1>
-
-        <div class="l-overflow">
-          {{ content }}
-        </div>
+    <!-- Content -->
+    <main class="flex-1 w-full px-8 bg-neutral-050 text-neutral-800">
+      <div class="max-w-screen-xl w-full mx-auto pt-8 pb-10 mb-12 md:mb-16 lg:mb-28">
+        {{ content }}
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="l-wrap--footer">
-        <div class="l-overflow">
-          <div class="nav--v l-col--r--pad">
-            <a class="nav--v__link--footer" href="https://status.rubygems.org">Status</a>
-            <a class="nav--v__link--footer" href="https://uptime.rubygems.org">Uptime</a>
-            <a class="nav--v__link--footer" href="https://github.com/rubygems/rubygems.org">Code</a>
-            <a class="nav--v__link--footer" href="https://rubygems.org/pages/data">Data</a>
-            <a class="nav--v__link--footer" href="https://groups.google.com/group/rubygems-org">Discuss</a>
-            <a class="nav--v__link--footer" href="https://rubygems.org/stats">Stats</a>
-            <a class="nav--v__link--footer" href="/">Blog</a>
-            <a class="nav--v__link--footer" href="https://rubygems.org/pages/about">About</a>
-            <a class="nav--v__link--footer" href="https://guides.rubygems.org/rubygems-org-api">API</a>
-          </div>
-          <div class="l-colspan--l colspan--l--has-border">
-            <p class="footer__about">RubyGems.org is the Ruby community&rsquo;s gem hosting service. Instantly publish your gems and install them. Use the API to interact and find out more information about available gems. Become a contributor and enhance the site with your own changes.</p>
+    <!-- Footer -->
+    <footer>
+      <div class="w-full px-8 py-8 bg-orange-100 text-neutral-800">
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between">
+          <nav class="mb-4 md:mb-0">
+            <ul class="flex flex-col md:flex-row md:space-x-8 text-lg md:text-base">
+              <li><a href="https://rubygems.org/pages/about" class="hover:text-neutral-600">About</a></li>
+              <li><a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600">Docs</a></li>
+              <li><a href="https://rubygems.org/pages/security" class="hover:text-neutral-600">Security</a></li>
+              <li><a href="https://status.rubygems.org" class="hover:text-neutral-600">Status</a></li>
+              <li><a href="mailto:support@rubygems.org" class="hover:text-neutral-600">Help</a></li>
+            </ul>
+          </nav>
+          <div class="flex space-x-4">
+            <a href="https://github.com/rubygems" class="hover:text-neutral-600" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
           </div>
         </div>
       </div>
-      <div class="footer__sponsors-wrap">
-        <div class="footer__sponsors">
-          <a class="footer__sponsor" href="https://rubycentral.org/" target="_blank">
-            Supported by
-            <span class="t-hidden">Ruby Central</span>
-          </a>
-          <a class="footer__sponsor" href="https://rubytogether.org/" target="_blank">
-            Supported by
-            <span class="t-hidden">Ruby Together</span>
-          </a>
-          <a class="footer__sponsor" href="https://dockyard.com/ruby-on-rails-consulting" target="_blank">
-            Designed by
-            <span class="t-hidden">DockYard</span>
-          </a>
-          <a class="footer__sponsor" href="https://dnsimple.link/resolving-rubygems" target="_blank">
-            Resolved with
-            <span class="t-hidden">DNSimple</span>
-          </a>
-          <a class="footer__sponsor" href="https://newrelic.com/" target="_blank">
-            Optimized by
-            <span class="t-hidden">New Relic</span>
-          </a>
-          <a class="footer__sponsor" href="https://www.datadoghq.com/" target="_blank">
-            Monitored by
-            <span class="t-hidden">Datadog</span>
-          </a>
-          <a class="footer__sponsor" href="https://www.runscope.com/" target="_blank">
-            Monitored by
-            <span class="t-hidden">Runscope</span>
-          </a>
-          <a class="footer__sponsor" href="https://www.fastly.com/" target="_blank">
-            Gems served by
-            <span class="t-hidden">Fastly</span>
-          </a>
-          <a class="footer__sponsor" href="https://www.honeybadger.io/" target="_blank">
-            Monitored by
-            <span class="t-hidden">Honeybadger</span>
-          </a>
+
+      <div class="w-full px-6 bg-orange-200 text-neutral-900">
+        <div class="flex flex-col lg:flex-row max-w-screen-xl mx-auto py-6 items-center justify-between">
+          <p class="mb-6 lg:mb-0 lg:mr-14 lg:w-52 text-base leading-6 text-balance">
+            RubyGems.org is supported by
+          </p>
+          <div class="w-full lg:grow mx-auto flex flex-wrap items-center justify-center lg:justify-between gap-6 text-sm font-semibold text-neutral-700">
+            <a href="https://rubycentral.org/" class="hover:text-neutral-900">Ruby Central</a>
+            <a href="https://aws.amazon.com/" class="hover:text-neutral-900">AWS</a>
+            <a href="https://dnsimple.link/resolving-rubygems" class="hover:text-neutral-900">DNSimple</a>
+            <a href="https://www.datadoghq.com/" class="hover:text-neutral-900">Datadog</a>
+            <a href="https://www.fastly.com/" class="hover:text-neutral-900">Fastly</a>
+            <a href="https://www.honeybadger.io/" class="hover:text-neutral-900">Honeybadger</a>
+          </div>
         </div>
       </div>
     </footer>
-
-    <script type="text/javascript">
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '5147d6f8f5a1f502ad000189');
-        t.src = 'https://secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-  </body>
+  </div>
+</body>
 </html>

@@ -3,10 +3,12 @@ layout: default
 title: RubyGems Blog
 ---
 
-{% for post in site.posts limit:1 %}
-  {% assign index = true %}
-  {% assign content = post.content %}
-  {% include article.html %}
-{% endfor %}
+<h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-8">Blog</h1>
 
-{% include archive.html %}
+<div class="flex flex-col lg:flex-row gap-12">
+  <div class="flex-1 min-w-0">
+    {% assign index = true %}
+    {% include article.html %}
+  </div>
+  {% include archive.html %}
+</div>

@@ -3,5 +3,9 @@ layout: default
 type: post
 ---
 
-{% include article.html %}
-{% include archive.html %}
+<div class="flex flex-col lg:flex-row gap-12">
+  <div class="flex-1 min-w-0">
+    {% include article.html %}
+  </div>
+  {% include archive.html %}
+</div>
