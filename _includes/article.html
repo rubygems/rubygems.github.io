@@ -6,32 +6,24 @@
       <h2 id="{{current_year}}" class="text-2xl font-bold text-neutral-800 mt-10 mb-4 first:mt-0">{{current_year}}</h2>
     {% endif %}
     <a class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-3 border-b border-neutral-200 hover:bg-neutral-100 -mx-3 px-3 rounded transition-colors" href="{{ post.url }}">
-      <time class="text-sm text-neutral-600 shrink-0 tabular-nums">{{ post.date | date_to_string }}</time>
-      <span class="text-lg font-semibold text-neutral-800 group-hover:text-orange">{{ post.title }}</span>
+      <time class="text-sm text-neutral-700 shrink-0 tabular-nums">{{ post.date | date_to_string }}</time>
+      <span class="text-lg font-semibold text-neutral-800 group-hover:text-orange-700">{{ post.title }}</span>
     </a>
   {% endfor %}
 {% else %}
-  <a class="inline-flex items-center gap-1 text-orange hover:text-orange-700 mb-6 text-base font-medium" href="/">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-    All posts
-  </a>
-
-  <time class="block text-sm text-neutral-600 mb-2">{{ page.date | date_to_string }}</time>
-  <h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-2">{{ page.title }}</h1>
-  <p class="text-base text-neutral-600 mb-8">by {{ page.author }}</p>
-
-  <article class="prose prose-lg max-w-none">
-    {{ content }}
-  </article>
-
-  {% if page.author %}
-  <footer class="mt-12 pt-8 border-t border-neutral-200 flex items-center gap-4">
-    {% if page.author_email %}
-      <img alt="{{ page.author }}" src="https://secure.gravatar.com/avatar/{{ page.author_email | md5 }}?s=96&d=retro" class="w-12 h-12 rounded-full">
-    {% endif %}
-    <div>
-      <p class="font-semibold text-neutral-800">{{ page.author }}</p>
+  <div class="max-w-prose">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">{{ page.title }}</h1>
+    <div class="flex items-center gap-3 mb-8 text-base text-neutral-700">
+      {% if page.author_email %}
+        <img alt="" src="https://secure.gravatar.com/avatar/{{ page.author_email | md5 }}?s=80&d=retro" loading="lazy" class="w-8 h-8 rounded-full">
+      {% endif %}
+      <span>{{ page.author }}</span>
+      <span class="text-neutral-400">&middot;</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
     </div>
-  </footer>
-  {% endif %}
+
+    <article class="prose prose-lg max-w-none">
+      {{ content }}
+    </article>
+  </div>
 {% endif %}

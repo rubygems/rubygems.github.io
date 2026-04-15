@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if index %}
     <title>Blog - RubyGems</title>
   {% else %}
@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="https://rubygems.org/favicon.ico" type="image/x-icon">
   <link href="/atom.xml" rel="alternate" title="RSS" type="application/rss+xml" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
@@ -55,30 +55,31 @@
             DEFAULT: {
               css: {
                 maxWidth: 'none',
-                color: '#333A45',
+                color: '#333A45', // neutral-800
                 a: {
-                  color: '#F74C27',
+                  color: '#AD2F14', // orange-700 — 5.9:1 on white, passes AA
                   textDecoration: 'underline',
-                  '&:hover': { color: '#AD2F14' },
+                  '&:hover': { color: '#761A05' }, // orange-800
                 },
                 'code::before': { content: '""' },
                 'code::after': { content: '""' },
                 code: {
-                  backgroundColor: '#EEF1F3',
+                  backgroundColor: '#EEF1F3', // neutral-100
                   padding: '0.125rem 0.375rem',
                   borderRadius: '0.25rem',
                   fontWeight: '400',
+                  overflowWrap: 'break-word',
                 },
                 pre: {
-                  backgroundColor: '#222831',
-                  color: '#EEF1F3',
+                  backgroundColor: '#222831', // neutral-900
+                  color: '#EEF1F3', // neutral-100
                 },
-                h1: { color: '#333A45' },
+                h1: { color: '#333A45' }, // neutral-800
                 h2: { color: '#333A45' },
                 h3: { color: '#333A45' },
                 h4: { color: '#333A45' },
                 strong: { color: '#333A45' },
-                blockquote: { borderLeftColor: '#F74C27' },
+                blockquote: { borderLeftColor: '#E04300' }, // orange-600
               },
             },
           },
@@ -92,28 +93,28 @@
 </head>
 <body class="bg-neutral-050 font-sans">
   <div class="min-h-screen flex flex-col">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-orange focus:text-white focus:px-4 focus:py-2 focus:rounded focus:text-sm focus:font-semibold">Skip to content</a>
+
     <!-- Header -->
     <header class="bg-white">
       <div class="py-4 px-8 border-b border-neutral-400">
         <div class="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
           <!-- Logo -->
-          <a href="https://rubygems.org/" title="RubyGems" class="flex items-center text-orange">
-            <svg class="w-7 h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          <a href="https://rubygems.org/" title="RubyGems" class="flex items-center text-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded">
+            <svg class="w-7 h-7 lg:w-8 lg:h-8" viewBox="0 0 200 200" fill="currentColor">
+              <path d="M68.8 69.9l-.1-.1L46.5 92l53.9 53.8 22.2-22.1L154.3 92l-22.2-22.2v-.1H68.7"/>
+              <path d="M100.2 10.6l-78.5 45v90l78.5 45 78.5-45v-90l-78.5-45zM163.7 137l-63.5 36.6L36.7 137V64l63.5-36.6L163.7 64v73z"/>
             </svg>
             <span class="ml-1 text-xl lg:text-2xl font-semibold text-orange">RubyGems</span>
           </a>
 
           <!-- Desktop Navigation -->
           <nav class="hidden lg:flex items-center space-x-7 text-lg text-neutral-800">
-            <a href="/" class="text-orange font-semibold hover:text-orange-700">Blog</a>
-            <a href="https://rubygems.org/stats" class="hover:text-neutral-600">Statistics</a>
-            <a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600">Docs</a>
-            <a href="https://rubygems.org/pages/about" class="hover:text-neutral-600">About</a>
+            {% include nav_links.html layout="desktop" %}
           </nav>
 
           <!-- Mobile Menu Button -->
-          <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden px-2 py-1 rounded text-white bg-orange hover:bg-orange-600 focus:outline-none" aria-label="Toggle menu">
+          <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2.5 rounded text-white bg-orange hover:bg-orange-600 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus:outline-none" aria-label="Toggle menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -123,17 +124,14 @@
         <!-- Mobile Navigation -->
         <nav id="mobile-menu" class="hidden lg:hidden max-w-screen-xl mx-auto mt-4 pt-4 border-t border-neutral-300">
           <div class="flex flex-col space-y-3 text-lg text-neutral-800">
-            <a href="/" class="text-orange font-semibold">Blog</a>
-            <a href="https://rubygems.org/stats" class="hover:text-neutral-600">Statistics</a>
-            <a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600">Docs</a>
-            <a href="https://rubygems.org/pages/about" class="hover:text-neutral-600">About</a>
+            {% include nav_links.html layout="mobile" %}
           </div>
         </nav>
       </div>
     </header>
 
     <!-- Content -->
-    <main class="flex-1 w-full px-8 bg-neutral-050 text-neutral-800">
+    <main id="main-content" class="flex-1 w-full px-8 bg-neutral-050 text-neutral-800">
       <div class="max-w-screen-xl w-full mx-auto pt-8 pb-10 mb-12 md:mb-16 lg:mb-28">
         {{ content }}
       </div>
@@ -145,15 +143,15 @@
         <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between">
           <nav class="mb-4 md:mb-0">
             <ul class="flex flex-col md:flex-row md:space-x-8 text-lg md:text-base">
-              <li><a href="https://rubygems.org/pages/about" class="hover:text-neutral-600">About</a></li>
-              <li><a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600">Docs</a></li>
-              <li><a href="https://rubygems.org/pages/security" class="hover:text-neutral-600">Security</a></li>
-              <li><a href="https://status.rubygems.org" class="hover:text-neutral-600">Status</a></li>
-              <li><a href="mailto:support@rubygems.org" class="hover:text-neutral-600">Help</a></li>
+              <li><a href="https://rubygems.org/pages/about" class="hover:text-neutral-600 focus-visible:text-orange focus-visible:outline-none">About</a></li>
+              <li><a href="https://guides.rubygems.org/command-reference/#gem-install" class="hover:text-neutral-600 focus-visible:text-orange focus-visible:outline-none">Docs</a></li>
+              <li><a href="https://rubygems.org/pages/security" class="hover:text-neutral-600 focus-visible:text-orange focus-visible:outline-none">Security</a></li>
+              <li><a href="https://status.rubygems.org" class="hover:text-neutral-600 focus-visible:text-orange focus-visible:outline-none">Status</a></li>
+              <li><a href="mailto:support@rubygems.org" class="hover:text-neutral-600 focus-visible:text-orange focus-visible:outline-none">Help</a></li>
             </ul>
           </nav>
           <div class="flex space-x-4">
-            <a href="https://github.com/rubygems" class="hover:text-neutral-600" aria-label="GitHub">
+            <a href="https://github.com/rubygems" class="hover:text-neutral-600 focus-visible:text-orange focus-visible:outline-none" aria-label="GitHub">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
           </div>
@@ -166,16 +164,37 @@
             RubyGems.org is supported by
           </p>
           <div class="w-full lg:grow mx-auto flex flex-wrap items-center justify-center lg:justify-between gap-6 text-sm font-semibold text-neutral-700">
-            <a href="https://rubycentral.org/" class="hover:text-neutral-900">Ruby Central</a>
-            <a href="https://aws.amazon.com/" class="hover:text-neutral-900">AWS</a>
-            <a href="https://dnsimple.link/resolving-rubygems" class="hover:text-neutral-900">DNSimple</a>
-            <a href="https://www.datadoghq.com/" class="hover:text-neutral-900">Datadog</a>
-            <a href="https://www.fastly.com/" class="hover:text-neutral-900">Fastly</a>
-            <a href="https://www.honeybadger.io/" class="hover:text-neutral-900">Honeybadger</a>
+            <a href="https://rubycentral.org/" class="hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:underline">Ruby Central</a>
+            <a href="https://aws.amazon.com/" class="hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:underline">AWS</a>
+            <a href="https://dnsimple.link/resolving-rubygems" class="hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:underline">DNSimple</a>
+            <a href="https://www.datadoghq.com/" class="hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:underline">Datadog</a>
+            <a href="https://www.fastly.com/" class="hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:underline">Fastly</a>
+            <a href="https://www.honeybadger.io/" class="hover:text-neutral-900 focus-visible:text-neutral-900 focus-visible:outline-none focus-visible:underline">Honeybadger</a>
           </div>
         </div>
       </div>
     </footer>
   </div>
+  <script>
+    (function() {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+          btn.setAttribute('aria-expanded', 'false');
+          menu.classList.add('hidden');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
