@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif;
+
+  /* Orange palette */
+  --color-orange-050: #FFF8F1;
+  --color-orange-100: #FFF0EC;
+  --color-orange-200: #FFC6AD;
+  --color-orange-300: #FFA983;
+  --color-orange-400: #FF7539;
+  --color-orange-500: #F74C27;
+  --color-orange: #F74C27;
+  --color-orange-600: #E04300;
+  --color-orange-700: #AD2F14;
+  --color-orange-800: #761A05;
+  --color-orange-900: #581A0C;
+  --color-orange-950: #3A1007;
+
+  /* Neutral palette */
+  --color-neutral-000: #FFFFFF;
+  --color-neutral-050: #FBFBFB;
+  --color-neutral-100: #EEF1F3;
+  --color-neutral-200: #E3E7EA;
+  --color-neutral-300: #D7DEE3;
+  --color-neutral-400: #C6CED5;
+  --color-neutral-500: #AEB8C1;
+  --color-neutral-600: #6C7583;
+  --color-neutral-700: #434B59;
+  --color-neutral-800: #333A45;
+  --color-neutral-900: #222831;
+  --color-neutral-950: #16191E;
+  --color-neutral-1000: #000000;
+}
+
+/* Typography plugin customizations */
+@layer base {
+  .prose {
+    --tw-prose-body: #333A45;
+    --tw-prose-headings: #333A45;
+    --tw-prose-links: #AD2F14;
+    --tw-prose-bold: #333A45;
+    --tw-prose-quotes: #333A45;
+    --tw-prose-quote-borders: #E04300;
+    --tw-prose-code: #333A45;
+    --tw-prose-pre-code: #EEF1F3;
+    --tw-prose-pre-bg: #222831;
+  }
+
+  .prose :where(a):not(:where([class~="not-prose"] *)) {
+    text-decoration: underline;
+  }
+
+  .prose :where(a):not(:where([class~="not-prose"] *)):hover {
+    color: #761A05;
+  }
+
+  .prose :where(code):not(:where([class~="not-prose"], pre *)) {
+    background-color: #EEF1F3;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+  }
+
+  .prose :where(code):not(:where([class~="not-prose"] *))::before,
+  .prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+  }
+}
