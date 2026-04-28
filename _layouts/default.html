@@ -48,6 +48,7 @@
   {%- endif %}
 </head>
 <body class="bg-neutral-050 font-sans">
+  {% include supporters.svg %}
   <div class="min-h-screen flex flex-col">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-orange-700 focus:text-white focus:px-4 focus:py-2 focus:rounded focus:text-sm focus:font-semibold">Skip to content</a>
 
@@ -122,13 +123,14 @@
           <p class="mb-6 lg:mb-0 lg:mr-14 lg:w-52 text-base leading-6 text-balance">
             RubyGems.org is supported by
           </p>
-          <div class="w-full lg:grow mx-auto flex flex-wrap items-center justify-center lg:justify-between gap-6 text-sm font-semibold text-orange-900">
-            <a href="https://rubycentral.org/" class="hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:underline">Ruby Central</a>
-            <a href="https://aws.amazon.com/" class="hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:underline">AWS</a>
-            <a href="https://dnsimple.link/resolving-rubygems" class="hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:underline">DNSimple</a>
-            <a href="https://www.datadoghq.com/" class="hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:underline">Datadog</a>
-            <a href="https://www.fastly.com/" class="hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:underline">Fastly</a>
-            <a href="https://www.honeybadger.io/" class="hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:underline">Honeybadger</a>
+          <div class="w-full lg:grow mx-auto grid grid-cols-3 gap-6 justify-items-center md:flex md:items-center md:justify-between text-orange-900">
+            <a href="https://rubycentral.org/" aria-label="Ruby Central" class="p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#ruby-central"/></svg></a>
+            <a href="https://aws.amazon.com/" aria-label="AWS" class="p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#aws"/></svg></a>
+            <a href="https://dnsimple.link/resolving-rubygems" aria-label="DNSimple" class="p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#dnsimple"/></svg></a>
+            <a href="https://www.datadoghq.com/" aria-label="Datadog" class="p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#datadog"/></svg></a>
+            <a href="https://www.fastly.com/" aria-label="Fastly" class="p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#fastly"/></svg></a>
+            <a href="https://www.honeybadger.io/" aria-label="Honeybadger" class="p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#honeybadger"/></svg></a>
+            <a href="https://mend.io/" aria-label="Mend.io" class="col-start-2 p-1 hover:text-orange-950 focus-visible:text-orange-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"><svg class="h-15 w-15 fill-current" aria-hidden="true" role="graphics-symbol"><use href="#mend-io"/></svg></a>
           </div>
         </div>
       </div>
