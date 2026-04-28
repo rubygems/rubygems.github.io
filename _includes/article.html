@@ -13,7 +13,7 @@
 {% else %}
   {%- include author_lookup.html email=page.author_email -%}
   {%- assign author_name = author_profile.name | default: page.author -%}
-  <div class="max-w-prose">
+  <div class="max-w-3xl mx-auto">
     <h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4 break-words">{{ page.title }}</h1>
     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2 text-base text-neutral-700">
       {% if page.author_email %}

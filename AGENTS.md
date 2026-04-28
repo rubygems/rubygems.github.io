@@ -46,4 +46,4 @@ author_email: author@example.com
 
 Reliable, open, technical. Content-first: the orange brand color (`orange-500` `#F74C27`) and Titillium Web wordmark are the only signature elements; everything else stays out of the way of the writing. References: GitHub Blog, Rust Blog, Go Blog. Anti-references: marketing-heavy or startup-y aesthetics, animation, dark patterns.
 
-Page shell: `max-w-screen-xl`. Article body: `prose prose-lg` inside `max-w-prose`. Display heading: `text-3xl md:text-4xl font-bold text-neutral-800`.
+Page shell: `max-w-screen-xl`. Article body: `prose prose-lg` inside `max-w-3xl mx-auto` (centered, ~768px). Display heading: `text-3xl md:text-4xl font-bold text-neutral-800`.
