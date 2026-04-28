@@ -1,6 +1,6 @@
 <nav aria-label="Archive" class="shrink-0 lg:w-48">
   <h3 class="text-sm font-bold text-neutral-700 uppercase tracking-wider mb-3">Archive</h3>
-  <ul class="flex flex-row flex-wrap lg:flex-col gap-2">
+  <ul class="flex flex-row flex-wrap lg:flex-col gap-1 -mx-2">
     {% for post in site.posts %}
       {% assign index = true %}
       {% assign truncated = true %}
@@ -9,7 +9,7 @@
       {% capture next_year %}{{post.next.date | date: "%Y"}}{% endcapture %}
 
       {% if current_year != next_year %}
-        <li><a class="text-base text-neutral-700 hover:text-orange-700 focus-visible:text-orange-700 focus-visible:outline-none transition-colors" href="/#{{current_year}}">{{current_year}}</a></li>
+        <li><a class="inline-block px-2 py-1.5 text-base text-neutral-700 rounded hover:bg-neutral-100 hover:text-orange-700 focus-visible:text-orange-700 focus-visible:outline-none focus-visible:underline transition-colors" href="/#{{current_year}}">{{current_year}}</a></li>
       {% endif %}
     {% endfor %}
   </ul>

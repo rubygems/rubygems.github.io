@@ -3,6 +3,7 @@ exclude:
 - vendor
 - CLAUDE.md
 - AGENTS.md
-safe: true
 markdown: kramdown
 url: https://blog.rubygems.org
+title: RubyGems Blog
+description: News and updates from the RubyGems team — releases, security advisories, and project announcements.

@@ -10,8 +10,8 @@ layout: null
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://blog.rubygems.org/</id>
  <author>
-   <name>Fred, the rubygems robot</name>
-   <email>rubygems-developers@rubyforge.org</email>
+   <name>RubyGems Team</name>
+   <email>support@rubygems.org</email>
  </author>
 
  {% for post in site.posts %}

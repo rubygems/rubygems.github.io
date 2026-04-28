@@ -11,7 +11,6 @@
   --color-orange-300: #FFA983;
   --color-orange-400: #FF7539;
   --color-orange-500: #F74C27;
-  --color-orange: #F74C27;
   --color-orange-600: #E04300;
   --color-orange-700: #AD2F14;
   --color-orange-800: #761A05;
@@ -34,18 +33,53 @@
   --color-neutral-1000: #000000;
 }
 
-/* Typography plugin customizations */
-@layer base {
+/* Defer offscreen rendering for the long archive list on the index page.
+   The browser skips layout/paint for rows outside the viewport and
+   reserves ~60px each so the scrollbar stays accurate. */
+@layer components {
+  .post-row {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 60px;
+  }
+
+  /* Mobile menu button: swap hamburger ↔ X based on aria-expanded. */
+  #mobile-menu-button[aria-expanded="false"] .menu-icon-close,
+  #mobile-menu-button[aria-expanded="true"] .menu-icon-open {
+    display: none;
+  }
+}
+
+/* Defensive: stop overflow-content (e.g. <pre> code blocks) from propagating
+   up and creating a tiny page-level horizontal scroll on narrow viewports.
+   Internal scroll containers continue to scroll on their own axis. */
+html, body {
+  overflow-x: clip;
+}
+
+/* Honour user motion preferences globally. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography plugin customizations.
+   Must be in @layer utilities to win over the plugin's own rules,
+   which are emitted into @layer utilities. */
+@layer utilities {
   .prose {
-    --tw-prose-body: #333A45;
-    --tw-prose-headings: #333A45;
-    --tw-prose-links: #AD2F14;
-    --tw-prose-bold: #333A45;
-    --tw-prose-quotes: #333A45;
-    --tw-prose-quote-borders: #E04300;
-    --tw-prose-code: #333A45;
-    --tw-prose-pre-code: #EEF1F3;
-    --tw-prose-pre-bg: #222831;
+    --tw-prose-body: var(--color-neutral-800);
+    --tw-prose-headings: var(--color-neutral-800);
+    --tw-prose-links: var(--color-orange-700);
+    --tw-prose-bold: var(--color-neutral-800);
+    --tw-prose-quotes: var(--color-neutral-800);
+    --tw-prose-quote-borders: var(--color-orange-600);
+    --tw-prose-code: var(--color-neutral-800);
+    --tw-prose-pre-code: var(--color-neutral-100);
+    --tw-prose-pre-bg: var(--color-neutral-900);
   }
 
   .prose :where(a):not(:where([class~="not-prose"] *)) {
@@ -53,11 +87,11 @@
   }
 
   .prose :where(a):not(:where([class~="not-prose"] *)):hover {
-    color: #761A05;
+    color: var(--color-orange-800);
   }
 
   .prose :where(code):not(:where([class~="not-prose"], pre *)) {
-    background-color: #EEF1F3;
+    background-color: var(--color-neutral-100);
     padding: 0.125rem 0.375rem;
     border-radius: 0.25rem;
     font-weight: 400;

@@ -10,7 +10,7 @@ bundle exec jekyll serve     # Dev server at http://127.0.0.1:4000 (auto-rebuild
 bundle exec jekyll build     # One-shot build into _site/
 ```
 
-Tailwind v4 is compiled by the `jekyll-tailwindcss` plugin during the Jekyll build — no Node toolchain. Edit `_tailwind.css`; the plugin emits `assets/css/styles.tailwindcss`.
+Tailwind v4 is compiled by the `jekyll-tailwindcss` plugin during the Jekyll build — no Node toolchain. Edit `_tailwind.css`; the plugin emits `_site/assets/css/styles.css`, which the layout links via `/assets/css/styles.css`. The empty `assets/css/styles.tailwindcss` source file is the marker that tells the plugin where to land the output — leave it as is.
 
 ## Layout
 
@@ -36,7 +36,7 @@ author_email: author@example.com
 
 ## Gotchas
 
-- **Never edit `assets/css/styles.tailwindcss`** — it's compiled output. Edit `_tailwind.css`.
+- **Never edit `_site/assets/css/styles.css`** — that's compiled output, regenerated on every build. Edit `_tailwind.css`.
 - **Use Tailwind tokens, not raw hex.** All colors and the font stack are defined as `@theme` tokens in `_tailwind.css` — reference `text-orange-700`, `bg-neutral-050`, etc. The token table is the source of truth; do not re-declare values in CLAUDE.md.
 - **Don't override `prose` styles in markup.** Tweak them in the `.prose` layer of `_tailwind.css` so all posts stay consistent.
 - **Light mode only** — no dark variants.
