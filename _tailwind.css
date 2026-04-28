@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif;
+
+  /* Orange palette */
+  --color-orange-050: #FFF8F1;
+  --color-orange-100: #FFF0EC;
+  --color-orange-200: #FFC6AD;
+  --color-orange-300: #FFA983;
+  --color-orange-400: #FF7539;
+  --color-orange-500: #F74C27;
+  --color-orange-600: #E04300;
+  --color-orange-700: #AD2F14;
+  --color-orange-800: #761A05;
+  --color-orange-900: #581A0C;
+  --color-orange-950: #3A1007;
+
+  /* Neutral palette */
+  --color-neutral-000: #FFFFFF;
+  --color-neutral-050: #FBFBFB;
+  --color-neutral-100: #EEF1F3;
+  --color-neutral-200: #E3E7EA;
+  --color-neutral-300: #D7DEE3;
+  --color-neutral-400: #C6CED5;
+  --color-neutral-500: #AEB8C1;
+  --color-neutral-600: #6C7583;
+  --color-neutral-700: #434B59;
+  --color-neutral-800: #333A45;
+  --color-neutral-900: #222831;
+  --color-neutral-950: #16191E;
+  --color-neutral-1000: #000000;
+}
+
+/* Defer offscreen rendering for the long archive list on the index page.
+   The browser skips layout/paint for rows outside the viewport and
+   reserves ~60px each so the scrollbar stays accurate. */
+@layer components {
+  .post-row {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 60px;
+  }
+
+  /* Mobile menu button: swap hamburger ↔ X based on aria-expanded. */
+  #mobile-menu-button[aria-expanded="false"] .menu-icon-close,
+  #mobile-menu-button[aria-expanded="true"] .menu-icon-open {
+    display: none;
+  }
+}
+
+/* Defensive: stop overflow-content (e.g. <pre> code blocks) from propagating
+   up and creating a tiny page-level horizontal scroll on narrow viewports.
+   Internal scroll containers continue to scroll on their own axis. */
+html, body {
+  overflow-x: clip;
+}
+
+/* Honour user motion preferences globally. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography plugin customizations.
+   Must be in @layer utilities to win over the plugin's own rules,
+   which are emitted into @layer utilities. */
+@layer utilities {
+  .prose {
+    --tw-prose-body: var(--color-neutral-800);
+    --tw-prose-headings: var(--color-neutral-800);
+    --tw-prose-links: var(--color-orange-700);
+    --tw-prose-bold: var(--color-neutral-800);
+    --tw-prose-quotes: var(--color-neutral-800);
+    --tw-prose-quote-borders: var(--color-orange-600);
+    --tw-prose-code: var(--color-neutral-800);
+    --tw-prose-pre-code: var(--color-neutral-100);
+    --tw-prose-pre-bg: var(--color-neutral-900);
+  }
+
+  .prose :where(a):not(:where([class~="not-prose"] *)) {
+    text-decoration: underline;
+  }
+
+  .prose :where(a):not(:where([class~="not-prose"] *)):hover {
+    color: var(--color-orange-800);
+  }
+
+  .prose :where(code):not(:where([class~="not-prose"], pre *)) {
+    background-color: var(--color-neutral-100);
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+  }
+
+  .prose :where(code):not(:where([class~="not-prose"] *))::before,
+  .prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+  }
+}

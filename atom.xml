@@ -8,18 +8,19 @@ layout: null
  <link href="https://blog.rubygems.org/atom.xml" rel="self"/>
  <link href="https://blog.rubygems.org/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://blog.rubygems.org/</id>
+ <id>https://blog.rubygems.org/</id>
  <author>
-   <name>Fred, the rubygems robot</name>
-   <email>rubygems-developers@rubyforge.org</email>
+   <name>RubyGems Team</name>
+   <email>support@rubygems.org</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.posts limit:20 %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
    <link href="https://blog.rubygems.org{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://blog.rubygems.org{{ post.id }}</id>
+   <id>https://blog.rubygems.org{{ post.id }}</id>
+   {% if post.author %}<author><name>{{ post.author | xml_escape }}</name></author>{% endif %}
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

@@ -4,3 +4,5 @@
 .jekyll-metadata
 .sass-cache/
 /_site/*
+.playwright-mcp/
+/assets/images/og/
