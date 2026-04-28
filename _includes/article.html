@@ -15,31 +15,33 @@
   {%- assign author_name = author_profile.name | default: page.author -%}
   <div class="max-w-3xl mx-auto">
     <h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4 break-words">{{ page.title }}</h1>
-    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2 text-base text-neutral-700">
+    <div class="flex items-center gap-3 mb-8">
       {% if page.author_email %}
         {% assign author_hash = page.author_email | md5 %}
-        <img alt="" src="https://secure.gravatar.com/avatar/{{ author_hash }}?s=80&d=retro" loading="lazy" decoding="async" width="32" height="32" class="w-8 h-8 rounded-full bg-neutral-200">
+        <img alt="" src="https://secure.gravatar.com/avatar/{{ author_hash }}?s=88&d=retro" loading="lazy" decoding="async" width="44" height="44" class="w-11 h-11 rounded-full bg-neutral-200 shrink-0">
       {% endif %}
-      {% if author_name %}
-        {% if author_profile.url %}
-          <a href="{{ author_profile.url }}" rel="author" class="text-neutral-800 hover:text-orange-700 hover:underline">{{ author_name }}</a>
-        {% else %}
-          <span>{{ author_name }}</span>
+      <div class="min-w-0 leading-tight">
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-base text-neutral-800">
+          {% if author_name %}
+            {% if author_profile.url %}
+              <a href="{{ author_profile.url }}" rel="author" class="font-medium hover:text-orange-700 hover:underline">{{ author_name }}</a>
+            {% else %}
+              <span class="font-medium">{{ author_name }}</span>
+            {% endif %}
+            <span class="text-neutral-400" aria-hidden="true">&middot;</span>
+          {% endif %}
+          <time class="text-neutral-600" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+          {% assign updated_at = page.last_modified_at | default: page.updated %}
+          {% if updated_at %}
+            <span class="text-neutral-400" aria-hidden="true">&middot;</span>
+            <span class="text-neutral-600">Updated <time datetime="{{ updated_at | date_to_xmlschema }}">{{ updated_at | date_to_string }}</time></span>
+          {% endif %}
+        </div>
+        {% if author_profile.bio %}
+          <div class="mt-0.5 text-sm text-neutral-600">{{ author_profile.bio }}</div>
         {% endif %}
-        <span class="text-neutral-400" aria-hidden="true">&middot;</span>
-      {% endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
-      {% assign updated_at = page.last_modified_at | default: page.updated %}
-      {% if updated_at %}
-        <span class="text-neutral-400" aria-hidden="true">&middot;</span>
-        <span>Updated <time datetime="{{ updated_at | date_to_xmlschema }}">{{ updated_at | date_to_string }}</time></span>
-      {% endif %}
+      </div>
     </div>
-    {% if author_profile.bio %}
-      <p class="mb-8 text-sm text-neutral-600">{{ author_profile.bio }}</p>
-    {% else %}
-      <div class="mb-6"></div>
-    {% endif %}
 
     <article class="prose prose-lg max-w-none">
       {{ content }}
