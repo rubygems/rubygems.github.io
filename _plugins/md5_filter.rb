@@ -3,8 +3,10 @@ require "digest"
 module Jekyll
   module Md5Filter
     def md5(input)
-      return "" if input.nil?
-      Digest::MD5.hexdigest(input.to_s.strip.downcase)
+      normalized_input = input.to_s.strip.downcase
+      return "" if normalized_input.empty?
+
+      Digest::MD5.hexdigest(normalized_input)
     end
   end
 end

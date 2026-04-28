@@ -16,8 +16,8 @@
   <div class="max-w-3xl mx-auto">
     <h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4 break-words">{{ page.title }}</h1>
     <div class="flex items-center gap-3 mb-8">
-      {% if page.author_email %}
-        {% assign author_hash = page.author_email | md5 %}
+      {% assign author_hash = page.author_email | md5 %}
+      {% if author_hash != "" %}
         <img alt="" src="https://secure.gravatar.com/avatar/{{ author_hash }}?s=88&d=retro" loading="lazy" decoding="async" width="44" height="44" class="w-11 h-11 rounded-full bg-neutral-200 shrink-0">
       {% endif %}
       <div class="min-w-0 leading-tight">

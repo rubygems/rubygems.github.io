@@ -3,7 +3,7 @@
 {% if post_description == "" or post_description == nil %}{% assign post_description = site.description %}{% endif %}
 {% include author_lookup.html email=page.author_email %}
 {% assign author_name = author_profile.name | default: page.author | default: "RubyGems Team" %}
-{% assign post_image = page.og_image | default: site.og_image %}
+{% assign post_image = page.og_image | default: page.image.path %}
 {% if post_image and post_image != "" %}
   {% unless post_image contains "://" %}{% assign post_image = site.url | append: post_image %}{% endunless %}
 {% endif %}
