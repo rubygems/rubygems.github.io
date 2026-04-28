@@ -41,6 +41,8 @@ GEM
       webrick (~> 1.7)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-tailwindcss (0.7.0)
       tailwindcss-ruby
     jekyll-watch (2.2.1)
@@ -81,6 +83,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.0)
+  jekyll-sitemap
   jekyll-tailwindcss
   rake (~> 13.0)
 
@@ -100,6 +103,7 @@ CHECKSUMS
   i18n (1.14.7) sha256=ceba573f8138ff2c0915427f1fc5bdf4aa3ab8ae88c8ce255eb3ecf0a11a5d0f
   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
+  jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
   jekyll-tailwindcss (0.7.0) sha256=987eac000d0ef5a23b901927a34c9949066be3f7acd9729643e2f6afb4e30adf
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
   json (2.17.1.2) sha256=130dc7927f9484007107a4bcb2ebaa9523b973985f374686d5b2395d4143e2fa

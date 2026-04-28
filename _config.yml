@@ -7,3 +7,8 @@ markdown: kramdown
 url: https://blog.rubygems.org
 title: RubyGems Blog
 description: News and updates from the RubyGems team — releases, security advisories, and project announcements.
+og_image: /images/hammy-og.jpg
+
+plugins:
+  - jekyll-tailwindcss
+  - jekyll-sitemap

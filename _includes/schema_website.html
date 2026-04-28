@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "RubyGems Blog",
+      "description": {{ site.description | jsonify }},
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "RubyGems",
+      "url": "https://rubygems.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rubygems.org/favicon.ico"
+      },
+      "sameAs": [
+        "https://rubygems.org/",
+        "https://github.com/rubygems"
+      ]
+    }
+  ]
+}
+</script>

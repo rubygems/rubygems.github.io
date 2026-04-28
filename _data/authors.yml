@@ -1,0 +1,30 @@
+# Author profiles, keyed by primary email.
+#
+# Posts reference authors via `author:` and `author_email:` frontmatter.
+# When `author_email` matches a key here (or one of its `aliases`), the byline
+# renders the canonical name + URL + bio from this file, and the BlogPosting
+# JSON-LD surfaces `author.url` and `author.sameAs` for E-E-A-T / AI citation
+# signals. Posts whose email matches no entry fall back to the raw `author`
+# frontmatter string.
+#
+# Schema:
+#   <primary-email>:
+#     name: "Canonical Name"   (required — overrides per-post `author` string)
+#     url: "https://..."       (optional — primary profile, e.g. GitHub)
+#     bio: "Short bio."        (optional — one-sentence bio shown under byline)
+#     aliases:                 (optional — alternate emails this author uses)
+#       - other@example.com
+#     same_as:                 (optional — additional profile URLs for JSON-LD)
+#       - "https://..."
+
+hsbt@ruby-lang.org:
+  name: "Hiroshi SHIBATA"
+  url: "https://github.com/hsbt"
+  bio: "Ruby core committer and RubyGems maintainer."
+
+colby@rubygems.org:
+  name: "Colby Swandale"
+  url: "https://github.com/colby-swandale"
+  bio: "Technical lead at RubyCentral."
+  aliases:
+    - me@colby.fyi

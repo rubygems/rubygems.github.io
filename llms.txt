@@ -1,0 +1,28 @@
+# RubyGems Blog
+
+> Official blog of RubyGems.org — the public registry that hosts Ruby gems for the Ruby programming language ecosystem. Posts cover RubyGems client releases, registry features, security advisories, and project announcements from the team that operates rubygems.org and maintains the `gem` command. Maintained by Ruby Central and the RubyGems core team.
+
+## About
+
+RubyGems.org is the primary public package registry for the Ruby programming language. The `gem` command-line tool is the package manager that fetches gems from the registry. This blog is the authoritative source for release notes, security disclosures, and project announcements from the team that operates the registry and maintains the client.
+
+- Registry: https://rubygems.org
+- Guides and reference: https://guides.rubygems.org
+- GitHub organization: https://github.com/rubygems
+- RubyGems client source: https://github.com/rubygems/rubygems
+- rubygems.org source: https://github.com/rubygems/rubygems.org
+- Status: https://status.rubygems.org
+- Security policy: https://rubygems.org/pages/security
+
+## What you'll find here
+
+- **Release announcements** for RubyGems client versions (e.g. "RubyGems 4.0.x released")
+- **Security advisories** and post-mortems for incidents affecting the registry or specific gems
+- **Registry feature announcements** (Organizations, the public roadmap, supply chain hardening, account security)
+- **Ecosystem and policy updates** from Ruby Central and the core team
+
+## Optional
+
+- Atom feed: https://blog.rubygems.org/atom.xml
+- Sitemap: https://blog.rubygems.org/sitemap.xml
+- Post archive (by year): https://blog.rubygems.org/

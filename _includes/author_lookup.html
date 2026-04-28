@@ -1,0 +1,19 @@
+{%- comment -%}
+Resolves an email to an author profile from _data/authors.yml.
+First checks for a direct key match, then falls back to scanning
+each entry's `aliases` list. Sets {{ author_profile }} (nil if no match).
+
+Usage: {% include author_lookup.html email=page.author_email %}
+{%- endcomment -%}
+{%- assign author_profile = nil -%}
+{%- if include.email and site.data.authors -%}
+  {%- assign author_profile = site.data.authors[include.email] -%}
+  {%- if author_profile == nil -%}
+    {%- for entry in site.data.authors -%}
+      {%- if entry[1].aliases and entry[1].aliases contains include.email -%}
+        {%- assign author_profile = entry[1] -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endif -%}

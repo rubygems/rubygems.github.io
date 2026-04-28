@@ -1,0 +1,46 @@
+{% assign post_url = site.url | append: page.url %}
+{% assign post_description = page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 200 %}
+{% if post_description == "" or post_description == nil %}{% assign post_description = site.description %}{% endif %}
+{% include author_lookup.html email=page.author_email %}
+{% assign author_name = author_profile.name | default: page.author | default: "RubyGems Team" %}
+{% assign post_image = page.og_image | default: site.og_image %}
+{% if post_image and post_image != "" %}
+  {% unless post_image contains "://" %}{% assign post_image = site.url | append: post_image %}{% endunless %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{ post_url }}#article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ post_description | jsonify }},
+  "url": "{{ post_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }}{% if author_profile.url %},
+    "url": {{ author_profile.url | jsonify }}{% endif %}{% if author_profile.same_as %},
+    "sameAs": {{ author_profile.same_as | jsonify }}{% endif %}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{ site.url }}/#organization",
+    "name": "RubyGems",
+    "url": "https://rubygems.org/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rubygems.org/favicon.ico"
+    }
+  }{% if post_image %},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ post_image | jsonify }}
+  }{% endif %},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ post_url }}"
+  },
+  "isPartOf": { "@id": "{{ site.url }}/#website" }
+}
+</script>
