@@ -1,6 +1,8 @@
 ---
 exclude:
 - vendor
+- CLAUDE.md
+- AGENTS.md
 safe: true
 markdown: kramdown
 url: https://blog.rubygems.org
