@@ -4,11 +4,39 @@ exclude:
 - CLAUDE.md
 - AGENTS.md
 markdown: kramdown
+timezone: UTC
 url: https://blog.rubygems.org
 title: RubyGems Blog
 description: News and updates from the RubyGems team — releases, security advisories, and project announcements.
-og_image: /images/hammy-og.jpg
 
 plugins:
   - jekyll-tailwindcss
   - jekyll-sitemap
+  - jekyll-og-image
+
+og_image:
+  collections: ["posts", "pages"]
+  output_dir: assets/images/og
+  canvas:
+    background_color: "#FFFFFF"
+  header:
+    color: "#262626"
+  content:
+    color: "#525252"
+  border_bottom:
+    width: 20
+    fill:
+      - "#F74C27"
+  image:
+    path: /images/blog-mark.png
+    width: 360
+    height: 56
+    radius: 0
+    gravity: se
+    position:
+      x: 60
+      y: 87
+  metadata:
+    fields: ["author", "date"]
+    separator: " • "
+    date_format: "%B %-d, %Y"

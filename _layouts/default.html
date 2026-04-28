@@ -7,15 +7,17 @@
   {%- if page.url == "/" -%}{%- assign is_home = true -%}{%- endif -%}
   {%- if is_home -%}
     {%- assign page_title = "RubyGems Blog" -%}
+    {%- assign social_title = "RubyGems Blog" -%}
   {%- else -%}
     {%- assign page_title = page.title | append: " - RubyGems Blog" -%}
+    {%- assign social_title = page.title -%}
   {%- endif -%}
   {%- assign page_description = page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 200 -%}
   {%- if page_description == "" or page_description == nil -%}
     {%- assign page_description = site.description -%}
   {%- endif -%}
   {%- assign canonical_url = site.url | append: page.url -%}
-  {%- assign og_image_path = page.og_image | default: site.og_image -%}
+  {%- assign og_image_path = page.og_image | default: page.image.path -%}
   {%- if og_image_path and og_image_path != "" -%}
     {%- if og_image_path contains "://" -%}
       {%- assign og_image_url = og_image_path -%}
@@ -35,12 +37,16 @@
   <link href="/assets/css/styles.css" rel="stylesheet">
 
   <meta property="og:site_name" content="RubyGems Blog">
-  <meta property="og:title" content="{{ page_title | xml_escape }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="{{ social_title | xml_escape }}">
   <meta property="og:description" content="{{ page_description | xml_escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   {%- if og_image_url %}
   <meta property="og:image" content="{{ og_image_url }}">
+  {%- if page.image.width %}<meta property="og:image:width" content="{{ page.image.width }}">{% endif %}
+  {%- if page.image.height %}<meta property="og:image:height" content="{{ page.image.height }}">{% endif %}
+  {%- if page.image.alt %}<meta property="og:image:alt" content="{{ page.image.alt | xml_escape }}">{% endif %}
   {%- endif %}
   {%- if page.layout == 'post' %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -53,7 +59,7 @@
   {%- endif %}
 
   <meta name="twitter:card" content="{% if og_image_url %}summary_large_image{% else %}summary{% endif %}">
-  <meta name="twitter:title" content="{{ page_title | xml_escape }}">
+  <meta name="twitter:title" content="{{ social_title | xml_escape }}">
   <meta name="twitter:description" content="{{ page_description | xml_escape }}">
   {%- if og_image_url %}
   <meta name="twitter:image" content="{{ og_image_url }}">
