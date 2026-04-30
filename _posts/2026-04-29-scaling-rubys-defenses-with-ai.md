@@ -9,11 +9,11 @@ On April 23rd, we submitted a vulnerability report to the [Nokogiri](https://git
 
 The same week, news broke that Mythos, Anthropic's most capable security model, had been accessed by unauthorized users through a third-party vendor. According to Anthropic, Mythos has identified thousands of zero-day vulnerabilities across every major operating system and web browser, [including a 17-year-old remote code execution flaw in FreeBSD and a 27-year-old bug in OpenBSD](https://red.anthropic.com/2026/mythos-preview/). Two stories on the same shift, one from each side of it. The capability gap between attackers and defenders just widened, and most open source ecosystems have nothing to close it with.
 
-Anthropic is bringing some open source maintainers into [Project Glasswing](https://www.anthropic.com/glasswing), but Ruby is not in yet. We cannot afford to be on the wrong side of that gap.
+Anthropic is bringing some open source maintainers into [Project Glasswing](https://www.anthropic.com/glasswing). Ruby is on the list, and agreements signed, but the access is not live yet. We cannot afford to be on the wrong side of that gap.
 
 We have been working on the defender side. [RubyGems](https://rubygems.org) hosts roughly 190,000 gems, and you cannot audit them all. The [OpenSSF Criticality Score](https://openssf.org/projects/criticality-score/) lets us focus on the gems whose compromise would cascade through the rest of the ecosystem. We're looking at those first.
 
-We are using Claude Opus 4.7 to surface candidate vulnerabilities. A human reviewer triages, verifies, and writes up every finding before anything reaches a maintainer. None of this work happens without funding. [Alpha Omega](https://alpha-omega.dev/), a project of the [OpenSSF](https://openssf.org) at the Linux Foundation, is [sponsoring this work](https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security).
+We are using Claude Opus 4.7 to surface candidate vulnerabilities. A human reviewer triages, verifies, and writes up every finding before anything reaches a maintainer. None of this work happens without backing. [Alpha Omega](https://alpha-omega.dev/), a project of the [OpenSSF](https://openssf.org) at the Linux Foundation, is [sponsoring this work](https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security). Anthropic is providing the model access we need to operate at the scale it needs.
 
 The bug we found in Nokogiri is a regex backtracking pathology in the CSS tokenizer. A short, unterminated attribute selector could hang the Ruby process indefinitely because the tokenizer's regex tries to interpret each escape sequence two different ways and explores an exponential number of possibilities before giving up. Every public Nokogiri CSS entry point routes through this tokenizer. Most large consumers (Rails, Capybara, Loofah) pass developer-written selectors and were unaffected. But any application that lets user input flow into a CSS selector (scrapers, feed readers) was exposed to an unauthenticated denial-of-service via a payload small enough to fit in a request parameter.
 
@@ -27,3 +27,4 @@ Opus 4.7 is the most capable model we have access to right now, and it produced 
 
 We submitted our first report on April 23rd. There are 190,000 more gems to look at.
 
+> **Update, 30 April 2026:** An earlier version of this post said *"Ruby is not in yet"* in reference to Project Glasswing. We have been invited into the program, but the access is not live yet. The line has been clarified to reflect that.
