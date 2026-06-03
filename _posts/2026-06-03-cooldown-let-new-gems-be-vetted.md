@@ -13,7 +13,7 @@ Cooldown reads the per-version `created_at` timestamp that rubygems.org's v2 com
 
 ### Getting started
 
-Cooldown ships in Bundler 4.0.13. If you are on an earlier release, update Bundler in place and pin the same version in your lockfile so the whole team moves together:
+Cooldown ships in [Bundler 4.0.13]({% post_url 2026-06-03-4.0.13-released %}). If you are on an earlier release, update Bundler in place and pin the same version in your lockfile so the whole team moves together:
 
 ```console
 $ gem update --system          # or: gem install bundler -v 4.0.13
