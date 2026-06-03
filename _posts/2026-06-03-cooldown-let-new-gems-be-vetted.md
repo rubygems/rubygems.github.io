@@ -96,6 +96,4 @@ Cooldown is most useful as one part of the wider security investment happening o
 
 Cooldown itself only works because rubygems.org now publishes the per-version `created_at` timestamp through its [v2 compact index](https://github.com/rubygems/rubygems.org/issues/6412) (v2 is an internal format version, not a public API change), delivered through a careful dual-write migration and a flagged cutover with no disruption for clients. I'm grateful to the rubygems.org team for that groundwork. Cooldown is a thin client-side filter on top of it.
 
-Cooldown itself only works because rubygems.org now publishes the per-version created_at timestamp through an updated [compact index](https://github.com/rubygems/rubygems.org/issues/6412) (an internal format version, not a change to the public API), delivered through a careful dual-write migration and a flagged cutover with no disruption for clients.
-
 Each of these defenses covers a different gap, and they compound. Resolving your dependencies against rubygems.org is what puts all of them to work on your behalf, which makes it the safest default for Ruby projects.
